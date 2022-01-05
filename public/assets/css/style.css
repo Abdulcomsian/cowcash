@@ -1,0 +1,262 @@
+#kt_content_container {
+    max-width: 100% !important;
+}
+
+/*Using this for show validation error in red color*/
+.text-red-600 {
+    --tw-text-opacity: 1;
+    color: rgba(220, 38, 38, var(--tw-text-opacity));
+}
+
+input:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.modalDiv input {
+    width: 100%;
+    color: #000 !important;
+    padding: 4;
+    padding: 11px 15px;
+    margin: 20px 0px 0px;
+    border: none;
+    background-color: #f5f8fa;
+}
+
+.modalDiv input::placeholder,
+.requirment-second li input::placeholder {
+    color: #000;
+}
+
+.modalDiv label {
+    margin: 0px !important;
+}
+
+.multi-list {
+    display: flex;
+    max-height: 400px;
+    overflow: scroll;
+}
+
+#scope-of-design .list-div ul li {
+    height: 58px;
+    display: flex;
+}
+
+#design-requirement .requirment-second li:nth-child(1):after {
+    content: none !important;
+}
+
+.requirment-first-value,
+.requirment-second-value,
+.requirment-third-value,
+.requirment-second,
+.requirment-third,
+.other-input {
+    display: none;
+}
+
+.requirment-second li input {
+    width: 100%;
+    background-color: #f5f8fa;
+    color: #fff !important;
+    border: none;
+}
+
+#scope-of-design .common-requirment,
+#design-requirement .common-requirment {
+    width: 50%;
+}
+
+#attachment-of-design .requirment-first {
+    width: 70%;
+}
+
+#attachment-of-design .requirment-second {
+    width: 30%;
+}
+
+.multi-Radio {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+.submit-requirment {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.submit-requirment button {
+    opacity: 0.5;
+    width: 100%;
+    margin-right: 20px !important;
+}
+
+.submit-requirment .uploadDiv {
+    width: 100%;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.common-requirment {
+    width: 24%;
+    margin: 0px 10px;
+}
+
+.list-div ul,
+.list-check-div ul {
+    padding: 0px;
+    list-style: none;
+    /* max-height: 400px;
+    overflow: scroll; */
+    overflow-x: hidden;
+}
+
+.list-div ul li {
+    padding: 10px;
+   background-color: #f5f8fa;
+    color: #000 !important;
+    margin: 10px 0px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+.list-check-div ul li {
+    padding: 10px;
+   background-color: #f5f8fa;
+    color: #000 !important;
+    margin: 10px 0px;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+}
+
+#scope-of-design .common-requirment input {
+   background-color: #f5f8fa;
+    color: #000 !important;
+    cursor: pointer;
+    position: relative;
+    width: 50%;
+    border: none;
+}
+
+.list-div ul li:after {
+    content: "\f0da";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    top: 7px;
+}
+.requirment-second .list-div ul li:after{
+    content: "";
+}
+.submit-requirment button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    color: #fff !important;
+    background-color: #07d564;
+    margin: 10px 0px;
+}
+
+/* obaid css */
+.form-check .form-check-label {
+    cursor: pointer;
+    padding-top: 4px;
+}
+
+.requirment-second li input[type="radio"] {
+    width: 60% !important;
+    background-color: #fff !important;
+    border: none;
+}
+
+.form-check .form-check-input {
+    float: left;
+    margin-left: -2rem !important;
+}
+
+.requirment-second li input[type="radio"]:checked {
+    background-color: #009ef7 !important;
+    border-color: #009ef7 !important;
+}
+
+/* .form-check-input:checked {
+    background-color: #009ef7 !important;
+    border-color: #009ef7 !important;
+} */
+.toolbar-fixed .toolbar {
+    position: initial !important;
+    top: 0px;
+}
+
+
+/******** New CSS *********/
+.aside,
+.aside .aside-logo,
+.aside-menu .menu-item.here>.menu-link,
+.aside-menu .menu-item.show>.menu-link {
+    background-color: transparent;
+}
+
+.header-fixed .header {
+    background-color: #fff !important;
+}
+
+.aside-menu .menu-item.here>.menu-link .menu-title,
+.aside-menu .menu-item.show>.menu-link .menu-title,
+.aside-menu .menu-item.here>.menu-link .menu-icon i,
+.aside-menu .menu-item.show>.menu-link .menu-icon i {
+    color: #07d564;
+}
+
+.aside-menu .menu-item .menu-link:hover:not(.disabled):not(.active),
+.aside-menu .menu-item.hover>.menu-link:not(.disabled):not(.active) {
+    background-color: #07d564;
+}
+
+.aside .aside-toggle svg [fill]:not(.permanent):not(g),
+.btn.btn-active-color-primary:hover:not(.btn-active) .svg-icon svg [fill]:not(.permanent):not(g) {
+    fill: #07d564;
+}
+
+
+
+.header .header-menu .menu>.menu-item>.menu-link,
+.header .header-menu .menu>.menu-item>.menu-link .menu-title {
+    font-weight: 600;
+    color: #07d564;
+}
+
+.card>.card-header .card-title h2,
+.dataTables_length label,
+#DataTables_Table_0_filter label {
+    color: #000 !important;
+}
+
+.btn-check:checked+.btn.btn-active-primary,
+.btn.btn-primary:hover:not(.btn-active),
+.btn.btn-primary,
+.header .header-menu .menu>.menu-item.hover>.menu-link:not(.disabled):not(.active),
+.header .header-menu .menu>.menu-item>.menu-link:hover:not(.disabled):not(.active),
+.scrolltop {
+    background-color: #07d564;
+    border-color: #07d564;
+}
+
+.form-control[readonly] {
+    background-color: #f5f8fa !important;
+}
+
+.active{
+    background-color: #07d564 !important;
+}
