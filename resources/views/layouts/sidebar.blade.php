@@ -39,19 +39,11 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="nav-link bgcolor" href="">
                                 <i><img src="{{asset('images/file.png')}}"></i>
-                                <span>All Deals</span>
+                                <span>All Cows</span>
                             </a>
                             <a class="nav-link bgcolor" href="">
                                 <i><img src="{{asset('images/file.png')}}"></i>
-                                <span>Active Deals</span>
-                            </a>
-                            <a class="nav-link bgcolor" href="">
-                                <i><img src="{{asset('images/file.png')}}"></i>
-                                <span>Offers Pending</span>
-                            </a>
-                            <a class="nav-link bgcolor" href="">
-                                <i><img src="{{asset('images/file.png')}}"></i>
-                                <span>Zellaray Deals</span>
+                                <span>Add Cows</span>
                             </a>
                         </div>
                     </li>

@@ -21,8 +21,8 @@ Cow Cash | Farming
                 <div class="d-flex align-content-center align-middle bd-highlight">
                   <div class="icon1 text-center"><img src="images/specialist-user.png"></div>
                   <div class="flex-grow-1 valtop">
-                    <div class="heading">Total Clients</div>
-                    <div class="cont-val">{{$totalcustomers}}</div>
+                    <div class="heading">Total Users</div>
+                    <div class="cont-val"></div>
                   </div>
                 </div>
               </div>
@@ -34,7 +34,7 @@ Cow Cash | Farming
                 <div class="d-flex align-content-center align-middle bd-highlight">
                   <div class="icon2 text-center"><img src="images/deadline.png"></div>
                   <div class="flex-grow-1 valtop">
-                    <div class="heading2">Total Appointment</div>
+                    <div class="heading2">Total Cows</div>
                     <div class="cont-val"></div>
                   </div>
                 </div>
