@@ -32,11 +32,28 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i><img src="{{asset('images/16061-[Converted].png')}}"></i>
-                            <span>Add Cows</span>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-collapse " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i><img src="{{asset('images/file.png')}}"></i>Cows <span class="fa fa-caret-down" style="float: right;"></span>
                         </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link bgcolor" href="">
+                                <i><img src="{{asset('images/file.png')}}"></i>
+                                <span>All Deals</span>
+                            </a>
+                            <a class="nav-link bgcolor" href="">
+                                <i><img src="{{asset('images/file.png')}}"></i>
+                                <span>Active Deals</span>
+                            </a>
+                            <a class="nav-link bgcolor" href="">
+                                <i><img src="{{asset('images/file.png')}}"></i>
+                                <span>Offers Pending</span>
+                            </a>
+                            <a class="nav-link bgcolor" href="">
+                                <i><img src="{{asset('images/file.png')}}"></i>
+                                <span>Zellaray Deals</span>
+                            </a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

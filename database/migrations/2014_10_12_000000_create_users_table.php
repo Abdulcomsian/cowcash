@@ -22,8 +22,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role')->nullable();
-            $table->string('compaign_link')->nullable();
-            $table->string('fcm_token')->nullable();
+            $table->integer('silver_coins')->default(0);
+            $table->integer('gold_coins')->default(0);
+            $table->integer('referal_coins')->default(0);
+            $table->string('referal_link')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
