@@ -8,28 +8,21 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
+    //admin dashbaord
     public function index()
     {
         $totalcows = Cows::count();
         $totalusers = User::count();
         return view('backend.Admin.dashboard', compact('totalcows', 'totalusers'));
     }
+    //dashboard
     public function dashboard()
     {
         $totalcows = Cows::count();
         $totalusers = User::count();
         return view('backend.Admin.dashboard', compact('totalcows', 'totalusers'));
     }
+    //all user
     public function AllUsers()
     {
         try {
@@ -40,6 +33,7 @@ class AdminController extends Controller
             return back();
         }
     }
+    //block user
     public function Block_user($id)
     {
         try {
@@ -51,6 +45,7 @@ class AdminController extends Controller
             return back();
         }
     }
+    //unblock user
     public function Unblock_user($id)
     {
         try {
@@ -61,5 +56,10 @@ class AdminController extends Controller
             toastError('Something went wrong,try again');
             return back();
         }
+    }
+    //profile
+    public function profile()
+    {
+        return view('backend.Admin.profile');
     }
 }
