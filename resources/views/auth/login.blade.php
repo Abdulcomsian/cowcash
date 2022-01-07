@@ -91,7 +91,7 @@
                     <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                         @csrf
                         <a href="dashboard">
-                            <div class="logo-login text-center pb-4"><img src="images/zine.png	" width="80%" height="auto"></div>
+                            <div class="logo-login text-center pb-4"><img src="images/cows.png	" width="80%" height="auto"></div>
                         </a>
                         <span class="login100-form-title pb-4">
                             Login to continue
