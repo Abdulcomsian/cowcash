@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class PackageTxn extends Model
 {
     use HasFactory;
+    protected $guarded = [];
+
+
+    public function package()
+    {
+        return $this->belongsTo(Packages::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

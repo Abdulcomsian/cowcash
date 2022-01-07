@@ -54,6 +54,23 @@ class CowsTableSeeder extends Seeder
             ],
         ];
 
+        //package entry
+        $packages = [
+            [
+                'Pkgname' => 'Silver Package',
+                'amount' => 500,
+                'coins_to_get' => 1000,
+                'status' => 1,
+            ],  [
+                'Pkgname' => 'Pramium Package',
+                'amount' => 1000,
+                'coins_to_get' => 10000,
+                'status' => 1,
+            ],
+        ];
+
+
+
         foreach ($cows as $cow) {
             Cows::create($cow);
         }

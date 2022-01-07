@@ -22,7 +22,7 @@
                   </i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-small dropdown-menu-right">
-                  <a class="dropdown-item" href="profile">
+                  <a class="dropdown-item" href="{{route('profile')}}">
                     <i class="material-icons">&#xE7FD;</i> Profile</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
