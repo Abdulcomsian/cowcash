@@ -4,9 +4,6 @@ Cow Cash | Farming
 @endsection
 @section('content')
 
-
-
-
 <div class="container-fluid">
   <div class="row">
     <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
@@ -19,10 +16,10 @@ Cow Cash | Farming
             <div class="card welcome-card">
               <div class="s">
                 <div class="d-flex align-content-center align-middle bd-highlight">
-                  <div class="icon1 text-center"><img src="images/specialist-user.png"></div>
+                  <div class="icon1 text-center"><img src="{{asset('images/specialist-user.png')}}"></div>
                   <div class="flex-grow-1 valtop">
                     <div class="heading">Total Users</div>
-                    <div class="cont-val"></div>
+                    <div class="cont-val">{{$totalusers ?? ''}}</div>
                   </div>
                 </div>
               </div>
@@ -35,7 +32,7 @@ Cow Cash | Farming
                   <div class="icon2 text-center"><img src="images/deadline.png"></div>
                   <div class="flex-grow-1 valtop">
                     <div class="heading2">Total Cows</div>
-                    <div class="cont-val"></div>
+                    <div class="cont-val">{{$totalcows ?? ''}}</div>
                   </div>
                 </div>
               </div>

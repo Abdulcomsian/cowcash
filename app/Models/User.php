@@ -25,8 +25,11 @@ class User extends Authenticatable
         'role',
         'email_verified_at',
         'password',
-        'compaign_link',
-        'fcm_token',
+        'status',
+        'siliver_coins',
+        'gold_coins',
+        'referal_coins',
+        'referal_link'
     ];
 
     /**
@@ -53,8 +56,8 @@ class User extends Authenticatable
         return $this->fcm_token;
     }
 
-    public function appointments(){
+    public function appointments()
+    {
         return $this->hasMany(Appointment::class);
     }
-
 }

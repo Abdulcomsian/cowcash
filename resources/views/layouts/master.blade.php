@@ -17,7 +17,7 @@
     @yield('css')
 </head>
 
-<body class="h-100">
+<body class="h-100" style="overflow-x:hidden !important;">
 
 
     @include("layouts.header")

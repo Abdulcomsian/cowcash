@@ -34,18 +34,30 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-collapse " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i><img src="{{asset('images/file.png')}}"></i>Cows <span class="fa fa-caret-down" style="float: right;"></span>
+                            <i class="fa fa-paw"></i>Cows <span class="fa fa-caret-down" style="float: right;"></span>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="nav-link bgcolor" href="">
-                                <i><img src="{{asset('images/file.png')}}"></i>
+                            <a class="nav-link bgcolor" href="{{route('cow.index')}}">
+                                <i class="fa fa-list"></i>
                                 <span>All Cows</span>
                             </a>
-                            <a class="nav-link bgcolor" href="">
-                                <i><img src="{{asset('images/file.png')}}"></i>
+                            <a class="nav-link bgcolor" href="{{route('cow.create')}}">
+                                <i class="fa fa-plus"></i>
                                 <span>Add Cows</span>
                             </a>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{route('admin.users')}}">
+                            <i><img src="{{asset('images/specialist-user.png')}}"></i>
+                            <span>User</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="">
+                            <i class="fa fa-gift" aria-hidden="true"></i>
+                            <span>Packages</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -60,4 +72,4 @@
             </div>
         </aside>
     </div>
-</div
+</div>
