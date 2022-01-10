@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CowsController;
 use App\Http\Controllers\Admin\PackagesController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Frontend\UserOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use PhpParser\Node\Expr\FuncCall;
@@ -18,11 +19,13 @@ use PhpParser\Node\Expr\FuncCall;
 |
 */
 
-Route::group(['middleware' => ['auth', 'admin']], function () {
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+//Admin middlewware and admin routes
+Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function () {
     Route::get('/', [AdminController::class, 'index']);
     Route::get('/dashboard', [AdminController::class, 'dashboard']);
-});
-Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function () {
     //cows work
     Route::resource('/cow', CowsController::class);
     //packages work 
@@ -36,6 +39,16 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/user', [AdminController::class, 'AllUsers'])->name('admin.users');
     Route::get('/user-block/{id}', [AdminController::class, 'Block_user'])->name('user.block');
     Route::get('/user-unblock/{id}', [AdminController::class, 'Unblock_user'])->name('user.unblock');
+    Route::get('/user-cow-details/{id}', [AdminController::class, 'User_cow_details'])->name('user.cow.details');
+});
+
+//frontend user routes here
+Route::group(['middleware' => ['auth'], 'prefix' => 'User'], function () {
+    Route::get('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
 });
 
 Auth::routes();
+
+
+//route for calculating hour per milk
+Route::get('calculate-milk-per-houre', [HomeController::class, 'calculate_milk_per_hour'])->name('calculate.milk');

@@ -38,6 +38,7 @@ ALL Packages List
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($packages)>0)
                                     @foreach($packages as $pkg)
                                     <tr>
                                         <td>{{$loop->iteration}}</td>
@@ -57,6 +58,11 @@ ALL Packages List
                                         </td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <tr>
+                                        <td colspan="8" class="text-center">No Packages Found!</td>
+                                    </tr>
+                                    @endif
 
                                 </tbody>
                             </table>

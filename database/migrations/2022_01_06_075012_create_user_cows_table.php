@@ -21,7 +21,7 @@ class CreateUserCowsTable extends Migration
 
             $table->unsignedBigInteger('cow_id');
             $table->foreign('cow_id')->references('id')->on('cows');
-
+            $table->float('per_hours_litters')->nullable();
             $table->double('total_milk')->nullable();
             $table->double('available_milk')->nullable();
             $table->double('sold_milk')->nullable();

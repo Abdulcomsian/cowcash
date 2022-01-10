@@ -36,6 +36,7 @@ ALL Users
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($users)>0)
                                     @foreach($users as $user)
                                     <tr>
                                         <td>{{$user->name}}</td>
@@ -52,21 +53,27 @@ ALL Users
                                             <img src="{{asset($user->image)}}" width="80px" height="80px" />
                                             @endif
                                         </td>
-                                        @if($user->status==0)
-                                        <td class="d-flex">
+
+                                        <td>
+                                            @if($user->status==0)
                                             <a href="{{route('user.unblock',$user->id)}}" class="confirm btn btn-danger">
                                                 UnBlock
                                             </a>
-                                        </td>
-                                        @else
-                                        <td class="d-flex">
+                                            @else
                                             <a href="{{route('user.block',$user->id)}}" class="confirm btn btn-success">
                                                 Block
                                             </a>
+                                            @endif
+                                            <a href="{{route('user.cow.details',$user->id)}}"><i class="fa fa-eye"></i></a>
                                         </td>
-                                        @endif
+
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <tr>
+                                        <td colspan="8" class="text-center">No User Found!</td>
+                                    </tr>
+                                    @endif
 
                                 </tbody>
                             </table>

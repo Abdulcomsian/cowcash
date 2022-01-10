@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Cows;
+use App\Models\UserCows;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -52,6 +53,17 @@ class AdminController extends Controller
             User::find($id)->update(['status' => 1]);
             toastSuccess('User is now Active');
             return back();
+        } catch (\Exception $exception) {
+            toastError('Something went wrong,try again');
+            return back();
+        }
+    }
+    //user orders and cows details
+    public function User_cow_details($id)
+    {
+        try {
+            $userOrders = UserCows::with('user', 'cow')->where('user_id', $id)->get();
+            return view('backend.Admin.User.userorders', compact('userOrders'));
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
             return back();

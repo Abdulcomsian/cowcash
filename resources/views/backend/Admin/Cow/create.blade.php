@@ -43,7 +43,12 @@ Create Cows
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label class="mb-2 formlabel">Color</label>
-                                        <input type="color" class="form-control" id="color" name="color" placeholder="Color" required>
+                                        <select class="form-control" id="color" name="color" required>
+                                            <option value="">Select Color</option>
+                                            <option value="Bhite">White</option>
+                                            <option value="Black">Black</option>
+                                            <option value="Brown">Brown</option>
+                                        </select>
                                         @if($errors->has('color'))
                                         <div class="error">{{ $errors->first('color') }}</div>
                                         @endif

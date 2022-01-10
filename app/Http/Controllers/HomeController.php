@@ -3,26 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\UserCows;
+use DB;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        return view('Frontend.home');
+    }
+
+
+    //cron job for calculating per hour milk cow and user should be active
+    public function calculate_milk_per_hour()
+    {
+        UserCows::with('user')->where('status', 1)->chunk(100, function ($users) {
+            foreach ($users as $user) {
+                if ($user->user->status == 1) {
+                    DB::table('user_cows')
+                        ->where('id', $user->id)
+                        ->update([
+                            'total_milk' => DB::raw('total_milk +' . $user->per_hours_litters . ''),
+                        ]);
+                }
+            }
+        });
     }
 }
