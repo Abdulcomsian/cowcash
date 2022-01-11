@@ -21,7 +21,7 @@ ALL Users
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body" style="overflow-x:scroll;">
                             <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>

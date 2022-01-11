@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\UserOrder;
 use App\Models\UserCows;
+use Auth;
 
 class UserOrderController extends Controller
 {
@@ -21,7 +22,7 @@ class UserOrderController extends Controller
                 $usercoworder = UserOrder::create([
                     'user_id' => 2,
                     'cow_id' => 2,
-                    'coins_to_pay' => $cowprice,
+                    'coins_to_pay' => $toalcowscoins,
                     'qty' => $qty,
                     'status' => 1,
                 ]);
@@ -39,18 +40,19 @@ class UserOrderController extends Controller
 
                     //deduct coins fron user when purchase cows
                     $User = Auth::user();
-                    $user->silver_coins = $user->silver_coins - $cowcoins;
-                    $user->save();
+                    $User->silver_coins = $User->silver_coins - $cowcoins;
+                    $User->save();
                     // toastSuccess('You have successfully purchased cow!');
                     // return back();
                 }
             } else {
-                toastError('You dont have enough coins to buy this cow');
-                return back();
+                echo "here";
+                // toastError('You dont have enough coins to buy this cow');
+                // return back();
             }
         } catch (\Exception $exception) {
-            toastError('Something went wrong,try again');
-            return back();
+            // toastError('Something went wrong,try again');
+            // return back();
         }
     }
 }

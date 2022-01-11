@@ -19,7 +19,7 @@ Home Page
             <td class="loginForm commonWooden">
                 <span class="signInText">SIGN IN ACCOUNT</span>
                 <div class="formDiv">
-                    <form id="login" class="" method="POST" action="{{ route('login') }}">
+                    <form id="login" method="POST" action="{{route('login')}}">
                         @csrf
                         <div class="inputView">
                             <div class="inputDiv">
