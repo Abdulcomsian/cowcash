@@ -24,8 +24,10 @@ class CreateUsersTable extends Migration
             $table->string('role')->nullable();
             $table->integer('silver_coins')->default(0);
             $table->integer('gold_coins')->default(0);
-            $table->integer('referal_coins')->default(0);
+            $table->string('referred_by')->nullable();
+            $table->string('affiliate_id')->unique()->nullable();
             $table->string('referal_link')->nullable();
+            $table->integer('referal_coins')->default(0);
             $table->tinyInteger('status')->default(1);
             $table->rememberToken();
             $table->timestamps();

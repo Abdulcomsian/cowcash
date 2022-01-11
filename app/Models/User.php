@@ -29,7 +29,9 @@ class User extends Authenticatable
         'siliver_coins',
         'gold_coins',
         'referal_coins',
-        'referal_link'
+        'referal_link',
+        'affiliate_id',
+        'referred_by',
     ];
 
     /**
@@ -59,5 +61,9 @@ class User extends Authenticatable
     public function appointments()
     {
         return $this->hasMany(Appointment::class);
+    }
+    public function totalaffiliate()
+    {
+        return $this->hasMany(User::class, 'referred_by', 'affiliate_id');
     }
 }

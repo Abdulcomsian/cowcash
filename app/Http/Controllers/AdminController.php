@@ -12,22 +12,34 @@ class AdminController extends Controller
     //admin dashbaord
     public function index()
     {
-        $totalcows = Cows::count();
-        $totalusers = User::count();
-        return view('backend.Admin.dashboard', compact('totalcows', 'totalusers'));
+        try {
+            $totalcows  = Cows::count();
+            $totalusers = User::where('role', 'farmer')->count();
+            $referalusers = User::where('referred_by', '!=', NULL)->count();
+            return view('backend.Admin.dashboard', compact('totalcows', 'totalusers', 'referalusers'));
+        } catch (\Exception $exception) {
+            toastError('Something went wrong,try again');
+            return back();
+        }
     }
     //dashboard
     public function dashboard()
     {
-        $totalcows = Cows::count();
-        $totalusers = User::count();
-        return view('backend.Admin.dashboard', compact('totalcows', 'totalusers'));
+        try {
+            $totalcows  = Cows::count();
+            $totalusers = User::where('role', 'farmer')->count();
+            $referalusers = User::where('referred_by', '!=', NULL)->count();
+            return view('backend.Admin.dashboard', compact('totalcows', 'totalusers', 'referalusers'));
+        } catch (\Exception $exception) {
+            toastError('Something went wrong,try again');
+            return back();
+        }
     }
     //all user
     public function AllUsers()
     {
         try {
-            $users = User::where('role', 'farmer')->get();
+            $users = User::with('totalaffiliate')->where('role', 'farmer')->get();
             return view('backend.Admin.User.index', compact('users'));
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
@@ -64,6 +76,18 @@ class AdminController extends Controller
         try {
             $userOrders = UserCows::with('user', 'cow')->where('user_id', $id)->get();
             return view('backend.Admin.User.userorders', compact('userOrders'));
+        } catch (\Exception $exception) {
+            toastError('Something went wrong,try again');
+            return back();
+        }
+    }
+    //user referal details
+    public function User_referal_details($id)
+    {
+        try {
+            $user = User::find($id);
+            $userreferal = User::where('referred_by', $user->affiliate_id)->get();
+            return view('backend.Admin.User.userreferals', compact('userreferal', 'user'));
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
             return back();

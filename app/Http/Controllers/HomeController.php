@@ -4,13 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\UserCows;
+use App\Models\User;
 use DB;
+use Carbon\Carbon;
+use Auth;
 
 class HomeController extends Controller
 {
+    //front end page page hoeme page
     public function index()
     {
-        return view('Frontend.home');
+        try {
+            $allusers = User::where('role', 'farmer')->count();
+            $newuser = User::where('role', 'farmer')->where('created_at', '>', Carbon::now()->subDays(1))->count();
+            $todayActive = User::where('role', 'farmer')->whereDate('created_at', Carbon::today())->count();
+            return view('Frontend.home', compact('allusers', 'newuser', 'todayActive'));
+        } catch (\Exception $exception) {
+            toastError('Something went wrong,try again');
+            return back();
+        }
     }
 
 

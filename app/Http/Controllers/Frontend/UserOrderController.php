@@ -13,7 +13,6 @@ class UserOrderController extends Controller
     //when user perchase cows from admin
     public function Take_order()
     {
-        //
         $cowcoins = 10000;
         $qty = 1;
         $toalcowscoins = $qty * $cowcoins;
@@ -37,6 +36,13 @@ class UserOrderController extends Controller
                         'sold_milk' => 0,
                         'status' => 1,
                     ]);
+
+                    //deduct coins fron user when purchase cows
+                    $User = Auth::user();
+                    $user->silver_coins = $user->silver_coins - $cowcoins;
+                    $user->save();
+                    // toastSuccess('You have successfully purchased cow!');
+                    // return back();
                 }
             } else {
                 toastError('You dont have enough coins to buy this cow');

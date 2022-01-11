@@ -2,6 +2,13 @@
 @section('title')
 Home Page
 @endsection
+@section('css')
+<style>
+    .cursor-pointer {
+        cursor: pointer;
+    }
+</style>
+@endsection
 @section('content')
 <section id="header">
     <table>
@@ -12,27 +19,56 @@ Home Page
             <td class="loginForm commonWooden">
                 <span class="signInText">SIGN IN ACCOUNT</span>
                 <div class="formDiv">
-                    <div class="inputView">
-                        <div class="inputDiv">
-                            <label for="">Email</label>
-                            <input type="text" name="" id="">
+                    <form id="login" class="" method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="inputView">
+                            <div class="inputDiv">
+                                <label for="">Email</label>
+                                <input type="text" name="email" id="email" required>
+                            </div>
+                            <div class="inputDiv">
+                                <label for="">Password</label>
+                                <input type="text" name="password" id="password" required>
+                            </div>
                         </div>
-                        <div class="inputDiv">
-                            <label for="">Password</label>
-                            <input type="text" name="" id="">
+                        <div class="multiBtn">
+                            <button type="submit" class="cursor-pointer">Login</button>
+                            <button type="button" class="cursor-pointer Registerbtn">Register</button>
                         </div>
-                    </div>
-                    <div class="multiBtn">
-                        <button>Login</button>
-                        <button>Register</button>
-                    </div>
+                    </form>
+                    <!-- Register Form -->
+                    <form id="register" style="display: none;" method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <div class="inputView">
+                            <div class="inputDiv">
+                                <label for="">Name</label>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+                            <div class="inputDiv">
+                                <label for="">Email</label>
+                                <input type="text" name="email" id="email" required>
+                            </div>
+                            <div class="inputDiv">
+                                <label for="">Password</label>
+                                <input type="text" name="password" id="password" required>
+                            </div>
+                            <div class="inputDiv">
+                                <label for="">Password</label>
+                                <input type="text" name="password_confirmation" id="password_confirmation" required>
+                            </div>
+                        </div>
+                        <div class="multiBtn">
+                            <button type="submit" class="cursor-pointer">Register</button>
+                            <button type="button" class="cursor-pointer Loginbtn">Login</button>
+                        </div>
+                    </form>
                 </div>
             </td>
             <td class="statistics commonWooden">
                 <span class="statisticsText">statistics</span>
-                <p><span>All Participants:</span> <span><b>234567 Users</b></span></p>
-                <p><span>New for 24 Hours:</span> <span><b>2308 Users</b></span></p>
-                <p><span>Active Today:</span> <span><b>31834 Users</b></span></p>
+                <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
+                <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
+                <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
                 <button>Create Account</button>
 
             </td>
@@ -179,4 +215,18 @@ Home Page
         </div>
     </div>
 </section>
+@endsection
+@section('script')
+<script>
+    $(document).on('click', '.Registerbtn', function() {
+        $("#login").fadeOut(500);
+        $("#register").fadeIn(1000);
+    })
+
+    $(document).on('click', '.Loginbtn', function() {
+        $("#register").fadeOut(500);
+        $("#login").fadeIn(1000);
+
+    })
+</script>
 @endsection

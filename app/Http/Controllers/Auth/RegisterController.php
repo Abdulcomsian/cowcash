@@ -8,6 +8,9 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Cookie;
+use DB;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -38,7 +41,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware(['guest', 'refeeral']);
     }
 
     /**
@@ -64,10 +67,24 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $referred_by = '';
+        if (!empty(Cookie::get('referral'))) {
+            $referred_by = Cookie::get('referral');
+        }
+        $affiliateid = Str::random(10);
+        $referal_link = env('APP_URL', '') . '/register/?ref=' . $affiliateid;
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'role' => 'farmer',
+            'affiliate_id' => $affiliateid,
+            'referal_link' => $referal_link,
+            'referred_by' => $referred_by,
         ]);
+        if ($user) {
+            User::where('affiliate_id', $referred_by)->update(['silver_coins' => DB::raw('silver_coins +30'), 'referal_coins' => DB::raw('referal_coins +30')]);
+            return $user;
+        }
     }
 }

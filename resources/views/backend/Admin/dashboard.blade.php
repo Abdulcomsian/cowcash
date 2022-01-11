@@ -40,7 +40,7 @@ Cow Cash | Farming
               <div class="card welcome-card">
                 <div class="s">
                   <div class="d-flex align-content-center align-middle bd-highlight">
-                    <div class="icon2 text-center"><img src="images/deadline.png"></div>
+                    <div class="icon2 text-center"><img src="{{asset('images/deadline.png')}}"></div>
                     <div class="flex-grow-1 valtop">
                       <div class="heading2">Total Cows</div>
                       <div class="cont-val">{{$totalcows ?? ''}}</div>
@@ -55,10 +55,10 @@ Cow Cash | Farming
             <div class="card welcome-card">
               <div class="s">
                 <div class="d-flex align-content-center align-middle bd-highlight">
-                  <div class="icon2 text-center"><img src="images/deadline.png"></div>
+                  <div class="icon2 text-center"><img src="{{asset('images/deadline.png')}}"></div>
                   <div class="flex-grow-1 valtop">
-                    <div class="heading2">Silver Coins</div>
-                    <div class="cont-val">{{\Auth::user()->silver_coins ?? ''}}</div>
+                    <div class="heading2">Referal Users</div>
+                    <div class="cont-val">{{$referalusers ?? ''}}</div>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ Cow Cash | Farming
             <div class="card welcome-card">
               <div class="s">
                 <div class="d-flex align-content-center align-middle bd-highlight">
-                  <div class="icon2 text-center"><img src="images/deadline.png"></div>
+                  <div class="icon2 text-center"><img src="{{asset('images/deadline.png')}}"></div>
                   <div class="flex-grow-1 valtop">
                     <div class="heading2">Gold Coins</div>
                     <div class="cont-val">{{\Auth::user()->gold_coins ?? ''}}</div>
