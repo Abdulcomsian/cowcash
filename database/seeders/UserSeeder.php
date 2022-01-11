@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\PackageTxn;
 use App\Models\Packages;
+use Illuminate\Support\Str;
 
 class UserSeeder extends Seeder
 {
@@ -24,6 +25,8 @@ class UserSeeder extends Seeder
             'password' => bcrypt('admin123'),
             'role' => 'admin',
         ]);
+        $affiliateid = Str::random(10);
+        $referal_link = env('APP_URL', '') . '/register/?ref=' . $affiliateid;
         $user = User::create([
             'name' => 'Farmer1',
             'email' => 'farmer1@gmail.com',
@@ -31,13 +34,19 @@ class UserSeeder extends Seeder
             'password' => bcrypt('farmer123'),
             'role' => 'farmer',
             'silver_coins' => 10000,
+            'affiliate_id' => $affiliateid,
+            'referal_link' => $referal_link,
         ]);
+        $affiliateid = Str::random(10);
+        $referal_link = env('APP_URL', '') . '/register/?ref=' . $affiliateid;
         User::create([
             'name' => 'Farmer2',
             'email' => 'farmer2@gmail.com',
             'email_verified_at' => '2021-07-30',
             'password' => bcrypt('farmer123'),
             'role' => 'farmer',
+            'affiliate_id' => $affiliateid,
+            'referal_link' => $referal_link,
         ]);
 
         $packages = [

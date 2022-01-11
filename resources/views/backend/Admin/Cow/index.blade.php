@@ -44,6 +44,7 @@ ALL Cows List
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($cowslist)>0)
                                     @foreach($cowslist as $cow)
                                     <tr>
                                         <td>{{$cow->cowName}}</td>
@@ -66,6 +67,11 @@ ALL Cows List
                                         </td>
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <tr>
+                                        <td colspan="7" class="text-center">No Cows Found!</td>
+                                    </tr>
+                                    @endif
 
                                 </tbody>
                             </table>

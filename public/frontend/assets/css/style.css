@@ -1,0 +1,438 @@
+@font-face {
+    font-family: Nexa-Regular;
+    src: url("../fonts/Nexa\ Regular.otf");
+}
+
+@font-face {
+    font-family: Nexa-Bold;
+    src: url("../fonts/Nexa\ Bold.otf");
+}
+
+@font-face {
+    font-family: Snap;
+    src: url("../fonts/Snap.ttf");
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.mainContent {
+    background-image: url("../img/mainBgImg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header .commonWooden {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 150px;
+    width: 220px;
+    position: relative;
+    padding: 26px 0px;
+}
+
+#header table {
+    margin: auto;
+}
+
+#header .commonWooden span.signInText {
+    position: relative;
+    top: 26px;
+    left: 73px;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Bangers", cursive;
+}
+
+#header .commonWooden span.statisticsText {
+    position: absolute;
+    top: 56px;
+    left: 83px;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Bangers", cursive;
+}
+
+#header .commonWooden span.paymentText {
+    position: absolute;
+    top: 74px;
+    left: 70px;
+    font-size: 14px;
+    color: #fff;
+    font-family: "Bangers", cursive;
+}
+
+#header .logo h2 {
+    font-family: "Bangers", cursive;
+    text-align: center;
+    color: #005f90;
+    font-size: 50px;
+}
+
+#header .logo h2 span {
+    font-size: 60px;
+}
+
+#header .logo {
+    background-image: url("../img/logoBadge.png");
+}
+
+#header .loginForm {
+    background-image: url("../img/signIn.png");
+}
+
+#header .statistics {
+    background-image: url("../img/statistics.png");
+}
+
+#header .statistics button {
+    position: absolute;
+    bottom: 24px;
+    left: 62px;
+    background: transparent;
+    border: none;
+    color: #ffff;
+    font-family: Nexa-Regular;
+    font-size: 11px;
+}
+
+#header .payment {
+    background-image: url("../img/payment.png");
+}
+
+.board {
+    background-image: url("../img/btnBoard.png");
+}
+
+#header .loginForm .inputDiv label,
+#header .loginForm .inputDiv input {
+    width: 100%;
+    font-family: Nexa-Regular;
+    outline: none;
+}
+
+#header .loginForm .formDiv {
+    padding-top: 50px;
+}
+
+#header .loginForm .inputDiv input {
+    margin-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    border-radius: 7px;
+}
+
+#header .loginForm .inputDiv label {
+    font-size: 12px;
+    color: #00000085;
+}
+
+#header .loginForm .inputDiv {
+    width: 100%;
+    max-width: 70%;
+    margin: auto;
+}
+
+#header .loginForm .multiBtn {
+    text-align: center;
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header .loginForm .multiBtn button {
+    width: 70px;
+    text-align: center;
+    margin: 0px 5px;
+    background: transparent;
+    border: 1px solid #00000085;
+    color: #00000085;
+}
+
+#header .statistics p {
+    font-family: Nexa-Regular;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 18px;
+    color: #00000085;
+    position: relative;
+    top: 18px;
+}
+
+#header .statistics p b {
+    color: #000;
+}
+
+#header .board.commonWooden .multiBtn {
+    position: relative;
+    top: 30px;
+    left: 58px;
+}
+
+#header .board.commonWooden .multiBtn img {
+    width: 30px;
+}
+
+#startRightNow .midDiv {
+    width: 100%;
+    max-width: 30%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background-image: url("../img/Vector Smart Object-5.png");
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px 30px;
+    z-index: 999999;
+}
+
+#startRightNow .midDiv .boardImg {
+    width: 400px;
+}
+
+#startRightNow .midDiv .rightNow {
+    background-image: url("../img/badgeWooden.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 42px;
+    top: -12px;
+    width: 100%;
+    left: 26%;
+    max-width: 44%;
+    background-size: auto;
+    color: #fff;
+    font-family: "Bangers", cursive;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#startRightNow .midDiv .multiDiv {
+    padding: 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#startRightNow .midDiv p {
+    font-family: "Source Serif Pro", serif;
+    color: #00669b;
+    font-weight: 700;
+}
+
+#startRightNow .midDiv .multiDiv .leftDiv,
+#startRightNow .midDiv .multiDiv .rightDiv {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#startRightNow .midDiv .multiDiv .leftDiv p,
+#startRightNow .midDiv .multiDiv .rightDiv p {
+    text-align: left;
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+#startRightNow .midDiv .multiDiv .leftDiv img,
+#startRightNow .midDiv .multiDiv .rightDiv img {
+    width: 80px;
+}
+
+#startRightNow .midDiv .startNow {
+    background-image: url("../img/badgeWooden.png");
+    background-repeat: no-repeat;
+    margin: auto;
+    height: 42px;
+    width: 100%;
+    max-width: 44%;
+    background-size: auto;
+    color: #fff;
+    font-family: "Bangers", cursive;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#startRightNow .midDiv .startNowView .leftDiv {
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+
+#startRightNow .midDiv .startNowView .leftDiv .imgDiv img {
+    width: 200px;
+}
+
+#startRightNow .midDiv .advantagesList ul {
+    list-style: none;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#startRightNow .midDiv .advantagesList img {
+    width: 65px;
+    margin: 0px 10px;
+    height: 70px;
+}
+
+#startRightNow .midDiv .advantagesList ul li p {
+    font-size: 12px;
+}
+
+#startRightNow .stairDiv {
+    background-image: url("../img/stair.png");
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top center;
+    position: relative;
+    top: -90px;
+    width: 100%;
+    max-width: 30%;
+    margin: auto;
+}
+
+#startRightNow .stairDiv .listContent {
+    position: absolute;
+    top: 200px;
+    left: 3%;
+    width: 100%;
+    text-align: center;
+}
+
+#startRightNow .stairDiv .listContent p {
+    font-family: Snap;
+    color: #3e0f5f;
+    margin-bottom: 10px;
+}
+
+#startRightNow .stairDiv .listContent p:last-child {
+    font-size: 14px;
+}
+
+#startRightNow .stairDiv .secondChild {
+    position: relative;
+    top: 44px;
+}
+
+#startRightNow .stairDiv .thirdChild {
+    position: relative;
+    top: 70px;
+}
+
+#startRightNow .stairDiv .forthChild {
+    position: relative;
+    top: 110px;
+}
+
+#startRightNow .stairDiv .fifthChild {
+    position: relative;
+    top: 165px;
+}
+
+#startRightNow .midDiv .menuBox {
+    background-image: url("../img/menu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100px;
+    right: -450px;
+}
+
+#startRightNow .midDiv .menuBox .listView {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#startRightNow .midDiv .menuBox .listView img {
+    width: 80px;
+}
+
+#startRightNow .midDiv .menuBox .listView .listdiv {
+    margin: 10px;
+}
+
+#startRightNow .midDiv .menuBox .menuList {
+    padding: 45px;
+}
+
+#startRightNow .midDiv .menuBox .menuList p {
+    color: #5e3700;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+/*********** Media Query ************/
+
+@media (max-width: 1400px) {
+    #startRightNow .midDiv {
+        max-width: 50%;
+        background-size: 100% 100%;
+    }
+
+    #header .commonWooden {
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #startRightNow .stairDiv {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #startRightNow .midDiv {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 568px) {
+    #startRightNow .midDiv {
+        min-width: 500px;
+        position: relative;
+        left: 30%;
+    }
+    #startRightNow .midDiv .menuBox .listView img {
+        width: 50px;
+    }
+    #startRightNow .midDiv .menuBox {
+        right: -65%;
+    }
+    #startRightNow .stairDiv {
+        position: relative;
+        left: 50%;
+    }
+    #header .commonWooden {
+        min-width: 200px;
+    }
+    #startRightNow {
+        padding: 80px 0px;
+    }
+}

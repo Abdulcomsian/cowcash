@@ -27,46 +27,55 @@ ALL Users
                                     <tr>
                                         <th class="th-sm">Name</th>
                                         <th class="th-sm">Email</th>
-                                        <th class="th-sm">Phone Number</th>
-                                        <th>Silver Coins</th>
-                                        <th>Gold Coins</th>
-                                        <th>Image</th>
+                                        <th class="th-sm">Phone</th>
+                                        <th class="th-sm">Silver Coins</th>
+                                        <th class="th-sm">Gold Coins</th>
+                                        <th class="th-sm">Referal Link</th>
+                                        <th class="th-sm">Referal User</th>
+                                        <th class="th-sm">Referal Coins</th>
                                         <th class="th-sm">Action
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($users)>0)
                                     @foreach($users as $user)
                                     <tr>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->email}}</td>
-                                        <td>{{$user->phone_Number}}</td>
-                                        <td>{{$user->silver_coins}}
+                                        <td>{{$user->name ?? ''}}</td>
+                                        <td>{{$user->email ?? ''}}</td>
+                                        <td>{{$user->phone_Number ?? ''}}</td>
+                                        <td>{{$user->silver_coins ?? ''}}
                                             <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
                                         </td>
-                                        <td>{{$user->gold_coins}}
+                                        <td>{{$user->gold_coins ?? ''}}
                                             <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
                                         </td>
+                                        <td>{{$user->referal_link ?? ''}}</td>
+                                        <td>{{count($user->totalaffiliate)}}</td>
+                                        <td>{{$user->referal_coins ?? ''}}
+                                            <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
+                                        </td>
                                         <td>
-                                            @if($user->image)
-                                            <img src="{{asset($user->image)}}" width="80px" height="80px" />
-                                            @endif
-                                        </td>
-                                        @if($user->status==0)
-                                        <td class="d-flex">
+                                            @if($user->status==0)
                                             <a href="{{route('user.unblock',$user->id)}}" class="confirm btn btn-danger">
-                                                UnBlock
+                                                <i class="fa fa-unlock"></i> UnBlock
                                             </a>
-                                        </td>
-                                        @else
-                                        <td class="d-flex">
+                                            @else
                                             <a href="{{route('user.block',$user->id)}}" class="confirm btn btn-success">
-                                                Block
+                                                <i class="fa fa-ban"></i> Block
                                             </a>
+                                            @endif
+                                            <a href="{{route('user.cow.details',$user->id)}}"><i class="fa fa-eye"></i></a>
+                                            <a href="{{route('user.referral.details',$user->id)}}" title="User Referals"><i class="fa fa-user-plus"></i></a>
                                         </td>
-                                        @endif
+
                                     </tr>
                                     @endforeach
+                                    @else
+                                    <tr>
+                                        <td colspan="8" class="text-center">No User Found!</td>
+                                    </tr>
+                                    @endif
 
                                 </tbody>
                             </table>
