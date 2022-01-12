@@ -43,9 +43,9 @@ User Cows
                                         <td>{{$order->user->name ?? ''}}</td>
                                         <td>{{$order->cow->cowName ?? ''}}</td>
                                         <td>{{$order->cow->color ?? ''}}</td>
-                                        <td>{{$order->total_milk ?? ''}}</td>
-                                        <td>{{$order->available_milk ?? ''}}</td>
-                                        <td>{{$order->sold_milk ?? ''}}</td>
+                                        <td>{{$order->total_milk ?? ''}} Ltrs</td>
+                                        <td>{{$order->available_milk ?? ''}} Ltrs</td>
+                                        <td>{{$order->sold_milk ?? ''}} Ltrs</td>
                                     </tr>
                                     @endforeach
                                     @else

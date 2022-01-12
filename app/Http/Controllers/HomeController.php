@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\UserCows;
 use App\Models\User;
+use App\Models\Cows;
 use DB;
 use Carbon\Carbon;
 use Auth;
