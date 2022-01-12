@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\UserOrder;
 use App\Models\UserCows;
 use Auth;
+use DB;
 
 class UserOrderController extends Controller
 {
@@ -53,6 +54,28 @@ class UserOrderController extends Controller
         } catch (\Exception $exception) {
             // toastError('Something went wrong,try again');
             // return back();
+        }
+    }
+
+    //sold milk script
+    public function sold_milk(Request $request)
+    {
+        $milk = 10;
+        //let supoose 1 litter milk=5 coins
+        $soldmilk = $milk * 5;
+        $cows_id = 2;
+        $cowsdetail = UserCows::where(['user_id' => 2, 'cow_id' => $cows_id])->first();
+        if ($cowsdetail->total_milk >= $milk) {
+            UserCows::where(['user_id' => 2, 'cow_id' => $cows_id])->update([
+                'sold_milk' => DB::raw('sold_milk +' .  $milk . ''),
+                'total_milk' => DB::raw('total_milk -' .  $milk . ''),
+                'available_milk' => DB::raw('total_milk -0'),
+            ]);
+            $user = Auth::user();
+            $user->silver_coins = $user->silver_coins + $soldmilk;
+            $user->save();
+        } else {
+            echo "You have not sufficient milk for sold";
         }
     }
 }

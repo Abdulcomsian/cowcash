@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
 //frontend Farmer user routes here
 Route::group(['middleware' => ['auth'], 'prefix' => 'User'], function () {
     Route::get('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
+    Route::get('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('sold.milk');
 });
 
 Auth::routes();
