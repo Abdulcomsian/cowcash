@@ -71,8 +71,9 @@ class RegisterController extends Controller
         if (!empty(Cookie::get('referral'))) {
             $referred_by = Cookie::get('referral');
         }
+
         $affiliateid = Str::random(10);
-        $referal_link = env('APP_URL', '') . '/register/?ref=' . $affiliateid;
+        $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -83,7 +84,25 @@ class RegisterController extends Controller
             'referred_by' => $referred_by,
         ]);
         if ($user) {
-            User::where('affiliate_id', $referred_by)->update(['silver_coins' => DB::raw('silver_coins +30'), 'referal_coins' => DB::raw('referal_coins +30')]);
+            //check parent
+            if ($referred_by != '') {
+                //parent have got 30 coins
+                User::where('affiliate_id', $referred_by)->update(['silver_coins' => DB::raw('silver_coins +30'), 'referal_coins' => DB::raw('referal_coins +30')]);
+                $userlevel1parent = User::where(['affiliate_id' => $referred_by])->first();
+                if ($userlevel1parent->referred_by != NULL) {
+
+                    $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
+                    if ($userlevel2parent->referred_by != NULL) {
+                        User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins +20'), 'referal_coins' => DB::raw('referal_coins +20')]);
+                        $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
+                        if ($userlevel3parent) {
+                            User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins +10'), 'referal_coins' => DB::raw('referal_coins +10')]);
+                        }
+                    } else {
+                        User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins +20'), 'referal_coins' => DB::raw('referal_coins +20')]);
+                    }
+                }
+            }
             return $user;
         }
     }
