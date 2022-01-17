@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\Country;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -56,7 +57,16 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'country_id' => ['required'],
+            'currency' => ['required'],
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+
+        $countries = Country::get();
+        return view('auth.register', compact('countries'));
     }
 
     /**
@@ -67,7 +77,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $referred_by = '';
+        $referred_by = NULL;
         if (!empty(Cookie::get('referral'))) {
             $referred_by = Cookie::get('referral');
         }
@@ -82,10 +92,12 @@ class RegisterController extends Controller
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'referred_by' => $referred_by,
+            'country_id' => $data['country_id'],
+            'currency' => $data['currency'],
         ]);
         if ($user) {
             //check parent
-            if ($referred_by != '') {
+            if ($referred_by != NULL) {
                 //parent have got 30 coins
                 User::where('affiliate_id', $referred_by)->update(['silver_coins' => DB::raw('silver_coins +30'), 'referal_coins' => DB::raw('referal_coins +30')]);
                 $userlevel1parent = User::where(['affiliate_id' => $referred_by])->first();

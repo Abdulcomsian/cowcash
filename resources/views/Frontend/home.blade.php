@@ -218,15 +218,5 @@ Home Page
 @endsection
 @section('script')
 <script>
-    $(document).on('click', '.Registerbtn', function() {
-        $("#login").fadeOut(500);
-        $("#register").fadeIn(1000);
-    })
-
-    $(document).on('click', '.Loginbtn', function() {
-        $("#register").fadeOut(500);
-        $("#login").fadeIn(1000);
-
-    })
 </script>
 @endsection

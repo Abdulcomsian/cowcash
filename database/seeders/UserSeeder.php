@@ -24,6 +24,7 @@ class UserSeeder extends Seeder
             'email_verified_at' => '2021-07-30',
             'password' => bcrypt('admin123'),
             'role' => 'admin',
+            'country_id' => '170',
         ]);
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
@@ -36,6 +37,8 @@ class UserSeeder extends Seeder
             'silver_coins' => 10000,
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
+            'country_id' => '170',
+            'currency' => '1',
         ]);
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
@@ -48,6 +51,8 @@ class UserSeeder extends Seeder
             'silver_coins' => 10000,
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
+            'country_id' => '170',
+            'currency' => '1',
         ]);
 
         $packages = [
