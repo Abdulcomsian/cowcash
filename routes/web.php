@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'User'], function () {
     Route::get('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('sold.milk');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 //route for calculating hour per milk using cron job

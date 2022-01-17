@@ -29,6 +29,9 @@ class CreateUsersTable extends Migration
             $table->string('referal_link')->nullable();
             $table->integer('referal_coins')->default(0);
             $table->tinyInteger('status')->default(1);
+            $table->integer('currency')->nullable();
+            $table->unsignedBigInteger('country_id');
+            $table->foreign('country_id')->references('id')->on('countries');
             $table->rememberToken();
             $table->timestamps();
         });

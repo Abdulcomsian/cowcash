@@ -29,6 +29,7 @@ Cow Cash | Farming
                     <div class="flex-grow-1 valtop">
                       <div class="heading">Total Users</div>
                       <div class="cont-val">{{$totalusers ?? ''}}</div>
+                      {{ __('auth.Name') }}
                     </div>
                   </div>
                 </div>
@@ -77,8 +78,6 @@ Cow Cash | Farming
               </div>
             </div>
           </div>
-          <!--End here-->
-
         </div>
 
       </div>
