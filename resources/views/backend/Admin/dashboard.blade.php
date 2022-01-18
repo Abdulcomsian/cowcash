@@ -27,9 +27,8 @@ Cow Cash | Farming
                   <div class="d-flex align-content-center align-middle bd-highlight">
                     <div class="icon1 text-center"><img src="{{asset('images/specialist-user.png')}}"></div>
                     <div class="flex-grow-1 valtop">
-                      <div class="heading">Total Users</div>
+                      <div class="heading">{{__('auth.Total Users')}}</div>
                       <div class="cont-val">{{$totalusers ?? ''}}</div>
-                      {{ __('auth.Name') }}
                     </div>
                   </div>
                 </div>

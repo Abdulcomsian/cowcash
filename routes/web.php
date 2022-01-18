@@ -6,12 +6,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Frontend\UserOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use PhpParser\Node\Expr\FuncCall;
+use App\Models\Country;
 
 
-//front end home page
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
 
 //Admin middlewware and admin routes
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function () {
@@ -30,14 +29,47 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/dashboard', [AdminController::class, 'dashboard']);
 });
 
-//frontend Farmer user routes here
+
+
+// Frontend user farmer work
+
+
+//front end home page without login
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/payments', function () {
+    return view('Frontend.payments');
+});
+Route::get('/rules', function () {
+    return view('Frontend.rules');
+});
+Route::get('/about', function () {
+    return view('Frontend.about');
+});
+Route::get('/calculate', function () {
+    return view('Frontend.calculate');
+});
+Route::get('/support', function () {
+    return view('Frontend.support');
+});
+// registraion url
+Route::get('User/registration', function () {
+    $countries = Country::get();
+    return view('Frontend.registration', compact('countries'));
+});
+
+
+
+
+
 Route::group(['middleware' => ['auth'], 'prefix' => 'User'], function () {
+
     Route::get('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
     Route::get('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('sold.milk');
 });
 
-Auth::routes(['verify' => true]);
 
+Auth::routes(['verify' => true]);
 
 //route for calculating hour per milk using cron job
 Route::get('calculate-milk-per-houre', [HomeController::class, 'calculate_milk_per_hour'])->name('calculate.milk');

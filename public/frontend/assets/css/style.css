@@ -42,19 +42,20 @@ a:hover {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 150px;
-    width: 220px;
+    width: 22%;
     position: relative;
     padding: 26px 0px;
 }
 
 #header table {
     margin: auto;
+    width: auto;
 }
 
 #header .commonWooden span.signInText {
-    position: relative;
-    top: 26px;
-    left: 73px;
+    position: absolute;
+    top: 24% !important;
+    left: 35%;
     font-size: 14px;
     color: #fff;
     font-family: "Bangers", cursive;
@@ -62,8 +63,8 @@ a:hover {
 
 #header .commonWooden span.statisticsText {
     position: absolute;
-    top: 56px;
-    left: 83px;
+    top: 26%;
+    left: 38%;
     font-size: 14px;
     color: #fff;
     font-family: "Bangers", cursive;
@@ -71,8 +72,8 @@ a:hover {
 
 #header .commonWooden span.paymentText {
     position: absolute;
-    top: 74px;
-    left: 70px;
+    top: 34%;
+    left: 33%;
     font-size: 14px;
     color: #fff;
     font-family: "Bangers", cursive;
@@ -103,8 +104,8 @@ a:hover {
 
 #header .statistics button {
     position: absolute;
-    bottom: 24px;
-    left: 62px;
+    bottom: 10%;
+    left: 27%;
     background: transparent;
     border: none;
     color: #ffff;
@@ -185,11 +186,15 @@ a:hover {
 #header .board.commonWooden .multiBtn {
     position: relative;
     top: 30px;
-    left: 58px;
+    left: 22%;
 }
 
 #header .board.commonWooden .multiBtn img {
-    width: 30px;
+    width: 20px;
+}
+
+#startRightNow {
+    margin-top: 120px;
 }
 
 #startRightNow .midDiv {
@@ -201,7 +206,7 @@ a:hover {
     position: relative;
     background-image: url("../img/Vector Smart Object-5.png");
     height: 600px;
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 50px 30px;
     z-index: 999999;
@@ -305,9 +310,9 @@ a:hover {
 
 #startRightNow .stairDiv {
     background-image: url("../img/stair.png");
-    height: 800px;
+    height: 100%;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 100% 100%;
     background-position: top center;
     position: relative;
     top: -90px;
@@ -336,22 +341,22 @@ a:hover {
 
 #startRightNow .stairDiv .secondChild {
     position: relative;
-    top: 44px;
+    top: 60px;
 }
 
 #startRightNow .stairDiv .thirdChild {
     position: relative;
-    top: 70px;
+    top: 100px;
 }
 
 #startRightNow .stairDiv .forthChild {
     position: relative;
-    top: 110px;
+    top: 140px;
 }
 
 #startRightNow .stairDiv .fifthChild {
     position: relative;
-    top: 165px;
+    top: 205px;
 }
 
 #startRightNow .midDiv .menuBox {
@@ -386,6 +391,637 @@ a:hover {
     color: #5e3700;
     font-family: "Poppins", sans-serif;
     font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#startRightNow .midDiv .multiBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 30px 0px 40px;
+}
+
+#startRightNow .midDiv .multiBox .imgBoxInput img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+#startRightNow .midDiv .multiBox .imgBoxInput input {
+    width: 70px;
+    border: 1px solid #c68d40;
+    border-radius: 3px;
+}
+
+.yourIncome span,
+.detailBox p:last-child {
+    color: #5e3700 !important;
+    font-weight: 600 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+button.signUpBtn {
+    background: #005c8b;
+    width: 150px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px 5px 40px 40px;
+    margin-bottom: 30px;
+}
+
+.detailBox {
+    padding: 30px 20px 0px;
+}
+
+.detailBox p {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #000 !important;
+    font-weight: 300 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.notePara {
+    background-color: #e6ceaf;
+    padding: 10px;
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    text-align: left;
+    color: #000 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 12px;
+}
+
+.dailyBonusTable table {
+    width: 100%;
+}
+
+.dailyBonusTable table thead td {
+    color: #5e3700 !important;
+    font-weight: 600;
+}
+
+.dailyBonusTable table tbody td,
+.dailyBonusTable table thead td {
+    text-align: center;
+}
+
+.dailyBonustwo .bgColor p {
+    color: #000 !important;
+    font-weight: 400 !important;
+}
+
+.commonBox {
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e3ab5d;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.commonBox .detailDiv {
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.milkWhareHouse .commonBox .detailDiv .title {
+    font-family: "Source Serif Pro", serif !important;
+    color: #5e3700 !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+}
+
+.commonBox img {
+    width: 80px;
+}
+
+.commonBox .detailDiv p,
+.profileDetails p {
+    color: #5e3700 !important;
+    font-weight: 300 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.commonBox .detailDiv hr {
+    border: 1px solid #e3ab5d;
+}
+
+.profileDetails {
+    padding: 60px 0px;
+}
+
+.profileDetails .profileTable {
+    margin: 50px 20px;
+}
+
+.profileDetails .profileTable table {
+    width: 100%;
+}
+
+.profileDetails .profileTable table tr td {
+    padding: 5px;
+}
+
+.profileDetails .profileTable table tr td {
+    color: #5e3700 !important;
+    font-weight: 400 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.affiliateProgram p {
+    font-family: Nexa-Regular !important;
+    color: #5e3700 !important;
+    font-weight: 400 !important;
+    font-size: 12px;
+}
+
+.affiliateProgram .tabeDiv {
+    display: flex;
+    width: 100%;
+    border: 1px solid #e3ab5d;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.dailyBonus .notePara {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.affiliateProgram .tabeDiv p {
+    width: 50%;
+    padding: 5px;
+}
+
+.affiliateProgram .tabeDiv p.active {
+    background-color: #ffddb4;
+}
+
+.affiliateProgram {
+    padding: 30px 20px;
+}
+
+.affiliateProgram tbody tr:nth-child(even),
+.paymentTable tbody tr:nth-child(even) {
+    background: #fff8ea;
+}
+
+.affiliateProgram tbody tr:nth-child(odd),
+.paymentTable tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+.affiliateProgram td {
+    font-family: Nexa-Regular !important;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.linkText {
+    border: 1px solid #e3ab5d;
+    padding: 5px;
+    max-width: 80%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.linkText a {
+    color: #000;
+}
+
+table {
+    width: 100%;
+    order: none;
+    border-collapse: collapse;
+}
+
+.amountDiv table thead td {
+    text-align: center;
+}
+
+.paymentTable table thead tr {
+    background-color: #5f3a0f;
+}
+
+.paymentTable table thead tr td {
+    color: #fff;
+    padding: 5px;
+    font-family: "Source Serif Pro", serif;
+    font-size: 14px;
+}
+
+.paymentTable table tr td {
+    text-align: center;
+    padding: 5px;
+    font-family: "Source Serif Pro", serif;
+    font-size: 14px;
+}
+
+.referralPromotion .detailBox p {
+    color: #000 !important;
+    font-weight: 300 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.referralPromotion .title {
+    text-align: center !important;
+}
+
+.referralPromotion .title span {
+    text-align: center;
+    color: #5e3700 !important;
+    font-weight: 600 !important;
+    font-family: Nexa-Bold !important;
+}
+
+.referralPromotion .detailBox p b,
+.referralLink p b,
+.alreadyPurchased p b {
+    color: #5e3700 !important;
+    font-family: Nexa-Bold !important;
+}
+
+.referralLink p,
+.totalReferrals p,
+.registration .detailBox p,
+.registration .formDiv .acceptText,
+.rulesProgram .rulesDiv p,
+.changeEmail .bgColor p,
+.cowShop .detailDiv p,
+.alreadyPurchased p,
+.cowShop .multipleDiv .commonDiv .detailCowDiv p,
+.milkWhareHouse .milkWhareHouse p,
+.aboutSection .bgColor p,
+.dailyBonus tbody td,
+.dailyBonustwo .bgColor p,
+.calculateIncome .bgColor p {
+    color: #000 !important;
+    font-weight: 300 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.advertisingBalance {
+    background-color: #fdf1e4;
+    border: 1px solid #fdd29e;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.dailyBonus table {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.advertisingBalance span,
+.rulesProgram .rulesDiv .title,
+.setting .formDiv .title,
+.profileDetails p.title,
+.profileDetails p,
+.milkWhareHouse .notePara,
+.dailyBonus thead td,
+.calculateIncome .title {
+    color: #7d3701 !important;
+    font-family: Nexa-Bold !important;
+    font-size: 14px;
+}
+
+.calculateIncome .title {
+    text-align: center !important;
+}
+
+.commonBtn {
+    background-image: url("../img/commonBtn.png");
+    background-color: transparent;
+    border: none;
+    width: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    padding: 16px 21px 20px;
+    color: #fbeabf;
+    font-family: Nexa-Regular !important;
+}
+
+.totalReferrals {
+    margin: 30px 20px;
+}
+
+.totalReferrals table {
+    margin: 20px 0px;
+}
+
+.totalReferrals thead {
+    background-color: #e5cdaf;
+}
+
+.totalReferrals thead tr td {
+    color: #7d3701 !important;
+    font-weight: 300 !important;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+}
+
+.registration .detailBox p {
+    text-align: center;
+}
+
+.registration .formDiv .inputDiv,
+.setting .formDiv .inputDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.registration .formDiv .inputDiv label,
+.registration .formDiv .inputDiv input,
+.registration .formDiv .inputDiv select,
+.setting .formDiv .inputDiv label,
+.setting .formDiv .inputDiv input,
+.setting .formDiv .inputDiv select {
+    width: 50%;
+}
+
+.registration .formDiv .inputDiv label,
+.setting .formDiv .inputDiv label,
+.cowShop .multipleDiv .commonDiv .detailCowDiv label {
+    text-align: left;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.registration .formDiv,
+.setting .formDiv {
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.registration .formDiv input,
+.registration .formDiv .inputDiv select,
+.setting .formDiv input,
+.setting .formDiv .inputDiv select {
+    border: 1px solid #ffd9a9;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.registration .formDiv .acceptText input {
+    width: auto;
+}
+
+.registration .formDiv .acceptText {
+    display: flex;
+    align-items: center;
+    justify-self: unset;
+}
+
+.rulesProgram .rulesDiv p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.rulesProgram .rulesDiv {
+    padding: 20px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.rulesProgram .rulesDiv p a {
+    color: #ffd9a9;
+    font-family: Nexa-Bold !important;
+}
+
+.setting .formDiv .title {
+    margin-bottom: 20px;
+}
+
+.setting .formDiv hr {
+    border: 1px solid #ffd9a9;
+}
+
+.cowShop .detailDiv p {
+    text-align: left;
+}
+
+.cowShop .detailDiv {
+    padding: 20px;
+}
+
+.alreadyPurchased {
+    background-color: #e6ceaf;
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cowShop .multipleDiv {
+    height: 250px;
+    overflow: scroll;
+}
+
+.cowShop .multipleDiv .commonDiv {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ffd9a9;
+    width: 100%;
+    max-width: 80%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.cowShop .multipleDiv .commonDiv .detailCowDiv {
+    text-align: left;
+}
+
+.cowShop .multipleDiv .commonDiv .detailCowDiv h5 {
+    color: #7d3701 !important;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.cowShop .multipleDiv .commonDiv .detailCowDiv p {
+    padding-bottom: 5px;
+}
+
+.cowShop .multipleDiv .commonDiv .detailCowDiv input {
+    border: 1px solid #ffd9a9;
+    padding: 5px;
+    border-radius: 6px;
+    width: 60px;
+}
+
+.cowShop .multipleDiv .commonDiv .detailCowDiv button {
+    padding: 6px 18px;
+    background: #00669b;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.bgColor {
+    background-image: url(../img/bgColor.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    height: 86%;
+    overflow: scroll;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 35px !important;
+    height: 15px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: -6px;
+    bottom: 2px;
+
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #4caf50;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.mobileMenu {
+    height: 100%;
+    position: fixed;
+    width: 300px;
+    z-index: 999999999;
+    background: #ead5b4;
+    top: 78px;
+    display: none;
+    left: 0;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    box-shadow: 0px 13px 10px rgb(0 0 0 / 70%);
+    overflow: auto;
+    border-top: 1px solid #d1b7a2;
+}
+
+.mobileMenu ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.headerMenu {
+    display: none;
+    width: 80%;
+}
+
+.headerMenu ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+}
+
+.headerMenu ul li {
+    padding: 0px 7px;
+    text-align: center;
+}
+
+.headerMenu ul li p {
+    color: #7d3701 !important;
+    font-weight: 300 !important;
+    font-family: Nexa-Bold !important;
+    font-size: 12px;
+}
+
+.headerMenu ul li .listdiv img {
+    width: 50px;
+}
+
+.menuBtn {
+    background: #f8d06b;
+    z-index: 99999;
+    padding: 8px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    color: #b57a4b;
+    display: none;
+    border: 1px solid #b57a4b;
+    box-shadow: 0px 2.2px 1px -1px #4d3a26 !important;
+    height: 20%;
 }
 
 /*********** Media Query ************/
@@ -395,10 +1031,6 @@ a:hover {
         max-width: 50%;
         background-size: 100% 100%;
     }
-
-    #header .commonWooden {
-        min-width: 220px;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -407,32 +1039,202 @@ a:hover {
     }
 }
 
+@media (max-width: 992px) {
+    #startRightNow .stairDiv {
+        max-width: 60%;
+    }
+
+    #header table {
+        min-width: 1200px;
+    }
+}
+
 @media (max-width: 768px) {
+    #startRightNow .stairDiv .listContent p {
+        font-size: 12px;
+    }
+
+    #startRightNow .stairDiv .listContent p:last-child {
+        font-size: 10px;
+    }
+
+    #startRightNow .stairDiv .listContent .firstChild {
+        position: relative;
+        top: -8px;
+    }
+
+    #header {
+        display: flex;
+    }
+
+    #header .statistics {
+        position: relative;
+        top: -7px;
+    }
+
+    #startRightNow .stairDiv .secondChild {
+        top: 40px;
+    }
+
+    #startRightNow .stairDiv .thirdChild {
+        top: 75px;
+    }
+
+    #startRightNow .stairDiv .forthChild {
+        top: 110px;
+    }
+
+    #startRightNow .stairDiv .fifthChild {
+        top: 180px;
+    }
+
+    #header .statistics button {
+        bottom: 11%;
+        left: 30%;
+    }
+
+    #header .payment {
+        top: -16px;
+    }
+
+    #header .board {
+        top: -27px;
+    }
+
+    #header .board.commonWooden .multiBtn {
+        top: 45%;
+        left: 26%;
+    }
+
+    #header .board.commonWooden .multiBtn img {
+        width: 33px;
+    }
+
+    #header .commonWooden {
+        width: 100%;
+        max-width: 80%;
+        margin: auto;
+    }
+
+    #header .statistics p {
+        position: relative;
+        top: 53px;
+    }
+
+    .menuBtn,
+    .headerMenu {
+        display: block;
+    }
+
+    #header table,
+    #startRightNow .midDiv .menuBox {
+        display: none;
+    }
+
     #startRightNow .midDiv {
         max-width: 70%;
+    }
+
+    #header {
+        padding: 0px 20px;
+        margin-bottom: 50px;
+        background: #ead5b4;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 99999999;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
 @media (max-width: 568px) {
-    #startRightNow .midDiv {
-        min-width: 500px;
-        position: relative;
-        left: 30%;
+    .menuBtn {
+        background: #f8d06b;
+        z-index: 99999;
+        padding: 5px 10px;
+        font-size: 14px;
     }
+
+    .headerMenu ul li .listdiv img {
+        width: 20px;
+        margin-bottom: 5px;
+    }
+
+    .headerMenu ul li p {
+        font-size: 8px;
+    }
+
+    #startRightNow .midDiv p {
+        font-size: 12px;
+    }
+
+    #startRightNow .midDiv,
+    #startRightNow .stairDiv {
+        max-width: 80%;
+    }
+
     #startRightNow .midDiv .menuBox .listView img {
         width: 50px;
     }
+
     #startRightNow .midDiv .menuBox {
         right: -65%;
     }
-    #startRightNow .stairDiv {
-        position: relative;
-        left: 50%;
-    }
+
     #header .commonWooden {
         min-width: 200px;
     }
+
     #startRightNow {
         padding: 80px 0px;
+    }
+
+    #startRightNow .midDiv .multiDiv .leftDiv img,
+    #startRightNow .midDiv .multiDiv .rightDiv img {
+        width: 40px;
+    }
+
+    #startRightNow .midDiv .advantagesList img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #startRightNow .midDiv .startNowView .leftDiv .imgDiv img {
+        width: 120px;
+    }
+
+    #startRightNow .midDiv .startNowView .leftDiv,
+    #startRightNow .midDiv .advantagesList ul {
+        padding: 0px;
+    }
+
+    #startRightNow .midDiv .multiDiv .leftDiv p,
+    #startRightNow .midDiv .multiDiv .rightDiv p {
+        margin-left: 5px;
+    }
+
+    #startRightNow {
+        margin-top: 10px;
+    }
+
+    #startRightNow .stairDiv .listContent .firstChild {
+        top: 20px;
+    }
+
+    #startRightNow .stairDiv .secondChild {
+        top: 80px;
+    }
+
+    #startRightNow .stairDiv .thirdChild {
+        top: 130px;
+    }
+
+    #startRightNow .stairDiv .forthChild {
+        top: 200px;
+    }
+
+    #startRightNow .stairDiv .fifthChild {
+        top: 260px;
     }
 }

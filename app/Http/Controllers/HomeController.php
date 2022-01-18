@@ -27,6 +27,7 @@ class HomeController extends Controller
     }
 
 
+
     //cron job for calculating per hour milk cow and user should be active
     public function calculate_milk_per_hour()
     {
