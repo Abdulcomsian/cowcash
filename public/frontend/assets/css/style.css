@@ -1024,6 +1024,53 @@ input:checked + .slider:before {
     height: 20%;
 }
 
+.loginUser .addFunds {
+    position: relative;
+    top: -15px;
+    left: 19px;
+}
+
+.loginUser .withDrawFunds {
+    position: relative;
+    top: -4px;
+    left: 20px;
+}
+
+.loginUser .myProfile {
+    position: relative;
+    left: 20px;
+    top: 9px;
+}
+
+.loginUser .accountSetting {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.loginUser .signInText {
+    left: 40% !important;
+}
+#header .loginUser {
+    min-width: 115px;
+}
+.statistics.loginUser p {
+    display: block !important;
+    text-align: center;
+    position: relative;
+    top: 27px !important;
+}
+.loginUser .paymentText {
+    left: 42% !important;
+}
+.payment.loginUser p {
+    position: relative;
+    top: 36px;
+    text-align: center;
+    font-family: Nexa-Regular;
+    font-size: 12px;
+    padding: 3px 18px;
+    color: #00000085;
+}
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
@@ -1050,6 +1097,24 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+    .loginUser .addFunds {
+        top: 0px;
+    }
+    .loginUser .withDrawFunds {
+        top: 19px;
+    }
+    .loginUser .myProfile {
+        top: 36px;
+    }
+    .loginUser .accountSetting {
+        top: 52px;
+    }
+    .statistics.loginUser p {
+        top: 52px !important;
+    }
+    .payment.loginUser p {
+        top: 80px;
+    }
     #startRightNow .stairDiv .listContent p {
         font-size: 12px;
     }

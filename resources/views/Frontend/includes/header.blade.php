@@ -27,7 +27,7 @@
                              </div>
                              <div class="multiBtn">
                                  <button type="submit" class="cursor-pointer">Login</button>
-                                 <a href="{{url('User/registration')}}" class="cursor-pointer">Register</a>
+                                 <a href="{{url('account/registration')}}" class="cursor-pointer">Register</a>
                              </div>
                          </form>
                      </div>
@@ -37,7 +37,7 @@
                      <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                      <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                      <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                     <a href="{{url('User/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                     <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
                  </div>
                  <div class="payment commonWooden">
                      <span class="paymentText">Payment System</span>
@@ -125,7 +125,7 @@
                          </div>
                          <div class="multiBtn">
                              <button type="submit" class="cursor-pointer">Login</button>
-                             <a href="{{url('User/registration')}}"><button type="button" class="cursor-pointer">Register</button></a>
+                             <a href="{{url('account/registration')}}"><button type="button" class="cursor-pointer">Register</button></a>
                          </div>
                      </form>
                  </div>
@@ -135,7 +135,7 @@
                  <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                  <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                  <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                 <a href="{{url('User/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                 <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
 
              </td>
              <td class="payment commonWooden">
@@ -166,37 +166,56 @@
      <div class="mobileMenu" style="display: none;">
          <ul>
              <li>
-                 <div class="loginForm commonWooden">
-                     <span class="signInText">Login</span>
+                 <div class="loginForm commonWooden loginUser">
+                     <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
                      <div class="formDiv">
-                         <form id="login" method="POST" action="{{route('login')}}">
-                             @csrf
-                             <div class="inputView">
-                                 <div class="inputDiv">
-                                     <label for="">Email</label>
-                                     <input type="text" name="email" id="email" required>
-                                 </div>
-                                 <div class="inputDiv">
-                                     <label for="">Password</label>
-                                     <input type="text" name="password" id="password" required>
-                                 </div>
+                         <div class="inputView">
+                             <div class="inputDiv addFunds">
+                                 <label for="">{{\Auth::user()->silver_coins ?? ''}} [Add Funds]</label>
                              </div>
-                             <div class="multiBtn">
-                                 <button type="submit" class="cursor-pointer">Login</button>
-                                 <a href="{{url('User/registration')}}" class="cursor-pointer">Register</a>
+                             <div class="inputDiv withDrawFunds">
+                                 <label for="">0.0 [Withdraw Funds]</label>
+
                              </div>
-                         </form>
+                             <a href="{{url('/account')}}" class="cursor-pointer">
+                                 <div class="inputDiv myProfile">
+                                     <label for="">Profile</label>
+                                 </div>
+                             </a>
+                             <a href="{{url('account/settings')}}" class="cursor-pointer">
+                                 <div class="inputDiv accountSetting">
+                                     <label for="">Account Settings</label>
+
+                                 </div>
+                             </a>
+                         </div>
                      </div>
                  </div>
-                 <div class="statistics commonWooden">
-                     <span class="statisticsText">statistics</span>
-                     <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
-                     <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
-                     <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                     <a href="{{url('User/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                 <div class="statistics commonWooden loginUser">
+                     <span class="statisticsText">MY FARM</span>
+                     <a href="{{url('account/farm')}}">
+                         <p>Buy Cows</p>
+                     </a>
+                     <a href="{{url('account/store')}}">
+                         <p>Milk Wearhouse</p>
+                     </a>
+                     <a href="{{url('account/market')}}">
+                         <p>Milk Selling</p>
+                     </a>
+                     <a href="{{url('account/bonus')}}">
+                         <p>Daily Bonus</p>
+                     </a>
                  </div>
-                 <div class="payment commonWooden">
-                     <span class="paymentText">Payment System</span>
+                 <div class="payment commonWooden loginUser">
+                     <span class="paymentText">Other</span>
+                     <a href="{{url('account/promotion')}}">
+                         <p>Referral Promotion</p>
+                     </a>
+                     <a href="{{url('account/referal')}}">
+                         <p>My referrals</p>
+                     </a>
+                     <p>Promo materials</p>
+                     <p>Calculate Income</p>
 
                  </div>
                  <div class="board commonWooden">
@@ -264,25 +283,59 @@
              <td class="logo commonWooden">
                  <h2><span>CASH</span> <br>COW</h2>
              </td>
-             <td class="loginForm commonWooden">
+             <td class="loginForm commonWooden loginUser">
                  <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
-                 <a href="">
-                     <p>Add funds</p>
+                 <div class="formDiv">
+                     <div class="inputView">
+                         <div class="inputDiv addFunds">
+                             <label for="">{{\Auth::user()->silver_coins ?? ''}} [Add Funds]</label>
+                         </div>
+                         <div class="inputDiv withDrawFunds">
+                             <label for="">0.0 [Withdraw Funds]</label>
+
+                         </div>
+                         <a href="{{url('/account')}}" class="cursor-pointer">
+                             <div class="inputDiv myProfile">
+                                 <label for="">Profile</label>
+                             </div>
+                         </a>
+                         <a href="{{url('account/settings')}}" class="cursor-pointer">
+                             <div class="inputDiv accountSetting">
+                                 <label for="">Account Settings</label>
+
+                             </div>
+                         </a>
+                     </div>
+                 </div>
+             </td>
+             <td class="statistics commonWooden loginUser">
+                 <span class="statisticsText">MY FARM</span>
+                 <a href="{{url('account/farm')}}">
+                     <p>Buy Cows</p>
+                 </a>
+                 <a href="{{url('account/store')}}">
+                     <p>Milk Wearhouse</p>
+                 </a>
+                 <a href="{{url('account/market')}}">
+                     <p>Milk Selling</p>
+                 </a>
+                 <a href="{{url('account/bonus')}}">
+                     <p>Daily Bonus</p>
                  </a>
              </td>
-             <td class="statistics commonWooden">
-                 <span class="statisticsText">statistics</span>
-                 <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
-                 <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
-                 <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                 <a href="{{url('User/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+             <td class="payment commonWooden loginUser">
+                 <span class="paymentText">Other</span>
+                 <a href="{{url('account/promotion')}}">
+                     <p>Referral Promotion</p>
+                 </a>
+                 <a href="{{url('account/referal')}}">
+                     <p>My referrals</p>
+                 </a>
+                 <p>Promo materials</p>
+                 <p>Calculate Income</p>
 
              </td>
-             <td class="payment commonWooden">
-                 <span class="paymentText">Payment System</span>
-
-             </td>
-             <td class="board commonWooden">
+             <td class="board commonWooden loginUser">
                  <div class="multiBtn">
                      <img src="{{asset('frontend/assets/img/Euro Coin.png')}}" alt="" class="img-fluid">
                      <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">

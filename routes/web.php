@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CowsController;
 use App\Http\Controllers\Admin\PackagesController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Frontend\FarmController;
 use App\Http\Controllers\Frontend\UserOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -52,8 +53,14 @@ Route::get('/calculate', function () {
 Route::get('/support', function () {
     return view('Frontend.support');
 });
+
+
+
+
+
+
 // registraion url
-Route::get('User/registration', function () {
+Route::get('account/registration', function () {
     $countries = Country::get();
     return view('Frontend.registration', compact('countries'));
 });
@@ -62,10 +69,22 @@ Route::get('User/registration', function () {
 
 
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'User'], function () {
+Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
+    //cow shop
+    Route::get('/farm', [FarmController::class, 'index'])->name('account.farm');
+    Route::post('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
+    Route::get('/store', [FarmController::class, 'milk_wearhouse'])->name('account.wearhouse');
+    Route::post('/collect-milk', [FarmController::class, 'collect_milk'])->name('collect.milk');
+    Route::get('/market', [FarmController::class, 'Sell_milk'])->name('account.market');
+    Route::post('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('account.sold.milk');
+    Route::get('/',  [UserOrderController::class, 'Profile'])->name('account');
+    Route::get('/settings', [UserOrderController::class, 'Settings'])->name('account.settings');
+    Route::get('/bonus', [UserOrderController::class, 'Bonus'])->name('account.bonus');
+    Route::get('/referal', [UserOrderController::class, 'Referal'])->name('account.referal');
 
-    Route::get('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
-    Route::get('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('sold.milk');
+    Route::get('/promotion', function () {
+        return view('Frontend.referal-promotions');
+    });
 });
 
 
