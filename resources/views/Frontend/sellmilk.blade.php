@@ -7,6 +7,10 @@
      .cursor-pointer {
          cursor: pointer;
      }
+
+     .bgColor {
+         overflow: hidden;
+     }
  </style>
  @endsection
 
@@ -42,14 +46,14 @@
                                  @php
                                  $goldbar=$sell->total_milk/1;
                                  @endphp
-                                 <td>{{$goldbar ?? ''}}</td>
+                                 <td> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> {{$goldbar ?? ''}}</td>
                              </tr>
                              <input type="hidden" name="item[]" value="{{$sell->id}}" readonly />
                              @endforeach
                          </tbody>
                      </table>
                  </div>
-                 <button class="signUpBtn" type="submit">See All</button>
+                 <button class="signUpBtn cursor-pointer" type="submit">See All</button>
              </form>
          </div>
 

@@ -56,7 +56,7 @@
                    <p style="margin-top: 20px;">Your referral link:</p>
                    <p class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p>
                    <div class="amountDiv">
-                       <p>Amount of your referrals: 0 users</p>
+                       <p>Amount of your referrals: {{count($userreferal ?? 0)}} users</p>
                        <table>
                            <thead style="background-color: #e6ceaf;padding: 5px;">
                                <tr>
@@ -65,6 +65,15 @@
                                    <td>Income in gold coins</td>
                                </tr>
                            </thead>
+                           <tbody>
+                               @foreach($userreferal as $referal)
+                               <tr>
+                                   <td>{{$referal->name ?? ''}}</td>
+                                   <td>{{$referal->created_at ?? ''}}</td>
+                                   <td>30 coins</td>
+                               </tr>
+                               @endforeach
+                           </tbody>
                        </table>
                    </div>
                </div>

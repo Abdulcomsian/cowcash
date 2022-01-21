@@ -16,22 +16,37 @@ Account Setting
         <div class="bgColor">
             <p class="rightNow">SETTING</p>
             <div class="formDiv">
-                <p class="title">Change Password</p>
-                <div class="inputDiv">
-                    <label for="">Old Password:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="inputDiv">
-                    <label for="">New Password:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="inputDiv">
-                    <label for="">Repeat Password:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <button class="commonBtn">
-                    Change Password
-                </button>
+                <form method="post" action="{{url('account/update-password')}}">
+                    @csrf
+                    <p class="title">Change Password</p>
+                    <div class="inputDiv">
+                        <label for="">Old Password:</label>
+                        <input type="password" name="oldpassword" id="oldpassword" placeholder="Enter Old Password" required>
+                        <br>
+                        @error('oldpassword')
+                        <span class="invalid-feedback" role="alert">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="inputDiv">
+                        <label for="">New Password:</label>
+                        <input type="password" name="password" id="password" placeholder="Enter New Password" required>
+                        <br>
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+                    <div class="inputDiv">
+                        <label for="">Repeat Password:</label>
+                        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm Password" required>
+                    </div>
+                    <button class="commonBtn cursor-pointer" type="submit">
+                        Change Password
+                    </button>
+                </form>
                 <hr>
                 <div class="inputDiv">
                     <label for="">Interface Language:</label>
@@ -52,23 +67,41 @@ Account Setting
                     <label for="">Account Currency:</label>
                     <label for="">USD</label>
                 </div>
-                <div class="inputDiv">
-                    <label for="">New Account Currency:</label>
-                    <select name="" id="">
-                        <option value="EUR">EUR</option>
-                    </select>
-                </div>
-                <button class="commonBtn">
-                    Set New Currency
-                </button>
+                <form action="{{url('account/update-currency')}}" method="post">
+                    @csrf
+                    <div class="inputDiv">
+                        <label for="">New Account Currency:</label>
+                        <select name="currency" id="currency" required>
+                            <option value="1" {{Auth::user()->currency=='1' ? 'selected':''}}>USD</option>
+                            <option value="2" {{Auth::user()->currency=='2' ? 'selected':''}}>EUR</option>
+                            <option value="3" {{Auth::user()->currency=='3' ? 'selected':''}}>RUB</option>
+                        </select>
+                    </div>
+                    <button class="commonBtn cursor-pointer">
+                        Set New Currency
+                    </button>
+                </form>
                 <hr>
                 <div class="changeEmail">
                     <p style="margin-bottom: 10px;" class="title">Change account email</p>
                     <p>You can change your account email address. Set only a valid email address otherwise you can lose access to your account.</p>
                 </div>
-                <button class="commonBtn">
-                    Set New Email
-                </button>
+                <form method="post" action="{{url('account/update-email')}}">
+                    @csrf
+                    <div class="inputDiv">
+                        <label for="">Change Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                        <br>
+                        @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+                    <button class="commonBtn cursor-pointer" type="submit">
+                        Set New Email
+                    </button>
+                </form>
             </div>
         </div>
         @include('Frontend.includes.menues')

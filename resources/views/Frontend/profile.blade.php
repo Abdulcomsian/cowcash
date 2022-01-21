@@ -7,6 +7,10 @@
       .cursor-pointer {
           cursor: pointer;
       }
+
+      .bgColor {
+          overflow: hidden;
+      }
   </style>
   @endsection
 
@@ -38,7 +42,7 @@
                               </tr>
                               <tr>
                                   <td>Gold Coins(for withdrawal):</td>
-                                  <td>{{\Auth::user()->silver_coins ?? ''}} coins </td>
+                                  <td>{{\Auth::user()->withdraw ?? ''}} coins </td>
                               </tr>
                               <tr>
                                   <td>Got from referrals:</td>
@@ -47,6 +51,16 @@
                               <tr>
                                   <td>Paid out:</td>
                                   <td>0.00 USD</td>
+                              </tr>
+                              <tr>
+                                  <td>Logout:</td>
+                                  <td>
+                                      <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                          <i class="material-icons text-danger">&#xE879;</i> Logout </a>
+                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                          {{ csrf_field() }}
+                                      </form>
+                                  </td>
                               </tr>
                           </tbody>
                       </table>

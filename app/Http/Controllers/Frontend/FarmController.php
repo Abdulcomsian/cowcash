@@ -63,4 +63,14 @@ class FarmController extends Controller
         $totalmilkforsale = UserCows::where('user_id', Auth::user()->id)->sum('total_milk');
         return view('Frontend.sellmilk', compact('milkforsell', 'totalmilkforsale'));
     }
+    //calcualte income
+    public function calculate()
+    {
+        // $cows_calculate = UserCows::join('cows', 'cows.id', '=', 'user_cows.cow_id')
+        //     ->select('cows.*', DB::raw('sum(user_cows.qty) as bought'), DB::raw('sum(user_cows.collect_per_hour_milk) as laidmilk'))
+        //     ->groupBy('user_cows.cow_id')
+        //     ->get();
+        $cows = Cows::get();
+        return view('Frontend.calculate', compact('cows'));
+    }
 }

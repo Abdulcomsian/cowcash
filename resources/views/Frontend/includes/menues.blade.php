@@ -28,7 +28,7 @@
                 </a>
             </div>
             <div class="listdiv">
-                <a href="{{url('/calculate')}}">
+                <a href="{{url('account/calculate')}}">
                     <img src="{{asset('frontend/assets/img/calculate.png')}}" alt="">
                     <p>Calculate</p>
                 </a>

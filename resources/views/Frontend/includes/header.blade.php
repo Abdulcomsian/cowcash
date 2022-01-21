@@ -171,10 +171,14 @@
                      <div class="formDiv">
                          <div class="inputView">
                              <div class="inputDiv addFunds">
-                                 <label for="">{{\Auth::user()->silver_coins ?? ''}} [Add Funds]</label>
+                                 <label for="">
+                                     <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
+                                     {{\Auth::user()->silver_coins ?? ''}} [Add Funds]
+                                 </label>
                              </div>
                              <div class="inputDiv withDrawFunds">
-                                 <label for="">0.0 [Withdraw Funds]</label>
+                                 <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
+                                 <label for=""> {{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label>
 
                              </div>
                              <a href="{{url('/account')}}" class="cursor-pointer">
@@ -288,12 +292,18 @@
                  <div class="formDiv">
                      <div class="inputView">
                          <div class="inputDiv addFunds">
-                             <label for="">{{\Auth::user()->silver_coins ?? ''}} [Add Funds]</label>
+                             <label for="">
+                                 <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
+                                 {{\Auth::user()->silver_coins ?? ''}} [Add Funds]
+                             </label>
                          </div>
-                         <div class="inputDiv withDrawFunds">
-                             <label for="">0.0 [Withdraw Funds]</label>
+                         <a href="{{url('account/payment')}}">
+                             <div class="inputDiv withDrawFunds">
+                                 <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
+                                 <label for="">{{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label>
 
-                         </div>
+                             </div>
+                         </a>
                          <a href="{{url('/account')}}" class="cursor-pointer">
                              <div class="inputDiv myProfile">
                                  <label for="">Profile</label>

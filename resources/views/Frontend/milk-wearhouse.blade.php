@@ -7,6 +7,10 @@
       .cursor-pointer {
           cursor: pointer;
       }
+
+      .bgColor {
+          overflow: hidden;
+      }
   </style>
   @endsection
 
@@ -31,7 +35,7 @@
                       </div>
                       <div class="detailDiv">
                           <p class="title">{{$perhour->cowName ?? ''}}</p>
-                          <p>Productivity: <span><b>{{$perhour->litters ?? ''}} kg Per Day</b></span></p>
+                          <p>Productivity: <span><b>{{$perhour->litters ?? ''}} litters Per Day</b></span></p>
                           <p>Bought: <span><b>{{$perhour->bought}}</b></span></p>
                           <hr>
                           <p>= {{$perhour->laidmilk ?? ''}}</p>

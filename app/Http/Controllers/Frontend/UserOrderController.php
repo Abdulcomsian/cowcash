@@ -7,8 +7,13 @@ use App\Models\Cows;
 use Illuminate\Http\Request;
 use App\Models\UserOrder;
 use App\Models\UserCows;
+use App\Models\User;
+use App\Utils\Validations;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 use Auth;
 use DB;
+use Carbon\Carbon;
 
 class UserOrderController extends Controller
 {
@@ -26,16 +31,45 @@ class UserOrderController extends Controller
     //Bonus
     public function Bonus()
     {
+        $currentDateTime = Carbon::now();
+        if ($currentDateTime > Auth::user()->bonus_time) {
+            Auth::user()->update([
+                'bonus_status' => 0,
+            ]);
+        }
         return view('Frontend.daily-bonus');
+    }
+    //collect bounus after 12 hours
+    public function Collect_Bonus(Request $request)
+    {
+        $currentDateTime = Carbon::now();
+        if ($currentDateTime > Auth::user()->bonus_time) {
+            if (Auth::user()->bonus_status == 0) {
+                $bonuscoins = rand(2, 100);
+                $newDateTime = Carbon::now()->addHour(12);
+                Auth::user()->update([
+                    'bonus_status' => 1,
+                    'bonus_time' => $newDateTime,
+                    'silver_coins' => DB::raw('silver_coins +' .  $bonuscoins . ''),
+                ]);
+                toastSuccess('You have got ' . $bonuscoins . ' silver coins');
+                return back();
+            }
+        } else {
+            toastError('You can collect bounus coins after 12 hours');
+            return back();
+        }
     }
     //referal
     public function Referal()
     {
-        return view('Frontend.myreferals');
+        $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->get();
+        return view('Frontend.myreferals', compact('userreferal'));
     }
     //when user perchase cows from admin
     public function Take_order(Request $request)
     {
+
         //check if cows exist or not
         try {
             $cow = Cows::find($request->item);
@@ -111,8 +145,9 @@ class UserOrderController extends Controller
             $totalmilk = 0;
             foreach ($request->item as $item) {
                 $checkcows = UserCows::where(['user_id' => Auth::user()->id, 'id' => $item])->first();
-                if (!$checkcows) {
+                if ($checkcows) {
                     $totalmilk = $totalmilk + $checkcows->total_milk;
+                } else {
                     toastError('Some Cows is not in your order Warning!!!!!!!');
                     return back();
                 }
@@ -122,15 +157,17 @@ class UserOrderController extends Controller
                     $checkcows = UserCows::where(['user_id' => Auth::user()->id, 'id' => $item])->first();
                     if ($checkcows) {
                         $milk = $checkcows->total_milk;
-                        //let supoose 1 litter milk=5 coins
-                        $coins = $milk / 1;
                         UserCows::where(['user_id' => Auth::user()->id, 'cow_id' => $checkcows->cow_id])->update([
                             'sold_milk' => DB::raw('sold_milk +' .  $milk . ''),
                             'total_milk' => DB::raw('total_milk -' .  $milk . ''),
                             'available_milk' => DB::raw('total_milk -0'),
                         ]);
+                        //let supoose 100 litter milk=1 silver coins
+                        $silvercoins = $milk / 100 * 70;
+                        $goldcoins = $milk / 100 * 30;
                         $user = Auth::user();
-                        $user->silver_coins = $user->silver_coins +  $coins;
+                        $user->silver_coins = $user->silver_coins +  $silvercoins;
+                        $user->withdraw = $user->withdraw + $goldcoins;
                         $user->save();
                     }
                 }
@@ -143,6 +180,59 @@ class UserOrderController extends Controller
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
             return back();
+        }
+    }
+    //update password
+    public function updatePassword(Request $request, User $user)
+    {
+        Validations::updateUserPassword($request);
+        try {
+            $hashedPassword = Auth::user()->password;
+            if (Hash::check($request->oldpassword, $hashedPassword)) {
+                $all_inputs['password'] = Hash::make($request->password);
+                Auth::user()->update([
+                    'password' => $all_inputs['password'],
+                ]);
+                toastSuccess('Password updated successfully');
+                return Redirect::back();
+            } else {
+                toastError('Old Password is incorrect!');
+                return Redirect::back();
+            }
+        } catch (\Exception $exception) {
+            toastError('Something went wrong, try again!');
+            return Redirect::back();
+        }
+    }
+    //update currency
+    public function updateCurrency(Request $request)
+    {
+        try {
+            Auth::user()->update([
+                'currency' => $request->currency,
+            ]);
+            toastSuccess('Currency updated successfully');
+            return Redirect::back();
+        } catch (\Exception $exception) {
+            toastError('Something went wrong, try again!');
+            return Redirect::back();
+        }
+    }
+    //update email
+    public function updateEmail(Request $request)
+    {
+        $request->validate([
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        ]);
+        try {
+            Auth::user()->update([
+                'email' => $request->email,
+            ]);
+            toastSuccess('Em updated successfully');
+            return Redirect::back();
+        } catch (\Exception $exception) {
+            toastError('Something went wrong, try again!');
+            return Redirect::back();
         }
     }
 }

@@ -47,12 +47,10 @@ Route::get('/rules', function () {
 Route::get('/about', function () {
     return view('Frontend.about');
 });
-Route::get('/calculate', function () {
-    return view('Frontend.calculate');
-});
 Route::get('/support', function () {
     return view('Frontend.support');
 });
+Route::get('account/calculate', [FarmController::class, 'calculate'])->name('account.calculate');
 
 
 
@@ -66,9 +64,6 @@ Route::get('account/registration', function () {
 });
 
 
-
-
-
 Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
     //cow shop
     Route::get('/farm', [FarmController::class, 'index'])->name('account.farm');
@@ -80,8 +75,16 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
     Route::get('/',  [UserOrderController::class, 'Profile'])->name('account');
     Route::get('/settings', [UserOrderController::class, 'Settings'])->name('account.settings');
     Route::get('/bonus', [UserOrderController::class, 'Bonus'])->name('account.bonus');
+    Route::post('/collect-bonus', [UserOrderController::class, 'Collect_Bonus'])->name('account.collectbonus');
     Route::get('/referal', [UserOrderController::class, 'Referal'])->name('account.referal');
 
+    Route::get('/payment', function () {
+        return view('Frontend.payment');
+    });
+    //update password
+    Route::post('/update-password', [UserOrderController::class, 'updatePassword'])->name('account.update-password');
+    Route::post('/update-currency', [UserOrderController::class, 'updateCurrency'])->name('account.update-currency');
+    Route::post('/update-email', [UserOrderController::class, 'updateEmail'])->name('account.update-email');
     Route::get('/promotion', function () {
         return view('Frontend.referal-promotions');
     });

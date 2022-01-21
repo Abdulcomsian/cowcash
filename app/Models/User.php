@@ -26,14 +26,16 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at',
         'password',
         'status',
-        'siliver_coins',
+        'silver_coins',
         'gold_coins',
         'referal_coins',
         'referal_link',
         'affiliate_id',
         'referred_by',
         'country_id',
-        'currency'
+        'currency',
+        'bonus_status',
+        'bonus_time'
     ];
 
     /**

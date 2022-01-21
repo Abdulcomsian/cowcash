@@ -7,6 +7,15 @@
       .cursor-pointer {
           cursor: pointer;
       }
+
+      .bgColor {
+          overflow: hidden;
+      }
+
+      .cowShop .multipleDiv {
+          height: 325px;
+          overflow: scroll;
+      }
   </style>
   @endsection
 
@@ -32,14 +41,14 @@
                           @csrf
                           <div class="detailCowDiv">
                               <h5>{{$cow->cowName ?? ''}}</h5>
-                              <p>Productivity: {{$cow->litters ?? ''}} kg Milk a day</p>
+                              <p>Productivity: {{$cow->litters ?? ''}} Litters Milk a day</p>
                               <p>Cost: {{$cow->price ?? ''}} Gold Coins</p>
-                              <p>Already boughtL 0</p>
+                              <p>Already boughtL {{\App\Utils\HelperFunctions::boughtcows($cow->id)}}</p>
                               <div class="inputDiv">
                                   <input type="number" name="qty" id="qty" value="1" required>
                                   <input type="hidden" name="item" id="item" value="{{$cow->id}}" />
                                   <label for="">Pcs.</label>
-                                  <button>Buy</button>
+                                  <button class="cursor-pointer">Buy</button>
                               </div>
                           </div>
                       </form>
