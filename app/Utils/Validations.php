@@ -18,4 +18,12 @@ class Validations
             'coins_to_get' => ['required', 'integer']
         ]);
     }
+
+    public static function updateUserPassword($request)
+    {
+        $request->validate([
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'oldpassword' => ['required', 'string', 'min:8'],
+        ]);
+    }
 }

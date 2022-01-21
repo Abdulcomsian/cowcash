@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use App;
-use Illuminate\Support\Facades\Cookie;
+use Session;
 use Illuminate\Http\Request;
 
 class LanguageMiddleware
@@ -18,12 +18,16 @@ class LanguageMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-
+        // Make sure current locale exists.
         if (isset($_GET['lang'])) {
-            App::setLocale($_GET['lang']);
+            $locale = $_GET['lang'];
+        } elseif (Session::has('lang')) {
+            $locale = Session::get('lang');
         } else {
-            App::setLocale('en');
+            $locale = 'en';
         }
+        Session::put('lang', $locale);
+        App::setLocale($locale);
         return $next($request);
     }
 }

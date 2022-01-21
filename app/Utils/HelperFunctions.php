@@ -3,8 +3,9 @@
 
 namespace App\Utils;
 
-
+use App\Models\UserCows;
 use Illuminate\Support\Facades\File;
+use Auth;
 
 class HelperFunctions
 {
@@ -33,5 +34,17 @@ class HelperFunctions
     public static function CowsImagePath()
     {
         return 'uploads/cowImages/';
+    }
+
+    public static function boughtcows($cowid)
+    {
+        if (Auth::check()) {
+            $boghtcows = UserCows::where(['cow_id' => $cowid, 'user_id' => Auth::user()->id])->first();
+            if ($boghtcows) {
+                return $boghtcows->qty;
+            } else {
+                return 0;
+            }
+        }
     }
 }

@@ -3,15 +3,15 @@
 use App\Http\Controllers\Admin\CowsController;
 use App\Http\Controllers\Admin\PackagesController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Frontend\FarmController;
 use App\Http\Controllers\Frontend\UserOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use PhpParser\Node\Expr\FuncCall;
+use App\Models\Country;
 
 
-//front end home page
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
 
 //Admin middlewware and admin routes
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function () {
@@ -30,14 +30,68 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/dashboard', [AdminController::class, 'dashboard']);
 });
 
-//frontend Farmer user routes here
-Route::group(['middleware' => ['auth'], 'prefix' => 'User'], function () {
-    Route::get('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
-    Route::get('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('sold.milk');
+
+
+// Frontend user farmer work
+
+
+//front end home page without login
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/payments', function () {
+    return view('Frontend.payments');
+});
+Route::get('/rules', function () {
+    return view('Frontend.rules');
+});
+Route::get('/about', function () {
+    return view('Frontend.about');
+});
+Route::get('/support', function () {
+    return view('Frontend.support');
+});
+Route::get('account/calculate', [FarmController::class, 'calculate'])->name('account.calculate');
+
+
+
+
+
+
+// registraion url
+Route::get('account/registration', function () {
+    $countries = Country::get();
+    return view('Frontend.registration', compact('countries'));
 });
 
-Auth::routes(['verify' => true]);
 
+Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
+    //cow shop
+    Route::get('/farm', [FarmController::class, 'index'])->name('account.farm');
+    Route::post('/take-order', [UserOrderController::class, 'Take_order'])->name('user.take.order');
+    Route::get('/store', [FarmController::class, 'milk_wearhouse'])->name('account.wearhouse');
+    Route::post('/collect-milk', [FarmController::class, 'collect_milk'])->name('collect.milk');
+    Route::get('/market', [FarmController::class, 'Sell_milk'])->name('account.market');
+    Route::post('/sold-milk', [UserOrderController::class, 'sold_milk'])->name('account.sold.milk');
+    Route::get('/',  [UserOrderController::class, 'Profile'])->name('account');
+    Route::get('/settings', [UserOrderController::class, 'Settings'])->name('account.settings');
+    Route::get('/bonus', [UserOrderController::class, 'Bonus'])->name('account.bonus');
+    Route::post('/collect-bonus', [UserOrderController::class, 'Collect_Bonus'])->name('account.collectbonus');
+    Route::get('/referal', [UserOrderController::class, 'Referal'])->name('account.referal');
+
+    Route::get('/payment', function () {
+        return view('Frontend.payment');
+    });
+    //update password
+    Route::post('/update-password', [UserOrderController::class, 'updatePassword'])->name('account.update-password');
+    Route::post('/update-currency', [UserOrderController::class, 'updateCurrency'])->name('account.update-currency');
+    Route::post('/update-email', [UserOrderController::class, 'updateEmail'])->name('account.update-email');
+    Route::get('/promotion', function () {
+        return view('Frontend.referal-promotions');
+    });
+});
+
+
+Auth::routes(['verify' => true]);
 
 //route for calculating hour per milk using cron job
 Route::get('calculate-milk-per-houre', [HomeController::class, 'calculate_milk_per_hour'])->name('calculate.milk');

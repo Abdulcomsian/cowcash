@@ -21,10 +21,12 @@ class CreateUserCowsTable extends Migration
 
             $table->unsignedBigInteger('cow_id');
             $table->foreign('cow_id')->references('id')->on('cows');
+            $table->integer('qty')->nullable();
             $table->float('per_hours_litters')->nullable();
-            $table->double('total_milk')->nullable();
-            $table->double('available_milk')->nullable();
-            $table->double('sold_milk')->nullable();
+            $table->float('total_milk')->nullable();
+            $table->float('available_milk')->nullable();
+            $table->float('sold_milk')->nullable();
+            $table->float('collect_per_hour_milk')->nullable();
             $table->tinyInteger('status')->default(1);
 
             $table->timestamps();
