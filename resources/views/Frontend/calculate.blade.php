@@ -30,11 +30,10 @@
               $totalcowsbought+=\App\Utils\HelperFunctions::boughtcows($cow->id);
               }
               $perdayincome= $totalcowsbought*24/100;
-              $perdayincome.="0000";
               @endphp
 
               <p class="yourIncome"><span>Your income:</span>
-                  <span id="calperday">{{$perdayincome ?? 0.00000}}</span> per 24 hrs.
+                  <span id="calperday">{{$perdayincome}}</span> per 24 hrs.
               </p>
               <div class="multiBox">
                   @foreach($cows as $cow)
@@ -75,7 +74,7 @@
 
           })
           var perdayincome = totalvalue * 24 / 100;
-          $("#calperday").html(perdayincome + '0000');
+          $("#calperday").html(perdayincome);
       })
   </script>
   @endsection
