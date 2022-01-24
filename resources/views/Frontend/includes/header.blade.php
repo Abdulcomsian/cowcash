@@ -41,7 +41,11 @@
                  </div>
                  <div class="payment commonWooden">
                      <span class="paymentText">Payment System</span>
-
+                    <div class="multiImg">
+                        <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
+                    </div>
                  </div>
                  <div class="board commonWooden">
                      <div class="multiBtn">
@@ -149,7 +153,15 @@
              </td>
              <td class="payment commonWooden">
                  <span class="paymentText">Payment System</span>
-
+                 <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
+                 <div class="multiImg">
+                        <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/bitcoin 2.png')}}" alt="" class="img-fluid">
+                    </div>
+                    <div class="text-center" style="text-align: center;">
+                    <img style="width: 50px" src="{{asset('frontend/assets/img/payeer.png')}}" alt="" class="img-fluid">
+                    </div>
+                    </div>
              </td>
              <td class="board commonWooden">
                  <div class="multiBtn">
