@@ -44,7 +44,7 @@ class FarmController extends Controller
     {
         try {
             foreach ($request->item as $cow) {
-                UserCows::find($cow)->update([
+                UserCows::where(['cow_id' => $cow])->update([
                     'total_milk' => DB::raw('total_milk + collect_per_hour_milk'),
                     'collect_per_hour_milk' => 0,
                 ]);
@@ -66,10 +66,6 @@ class FarmController extends Controller
     //calcualte income
     public function calculate()
     {
-        // $cows_calculate = UserCows::join('cows', 'cows.id', '=', 'user_cows.cow_id')
-        //     ->select('cows.*', DB::raw('sum(user_cows.qty) as bought'), DB::raw('sum(user_cows.collect_per_hour_milk) as laidmilk'))
-        //     ->groupBy('user_cows.cow_id')
-        //     ->get();
         $cows = Cows::get();
         return view('Frontend.calculate', compact('cows'));
     }

@@ -43,7 +43,7 @@
                       </div>
                   </div>
                   @endforeach
-                  <button class="commonBtn" type="submit">Collect All</button>
+                  <button class="commonBtn cursor-pointer" type="submit">Collect All</button>
               </form>
           </div>
 
