@@ -23,7 +23,19 @@
               <p>Enter a number of cows to see how much gold they will bring you.</p>
               <p>* Please note that you earning will increase exponentially, if you buy new cows
                   for earned gold.</p>
-              <p class="yourIncome"><span>Your income:</span> <span id="calperday">0.00000</span> per 24 hrs.</p>
+              @php
+              $totalcowsbought=0;
+              foreach($cows as $cow)
+              {
+              $totalcowsbought+=\App\Utils\HelperFunctions::boughtcows($cow->id);
+              }
+              $perdayincome= $totalcowsbought*24/100;
+              $perdayincome.="0000";
+              @endphp
+
+              <p class="yourIncome"><span>Your income:</span>
+                  <span id="calperday">{{$perdayincome ?? 0.00000}}</span> per 24 hrs.
+              </p>
               <div class="multiBox">
                   @foreach($cows as $cow)
                   <div class="imgBoxInput">
@@ -36,10 +48,11 @@
                   </div>
                   @endforeach
               </div>
+              @guest
               <button class="commonBtn">Sign Up</button>
-
               <p style="color: #5e3700; text-align: center; font-weight: 600;">Sign Up right now and get Brown cow<br> +300 gold coins as a gift</p>
               <img style="width: 300px" src="../assets/img/Group 291.png" alt="">
+              @endguest
           </div>
 
           @include('Frontend.includes.menues')
@@ -61,7 +74,8 @@
               totalvalue = totalvalue + newvalue;
 
           })
-          $("#calperday").html(totalvalue);
+          var perdayincome = totalvalue * 24 / 100;
+          $("#calperday").html(perdayincome + '0000');
       })
   </script>
   @endsection
