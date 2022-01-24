@@ -1172,6 +1172,7 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+    .bgColor{background-size:contain;}
     .loginUser .addFunds {
         top: 0px;
     }
