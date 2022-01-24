@@ -70,36 +70,45 @@
                  </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/paymentMenu.png')}}" alt="">
-                     <p>Payments</p>
-                 </div>
+                 <a href="{{url('/payments')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/paymentMenu.png')}}" alt="">
+                         <p>Payments</p>
+                     </div>
+                 </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/rules.png')}}" alt="">
-                     <p>Rules</p>
-                 </div>
+                 <a href="{{url('/rules')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/rules.png')}}" alt="">
+                         <p>Rules</p>
+                     </div>
+                 </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/about.png')}}" alt="">
-                     <p>About</p>
-                 </div>
+                 <a href="{{url('/about')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/about.png')}}" alt="">
+                         <p>About</p>
+                     </div>
+                 </a>
 
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/calculate.png')}}" alt="">
-                     <p>Calculate</p>
-                 </div>
-
+                 <a href="{{url('account/calculate')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/calculate.png')}}" alt="">
+                         <p>Calculate</p>
+                     </div>
+                 </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/support.png')}}" alt="">
-                     <p>Support</p>
-                 </div>
+                 <a href="{{url('/support')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/support.png')}}" alt="">
+                         <p>Support</p>
+                     </div>
+                 </a>
              </li>
          </ul>
      </div>
@@ -219,7 +228,9 @@
                          <p>My referrals</p>
                      </a>
                      <p>Promo materials</p>
-                     <p>Calculate Income</p>
+                     <a href="{{url('account/calculate')}}">
+                         <p>Calculate Income</p>
+                     </a>
 
                  </div>
                  <div class="board commonWooden">
@@ -249,36 +260,45 @@
                  </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/paymentMenu.png')}}" alt="">
-                     <p>Payments</p>
-                 </div>
+                 <a href="{{url('/payments')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/paymentMenu.png')}}" alt="">
+                         <p>Payments</p>
+                     </div>
+                 </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/rules.png')}}" alt="">
-                     <p>Rules</p>
-                 </div>
+                 <a href="{{url('/rules')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/rules.png')}}" alt="">
+                         <p>Rules</p>
+                     </div>
+                 </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/about.png')}}" alt="">
-                     <p>About</p>
-                 </div>
+                 <a href="{{url('/about')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/about.png')}}" alt="">
+                         <p>About</p>
+                     </div>
+                 </a>
 
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/calculate.png')}}" alt="">
-                     <p>Calculate</p>
-                 </div>
-
+                 <a href="{{url('account/calculate')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/calculate.png')}}" alt="">
+                         <p>Calculate</p>
+                     </div>
+                 </a>
              </li>
              <li>
-                 <div class="listdiv">
-                     <img src="{{asset('frontend/assets/img/support.png')}}" alt="">
-                     <p>Support</p>
-                 </div>
+                 <a href="{{url('/support')}}">
+                     <div class="listdiv">
+                         <img src="{{asset('frontend/assets/img/support.png')}}" alt="">
+                         <p>Support</p>
+                     </div>
+                 </a>
              </li>
          </ul>
      </div>
@@ -342,7 +362,9 @@
                      <p>My referrals</p>
                  </a>
                  <p>Promo materials</p>
-                 <p>Calculate Income</p>
+                 <a href="{{url('account/calculate')}}">
+                     <p>Calculate Income</p>
+                 </a>
 
              </td>
              <td class="board commonWooden loginUser">
