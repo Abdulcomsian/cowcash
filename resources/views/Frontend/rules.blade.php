@@ -7,6 +7,12 @@
      .cursor-pointer {
          cursor: pointer;
      }
+     .bgColor{
+         overflow: initial;
+     }
+     .title{
+         padding: 20px 20px 0px;
+     }
  </style>
  @endsection
 
@@ -17,7 +23,7 @@
              <p class="rightNow">RULES OF PROJECT</p>
              <div class="rulesDiv">
                  <p class="title">Rules</p>
-                 <p>Generalities.</p>
+                 <p style="padding: 0px 20px;">Generalities.</p>
                  <div class="rulesPara">
                      <p>1.1. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="">coin-farm.net</a>, hereinafter referred to as "Coordinator", and us addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)</p>
                      <p>1.2. To start getting the service a participant accepts all the rules of the present agreement fully and unconditionally and if you do not agree with any of the terms of the present agreement, the coordinator advise you to disclaim using the service.</p>
