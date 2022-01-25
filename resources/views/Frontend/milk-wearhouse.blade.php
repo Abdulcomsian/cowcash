@@ -9,7 +9,7 @@
       }
 
       .bgColor {
-          overflow: hidden;
+          overflow: scroll;
       }
   </style>
   @endsection
@@ -23,7 +23,7 @@
                   <p style="text-align: left;">From your container milk sent to the warehouse. Collect them and sell. You can do it once per 1 minute. Milk are always stored in a safe place so you can collect them every minute or even once a month.</p>
               </div>
               <p class="notePara">
-                  <span>Cows gives: <b>{{ $total_laid_milk ?? ''}} kg Milk</b></span>
+                  <span>Cows gives: <b>{{ $total_laid_milk ?? ''}} Litters Milk</b></span>
                   <span></span>
               </p>
               <form method="post" action="{{url('account/collect-milk')}}">
@@ -35,7 +35,7 @@
                       </div>
                       <div class="detailDiv">
                           <p class="title">{{$perhour->cowName ?? ''}}</p>
-                          <p>Productivity: <span><b>{{$perhour->litters ?? ''}} litters Per Day</b></span></p>
+                          <p>Productivity: <span><b>{{$perhour->litters ?? ''}} Litters Per Day</b></span></p>
                           <p>Bought: <span><b>{{$perhour->bought}}</b></span></p>
                           <hr>
                           <p>= {{$perhour->laidmilk ?? ''}}</p>
