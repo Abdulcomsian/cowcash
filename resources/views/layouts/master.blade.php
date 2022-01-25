@@ -42,6 +42,10 @@
     @toastr_js
     @toastr_render
     @yield('script')
+
+
+
+    
 </body>
 
 </html>
