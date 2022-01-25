@@ -1588,27 +1588,27 @@ input:checked+.slider:before {
         display: block;
     }
     .loginUser .addFunds {
-        top: 0px;
+        top: 23px;
     }
 
     .loginUser .withDrawFunds {
-        top: 19px;
+        top: 35px;
     }
 
     .loginUser .myProfile {
-        top: 36px;
+        top: 48px;
     }
 
     .loginUser .accountSetting {
-        top: 52px;
+        top: 64px;
     }
 
     .statistics.loginUser p {
-        top: 52px !important;
+        top: 77px !important;
     }
 
     .payment.loginUser p {
-        top: 80px;
+        top: 100px;
     }
 
     #startRightNow .stairDiv .listContent p {
@@ -1675,6 +1675,7 @@ input:checked+.slider:before {
         width: 100%;
         max-width: 80%;
         margin: auto;
+        height: 200px;
     }
 
     #header .statistics p {
