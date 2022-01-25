@@ -29,7 +29,8 @@ a,
 a:hover {
     text-decoration: none;
 }
-input:focus{
+
+input:focus {
     outline: none;
 }
 
@@ -44,15 +45,17 @@ input:focus{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 150px;
     width: 22%;
     position: relative;
-    padding: 26px 0px;
 }
 
 #header table {
     margin: auto;
     width: auto;
+}
+
+#login .inputDiv label {
+    margin-bottom: 0px;
 }
 
 #header .commonWooden span.signInText {
@@ -67,7 +70,7 @@ input:focus{
 #header .commonWooden span.statisticsText {
     position: absolute;
     top: 26%;
-    left: 38%;
+    left: 37%;
     font-size: 14px;
     color: #fff;
     font-family: "Bangers", cursive;
@@ -107,8 +110,8 @@ input:focus{
 
 #header .statistics button {
     position: absolute;
-    bottom: 11%;
-    left: 27%;
+    bottom: 12%;
+    left: 28%;
     background: transparent;
     border: none;
     color: #ffff;
@@ -125,7 +128,7 @@ input:focus{
 }
 
 #header .loginForm .inputDiv input {
-    width: 100%;
+    width: 93%;
     font-family: Nexa-Regular;
     outline: none;
 }
@@ -148,18 +151,21 @@ input:focus{
     font-family: "Source Serif Pro", serif !important;
     font-weight: 600;
 }
+
 #header .statistics.loginUser p {
     font-size: 12px;
     color: #00000085;
     font-family: "Source Serif Pro", serif !important;
     font-weight: 700;
 }
+
 #header .loginForm .inputDiv {
     width: 100%;
     max-width: 80%;
     margin: auto;
 }
-.loginUser .inputDiv{
+
+.loginUser .inputDiv {
     text-align: center;
 }
 
@@ -228,14 +234,14 @@ input:focus{
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 50px 30px;
-    z-index: 999999;
 }
 
 #startRightNow .midDiv .boardImg {
     width: 400px;
 }
 
-#startRightNow .midDiv .rightNow {
+#startRightNow .midDiv .rightNow,
+.modal .middleHeader {
     background-image: url("../img/badgeWooden.png");
     background-repeat: no-repeat;
     position: absolute;
@@ -365,12 +371,12 @@ input:focus{
 
 #startRightNow .stairDiv .thirdChild {
     position: relative;
-    top: 100px;
+    top: 85px;
 }
 
 #startRightNow .stairDiv .forthChild {
     position: relative;
-    top: 140px;
+    top: 150px;
 }
 
 #startRightNow .stairDiv .fifthChild {
@@ -482,7 +488,8 @@ button.signUpBtn {
     width: 100%;
 }
 
-.dailyBonusTable table thead td {
+.dailyBonusTable table thead td,
+    {
     color: #5e3700 !important;
     font-weight: 600;
 }
@@ -753,7 +760,8 @@ table {
     margin: 20px 0px;
 }
 
-.totalReferrals thead {
+.totalReferrals thead,
+.tableDiv table thead {
     background-color: #e5cdaf;
 }
 
@@ -836,12 +844,14 @@ table {
     color: #ffd9a9;
     font-family: Nexa-Bold !important;
 }
-.rulesProgram .rulesDiv .rulesPara{
+
+.rulesProgram .rulesDiv .rulesPara {
     overflow: scroll;
     height: 400px;
     padding: 20px;
     overflow-x: hidden;
 }
+
 .setting .formDiv .title {
     margin-bottom: 20px;
 }
@@ -963,15 +973,15 @@ table {
     transition: 0.4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #4caf50;
 }
 
-input:focus + .slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #4caf50;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -1053,42 +1063,48 @@ input:checked + .slider:before {
 
 .loginUser .addFunds {
     position: relative;
-    top: -15px;
- 
+    top: -12px;
+
 }
 
 .loginUser .withDrawFunds {
     position: relative;
-    top: -4px;
-    
+    top: -3px;
+    display: flex;
+
 }
 
 .loginUser .myProfile {
     position: relative;
-   
-    top: 9px;
+
+    top: 3px;
 }
 
 .loginUser .accountSetting {
     position: relative;
-    top: 20px;
-    
+    top: 9px;
+
 }
+
 .loginUser .signInText {
     left: 40% !important;
 }
+
 #header .loginUser {
     min-width: 115px;
 }
+
 .statistics.loginUser p {
     display: block !important;
     text-align: center;
     position: relative;
     top: 27px !important;
 }
+
 .loginUser .paymentText {
     left: 42% !important;
 }
+
 .payment.loginUser p {
     position: relative;
     top: 36px;
@@ -1099,17 +1115,20 @@ input:checked + .slider:before {
     color: #00000085;
     font-weight: 700;
 }
+
 .support p.title,
-.support p.yourIncome{
+.support p.yourIncome {
     font-family: "Source Serif Pro", serif !important;
     color: #000 !important;
     font-size: 14px;
     margin-bottom: 20px;
 }
-.support p.title{
+
+.support p.title {
     font-weight: 600 !important;
 }
-.support p.yourIncome{
+
+.support p.yourIncome {
     font-weight: 300 !important;
     margin-top: 20px;
 }
@@ -1121,7 +1140,7 @@ input:checked + .slider:before {
     width: 6px;
     height: 6px;
 }
- 
+
 ::-webkit-scrollbar-track {
     background-color: #ebebeb;
     -webkit-border-radius: 10px;
@@ -1132,10 +1151,11 @@ input:checked + .slider:before {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #f7dab7; 
+    background: #f7dab7;
     height: 6px;
 }
-.multiImg{
+
+.multiImg {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -1143,9 +1163,401 @@ input:checked + .slider:before {
     margin: auto;
     margin-top: 30px;
 }
+
 .multiImg img {
-    width: 70px;
+    width: 80px;
 }
+
+.promoMaterial .multiSelect .selectOption {
+    width: 15%;
+    padding: 5px 10px;
+    border: 1px solid #d7cdcd;
+    border-radius: 4px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promoMaterial .multiSelect .selectOption p {
+    color: #000 !important;
+    font-family: Nexa-Regular !important;
+    font-weight: 500 !important;
+    font-size: 14px;
+}
+
+.promoMaterial .multiSelect {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.box textarea {
+    width: 100%;
+    text-align: center;
+}
+
+.htmlDiv {
+    margin: 30px 0px;
+}
+
+.htmlDiv p {
+    margin-bottom: 30px;
+    font-family: Nexa-Regular !important;
+    color: #000 !important;
+    font-size: 14px;
+}
+
+.orderPayoff .inputDiv label {
+    width: 80%;
+    text-align: left;
+}
+
+.orderPayoff .inputDiv input {
+    width: 20%;
+}
+
+.orderPayoff .inputDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formDiv .inputDiv input,
+.formDiv .inputDiv select {
+    border: 1px solid #c68d40;
+    border-radius: 3px;
+    padding: 0px 5px;
+}
+
+.formDiv .inputDiv select {
+    margin-right: 10px;
+}
+
+.formDiv .inputDiv label,
+.tableDiv p {
+    font-family: Nexa-Regular !important;
+    color: #000 !important;
+    font-size: 13px;
+}
+
+.formDiv .inputDiv {
+    margin-bottom: 15px;
+}
+
+.formDiv {
+    margin: 30px 0px;
+}
+
+.tableDiv table {
+    margin: 20px 0px;
+}
+
+.tableDiv table thead td {
+    padding: 5px;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+    color: #c68d40;
+}
+
+.tableDiv table tbody td {
+    padding: 10px;
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.crystalDiv .descriptionDiv p {
+    text-align: left;
+    color: #000 !important;
+    font-size: 14px;
+
+}
+
+.crystalDiv .multiCrystalDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0px;
+    padding: 20px 0px;
+    border-top: 1px solid #b57a4b;
+    border-bottom: 1px solid #b57a4b;
+}
+
+.crystalDiv .multiCrystalDiv .commonDiv p {
+    text-align: center !important;
+    font-size: 14px;
+    color: #b57a4b !important;
+}
+
+.crystalInstruction p,
+.questionDiv p {
+    font-weight: 500 !important;
+}
+
+.questionDiv {
+    margin: 10px 0px;
+}
+
+.crystalDiv p span {
+    color: #b57a4b;
+}
+
+.modal-dialog {
+    max-width: 90%;
+}
+
+.modal .middleHeader {
+    left: 40%;
+    max-width: 23%;
+}
+
+
+
+
+
+
+
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    border-radius: 8px;
+    background-color: #fff5e0;
+    border: 3px solid #763202;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.orderPayCard .payoffHeader {
+    padding: 20px 10px;
+}
+
+.orderPayCard .payoffHeader p {
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+    color: #000 !important;
+}
+
+.multiCards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.multiCards .cardDiv {
+    width: 32%;
+}
+
+.multiCards .cardDiv img {
+    width: 120px;
+}
+
+.multiPackage .packageDiv {
+    width: 15%;
+    background: #ffe8b9;
+    border: 1px solid #7b3601;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.multiPackage .packageDiv::before {
+    content: "";
+    background-image: url(../../../images/tag.png);
+    background-size: 100% 100%;
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    width: 50px;
+    height: 50px;
+
+
+}
+
+.multiPackage .packageDiv button {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #793402;
+    border: none;
+    padding: 5px;
+    color: #fff;
+}
+
+.multiPackage .packageDiv .percentText {
+    top: 10px;
+    position: absolute;
+    left: 0px;
+    color: #fff;
+    transform: rotate(-45deg);
+    font-family: Nexa-Bold !important;
+}
+
+.multiPackage .packageDiv img {
+    margin: 20px 0px;
+}
+
+.multiPackage .packageDiv span {
+    text-decoration: line-through;
+}
+
+.multiPackage {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.horizontalLine {
+    width: 100%;
+    height: 1px;
+    background: #ffe8b9;
+    position: relative;
+    margin: 40px 0px;
+}
+
+.horizontalLine p {
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #ffe8b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    top: -23px;
+}
+
+.customAmount {
+    text-align: center;
+    background: #ffe8b9;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.customAmount label {
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+}
+
+.customAmount input,
+.checkoutOrder .inputDiv input {
+    border: 1px solid #c68d40;
+    border-radius: 3px;
+    padding: 0px 5px;
+}
+
+.checkoutOrder {
+    margin: 40px 0px;
+}
+
+.checkoutOrder .inputDiv {
+    display: flex;
+    align-items: center;
+}
+
+.checkoutOrder .inputDiv label:nth-child(1) {
+    font-size: 22px;
+    margin-right: 30px;
+}
+
+.twoThreeStep {
+    width: 100%;
+    display: flex;
+}
+
+.twoThreeStep .checkoutOrder {
+    width: 35%;
+    text-align: center;
+}
+
+.twoThreeStep .imgTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffe8b9;
+    padding: 20px;
+    margin: 20px 0px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 90%;
+}
+
+.twoThreeStep .imgTable table {
+    margin-left: 50px;
+}
+
+.twoThreeStep .imgTable table td {
+    font-family: Nexa-Regular !important;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.twoThreeStep .imgTable table thead {
+    border-bottom: 1px solid #f7bb41;
+}
+
+.twoThreeStep .paymentMethod {
+    width: 70%;
+    padding: 38px;
+}
+
+.twoThreeStep .paymentMethod label {
+    text-align: left;
+    font-size: 22px;
+}
+
+.paymentMulti {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 5px;
+}
+
+.paymentMulti img {
+    width: 90px;
+}
+
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
@@ -1173,24 +1585,33 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
     .bgColor{background-size:contain;}
+    .multiPackage{
+        display: block;
+    }
     .loginUser .addFunds {
-        top: 0px;
+        top: 23px;
     }
+
     .loginUser .withDrawFunds {
-        top: 19px;
+        top: 35px;
     }
+
     .loginUser .myProfile {
-        top: 36px;
+        top: 48px;
     }
+
     .loginUser .accountSetting {
-        top: 52px;
+        top: 64px;
     }
+
     .statistics.loginUser p {
-        top: 52px !important;
+        top: 77px !important;
     }
+
     .payment.loginUser p {
-        top: 80px;
+        top: 100px;
     }
+
     #startRightNow .stairDiv .listContent p {
         font-size: 12px;
     }
@@ -1255,6 +1676,7 @@ input:checked + .slider:before {
         width: 100%;
         max-width: 80%;
         margin: auto;
+        height: 200px;
     }
 
     #header .statistics p {

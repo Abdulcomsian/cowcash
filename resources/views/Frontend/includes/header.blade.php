@@ -324,7 +324,7 @@
                  <div class="formDiv">
                      <div class="inputView">
                          <div class="inputDiv addFunds">
-                             <label for="">
+                             <label for="" id="myBtn">
                                  <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
                                  {{\Auth::user()->silver_coins ?? ''}} [Add Funds]
                              </label>
@@ -395,4 +395,7 @@
          </tbody>
      </table>
  </section>
+
+
+
  @endauth
