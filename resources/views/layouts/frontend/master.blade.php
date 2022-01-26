@@ -64,7 +64,7 @@
           <p class="percentText">+19%</p>
           <p><b>88204</b></p>
           <span>82433</span>
-          <p class="title">Gold Coins</p>
+          <p class="title">Silver Coins</p>
           <img src="{{asset('images/12.png')}}" alt="">
           <button>10 USD</button>
         </div>
@@ -72,7 +72,7 @@
         <p class="percentText">+19%</p>
           <p><b>88204</b></p>
           <span>82433</span>
-          <p class="title">Gold Coins</p>
+          <p class="title">Silver Coins</p>
           <img src="{{asset('images/12.png')}}" alt="">
           <button>10 USD</button>
         </div>
@@ -80,7 +80,7 @@
         <p class="percentText">+19%</p>
           <p><b>88204</b></p>
           <span>82433</span>
-          <p class="title">Gold Coins</p>
+          <p class="title">Silver Coins</p>
           <img src="{{asset('images/12.png')}}" alt="">
           <button>10 USD</button>
         </div>
@@ -88,7 +88,7 @@
         <p class="percentText">+19%</p>
           <p><b>88204</b></p>
           <span>82433</span>
-          <p class="title">Gold Coins</p>
+          <p class="title">Silver Coins</p>
           <img src="{{asset('images/12.png')}}" alt="">
           <button>10 USD</button>
         </div>
@@ -96,7 +96,7 @@
         <p class="percentText">+19%</p>
           <p><b>88204</b></p>
           <span>82433</span>
-          <p class="title">Gold Coins</p>
+          <p class="title">Silver Coins</p>
           <img src="{{asset('images/12.png')}}" alt="">
           <button>10 USD</button>
         </div>
@@ -125,7 +125,7 @@
               <thead>
                 <tr>
                   <td>Pack:</td>
-                  <td>8244 gold coins</td>
+                  <td>8244 Silver Coins</td>
                 </tr>
               </thead>
               <tbody>

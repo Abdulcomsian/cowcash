@@ -53,6 +53,10 @@
                                   <td>0.00 USD</td>
                               </tr>
                               <tr>
+                                  <td>Total milk:</td>
+                                  <td>dynamic data</td>
+                              </tr>
+                              <tr>
                                   <td>Logout:</td>
                                   <td>
                                       <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
