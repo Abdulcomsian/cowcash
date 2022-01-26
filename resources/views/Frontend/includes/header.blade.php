@@ -26,6 +26,7 @@
                                  </div>
                              </div>
                              <div class="multiBtn">
+                                 
                                  <button type="submit" class="cursor-pointer">Login</button>
                                  <a href="{{url('account/registration')}}" class="cursor-pointer">Register</a>
                              </div>
@@ -119,12 +120,15 @@
      <table>
          <tbody>
              <td class="logo commonWooden">
-                 <h2><span>CASH</span> <br>COW</h2>
-             </td>
+                <a href="{{ url('/home') }}">   
+                <h2><span>CASH</span> <br>COW</h2>
+                </a>
+            </td>
+             
              <td class="loginForm commonWooden">
                  <span class="signInText">SIGN IN ACCOUNT</span>
                  <div class="formDiv">
-                     <form id="login" method="POST" action="{{route('login')}}">
+                     <form id="login"  method="POST" action="{{route('login')}}">
                          @csrf
                          <div class="inputView">
                              <div class="inputDiv">
@@ -137,9 +141,13 @@
                              </div>
                          </div>
                          <div class="multiBtn">
-                             <button type="submit" class="cursor-pointer">Login</button>
-                             <a href="{{url('account/registration')}}"><button type="button" class="cursor-pointer">Register</button></a>
-                         </div>
+                             <div id="commonBtn">
+                                 <button id="login_button" type="submit" class="cursor-pointer">Login</button>
+                             </div>
+                             <div id="commonBtn">
+                                 <a href="{{url('account/registration')}}"><button id="register_button" type="button" class="cursor-pointer">Register</button></a>
+                             </div>
+                        </div>
                      </form>
                  </div>
              </td>
@@ -148,20 +156,22 @@
                  <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                  <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                  <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                 <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                 <div id="commonBtnn">
+                     <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                 </div>
 
              </td>
              <td class="payment commonWooden">
                  <span class="paymentText">Payment System</span>
-                 <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
-                 <div class="multiImg">
+                <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
+                    <div class="multiImg">
                         <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
                          <img src="{{asset('frontend/assets/img/bitcoin 2.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="text-center" style="text-align: center;">
-                    <img style="width: 50px" src="{{asset('frontend/assets/img/payeer.png')}}" alt="" class="img-fluid">
+                        <img style="width: 50px; padding-top:9px;" src="{{asset('frontend/assets/img/payeer.png')}}" alt="" class="img-fluid">
                     </div>
-                    </div>
+                </div>
              </td>
              <td class="board commonWooden">
                  <div class="multiBtn">
@@ -233,13 +243,15 @@
                  </div>
                  <div class="payment commonWooden loginUser">
                      <span class="paymentText">Other</span>
-                     <a href="{{url('account/promotion')}}">
+                     <!-- <a href="{{url('account/promotion')}}">
                          <p>Referral Promotion</p>
-                     </a>
+                     </a> -->
                      <a href="{{url('account/referal')}}">
                          <p>My referrals</p>
                      </a>
-                     <p>Promo materials</p>
+                     <a href="{{url('account/promo_material')}}">
+                         <p>Promo materials</p>
+                     </a>                     
                      <a href="{{url('account/calculate')}}">
                          <p>Calculate Income</p>
                      </a>
@@ -367,13 +379,13 @@
              </td>
              <td class="payment commonWooden loginUser">
                  <span class="paymentText">Other</span>
-                 <a href="{{url('account/promotion')}}">
+                 <!-- <a href="{{url('account/promotion')}}">
                      <p>Referral Promotion</p>
-                 </a>
+                 </a> -->
                  <a href="{{url('account/referal')}}">
                      <p>My referrals</p>
                  </a>
-                 <p>Promo materials</p>
+                  <a href="{{url('account/promo_material')}}"><p>Promo materials</p></a>
                  <a href="{{url('account/calculate')}}">
                      <p>Calculate Income</p>
                  </a>
