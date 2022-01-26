@@ -175,7 +175,11 @@
   </div>
 
 </div>
-    
+    <script>
+      $(".close").click(function () {
+    $('#myModal').modal('hide');
+})
+    </script>
 </body>
 
 </html>

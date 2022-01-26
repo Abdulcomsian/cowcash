@@ -11,7 +11,7 @@
          <ul>
              <li>
                  <div class="loginForm commonWooden">
-                     <span class="signInText">fdfdfdSIGN IN ACCOUNT</span>
+                     <span class="signInText">SIGN IN ACCOUNT</span>
                      <div class="formDiv">
                          <form id="login" method="POST" action="{{route('login')}}">
                              @csrf
@@ -22,7 +22,7 @@
                                  </div>
                                  <div class="inputDiv">
                                      <label for="">Password</label>
-                                     <input type="text" name="password" id="password" required>
+                                     <input type="password" name="password" id="password" required>
                                  </div>
                              </div>
                              <div class="multiBtn">
@@ -128,7 +128,7 @@
              <td class="loginForm commonWooden">
                  <span class="signInText">SIGN IN ACCOUNT</span>
                  <div class="formDiv">
-                     <form id="login"  method="POST" action="{{route('login')}}">
+                     <form id="login"  style="position:Relative;top:15px;" method="POST" action="{{route('login')}}">
                          @csrf
                          <div class="inputView">
                              <div class="inputDiv">
@@ -137,15 +137,15 @@
                              </div>
                              <div class="inputDiv">
                                  <label for="">Password</label>
-                                 <input type="text" name="password" id="password" required>
+                                 <input type="password" name="password" id="password" required>
                              </div>
                          </div>
                          <div class="multiBtn">
-                             <div id="commonBtn">
+                             <div id="commonBtn" style="max-width:25%;margin:0px;">
                                  <button id="login_button" type="submit" class="cursor-pointer">Login</button>
                              </div>
-                             <div id="commonBtn">
-                                 <a href="{{url('account/registration')}}"><button id="register_button" type="button" class="cursor-pointer">Register</button></a>
+                             <div id="commonBtn" style="max-width:25%;margin:0px;">
+                                 <a href="{{url('account/registration')}}"><button style="margin-left:0px;" id="register_button" type="button" class="cursor-pointer">Register</button></a>
                              </div>
                         </div>
                      </form>
@@ -217,7 +217,7 @@
                                      <label for="">Profile</label>
                                  </div>
                              </a>
-                             <a href="{{url('account/settings')}}" class="cursor-pointer">
+                             <a href="{{url('account/settings')}}" class="accountsetting cursor-pointer">
                                  <div class="inputDiv accountSetting">
                                      <label for="">Account Settings</label>
 
@@ -226,7 +226,7 @@
                          </div>
                      </div>
                  </div>
-                 <div class="statistics commonWooden loginUser">
+                 <div class="statistics commonWooden loginUser ">
                      <span class="statisticsText">MY FARM</span>
                      <a href="{{url('account/farm')}}">
                          <p>Buy Cows</p>
@@ -331,7 +331,7 @@
              <td class="logo commonWooden">
                  <h2><span>CASH</span> <br>COW</h2>
              </td>
-             <td class="loginForm commonWooden loginUser">
+             <td class="loginForm commonWooden loginUser header_col1">
                  <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
                  <div class="formDiv">
                      <div class="inputView">
@@ -362,7 +362,7 @@
                      </div>
                  </div>
              </td>
-             <td class="statistics commonWooden loginUser">
+             <td class="statistics commonWooden loginUser header_col2">
                  <span class="statisticsText">MY FARM</span>
                  <a href="{{url('account/farm')}}">
                      <p>Buy Cows</p>

@@ -221,7 +221,7 @@ button#register_button {
     padding: 5px 20px 8px 20px !important;
     color: #00000085;
     position: relative;
-    top: 33px !important;
+    top: 40px !important;
     font-weight: 1000;
     font-family: "Poppins", sans-serif;
 }
@@ -1150,8 +1150,11 @@ input:checked+.slider:before {
 .loginUser .signInText {
     left: 40% !important;
 }
-
-#header .loginUser {
+.header_col2 a{position:relative;top:-6px;}
+.header_col1 .inputView{
+    position:relative;top:4px;
+}
+    #header .loginUser {
     min-width: 115px;
 }
 
