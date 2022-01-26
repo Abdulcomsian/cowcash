@@ -11,6 +11,7 @@ Home Page
 @endsection
 @section('content')
 <section id="startRightNow">
+    
     <div class="midDiv">
         <p class="rightNow">EARN MONEY BY PLAYING</p>
         <p>Cow fram with money withdrawal <br> Stable earnings with our affiliate program</p>

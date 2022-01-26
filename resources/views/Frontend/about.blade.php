@@ -7,6 +7,9 @@
      .cursor-pointer {
          cursor: pointer;
      }
+     .bgColor{
+         overflow: initial;
+     }
  </style>
  @endsection
 

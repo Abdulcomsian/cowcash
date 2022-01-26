@@ -50,6 +50,18 @@ Route::get('/about', function () {
 Route::get('/support', function () {
     return view('Frontend.support');
 });
+Route::get('/promo_material', function () {
+    return view('Frontend.promo_material');
+});
+Route::get('/order_payoff', function () {
+    return view('Frontend.order_payoff');
+});
+Route::get('/crystal', function () {
+    return view('Frontend.crystal');
+});
+Route::get('/order_card', function () {
+    return view('Frontend.order_payoff_card');
+});
 Route::get('account/calculate', [FarmController::class, 'calculate'])->name('account.calculate');
 
 
