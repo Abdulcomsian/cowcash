@@ -357,6 +357,7 @@ button#register_button {
 }
 
 #startRightNow .stairDiv {
+    z-index:-9999;
     background-image: url("../img/stair.png") !important;
     height: 100%;
     background-repeat: no-repeat;
