@@ -13,7 +13,7 @@
       }
 
       .cowShop .multipleDiv {
-          height: 325px;
+          height: 240px;
           overflow: scroll;
       }
   </style>
@@ -94,7 +94,7 @@
               </div>
           </div>
           <!-- <button class="signUpBtn cursor-pointer" type="submit">Collect All</button> -->
-          
+
 
           @include('Frontend.includes.menues')
 
