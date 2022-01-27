@@ -212,13 +212,26 @@ button#register_button {
     border-radius: 3px;
     font-size: 12px;
 }
-
+#header .statistics p#allPartici{
+    font-family: Nexa-Regular;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 5px 20px 8px 20px !important; */
+    padding: 21px 20px 3px 20px !important;
+    color: #00000085;
+    position: relative;
+    top: 40px !important;
+    font-weight: 1000;
+    font-family: "Poppins", sans-serif;
+}
 #header .statistics p {
     font-family: Nexa-Regular;
     font-size: 12px;
     display: flex;
     justify-content: space-between;
     padding: 5px 20px 8px 20px !important;
+    /* padding: 16px 20px 7px 20px !important; */
     color: #00000085;
     position: relative;
     top: 40px !important;
@@ -1130,20 +1143,19 @@ input:checked+.slider:before {
 
 .loginUser .withDrawFunds {
     position: relative;
-    top: -3px;
+    top: 0px;
     display: flex;
 
 }
 
 .loginUser .myProfile {
     position: relative;
-
-    top: 3px;
+    top: 15px;
 }
 
 .loginUser .accountSetting {
     position: relative;
-    top: 9px;
+    top: 15px;
 
 }
 
