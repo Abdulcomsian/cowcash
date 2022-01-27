@@ -26,7 +26,7 @@
                                  </div>
                              </div>
                              <div class="multiBtn">
-                                 
+
                                  <button type="submit" class="cursor-pointer">Login</button>
                                  <a href="{{url('account/registration')}}" class="cursor-pointer">Register</a>
                              </div>
@@ -42,11 +42,11 @@
                  </div>
                  <div class="payment commonWooden">
                      <span class="paymentText">Payment System</span>
-                    <div class="multiImg">
-                        <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
+                     <div class="multiImg">
+                         <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
                          <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
                          <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
-                    </div>
+                     </div>
                  </div>
                  <div class="board commonWooden">
                      <div class="multiBtn">
@@ -120,15 +120,15 @@
      <table>
          <tbody>
              <td class="logo commonWooden">
-                <a href="{{ url('/home') }}">   
-                <h2><span>CASH</span> <br>COW</h2>
-                </a>
-            </td>
-             
+                 <a href="{{ url('/home') }}">
+                     <h2><span>CASH</span> <br>COW</h2>
+                 </a>
+             </td>
+
              <td class="loginForm commonWooden">
                  <span class="signInText">SIGN IN ACCOUNT</span>
                  <div class="formDiv">
-                     <form id="login"  style="position:Relative;top:15px;" method="POST" action="{{route('login')}}">
+                     <form id="login" style="position:Relative;top:15px;" method="POST" action="{{route('login')}}">
                          @csrf
                          <div class="inputView">
                              <div class="inputDiv">
@@ -147,7 +147,7 @@
                              <div id="commonBtn" style="max-width:25%;margin:0px;">
                                  <a href="{{url('account/registration')}}"><button style="margin-left:0px;" id="register_button" type="button" class="cursor-pointer">Register</button></a>
                              </div>
-                        </div>
+                         </div>
                      </form>
                  </div>
              </td>
@@ -163,15 +163,15 @@
              </td>
              <td class="payment commonWooden">
                  <span class="paymentText">Payment System</span>
-                <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
-                    <div class="multiImg">
-                        <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
+                 <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
+                     <div class="multiImg">
+                         <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
                          <img src="{{asset('frontend/assets/img/bitcoin 2.png')}}" alt="" class="img-fluid">
-                    </div>
-                    <div class="text-center" style="text-align: center;">
-                        <img style="width: 50px; padding-top:9px;" src="{{asset('frontend/assets/img/payeer.png')}}" alt="" class="img-fluid">
-                    </div>
-                </div>
+                     </div>
+                     <div class="text-center" style="text-align: center;">
+                         <img style="width: 50px; padding-top:9px;" src="{{asset('frontend/assets/img/payeer.png')}}" alt="" class="img-fluid">
+                     </div>
+                 </div>
              </td>
              <td class="board commonWooden">
                  <div class="multiBtn">
@@ -251,7 +251,7 @@
                      </a>
                      <a href="{{url('account/promo_material')}}">
                          <p>Promo materials</p>
-                     </a>                     
+                     </a>
                      <a href="{{url('account/calculate')}}">
                          <p>Calculate Income</p>
                      </a>
@@ -337,14 +337,14 @@
                      <div class="inputView">
                          <div class="inputDiv addFunds">
                              <label for="" id="myBtn">
-                                 <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
-                                 {{\Auth::user()->silver_coins ?? ''}} [Add Funds]
+                                 <img src="{{asset('images/12.png')}}" alt="" style="width: 15px;vertical-align: middle;">
+                                 {{number_format((float)\Auth::user()->silver_coins, 2, '.', '');}} [<a href="#" style="color:#005f90">Add Funds</a>]
                              </label>
                          </div>
                          <a href="{{url('account/payment')}}">
                              <div class="inputDiv withDrawFunds">
-                                 <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
-                                 <label for="">{{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label>
+                                 <img src="{{asset('images/12.png')}}" alt="" style="width: 15px;vertical-align: middle;">
+                                 <label for="">{{number_format((float)\Auth::user()->withdraw, 2, '.', '');}} [<a href="{{url('account/payment')}}" style="color:#005f90">Withdraw Funds</a>]</label>
 
                              </div>
                          </a>
@@ -385,7 +385,9 @@
                  <a href="{{url('account/referal')}}">
                      <p>My referrals</p>
                  </a>
-                  <a href="{{url('account/promo_material')}}"><p>Promo materials</p></a>
+                 <a href="{{url('account/promo_material')}}">
+                     <p>Promo materials</p>
+                 </a>
                  <a href="{{url('account/calculate')}}">
                      <p>Calculate Income</p>
                  </a>
@@ -407,7 +409,4 @@
          </tbody>
      </table>
  </section>
-
-
-
  @endauth

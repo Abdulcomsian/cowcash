@@ -35,18 +35,25 @@ Update Package
                                 @method('PUT')
                                 @csrf
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label class="mb-2 formlabel">Package Name</label>
                                         <input type="text" class="form-control" id="Pkgname" name="Pkgname" placeholder="Enter Pkgname" value="{{$pkg->Pkgname ?? ''}}" required>
                                         @if($errors->has('Pkgname'))
                                         <div class="error">{{ $errors->first('Pkgname') }}</div>
                                         @endif
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label class="mb-2 formlabel">Amount</label>
                                         <input type="integer" class="form-control" id="amount" name="amount" placeholder="Enter Amount" value="{{$pkg->amount ?? ''}}" required>
                                         @if($errors->has('amount'))
                                         <div class="error">{{ $errors->first('amount') }}</div>
+                                        @endif
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label class="mb-2 formlabel">Discount</label>
+                                        <input type="number" class="form-control" id="discount" name="discount" placeholder="Enter Discount %" value="{{$pkg->discount ?? ''}}">
+                                        @if($errors->has('discount'))
+                                        <div class="error">{{ $errors->first('discount') }}</div>
                                         @endif
                                     </div>
                                 </div>
