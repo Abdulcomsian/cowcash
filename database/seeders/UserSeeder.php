@@ -58,13 +58,36 @@ class UserSeeder extends Seeder
         $packages = [
             [
                 'Pkgname' => 'Silver Package',
-                'amount' => 500,
-                'coins_to_get' => 1000,
+                'amount' => 10,
+                'coins_to_get' => 82433,
+                'discount' => 7,
                 'status' => 1,
             ],  [
-                'Pkgname' => 'Pramium Package',
-                'amount' => 1000,
-                'coins_to_get' => 10000,
+                'Pkgname' => 'Silver Package',
+                'amount' => 50,
+                'coins_to_get' => 412163,
+                'discount' => 10,
+                'status' => 1,
+            ],
+            [
+                'Pkgname' => 'Silver Package',
+                'amount' => 100,
+                'coins_to_get' => 824325,
+                'discount' => 19,
+                'status' => 1,
+            ],
+            [
+                'Pkgname' => 'Silver Package',
+                'amount' => 250,
+                'coins_to_get' => 2060811,
+                'discount' => 26,
+                'status' => 1,
+            ],
+            [
+                'Pkgname' => 'Silver Package',
+                'amount' => 500,
+                'coins_to_get' => 4121622,
+                'discount' => 35,
                 'status' => 1,
             ],
         ];
@@ -74,11 +97,5 @@ class UserSeeder extends Seeder
         foreach ($packages as $pkg) {
             $packg = Packages::create($pkg);
         }
-        PackageTxn::create([
-            'user_id' => $user->id,
-            'package_id' => $packg->id,
-            'payment_method' => 'Paypal',
-            'payment_status' => 1,
-        ]);
     }
 }

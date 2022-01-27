@@ -25,16 +25,41 @@
                   for earned gold.</p>
               @php
               $totalcowsbought=0;
+              $cowsmilkperhour=0;
               foreach($cows as $cow)
               {
-              $totalcowsbought+=\App\Utils\HelperFunctions::boughtcows($cow->id);
+              if(\App\Utils\HelperFunctions::boughtcows($cow->id))
+              {
+              $totalcowsbought = \App\Utils\HelperFunctions::boughtcows($cow->id);
+              $cowsmilkperhour += $totalcowsbought*$cow->litters;
               }
-              $perdayincome= $totalcowsbought*24/100;
+              }
+              $perdayincome= $cowsmilkperhour*24/100;
+              $onblanaceper=$perdayincome/100*70;
+              $onblncewithdraw=$perdayincome/100*30;
               @endphp
+              <br>
+              @auth
+              <center>
+                  <span id="userlogin"></span>
+                  <div class="form-control-main break_word bg_white block-calculate" style="width: 611px;">
 
+                      <font style="margin-left:0px; font-weight:500;font-size: 16px;"></font>
+                      <div style="">
+                          <font style="margin-left:0px; font-weight:500;font-size: 16px;">On balance for purchases: <span style="font-weight:600;" id="res_sum2">{{number_format((float)$onblanaceper, 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> gold coins per 24 hours.<br>
+                              On balance for withdrawals: <span style="font-weight:600;" id="res_sum4">{{number_format((float)$onblncewithdraw , 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> gold bars per 24 hours.
+                          </font>
+                      </div>
+
+                  </div>
+              </center>
+              <br>
+              @endauth
+              @guest
               <p class="yourIncome"><span>Your income:</span>
-                  <span id="calperday">{{$perdayincome}}</span> per 24 hrs.
+                  <span id="calperday">{{number_format((float)$perdayincome, 2, '.', '');}}</span> per 24 hrs.
               </p>
+              @endguest
               <div class="multiBox">
                   @foreach($cows as $cow)
                   <div class="imgBoxInput">
@@ -75,10 +100,15 @@
               var newvalue = value * perhour;
               console.log(newvalue);
               totalvalue = totalvalue + newvalue;
-
           })
           var perdayincome = totalvalue * 24 / 100;
-          $("#calperday").html(perdayincome);
+          //for login user
+          if ($("#userlogin").length > 0) {
+              $("#res_sum2").html(parseFloat(perdayincome / 100 * 70).toFixed(2));
+              $("#res_sum4").html(parseFloat(perdayincome / 100 * 30).toFixed(2));
+          } else { //guest
+              $("#calperday").html(parseFloat(perdayincome).toFixed(2));
+          }
       })
   </script>
   @endsection

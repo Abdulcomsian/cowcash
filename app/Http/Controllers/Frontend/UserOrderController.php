@@ -235,4 +235,38 @@ class UserOrderController extends Controller
             return Redirect::back();
         }
     }
+    //exchagne coins
+    public function Swap()
+    {
+        return view('Frontend.swap');
+    }
+    //swap coins
+    public function SwapExchange(Request $request)
+    {
+        try {
+            $crystalbars = $request->exchange_sum;
+            if ($crystalbars < 100) {
+                toastError('The minimum amount to exchange is 100 gold bars');
+                return Redirect::back();
+            } else {
+                $checkuserbars = Auth::user()->withdraw;
+                if ($checkuserbars < $crystalbars) {
+                    toastError('You have not such bars to exchange');
+                    return Redirect::back();
+                } else {
+                    $crystalpercent = $crystalbars / 100 * 20;
+                    $silvercoins = $crystalbars + $crystalpercent;
+                    Auth::user()->update([
+                        'withdraw' => DB::raw('withdraw -' . $crystalbars),
+                        'silver_coins' => DB::raw('silver_coins +' . $silvercoins),
+                    ]);
+                    toastSuccess('You have succesffully exchange bars to coins');
+                    return Redirect::back();
+                }
+            }
+        } catch (\Exception $exception) {
+            toastError('Something went wrong, try again!');
+            return Redirect::back();
+        }
+    }
 }
