@@ -75,7 +75,7 @@ input:focus {
     color: #fff;
     font-family: "Bangers", cursive;
 }
-#header .statistics .statisticsText .commonBtn{
+#header .statistics .statisticsText .commonBtn {
     margin: auto;
     position: relative;
     top: 34px;
@@ -125,7 +125,7 @@ input:focus {
     font-size: 11px;
 } */
 
-#header .statistics button{
+#header .statistics button {
     position: absolute;
     left: 18%;
     background: transparent;
@@ -212,7 +212,7 @@ button#register_button {
     border-radius: 3px;
     font-size: 12px;
 }
-#header .statistics p#allPartici{
+#header .statistics p#allPartici {
     font-family: Nexa-Regular;
     font-size: 12px;
     display: flex;
@@ -525,8 +525,7 @@ button.signUpBtn {
     width: 100%;
 }
 
-.dailyBonusTable table thead td,
-    {
+.dailyBonusTable table thead td {
     color: #5e3700 !important;
     font-weight: 600;
 }
@@ -816,7 +815,7 @@ table {
     max-width: 44%;
     top: 39px;
 }
-#header .loginForm #commonBtn{
+#header .loginForm #commonBtn {
     background-image: url(../img/commonBtn.png);
     background-color: transparent;
     border: none;
@@ -1068,15 +1067,15 @@ table {
     transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
     background-color: #4caf50;
 }
 
-input:focus+.slider {
+input:focus + .slider {
     box-shadow: 0 0 1px #4caf50;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
@@ -1159,14 +1158,12 @@ input:checked+.slider:before {
 .loginUser .addFunds {
     position: relative;
     top: -12px;
-
 }
 
 .loginUser .withDrawFunds {
     position: relative;
     top: 0px;
     display: flex;
-
 }
 
 .loginUser .myProfile {
@@ -1177,7 +1174,6 @@ input:checked+.slider:before {
 .loginUser .accountSetting {
     position: relative;
     top: 15px;
-
 }
 
 .loginUser .signInText {
@@ -1191,7 +1187,7 @@ input:checked+.slider:before {
     position:relative;
     top:4px;
 }
-    #header .loginUser {
+#header .loginUser {
     min-width: 115px;
 }
 
@@ -1234,8 +1230,6 @@ input:checked+.slider:before {
     font-weight: 300 !important;
     margin-top: 20px;
 }
-
-
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
@@ -1371,7 +1365,6 @@ input:checked+.slider:before {
     text-align: left;
     color: #000 !important;
     font-size: 14px;
-
 }
 
 .crystalDiv .multiCrystalDiv {
@@ -1412,13 +1405,6 @@ input:checked+.slider:before {
     left: 40%;
     max-width: 23%;
 }
-
-
-
-
-
-
-
 
 .modal {
     display: none;
@@ -1511,8 +1497,6 @@ input:checked+.slider:before {
     left: -5px;
     width: 50px;
     height: 50px;
-
-
 }
 .logoutBtn {
     position: relative;
@@ -1609,7 +1593,7 @@ input:checked+.slider:before {
 }
 
 .checkoutOrder .inputDiv label:nth-child(1) {
-    font-size: 22px;
+    font-size: 19px;
     margin-right: 30px;
 }
 
@@ -1650,7 +1634,7 @@ input:checked+.slider:before {
 }
 
 .twoThreeStep .paymentMethod {
-    width: 70%;
+    width: 50%;
     padding: 38px;
 }
 
@@ -1662,7 +1646,7 @@ input:checked+.slider:before {
 .paymentMulti {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
     margin-top: 5px;
 }
 
@@ -1696,8 +1680,10 @@ input:checked+.slider:before {
 }
 
 @media (max-width: 768px) {
-    .bgColor{background-size:contain;}
-    .multiPackage{
+    .bgColor {
+        background-size: contain;
+    }
+    .multiPackage {
         display: block;
     }
     .loginUser .addFunds {

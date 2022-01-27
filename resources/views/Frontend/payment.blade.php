@@ -1,47 +1,86 @@
-  @extends('layouts.frontend.master')
-  @section('title')
-  Milk Wearhouse
-  @endsection
-  @section('css')
-  <style>
-      .cursor-pointer {
-          cursor: pointer;
-      }
-  </style>
-  @endsection
+@extends('layouts.frontend.master')
+ @section('title')
+ About Us
+ @endsection
+ @section('css')
+ <style>
+     .cursor-pointer {
+         cursor: pointer;
+     }
+     .bgColor{
+         height: 93%;
+     }
+     .active{
+         background-color: #fff !important;
+     }
+ </style>
+ @endsection
 
-  @section('content')
-  <section id="startRightNow">
-      <div class="midDiv milkWhareHouse">
-          <div class="bgColor">
-              <p class="rightNow">Order PayOff</p>
-              <div class="milkWhareHouse" style="padding: 30px 10px 10px;">
-                  <p style="text-align: left;">Choose the payment system suitable for you from the list of available
-                      Payoffs are made in automatic mode.</p>
-              </div>
-              <p class="notePara">
-                  <span>Withdraw your gold bars</span>
-                  <span></span>
-              </p>
-              <div class="commonBox">
-                  <a href="">
-                      <div class="imgDiv">
-                          <img src="{{asset('images/Payeer.png')}}">
-                      </div>
-                  </a>
-              </div>
-              <div class="commonBox">
-                  <a href="">
-                      <div class="imgDiv">
-                          <img src="{{asset('images/Paypal.png')}}">
-                      </div>
-                  </a>
-              </div>
+ @section('content')
+ <section id="startRightNow">
+     <div class="midDiv orderPayCard">
+         <div class="bgColor">
+             <div class="descriptionDiv" style="padding: 20px 20px;">
+                 <p class="rightNow">ORDER PAYOFF</p>
+                <div class="payoffHeader">
+                    <p>Choose the payment system suitable for you from the list of available Payoffs are made in automatic mode</p>
+                </div>
+                <div class="multiCards">
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group42.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group40.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 39 (2).png')}}" alt="">
+                    </div>
+                </div>
+                <div class="multiCards">
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group43.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group41.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 38 (2).png')}}" alt="">
+                    </div>
+                </div>
+                <div class="multiCards">
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group44.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group46.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 47.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="multiCards">
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 38.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 39.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 34.png')}}" alt="">
+                    </div>
+                </div>
+                <div class="multiCards">
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 37.png')}}" alt="">
+                    </div>
+                    <div class="cardDiv">
+                        <img src="{{asset('images/Group 36.png')}}" alt="">
+                    </div>
+                </div>
+             </div>
+         </div>
+         @include('Frontend.includes.menues')
 
-          </div>
-
-          @include('Frontend.includes.menues')
-
-      </div>
-  </section>
-  @endsection
+     </div>
+ </section>
+ @endsection

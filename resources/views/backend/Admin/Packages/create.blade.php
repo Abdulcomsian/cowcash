@@ -34,18 +34,25 @@ Create Package
                             <form method="post" action="{{route('packages.store')}}">
                                 @csrf
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label class="mb-2 formlabel">Package Name</label>
                                         <input type="text" class="form-control" id="Pkgname" name="Pkgname" placeholder="Enter Pkgname" required>
                                         @if($errors->has('Pkgname'))
                                         <div class="error">{{ $errors->first('Pkgname') }}</div>
                                         @endif
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-4">
                                         <label class="mb-2 formlabel">Amount</label>
-                                        <input type="integer" class="form-control" id="amount" name="amount" placeholder="Enter Amount" required>
+                                        <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter Amount" required>
                                         @if($errors->has('amount'))
                                         <div class="error">{{ $errors->first('amount') }}</div>
+                                        @endif
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label class="mb-2 formlabel">Discount</label>
+                                        <input type="number" class="form-control" id="discount" name="discount" placeholder="Enter Discount %">
+                                        @if($errors->has('discount'))
+                                        <div class="error">{{ $errors->first('discount') }}</div>
                                         @endif
                                     </div>
                                 </div>
@@ -63,8 +70,8 @@ Create Package
                                             <option value="1">Active</option>
                                             <option value="0">InActive</option>
                                         </select>
-                                        @if($errors->has('coins_to_get'))
-                                        <div class="error">{{ $errors->first('coins_to_get') }}</div>
+                                        @if($errors->has('status'))
+                                        <div class="error">{{ $errors->first('status') }}</div>
                                         @endif
                                     </div>
                                 </div>

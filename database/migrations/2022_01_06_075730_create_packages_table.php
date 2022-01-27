@@ -18,6 +18,7 @@ class CreatePackagesTable extends Migration
             $table->string('Pkgname')->nullable();
             $table->float('amount')->nullable();
             $table->integer('coins_to_get')->nullable();
+            $table->integer('discount')->nullable();
             $table->tinyInteger('status')->default(1);
 
             $table->timestamps();
