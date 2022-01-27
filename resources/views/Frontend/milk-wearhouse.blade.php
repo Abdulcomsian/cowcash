@@ -20,7 +20,7 @@
           <div class="bgColor">
               <p class="rightNow">MILK WHAREHOUSE</p>
               <div class="milkWhareHouse" style="padding: 30px 10px 10px;">
-                  <p style="text-align: left;">From your container milk sent to the warehouse. Collect them and sell. You can do it once per 1 minute. Milk are always stored in a safe place so you can collect them every minute or even once a month.</p>
+                  <p style="text-align: left;">From your container milk sent to the warehouse. <br> Collect them and sell. You can do it once per 1 minute. Milk <br> are always stored in a safe place so you can collect them every minute or even once a month.</p>
               </div>
               <p class="notePara">
                   <span>Cows gives: <b>{{ $total_laid_milk ?? ''}} Litters Milk</b></span>

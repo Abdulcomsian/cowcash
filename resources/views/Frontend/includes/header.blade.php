@@ -153,9 +153,9 @@
              </td>
              <td class="statistics commonWooden">
                  <span class="statisticsText">statistics</span>
-                 <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
-                 <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
-                 <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
+                 <p id="allPartici"><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
+                 <p id="allPartici"><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
+                 <p id="allPartici"><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
                  <div id="commonBtnn">
                      <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
                  </div>

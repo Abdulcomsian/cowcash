@@ -20,7 +20,7 @@
          <div class="bgColor">
              <p class="rightNow">MILK SELLING</p>
              <div class="detailBox">
-                 <p>Here you can see eggs and get gold that is required for the real money withdrawal. The gold got after selling are divided between two of your accounts - gold coins (for purchase) and gold bars (for withdrawal) in proportion: 70% to the gold coins (account for purchases) and 30% to the gold bars (account for withdrawal).</p>
+                 <p>Here you can see eggs and get gold that is required for <br> the real money withdrawal. The gold got after selling are divided between two of your accounts - gold coins (for purchase) and gold bars (for withdrawal) in proportion: 70% to the gold coins (account for purchases) and 30% to the gold bars (account for withdrawal).</p>
                  <p>Sale rate of milk: 1 liter milk = 1 gold</p>
              </div>
              <p class="notePara">

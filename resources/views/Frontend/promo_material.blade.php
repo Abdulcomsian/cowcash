@@ -22,8 +22,9 @@ Promo Materials
          <div class="bgColor">
              <div class="descriptionDiv" style="padding: 60px 20px;">
                  <p class="rightNow">PROMO MATERIALS</p>
+
                  <div class="multiSelect">
-                     <div class="selectOption active">
+                    <div class="selectOption active">
                          <p>728x90</p>
                      </div>
                      <div class="selectOption">
