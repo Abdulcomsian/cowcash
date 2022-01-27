@@ -24,6 +24,7 @@
       <div class="midDiv cowShop">
           <div class="bgColor">
               <p class="rightNow">COW SHOP</p>
+              <br><br><br><br>
               <div class="detailDiv">
                   <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
                   <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
@@ -93,9 +94,7 @@
               </div>
           </div>
           <!-- <button class="signUpBtn cursor-pointer" type="submit">Collect All</button> -->
-          <div class="collectBtn">
-                  <button class="commonBtn">Collect All</button>
-              </div>
+          
 
           @include('Frontend.includes.menues')
 

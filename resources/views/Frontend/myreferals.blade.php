@@ -7,6 +7,9 @@
        .cursor-pointer {
            cursor: pointer;
        }
+       .bgColor{
+           overflow: hidden !important;
+       }
    </style>
    @endsection
 
@@ -15,7 +18,7 @@
        <div class="midDiv">
            <div class="bgColor">
                <p class="rightNow">AFFILIATE PROGRAM</p>
-               <div class="affiliateProgram">
+               <div class="affiliateProgram ">
                    <p><b>Invite your friends to the game !</b></p>
                    <div class="tabeDiv">
                        <p class="active">For earning gold coins</p>

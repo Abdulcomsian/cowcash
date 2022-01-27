@@ -9,7 +9,8 @@ Promo Materials
      }
      .bgColor{
          height: 93%;
-     }
+          overflow: hidden;
+      }
      .active{
          background-color: #fff !important;
      }
@@ -22,7 +23,7 @@ Promo Materials
          <div class="bgColor">
              <div class="descriptionDiv" style="padding: 60px 20px;">
                  <p class="rightNow">PROMO MATERIALS</p>
-
+                 <div class="promoDiv">
                  <div class="multiSelect">
                     <div class="selectOption active">
                          <p>728x90</p>
@@ -79,6 +80,8 @@ Promo Materials
                          <p>970x90</p>
                      </div>
                  </div>
+                 </div>
+                 
                 <div class="htmlDiv">
                     <p>HTML code for yout referral image (SizeL 728x90)</p>
                     <div class="box">

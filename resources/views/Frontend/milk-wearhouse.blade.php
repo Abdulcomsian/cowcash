@@ -26,7 +26,7 @@
                   <span>Cows gives: <b>{{ $total_laid_milk ?? ''}} Litters Milk</b></span>
                   <span></span>
               </p>
-              <form method="post" action="{{url('account/collect-milk')}}">
+              <form class="milkWhareSec" method="post" action="{{url('account/collect-milk')}}">
                   @csrf
                   @foreach( $per_hour_collection as $perhour)
                   <div class="commonBox">

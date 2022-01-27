@@ -56,7 +56,7 @@
                                   <td>Total milk:</td>
                                   <td>dynamic data</td>
                               </tr>
-                              <tr>
+                              <!-- <tr>
                                   <td>Logout:</td>
                                   <td>
                                       <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -65,7 +65,7 @@
                                           {{ csrf_field() }}
                                       </form>
                                   </td>
-                              </tr>
+                              </tr> -->
                           </tbody>
                       </table>
                   </div>

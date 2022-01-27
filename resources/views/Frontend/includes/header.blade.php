@@ -329,7 +329,23 @@
      <table>
          <tbody>
              <td class="logo commonWooden">
-                 <h2><span>CASH</span> <br>COW</h2>
+                @auth
+                <div class="logoutBtn">
+                    <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <img src="{{asset ('frontend/assets/img/logout.png')}}" class="img-fluid" alt="logo">
+                    </a>
+                </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+                    <!-- <div class="logoutBtn">
+                        <a href=""><img src="{{asset ('frontend/assets/img/logout.png')}}" class="img-fluid" alt="logo"></a>
+                    </div>                 -->
+                @endauth
+                 <!-- <h2><span>CASH</span> <br>COW</h2> -->
+                 <a href="{{url('/home')}}">   
+                    <h2><span>CASH</span> <br>COW</h2>
+                </a>
              </td>
              <td class="loginForm commonWooden loginUser header_col1">
                  <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
