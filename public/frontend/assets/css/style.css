@@ -212,7 +212,7 @@ button#register_button {
     border-radius: 3px;
     font-size: 12px;
 }
-#header .statistics p#allPartici{
+#header .statistics p#allPartici {
     font-family: Nexa-Regular;
     font-size: 12px;
     display: flex;
@@ -1152,12 +1152,7 @@ input:checked + .slider:before {
 
 .loginUser .accountSetting {
     position: relative;
-<<<<<<< HEAD
-    top: 9px;
-=======
     top: 15px;
-
->>>>>>> a56efae7a5ff3654ccab6b3bf25377a0392fe356
 }
 
 .loginUser .signInText {
