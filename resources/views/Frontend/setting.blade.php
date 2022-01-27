@@ -7,6 +7,9 @@ Account Setting
     .cursor-pointer {
         cursor: pointer;
     }
+    .bgColor{
+        overflow: hidden !important;
+    }
 </style>
 @endsection
 

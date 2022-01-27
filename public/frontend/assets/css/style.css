@@ -167,14 +167,14 @@ input:focus {
     color: #00000085 !important;
     width: 100%;
     font-family: "Poppins", sans-serif !important;
-    font-weight: 1000;
+    font-weight: 900;
 }
 
 #header .statistics.loginUser p {
     font-size: 12px;
     color: #00000085;
-    font-family: "Source Serif Pro", serif !important;
-    font-weight: 1000;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 900;
 }
 
 #header .loginForm .inputDiv {
@@ -234,7 +234,7 @@ button#register_button {
     /* padding: 16px 20px 7px 20px !important; */
     color: #00000085;
     position: relative;
-    top: 40px !important;
+    /* top: 40px !important; */
     font-weight: 1000;
     font-family: "Poppins", sans-serif;
 }
@@ -371,7 +371,7 @@ button#register_button {
 
 #startRightNow .stairDiv {
     z-index:-9999;
-    background-image: url("../img/stair.png") !important;
+    background-image: url("../img/newstair.png") !important;
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -637,9 +637,20 @@ button.signUpBtn {
 }
 
 .affiliateProgram {
-    padding: 30px 20px;
+    padding: 30px 20px !important;
+    height: 86% !important;
+    overflow: scroll !important;
+    margin-top: 70px;
 }
-
+.promoDiv {
+    padding: 30px 20px !important;
+    overflow: scroll !important;
+    margin-top: 3px;
+}
+form.milkWhareSec {
+    overflow: scroll;
+    height: 72%;
+}
 .affiliateProgram tbody tr:nth-child(even),
 .paymentTable tbody tr:nth-child(even) {
     background: #fff8ea;
@@ -879,6 +890,16 @@ table {
     max-width: 80%;
     margin: auto;
     padding: 20px;
+}
+
+.setting .formDiv {
+    width: 100%;
+    max-width: 91%;
+    margin: auto;
+    padding: 20px;
+    overflow: scroll;
+    height: 93%;
+    margin-top: 72px;
 }
 
 .registration .formDiv input,
@@ -1162,9 +1183,13 @@ input:checked+.slider:before {
 .loginUser .signInText {
     left: 40% !important;
 }
-.header_col2 a{position:relative;top:-6px;}
+.header_col2 a{
+    position:relative;
+    top:33px;
+}
 .header_col1 .inputView{
-    position:relative;top:4px;
+    position:relative;
+    top:4px;
 }
     #header .loginUser {
     min-width: 115px;
@@ -1174,7 +1199,7 @@ input:checked+.slider:before {
     display: block !important;
     text-align: center;
     position: relative;
-    top: 27px !important;
+    /* top: 27px !important; */
 }
 
 .loginUser .paymentText {
@@ -1185,7 +1210,8 @@ input:checked+.slider:before {
     position: relative;
     top: 21px;
     text-align: center;
-    font-family: "Source Serif Pro", serif !important;
+    /* font-family: "Source Serif Pro", serif !important; */
+    font-family: "Poppins", sans-serif !important;
     font-size: 12px;
     padding: 8px 18px;
     color: #00000085;
@@ -1487,6 +1513,16 @@ input:checked+.slider:before {
     height: 50px;
 
 
+}
+.logoutBtn {
+    position: relative;
+    top: 5px;
+    text-align: center;
+    left: 70px;
+}
+.logoutBtn img {
+    width: 100%;
+    max-width: 25px;
 }
 
 .multiPackage .packageDiv button {
