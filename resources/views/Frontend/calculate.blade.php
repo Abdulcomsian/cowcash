@@ -42,7 +42,7 @@
               @auth
               <center>
                   <span id="userlogin"></span>
-                  <div class="form-control-main break_word bg_white block-calculate" style="width: 611px;">
+                  <div class="form-control-main break_word bg_white block-calculate text-center">
 
                       <font style="margin-left:0px; font-weight:500;font-size: 16px;"></font>
                       <div style="">
