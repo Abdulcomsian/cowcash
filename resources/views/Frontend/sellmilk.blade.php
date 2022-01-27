@@ -53,7 +53,7 @@
                          </tbody>
                      </table>
                  </div>
-                 <button class="signUpBtn cursor-pointer" type="submit">See All</button>
+                 <button class="signUpBtn cursor-pointer" type="submit">Sell All</button>
              </form>
          </div>
 

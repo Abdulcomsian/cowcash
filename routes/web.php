@@ -50,7 +50,7 @@ Route::get('/about', function () {
 Route::get('/support', function () {
     return view('Frontend.support');
 });
-Route::get('/promo_material', function () {
+Route::get('account/promo_material', function () {
     return view('Frontend.promo_material');
 });
 Route::get('/order_payoff', function () {

@@ -42,10 +42,10 @@
                                    <td>For each replenishment by a referral of †he 3rd level:</td>
                                    <td><b>5%</b> of the repenishment sum</td>
                                </tr>
-                               <tr>
+                               <!-- <tr>
                                    <td>For each replenishment by a referral of †he 4th level:</td>
                                    <td><b>1%</b> of the repenishment sum</td>
-                               </tr>
+                               </tr> -->
                                <tr>
                                    <td>For referral with unique IP address (0/20 per day):</td>
                                    <td><b>250</b> Gold coins</td>

@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
  @section('title')
- About Us
+Promo Materials
  @endsection
  @section('css')
  <style>

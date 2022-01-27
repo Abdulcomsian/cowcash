@@ -78,6 +78,10 @@
               <img style="width: 300px" src="../assets/img/Group 291.png" alt="">
               @endguest
           </div>
+          <!-- <button class="signUpBtn cursor-pointer" type="submit">Buy Cows</button> -->
+            <div class="collectBtn">
+                  <button class="commonBtn">Buy Cows</button>
+              </div>
 
           @include('Frontend.includes.menues')
 
