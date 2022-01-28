@@ -97,8 +97,8 @@ Home Page
                 <p>above 250 USD - FREE BONUS</p>
             </div>
             <div class="fifthChild">
-                <p>20 Cow At the replenishment</p>
-                <p>above 500 USD - FREE BONUS</p>
+                <p id="fifthChild-h2" >20 Cow At the replenishment</p>
+                <p id="fifthChild-p">above 500 USD - FREE BONUS</p>
             </div>
         </div>
     </div>
