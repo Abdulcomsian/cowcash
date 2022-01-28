@@ -400,25 +400,54 @@ button#register_button {
 #startRightNow .stairDiv .listContent p:last-child {
     font-size: 14px;
 }
+#startRightNow .stairDiv .firstChild {
+    position: relative;
+    top: 15px;
+    transform: rotate(1deg);
+}
 
 #startRightNow .stairDiv .secondChild {
     position: relative;
-    top: 60px;
+    top: 67px;
+    transform: rotate(1deg);
 }
 
 #startRightNow .stairDiv .thirdChild {
     position: relative;
-    top: 85px;
+    top: 110px;
+    transform: rotate(4deg);
 }
-
 #startRightNow .stairDiv .forthChild {
     position: relative;
-    top: 150px;
+    top: 132px;
+    line-height: 2;
+    right: 44px;
+    transform: rotate(0deg);
 }
 
-#startRightNow .stairDiv .fifthChild {
+
+#startRightNow .stairDiv .forthChild .fifthChild-h2 {
+    position: relative;
+    top: 133px;
+    right: 43px;
+    line-height: 2;
+}
+
+#startRightNow .stairDiv .fifthChild .fifthChild-p{
     position: relative;
     top: 205px;
+}
+#startRightNow .stairDiv .fifthChild {
+    position: relative;
+    top: 187px;
+}
+p#fifthChild-h2 {
+    transform: rotate(3deg);
+    padding-left: 13%;
+}
+p#fifthChild-p {
+    transform: rotate(3deg);
+    padding-right: 75px;
 }
 
 #startRightNow .midDiv .menuBox {
@@ -634,21 +663,54 @@ button.signUpBtn {
 .affiliateProgram .tabeDiv p.active {
     background-color: #ffddb4;
 }
-
-.affiliateProgram {
-    padding: 30px 20px !important;
-    height: 86% !important;
-    overflow: scroll !important;
-    margin-top: 70px;
+.scroll-rtl-milkWhareHouse{
+    overflow: scroll;
+    direction: rtl;
+    height: 115px;
+    overflow-x: hidden;
 }
-.promoDiv {
+.scroll-rtl-milkWhareHouse .milkWhareHouse {
+    padding: 10px 55px 10px 10px;
+    direction: ltr;
+}
+.main-affiliateProgram{
+    direction: rtl;
     padding: 30px 20px !important;
+    height: 90% !important;
+    overflow: scroll !important;
+}
+.affiliateProgram{
+    direction: ltr;
+}
+.main-htmlDiv{
     overflow: scroll !important;
     margin-top: 3px;
+    direction: rtl;
+    overflow-x: hidden !important;
+    height: 265px;
+}
+.child-htmlDiv {
+    direction: ltr;
+    padding: 17px;
+}
+.main-promoDiv{
+    padding: 0px 20px !important;
+    overflow: scroll !important;
+    margin-top: 3px;
+    direction: rtl;
+    overflow-x: hidden !important;
+    height: 160px;
+}
+.promoDiv {
+    direction: ltr;
+}
+.scroll-rtl-milkWhareSec{
+    overflow: scroll;
+    height: 75%;
+    direction: rtl;
 }
 form.milkWhareSec {
-    overflow: scroll;
-    height: 72%;
+    direction: ltr;
 }
 .affiliateProgram tbody tr:nth-child(even),
 .paymentTable tbody tr:nth-child(even) {
@@ -890,15 +952,27 @@ table {
     margin: auto;
     padding: 20px;
 }
-
-.setting .formDiv {
+.main-descriptionDiv {
+    height: 97%;
+    overflow: scroll;
+    overflow-x: hidden;
+    direction: rtl;
+ }
+ .descriptionDiv{
+     direction:ltr;
+ }
+.setting .main-formDiv{
     width: 100%;
     max-width: 91%;
     margin: auto;
     padding: 20px;
     overflow: scroll;
     height: 93%;
-    margin-top: 72px;
+    margin-top: 55px;
+    direction: rtl;
+}
+.setting .formDiv {
+    direction: ltr;
 }
 
 .registration .formDiv input,
@@ -934,12 +1008,15 @@ table {
     color: #ffd9a9;
     font-family: Nexa-Bold !important;
 }
-
+.rulesProgram .rulesDiv .main-rulesPara{
+    direction: ltr;
+}
 .rulesProgram .rulesDiv .rulesPara {
     overflow: scroll;
     height: 400px;
     padding: 20px;
     overflow-x: hidden;
+    direction: rtl;
 }
 
 .setting .formDiv .title {
@@ -955,11 +1032,16 @@ table {
 }
 
 .cowShop .detailDiv {
+    direction: ltr;
+    padding: 0px 30px 1px 0px;
+}
+
+.cowShop .scroll-rtl {
     overflow: scroll;
     height: 120px;
-    padding: 20px;
+    padding: 20px 45px 20px 20px;
     overflow-x: hidden;
-    border-radius: 0px 130px 0px 0px;
+    direction: rtl;
 }
 
 .alreadyPurchased {
@@ -973,9 +1055,13 @@ table {
     align-items: center;
 }
 
-.cowShop .multipleDiv {
-    height: 250px;
+.cowShop .detail-scroll-rtl {
+    height: 300px;
     overflow: scroll;
+    direction: rtl;
+}
+.cowShop .multipleDiv {
+    direction: ltr;
 }
 
 .cowShop .multipleDiv .commonDiv {
@@ -1720,7 +1806,7 @@ input:checked + .slider:before {
 
     #startRightNow .stairDiv .listContent .firstChild {
         position: relative;
-        top: -8px;
+        top: 18px;
     }
 
     #header {
@@ -1733,19 +1819,19 @@ input:checked + .slider:before {
     }
 
     #startRightNow .stairDiv .secondChild {
-        top: 40px;
+        top: 80px;
     }
 
     #startRightNow .stairDiv .thirdChild {
-        top: 75px;
+        top: 130px;
     }
 
     #startRightNow .stairDiv .forthChild {
-        top: 110px;
+        top: 167px;
     }
 
     #startRightNow .stairDiv .fifthChild {
-        top: 180px;
+        top: 235px;
     }
 
     #header .statistics button {
@@ -1884,18 +1970,34 @@ input:checked + .slider:before {
     }
 
     #startRightNow .stairDiv .secondChild {
-        top: 80px;
+        top: 81px !important;
+        transform: rotate(0deg);
+    
     }
 
     #startRightNow .stairDiv .thirdChild {
-        top: 130px;
+        top: 135px;
+        transform: rotate(6deg);
     }
 
     #startRightNow .stairDiv .forthChild {
-        top: 200px;
+        top: 164px;
+        left: -36px;
+        line-height: 3;
+        transform: rotate(1deg);
     }
 
     #startRightNow .stairDiv .fifthChild {
-        top: 260px;
+        top: 218px;
+        transform: rotate(6deg);
+        left: 30px;
+    }
+    p#fifthChild-h2 {
+        transform: rotate(0deg);
+        padding-left: 6%;
+    }
+    p#fifthChild-p {
+        transform: rotate(0deg);
+        padding-right: 38%;
     }
 }
