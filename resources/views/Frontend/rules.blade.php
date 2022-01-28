@@ -27,8 +27,8 @@
                 <div class="main-rulesPara">
                     <div class="rulesPara">
                         <p>
-                            Generalities.
-                            <br><br>
+                            
+                            <br>
                             1.1. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="/">coin-farm.net</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
                             <br>
                             1.2. To start getting the service a participant accepts all the rules of the present agreement fully and unconditionally and if you do not agree with any of the terms of the present agreement, the coordinator advises you to disclaim using the service.
