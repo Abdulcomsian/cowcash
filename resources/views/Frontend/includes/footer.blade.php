@@ -66,6 +66,14 @@
          $(".checkoutOrder").css('opacity', '1');
      })
  </script>
+ <script type="text/javascript">
+     function pay_ps()
+     {
+        amount=$("#checkoutprice").attr('value');
+        pkgid=1;
+        window.location.href= "{{ url('/createPayment')}}";
+     }
+ </script>
  @toastr_js
  @toastr_render
  @yield('script')

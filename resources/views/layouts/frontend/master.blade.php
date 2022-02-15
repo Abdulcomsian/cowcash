@@ -50,38 +50,6 @@
             <button id="data-price-{{$pkg->id}}" value="{{$pkg->amount}}">{{$pkg->amount}} USD</button>
           </div>
           @endforeach
-          <!-- <div class="packageDiv ">
-            <p class="percentText">+19%</p>
-            <p><b>88204</b></p>
-            <span>82433</span>
-            <p class="title">Silver Coins</p>
-            <img src="{{asset('images/12.png')}}" alt="">
-            <button>10 USD</button>
-          </div> -->
-          <!-- <div class="packageDiv">
-            <p class="percentText">+19%</p>
-            <p><b>88204</b></p>
-            <span>82433</span>
-            <p class="title">Silver Coins</p>
-            <img src="{{asset('images/12.png')}}" alt="">
-            <button>10 USD</button>
-          </div>
-          <div class="packageDiv">
-            <p class="percentText">+19%</p>
-            <p><b>88204</b></p>
-            <span>82433</span>
-            <p class="title">Silver Coins</p>
-            <img src="{{asset('images/12.png')}}" alt="">
-            <button>10 USD</button>
-          </div>
-          <div class="packageDiv">
-            <p class="percentText">+19%</p>
-            <p><b>88204</b></p>
-            <span>82433</span>
-            <p class="title">Silver Coins</p>
-            <img src="{{asset('images/12.png')}}" alt="">
-            <button>10 USD</button>
-          </div> -->
         </div>
         <div class="horizontalLine">
           <p>OR</p>
@@ -127,21 +95,7 @@
           <div class="paymentMethod" disable style="opacity:0.5;">
             <label for="">3. Select the payment method:</label>
             <div class="paymentMulti">
-              <div class="paymentDiv">
-                <img src="{{asset('images/Group42.png')}}" alt="">
-              </div>
-              <div class="paymentDiv">
-                <img src="{{asset('images/Group40.png')}}" alt="">
-              </div>
-              <div class="paymentDiv">
-                <img src="{{asset('images/Group 39 (2).png')}}" alt="">
-              </div>
-              <div class="paymentDiv">
-                <img src="{{asset('images/Group 38 (2).png')}}" alt="">
-              </div>
-            </div>
-            <div class="paymentMulti">
-              <div class="paymentDiv">
+              <div class="paymentDiv cursor-pointer" onclick="pay_ps()">
                 <img src="{{asset('images/Group42.png')}}" alt="">
               </div>
               <div class="paymentDiv">

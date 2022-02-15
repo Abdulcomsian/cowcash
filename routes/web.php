@@ -103,6 +103,13 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
     });
 });
 
+Route::group(['middleware' => ['auth']], function () {
+    //Payeer Payment Work here
+    Route::get('/ipn',[IpnPayeerController::class,'getResult']);
+    Route::post('/createPayment',[PaymentPayeerController::class,'createPayment']);
+    
+});
+
 
 Auth::routes(['verify' => true]);
 
