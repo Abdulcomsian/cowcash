@@ -269,4 +269,9 @@ class UserOrderController extends Controller
             return Redirect::back();
         }
     }
+
+    public function payment($id)
+    {
+        return view('Frontend.order_payoff', compact('id'));
+    }
 }
