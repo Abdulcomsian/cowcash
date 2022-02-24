@@ -24,8 +24,8 @@ class PaymentPayeerController extends Controller
         $m_shop =  '1608608742';
         $m_orderid = mt_rand();
         $m_amount = number_format($request->purchase_sum, 2, '.', '');
-        $m_curr = 'RUB';
-        $m_desc = base64_encode('Пополнение баланса');
+        $m_curr = 'USD';
+        $m_desc = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
         $m_key = 'halyava';
 
         $arHash = array(
@@ -36,8 +36,9 @@ class PaymentPayeerController extends Controller
             $m_desc,
             $m_key
         );
-
-        $sign = strtoupper(hash('sha256', implode(':', $arHash)));
+        // https://payeer.com/merchant/?m_shop=1608608742&m_orderid=12345&m_amount=150.00&m_curr=USD&m_desc=VGVzdCBwYXltZW50IOKEljEyMzQ1&m_sign=4D2C2F2621D3EA28F45D0D450CD36D83D1D16C8E8856BBD00FD0061CF023D2CB&lang=en
+       
+        $sign = '4D2C2F2621D3EA28F45D0D450CD36D83D1D16C8E8856BBD00FD0061CF023D2CB';
 
         if ($m_amount != 0) {
             try {
@@ -64,7 +65,7 @@ class PaymentPayeerController extends Controller
                 DB::connection()->getPdo()->rollBack();
             }
         }
-        return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign");
+        return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
     }
 
     //user payoff
