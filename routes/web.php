@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\PackagesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Frontend\FarmController;
 use App\Http\Controllers\Frontend\UserOrderController;
+use App\Http\Controllers\Frontend\IpnPayeerController;
+use App\Http\Controllers\Frontend\PaymentPayeerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\Country;
@@ -94,6 +96,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
     Route::get('/payment', function () {
         return view('Frontend.payment');
     });
+    Route::get('/payment/{id}', [UserOrderController::class, 'payment']);
+
     //update password
     Route::post('/update-password', [UserOrderController::class, 'updatePassword'])->name('account.update-password');
     Route::post('/update-currency', [UserOrderController::class, 'updateCurrency'])->name('account.update-currency');
@@ -101,6 +105,13 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
     Route::get('/promotion', function () {
         return view('Frontend.referal-promotions');
     });
+});
+
+Route::group(['middleware' => ['auth']], function () {
+    //Payeer Payment Work here
+    Route::get('/ipn', [IpnPayeerController::class, 'getResult']);
+    Route::post('/createPayment', [PaymentPayeerController::class, 'createPayment']);
+    Route::post('/payoff', [PaymentPayeerController::class, 'payoff']);
 });
 
 

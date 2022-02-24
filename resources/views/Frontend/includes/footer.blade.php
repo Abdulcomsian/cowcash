@@ -26,6 +26,8 @@
          $("#checkoutcoins").attr('value', coins);
          $("#checkoutprice").text(price);
          $("#checkoutprice").attr('value', price);
+         $("#checkout-sum-val").val(price);
+         $("#package_id").val(pkgid);
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
      })
@@ -61,10 +63,17 @@
          $("#customcoins").text(coins);
          $("#checkoutqty").val(qty);
          $("#checkoutcoins").text(qty);
-         $("#checkoutprice").text(coins);
+         $("#checkoutprice").text(qty);
+         $("#checkout-sum-val").val(qty);
+         $("#package_id").val('');
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
      })
+ </script>
+ <script type="text/javascript">
+     function pay_ps() {
+         $("#checkout-submit").submit();
+     }
  </script>
  @toastr_js
  @toastr_render
