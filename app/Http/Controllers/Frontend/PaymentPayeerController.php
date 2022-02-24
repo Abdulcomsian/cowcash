@@ -21,7 +21,7 @@ class PaymentPayeerController extends Controller
         $pkgid = $request->package_id;
         $user = Auth::user();
         $user = $user->id;
-        $m_shop =  '75722594';
+        $m_shop =  '1608608742';
         $m_orderid = mt_rand();
         $m_amount = number_format($request->purchase_sum, 2, '.', '');
         $m_curr = 'RUB';
