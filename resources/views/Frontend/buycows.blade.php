@@ -48,8 +48,8 @@
                               @csrf
                               <div class="detailCowDiv">
                                   <h5>{{$cow->cowName ?? ''}}</h5>
-                                  <p>Productivity: {{$cow->litters ?? ''}} Litters Milk a day</p>
-                                  <p>Cost: {{$cow->price ?? ''}} Gold Coins</p>
+                                  <p>Productivity: {{$cow->litters ?? ''}} Litters Milk a Hour</p>
+                                  <p>Cost: {{$cow->price ?? ''}} Silver Coins</p>
                                   <p>Already boughtL {{\App\Utils\HelperFunctions::boughtcows($cow->id)}}</p>
                                   <div class="inputDiv">
                                       <input type="number" name="qty" id="qty" value="1" required>
