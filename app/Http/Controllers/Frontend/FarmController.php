@@ -59,7 +59,7 @@ class FarmController extends Controller
     //total milk for sale 
     public function Sell_milk()
     {
-        $milkforsell = UserCows::where('user_id', Auth::user()->id)->get();
+        $milkforsell = UserCows::with('cow')->where('user_id', Auth::user()->id)->get();
         $totalmilkforsale = UserCows::where('user_id', Auth::user()->id)->sum('total_milk');
         return view('Frontend.sellmilk', compact('milkforsell', 'totalmilkforsale'));
     }

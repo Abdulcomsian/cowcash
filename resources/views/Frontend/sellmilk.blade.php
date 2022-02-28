@@ -33,7 +33,7 @@
                      <table>
                          <thead>
                              <tr>
-                                 <td></td>
+                                 <td>Name</td>
                                  <td>You have at the warehouse</td>
                                  <td>Worth (Silver Coins)</td>
                              </tr>
@@ -41,7 +41,7 @@
                          <tbody>
                              @foreach($milkforsell as $sell)
                              <tr>
-                                 <td></td>
+                                 <td>{{$sell->cow->cowName ?? ''}}</td>
                                  <td>{{$sell->total_milk ?? ''}} liter milk</td>
                                  @php
                                  $goldbar=$sell->total_milk/100;
