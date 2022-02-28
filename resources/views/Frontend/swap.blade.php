@@ -20,7 +20,7 @@
          <div class="bgColor">
              <p class="rightNow">Exchanger</p>
              <div class="detailBox" style="margin-top:30px">
-                 <p>In this exchanging section you can swap gold bars (for withdrawal) to gold coins (for purchases). After the swap you get +20% gold coins as swap to your account.</p>
+                 <p>In this exchanging section you can swap gold bars (for withdrawal) to gold coins (for purchases). After the swap you get +20% Silver coins as swap to your account.</p>
              </div>
              <p class="notePara" style="text-align: center;color:red !important">
                  <span>Only one side exchange is possible</span>

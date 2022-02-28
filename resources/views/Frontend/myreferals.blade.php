@@ -29,7 +29,7 @@
                                     old coins account ov the person invited ov vou.
                                     Affiliate income is unlimited. Even several invited people car
                                     bring you more than IOC
-                                    000 gold coins</p>
+                                    000 Silver Coins</p>
                                 <div class="patnerDiv">
                                     <p style="background-color: #e6ceaf;padding: 5px;">Partners Program</p>
                                     <table>
@@ -66,7 +66,7 @@
                                             <tr>
                                                 <td>Username</td>
                                                 <td>Sign up date</td>
-                                                <td>Income in gold coins</td>
+                                                <td>Income in Silver Coins</td>
                                             </tr>
                                         </thead>
                                         <tbody>

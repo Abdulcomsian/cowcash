@@ -46,7 +46,7 @@
 
                       <font style="margin-left:0px; font-weight:500;font-size: 16px;"></font>
                       <div style="">
-                          <font style="margin-left:0px; font-weight:500;font-size: 16px;">On balance for purchases: <span style="font-weight:600;" id="res_sum2">{{number_format((float)$onblanaceper, 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> gold coins per 24 hours.<br>
+                          <font style="margin-left:0px; font-weight:500;font-size: 16px;">On balance for purchases: <span style="font-weight:600;" id="res_sum2">{{number_format((float)$onblanaceper, 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> Silver coins per 24 hours.<br>
                               On balance for withdrawals: <span style="font-weight:600;" id="res_sum4">{{number_format((float)$onblncewithdraw , 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> gold bars per 24 hours.
                           </font>
                       </div>

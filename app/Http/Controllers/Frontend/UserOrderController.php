@@ -164,7 +164,9 @@ class UserOrderController extends Controller
                         ]);
                         //let supoose 100 litter milk=1 silver coins
                         $silvercoins = $milk / 100 * 70;
+                        $silvercoins=$silvercoins/100;
                         $goldcoins = $milk / 100 * 30;
+                        $goldcoins= $goldcoins/100;
                         $user = Auth::user();
                         $user->silver_coins = $user->silver_coins +  $silvercoins;
                         $user->withdraw = $user->withdraw + $goldcoins;

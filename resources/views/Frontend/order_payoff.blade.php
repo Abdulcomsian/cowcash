@@ -43,7 +43,7 @@ About Us
                             <select name="currency" id="currency" class="form-control">
                                 <option value="USD">USD</option>
                             </select>
-                            <input type="text" class="form-control" value="4.4" disabled>
+                            <input type="text" class="form-control" value="0.4" disabled>
                         </div>
                         <button type="submit" class="commonBtn cursor-pointer">Order Payoff</button>
                     </form>
