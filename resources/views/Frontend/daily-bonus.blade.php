@@ -20,7 +20,7 @@
          <div class="poly"></div>
          <p class="rightNow">DAILY BONUS</p>
          <div class="bgColor">
-             <p style="margin-top:70px">You can receive bonus every 12 hours.<br>Bonus is credited in gold coins to the account for purchases. The sum of the bonus is generated randomly form 10 to 100 gold coins.</p>
+             <p style="margin-top:70px">You can receive bonus every 12 hours.<br>Bonus is credited in silver coins to the account for purchases. The sum of the bonus is generated randomly form 10 to 100 silver coins.</p>
              @if(\Auth::user()->bonus_status==1)
              <br>
              <span>You will be able to receive next bonus in </span>

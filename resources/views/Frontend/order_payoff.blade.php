@@ -35,7 +35,7 @@ About Us
                             <input type="text" name="pp" class="form-control" required>
                         </div>
                         <div class="inputDiv">
-                            <label for="">You give resources [Min. <b>388</b> Gold Bars]:</label>
+                            <label for="">You give resources [Min. <b>388</b> Silver Block]:</label>
                             <input type="text" name="sum" id="sum" class="form-control" value="388" required>
                         </div>
                         <div class="inputDiv">

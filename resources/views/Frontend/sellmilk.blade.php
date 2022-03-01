@@ -20,7 +20,7 @@
          <div class="bgColor">
              <p class="rightNow">MILK SELLING</p>
              <div class="detailBox">
-                 <p>Here you can see eggs and get gold that is required for <br> the real money withdrawal. The gold got after selling are divided between two of your accounts - Silver coins (for purchase) and gold bars (for withdrawal) in proportion: 70% to the Silver coins (account for purchases) and 30% to the gold bars (account for withdrawal).</p>
+                 <p>Here you can see eggs and get silver that is required for  the real money withdrawal. The silver got after selling are divided between two of your accounts - Silver coins (for purchase) and silver blocks (for withdrawal) in proportion: 70% to the Silver coins (account for purchases) and 30% to the silver blocks (account for withdrawal).</p>
                  <p>Sale rate of milk: 100 liter milk = 1 Silver Coin</p>
              </div>
              <p class="notePara">
@@ -53,7 +53,7 @@
                          </tbody>
                      </table>
                  </div>
-                 <button class="signUpBtn cursor-pointer" type="submit">Sell All</button>
+                 <button class="commonBtn cursor-pointer" type="submit">Sell All</button>
              </form>
          </div>
 

@@ -20,7 +20,7 @@
          <div class="bgColor">
              <p class="rightNow">Exchanger</p>
              <div class="detailBox" style="margin-top:30px">
-                 <p>In this exchanging section you can swap gold bars (for withdrawal) to gold coins (for purchases). After the swap you get +20% Silver coins as swap to your account.</p>
+                 <p>In this exchanging section you can swap silver block (for withdrawal) to silver coins (for purchases). After the swap you get +20% Silver coins as swap to your account.</p>
              </div>
              <p class="notePara" style="text-align: center;color:red !important">
                  <span>Only one side exchange is possible</span>
@@ -33,7 +33,7 @@
                      <tbody>
                          <tr>
                              <td>
-                                 <font color="#000;">Give gold bars (for withdrawal) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [min. 100]:</font>
+                                 <font color="#000;">Give silver block (for withdrawal) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [min. 100]:</font>
                              </td>
                              <td align="center">
                                  <input type="number" class="form-control" name="exchange_sum" id="sum" value="100" onkeyup="calculate();" style="background: #fdfdfd; margin:0px; width:130px;height:24px">
@@ -41,7 +41,7 @@
                          </tr>
                          <tr>
                              <td>
-                                 <font color="#000;">Get gold coins (for purchases) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"></font> [+20%]:
+                                 <font color="#000;">Get silver coins (for purchases) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"></font> [+20%]:
                              </td>
                              <td align="center">
                                  <input type="number" class="form-control" name="res" id="res_sum" value="120" style="background: #fdfdfd; margin:0px; width:130px;height:24px" disabled="disabled">

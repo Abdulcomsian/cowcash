@@ -20,9 +20,9 @@
           <div class="bgColor">
               <p class="rightNow">CALCULATE INCOME</p>
               <p class="title" style="margin-top:60px">Here you can calculate your income</p>
-              <p>Enter a number of cows to see how much gold they will bring you.</p>
+              <p>Enter a number of cows to see how much silver they will bring you.</p>
               <p>* Please note that you earning will increase exponentially, if you buy new cows
-                  for earned gold.</p>
+                  for earned silver.</p>
               @php
               $totalcowsbought=0;
               $cowsmilkperhour=0;
@@ -46,8 +46,8 @@
 
                       <font style="margin-left:0px; font-weight:500;font-size: 16px;"></font>
                       <div style="">
-                          <font style="margin-left:0px; font-weight:500;font-size: 16px;">On balance for purchases: <span style="font-weight:600;" id="res_sum2">{{number_format((float)$onblanaceper, 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> Silver coins per 24 hours.<br>
-                              On balance for withdrawals: <span style="font-weight:600;" id="res_sum4">{{number_format((float)$onblncewithdraw , 2, '.', '');}}</span> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> gold bars per 24 hours.
+                          <font style="margin-left:0px; font-weight:500;font-size: 10px;font-family: Nexa-Regular !important;">On balance for purchases: <span style="font-weight:600;" id="res_sum2">{{number_format((float)$onblanaceper, 2, '.', '');}}</span> <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" /> Silver coins per 24 hours.<br>
+                              On balance for withdrawals: <span style="font-weight:600;" id="res_sum4">{{number_format((float)$onblncewithdraw , 2, '.', '');}}</span> <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" /> Silver blocks per 24 hours.
                           </font>
                       </div>
 
@@ -65,7 +65,7 @@
                   <div class="imgBoxInput">
                       <img src="{{asset('frontend/assets/img/coinsCow.png')}}" alt="">
                       <br>
-                      <label style="font-size:10px">{{$cow->cowName}}</label>
+                      <label style="font-size:10px;font-family: Nexa-Regular !important;">{{$cow->cowName}}</label>
                       <br>
                       <p style="font-size:10px;color:red !important" id="price{{$cow->id}}">{{$cow->litters ?? ''}} Litters</p>
                       <input class="claculateinput" type="text" name="item" id="{{$cow->id}}" value="{{\App\Utils\HelperFunctions::boughtcows($cow->id)}}">
@@ -74,7 +74,7 @@
               </div>
               @guest
               <button class="commonBtn">Sign Up</button>
-              <p style="color: #5e3700; text-align: center; font-weight: 600;">Sign Up right now and get Brown cow<br> +300 gold coins as a gift</p>
+              <p style="color: #5e3700; text-align: center; font-weight: 600;">Sign Up right now and get Brown cow<br> +300 silver coins as a gift</p>
               <img style="width: 300px" src="../assets/img/Group 291.png" alt="">
               @endguest
           </div>

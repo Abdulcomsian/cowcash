@@ -49,13 +49,13 @@
                             <br>
                             Game inventory is a conditional playing units which are called "Silver" for playing the game, the place of accounting and storing of which is game account of the participant in a computer in the format of accounting system of the playing ground "<a href="/">coin-farm.net</a>".
                             <br>
-                            Game account is a virtual account of the participant of the game which is provided by the coordinator to every participant on the playing ground for accounting the game inventory (silver coins, Silver bars and Golds).
+                            Game account is a virtual account of the participant of the game which is provided by the coordinator to every participant on the playing ground for accounting the game inventory (silver coins, Silver bars and Silver).
                             <br><br>
                             3.1. The subject of the present Agreement is providing service by the Coordinator for the Participant to organize leisure time in the game "<a href="/">coin-farm.net</a>" according to the terms of the present Agreement. Under such service, particularly, the following ones are meant: service at buying - selling game inventory, accounting significant information: actions on the game account, providing arrangements for identification and security of the participants, development software which is integrated in the playing ground and external appliances, informational and other service necessary for organizing the game and providing service for the participant during the game on the playing ground of the coordinator.
                             <br>
                             3.2. The game in general as all it's elements and any other conjugate external playing appliances are made solely for entertaining. The participant admits that all activities in the game on the playing ground are entertainment. The participant agrees that according to the characteristics of the account his/her extent of involving in the game will be accessible in different degree.
                             <br>
-                            3.3. The participant agrees that he/she is personally responsible for all the actions done with the game inventory (silver coins, Silver bars and Golds): buying, selling, input and output and also for any actions on the playing ground: creating, buying-selling, operations with all playing objects and other game attributes and objects used for the playing process.
+                            3.3. The participant agrees that he/she is personally responsible for all the actions done with the game inventory (silver coins, Silver bars and Silvers): buying, selling, input and output and also for any actions on the playing ground: creating, buying-selling, operations with all playing objects and other game attributes and objects used for the playing process.
                             <br>
                             3.4. The participant agrees that extent and possibility of participating in entertainment on the server of the Game are the main characteristics of the rendered service.
                             <br><br>
@@ -112,13 +112,13 @@
                             <br>
                             4.2.1.1. to ensure without payment access of the Participant to the playing ground and to participation in the game. The participant pays for the Internet access  and other expenses connected with it by him/herself;
                             <br>
-                            4.2.1.2. to account the game inventory (silver coins, Silver bars and Golds) at the Participant's account;
+                            4.2.1.2. to account the game inventory (silver coins, Silver bars and Silver) at the Participant's account;
                             <br>
                             4.2.1.3. to regularly improve the hardware and software complex but the Coordinator doesn't guarantee that the game's software doesn't have any mistakes and the hardware won't overstep the working parameters and will be working uninterruptedly;
                             <br>
                             4.2.1.4. to comply with the privacy policy with regard to the Participant's personal data in the order of pt. 6 of the present agreement;
                             <br>
-                            4.2.1.5. Order of payoffs by the user is restricted by availability of <a href="https://coin-farm.net/account/coins">Golds</a> on the account. 1 Gold gives the right to withdraw 1 EUR (or other user's account currency).
+                            4.2.1.5. Order of payoffs by the user is restricted by availability of <a href="https://coin-farm.net/account/coins">Silvers</a> on the account. 1 Silver gives the right to withdraw 1 EUR (or other user's account currency).
                             Silver Coin are credited for replenishment of the silver coins account:
                             <br>
                             - your replenishments of the account (40% of the paid sum);
@@ -127,7 +127,8 @@
                             <br>
                             - replenishment of the account by a referral of the 2nd level - 5% of the paid sum;
                             <br>
-                            4.2.1.6. Any person legally owning the game inventory (Silver bars and Golds) is paid with the sum conditioned by the set cost (Silver bars and Golds) after deduction of the operational sum;
+                            4.2.1.6. Any person legally owning the game inventory (Silver bars and Silver
+                            ) is paid with the sum conditioned by the set cost (Silver bars and Silver) after deduction of the operational sum;
                             <br><br>
                             4.2.2. The coordinator has right:
                             <br>
@@ -163,9 +164,9 @@
                             <br>
                             5.8. The Coordinator can make changes to the present Agreement, rules of the playing ground and other documents unilaterally. In case of making any changes to the documents the Coordinator allocates the latest versions of the documents on the site of the playing ground. All the changes come into effect from the moment of their allocating. The Participant had right to abrogate the present agreement during 3 days if he/she doesn't agree to the changes. In this case abrogating of the Agreement is being made according to the pt. 5.9 of the present agreement. The Participant is vested with the function to visit the official site of the Game regularly to become familiar with the official documents and news.
                             <br>
-                            5.9. The Participant has right to allocate the present Agreement unilaterally without saving the game account. In this case all the expenses connected with participating in the Game are not compensated or returned. The game inventory (silver coins, Silver bars and Golds) which are at the Participant's account are not being returned or compensated.
+                            5.9. The Participant has right to allocate the present Agreement unilaterally without saving the game account. In this case all the expenses connected with participating in the Game are not compensated or returned. The game inventory (silver coins, Silver bars and Silver) which are at the Participant's account are not being returned or compensated.
                             <br>
-                            5.10. The Coordinator has right to allocate the present Agreement unilaterally and also make other actions which restrict the possibilities in the Game of a participant or a group of participants who are accessories to ascertained breaches of the present Agreement. In this case all the attributes, the game inventory (Silver bars and Golds) which are on the account and the game account of the participant or the group of participants and all the expenses are not being returned.
+                            5.10. The Coordinator has right to allocate the present Agreement unilaterally and also make other actions which restrict the possibilities in the Game of a participant or a group of participants who are accessories to ascertained breaches of the present Agreement. In this case all the attributes, the game inventory (Silver bars and Silver) which are on the account and the game account of the participant or the group of participants and all the expenses are not being returned.
                             <br>
                             5.11. The Coordinator and the Participant are released from responsibility in case of acts of God to the list of which the following ones are attributed: natural disasters, wars, fires, floods, explosions, terrorism, riots, civil disorders, acts of the government, hackers attacks lack or failure of electricity, Internet providers, telecommunications and services. The side that has such circumstances should inform the other side within the reasonable time and in the available way.
                             <br><br>

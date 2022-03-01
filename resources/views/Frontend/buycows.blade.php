@@ -26,11 +26,11 @@
               <p class="rightNow">COW SHOP</p>
               <div class="scroll-rtl">
                   <div class="detailDiv">
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for gold coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
+                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
+                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
+                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
+                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
+                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
                   </div>
               </div>
               <div class="alreadyPurchased">
@@ -48,7 +48,7 @@
                               @csrf
                               <div class="detailCowDiv">
                                   <h5>{{$cow->cowName ?? ''}}</h5>
-                                  <p>Productivity: {{$cow->litters ?? ''}} Litters Milk a Hour</p>
+                                  <p>Productivity: {{$cow->litters ?? ''}} litter milk per hour</p>
                                   <p>Cost: {{$cow->price ?? ''}} Silver Coins</p>
                                   <p>Already boughtL {{\App\Utils\HelperFunctions::boughtcows($cow->id)}}</p>
                                   <div class="inputDiv">
