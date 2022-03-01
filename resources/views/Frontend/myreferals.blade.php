@@ -22,10 +22,12 @@
                             <div class="affiliateProgram ">
                                 <p><b>Invite your friends to the game !</b></p>
                                 <div class="tabeDiv">
-                                    <p class="active">For earning gold coins</p>
-                                    <p>For earning crystal</p>
+                                    <p class="active">For earning silver coins</p>
+                                    <p>For earning silver blocks
+                                        
+                                    </p>
                                 </div>
-                                <p style="margin: 20px 0px; color: #000 !important;">You will get <b>gold coins</b> for purchase from every replenishment or the
+                                <p style="margin: 20px 0px; color: #000 !important;">You will get <b>silver coins</b> for purchase from every replenishment or the
                                     old coins account ov the person invited ov vou.
                                     Affiliate income is unlimited. Even several invited people car
                                     bring you more than IOC
@@ -52,7 +54,7 @@
                                             </tr> -->
                                             <tr>
                                                 <td>For referral with unique IP address (0/20 per day):</td>
-                                                <td><b>250</b> Gold coins</td>
+                                                <td><b>250</b> Silver coins</td>
                                             </tr>
                                         </tbody>
                                     </table>

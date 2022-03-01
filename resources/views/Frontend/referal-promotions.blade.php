@@ -37,7 +37,7 @@
                             <tr>
                                 <td>Username</td>
                                 <td>Sign up date</td>
-                                <td>Income in gold coins</td>
+                                <td>Income in silver coins</td>
                             </tr>
                         </thead>
 

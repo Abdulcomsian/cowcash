@@ -41,7 +41,7 @@
                                   <td>{{\Auth::user()->silver_coins ?? ''}} coins</td>
                               </tr>
                               <tr>
-                                  <td>Gold Coins(for withdrawal):</td>
+                                  <td>Silver Coins(for withdrawal):</td>
                                   <td>{{\Auth::user()->withdraw ?? ''}} coins </td>
                               </tr>
                               <tr>

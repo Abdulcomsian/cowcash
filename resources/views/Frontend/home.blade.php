@@ -34,7 +34,7 @@ Home Page
                 <div class="imgDiv">
                     <img src="{{asset('frontend/assets/img/eggMilk.png')}}" alt="">
                 </div>
-                <p>Sell milk and you will get gold(real money)</p>
+                <p>Sell milk and you will get silver(real money)</p>
             </div>
             <div class="rightDiv">
                 <div class="imgDiv">

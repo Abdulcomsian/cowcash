@@ -1016,7 +1016,6 @@ table {
     height: 400px;
     padding: 20px;
     overflow-x: hidden;
-    direction: rtl;
 }
 
 .setting .formDiv .title {
