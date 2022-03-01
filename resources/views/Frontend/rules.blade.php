@@ -120,7 +120,7 @@
                             <br>
                             4.2.1.4. to comply with the privacy policy with regard to the Participant's personal data in the order of pt. 6 of the present agreement;
                             <br>
-                            4.2.1.5. Order of payoffs by the user is restricted by availability of <a href="https://coin-farm.net/account/coins">Silvers</a> on the account. 1 Silver gives the right to withdraw 1 EUR (or other user's account currency).
+                            4.2.1.5. Order of payoffs by the user is restricted by availability of <a href="account/coins">Gold Bars</a> on the account. 1 Silver gives the right to withdraw 1 EUR (or other user's account currency).
                             Silver Coin are credited for replenishment of the silver coins account:
                             <br>
                             - your replenishments of the account (40% of the paid sum);
