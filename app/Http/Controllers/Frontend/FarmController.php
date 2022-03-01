@@ -69,4 +69,10 @@ class FarmController extends Controller
         $cows = Cows::get();
         return view('Frontend.calculate', compact('cows'));
     }
+
+    //account coins
+    public function coins()
+    {
+        return view('Frontend.crystal');
+    }
 }

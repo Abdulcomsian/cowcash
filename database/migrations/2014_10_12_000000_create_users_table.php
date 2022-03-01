@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->float('silver_coins')->default(0);
             $table->float('gold_coins')->default(0);
             $table->float('withdraw')->default(0);
+            $table->float('crystal')->default(0);
             $table->string('referred_by')->nullable();
             $table->string('affiliate_id')->unique()->nullable();
             $table->string('referal_link')->nullable();

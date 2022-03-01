@@ -93,6 +93,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
     Route::get('/referal', [UserOrderController::class, 'Referal'])->name('account.referal');
     Route::get('/swap', [UserOrderController::class, 'Swap'])->name('account.swap');
     Route::post('/swap', [UserOrderController::class, 'SwapExchange'])->name('account.swap.exchange');
+    Route::get('/coins', [FarmController::class, 'coins'])->name('account.coins');
     Route::get('/payment', function () {
         return view('Frontend.payment');
     });
