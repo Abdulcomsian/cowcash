@@ -36,14 +36,14 @@ About Us
                         </div>
                         <div class="inputDiv">
                             <label for="">You give resources [Min. <b>388</b> Silver Block]:</label>
-                            <input type="text" name="sum" id="sum" class="form-control" value="388" required>
+                            <input type="number" name="silverblocks" id="sum" class="form-control" value="388" required>
                         </div>
                         <div class="inputDiv">
                             <label for="">Sum <b>USD [With fee of 5%]:</b></label>
                             <select name="currency" id="currency" class="form-control">
                                 <option value="USD">USD</option>
                             </select>
-                            <input type="text" class="form-control" value="0.4" disabled>
+                            <input type="text" name="amount" id="amount" class="form-control" value="0.04" disabled>
                         </div>
                         <button type="submit" class="commonBtn cursor-pointer">Order Payoff</button>
                     </form>
@@ -73,4 +73,20 @@ About Us
 
     </div>
 </section>
+@endsection
+@section('script')
+<script>
+    $("#sum").on('keyup', function() {
+        $silverblocks = $("#sum").val();
+        if ($silverblocks < 0 || $silverblocks == 0) {
+            $("#sum").val(0);
+            $("#amount").val(0);
+        } else {
+            $converttodolar = 1 / 7834 * $silverblocks;
+            $("#amount").val(parseFloat($converttodolar).toFixed(2));
+        }
+
+
+    })
+</script>
 @endsection

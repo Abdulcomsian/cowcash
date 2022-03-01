@@ -38,6 +38,7 @@ class HomeController extends Controller
                     DB::table('user_cows')
                         ->where('id', $user->id)
                         ->update([
+                            'cronjobtime' => date('Y-m-d H:i:s'),
                             'collect_per_hour_milk' => DB::raw('collect_per_hour_milk +' .  $total_milk . ''),
                         ]);
                 }

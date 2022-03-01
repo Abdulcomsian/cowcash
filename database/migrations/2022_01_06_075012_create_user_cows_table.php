@@ -27,6 +27,7 @@ class CreateUserCowsTable extends Migration
             $table->float('available_milk')->nullable();
             $table->float('sold_milk')->nullable();
             $table->float('collect_per_hour_milk')->nullable();
+            $table->string('cronjobtime')->nullable();
             $table->tinyInteger('status')->default(1);
 
             $table->timestamps();
