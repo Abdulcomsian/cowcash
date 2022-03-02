@@ -29,12 +29,15 @@
                   $total_milks=0;
                   foreach( $per_hour_collection as $perhour)
                   {
-                  $nowtime=Carbon\Carbon::now()->format('Y-m-d H:i:s');
-                  $to=Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$perhour->cronjobtime);
-                  $difference = $to->diff($nowtime);
-                  $minutes=$difference->i;
-                  $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
-                  $total_milks=$total_milks+$minutesmilk;
+                   if($perhour->cronjobtime != NULL)
+                   {
+                      $nowtime=Carbon\Carbon::now()->format('Y-m-d H:i:s');
+                      $to=Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$perhour->cronjobtime);
+                      $difference = $to->diff($nowtime);
+                      $minutes=$difference->i;
+                      $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
+                      $total_milks=$total_milks+$minutesmilk;
+                    }
                   }
                   $total_laid_milk =$total_laid_milk+ $total_milks;
                   @endphp
@@ -55,13 +58,18 @@
                               <p>Bought: <span><b>{{$perhour->bought}}</b></span></p>
                               <hr>
                               @php
+                              $minutesmilk=0;
+                              if($perhour->cronjobtime != NULL)
+                             {
                               $nowtime=Carbon\Carbon::now()->format('Y-m-d H:i:s');
                               $to=Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$perhour->cronjobtime);
                               $difference = $to->diff($nowtime);
                               $minutes=$difference->i;
-                              $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes
-                              @endphp
-                              <p>{{$difference->i}} minutes</p>
+                              $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
+                             
+                             
+                               }
+                                @endphp
                               <p class="laidmilkperhour" data-perminut="{{$perhour->litters*$perhour->bought}}">{{round($perhour->laidmilk+$minutesmilk ?? '')}}</p>
                               <input type="hidden" name="item[]" value="{{$perhour->id}}" />
                           </div>
