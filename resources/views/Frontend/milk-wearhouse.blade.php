@@ -73,7 +73,7 @@
                               $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
                                }
                                 @endphp
-                              Minutes: <span class="minutes">{{ $minutes}}</span>
+                             <!--  Minutes: <span class="minutes">{{ $minutes}}</span> -->
                               <p class="laidmilkperhour" data-perminut="{{number_format((float)$perhour->litters/60*$perhour->bought, 2, '.', '');}}">{{round($perhour->laidmilk+$minutesmilk ?? '')}}</p>
                               <input type="hidden" name="item[]" value="{{$perhour->id}}" />
                           </div>
@@ -100,8 +100,8 @@
               var totalmilkadded = parseFloat(perminutmlk);
               overalltotalmilk = parseFloat(overalltotalmilk + totalmilkadded);
               $(this).text(parseInt(laidmilk+totalmilkadded));
-              var minutes=parseInt($(".minutes").text());
-              $(".minutes").text(minutes+1);
+              // var minutes=parseInt($(".minutes").text());
+              // $(".minutes").text(minutes+1);
           });
           $("#overalltotalmilk").html(parseInt(overalltotalmilk)+ " Litters Milk");
          
