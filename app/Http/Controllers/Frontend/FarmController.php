@@ -9,7 +9,7 @@ use App\Models\UserOrder;
 use Illuminate\Http\Request;
 use Auth;
 use DB;
-
+use Carbon\Carbon;
 class FarmController extends Controller
 {
     public function index()
@@ -44,9 +44,15 @@ class FarmController extends Controller
     {
         try {
             foreach ($request->item as $cow) {
+                $userCows=UserCows::where(['cow_id' => $cow])->first();
+                $nowtime=Carbon::now()->format('Y-m-d H:i:s');
+                $to=Carbon::createFromFormat('Y-m-d H:i:s',$userCows->cronjobtime);
+                $minutes = $to->diffInMinutes($nowtime);
+                $collect_per_milk=$userCows->per_hours_litters/60*$minutes;
                 UserCows::where(['cow_id' => $cow])->update([
-                    'total_milk' => DB::raw('total_milk + collect_per_hour_milk'),
+                    'total_milk' => DB::raw('total_milk+'.$collect_per_milk),
                     'collect_per_hour_milk' => 0,
+                    'cronjobtime'=>date('Y-m-d H:i:s'),
                 ]);
             }
             toastSuccess('You have successfully collected Milk');

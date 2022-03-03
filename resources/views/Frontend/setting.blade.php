@@ -69,7 +69,16 @@ Account Setting
                     <hr>
                     <div class="inputDiv">
                         <label for="">Account Currency:</label>
-                        <label for="">USD</label>
+                        <label for="">
+                            @if(Auth::user()->currency=='1')
+                            USD
+                            @elseif(Auth::user()->currency=='2')
+                            EUR
+                            @else
+                            RUB
+                            @endif
+                            
+                        </label>
                     </div>
                     <form action="{{url('account/update-currency')}}" method="post">
                         @csrf

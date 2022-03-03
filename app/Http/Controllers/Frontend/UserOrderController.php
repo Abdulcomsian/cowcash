@@ -98,6 +98,7 @@ class UserOrderController extends Controller
                                 'available_milk' => 0,
                                 'sold_milk' => 0,
                                 'collect_per_hour_milk' => 0,
+                                'cronjobtime'=>date('Y-m-d H:i:s'),
                                 'status' => 1,
                             ]);
                             //deduct coins fron user when purchase cows
