@@ -1,3 +1,10 @@
+  @php
+  use Stichoza\GoogleTranslate\GoogleTranslate;
+  $tr = new GoogleTranslate(); // Translates to 'en' from auto-detected language by default
+  $tr->setSource('en'); // Translate from English
+  $tr->setSource(); // Detect language automatically
+  $tr->setTarget(Config::get('app.locale')); // Translate to Georgian
+  @endphp
   @extends('layouts.frontend.master')
   @section('title')
   Milk Wearhouse
@@ -18,7 +25,7 @@
   <section id="startRightNow">
       <div class="midDiv milkWhareHouse">
           <div class="bgColor">
-              <p class="rightNow">MILK WHAREHOUSE</p>
+              <p class="rightNow">{{$tr->translate('MILK WHAREHOUSE')}}</p>
               <div class="scroll-rtl-milkWhareHouse">
                   <div class="milkWhareHouse">
                       <p style="text-align: left;">From your container milk sent to the warehouse. <br> Collect them and sell. You can do it once per 1 minute. Milk <br> are always stored in a safe place so you can collect them every minute or even once a month.</p>
@@ -33,8 +40,7 @@
                    {
                       $nowtime=Carbon\Carbon::now()->format('Y-m-d H:i:s');
                       $to=Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$perhour->cronjobtime);
-                      $difference = $to->diff($nowtime);
-                      $minutes=$difference->i;
+                       $minutes = $to->diffInMinutes($nowtime);
                       $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
                       $total_milks=$total_milks+$minutesmilk;
                     }
@@ -63,14 +69,12 @@
                              {
                               $nowtime=Carbon\Carbon::now()->format('Y-m-d H:i:s');
                               $to=Carbon\Carbon::createFromFormat('Y-m-d H:i:s',$perhour->cronjobtime);
-                              $difference = $to->diff($nowtime);
-                              $minutes=$difference->i;
+                              $minutes = $to->diffInMinutes($nowtime);
                               $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
-                             
-                             
                                }
                                 @endphp
-                              <p class="laidmilkperhour" data-perminut="{{$perhour->litters*$perhour->bought}}">{{round($perhour->laidmilk+$minutesmilk ?? '')}}</p>
+                              Minutes: <span class="minutes">{{ $minutes}}</span>
+                              <p class="laidmilkperhour" data-perminut="{{number_format((float)$perhour->litters/60*$perhour->bought, 2, '.', '');}}">{{round($perhour->laidmilk+$minutesmilk ?? '')}}</p>
                               <input type="hidden" name="item[]" value="{{$perhour->id}}" />
                           </div>
                       </div>
@@ -91,14 +95,16 @@
       setInterval(function() {
           var overalltotalmilk = parseFloat($("#overalltotalmilk").attr('data-val'));
           $(".laidmilkperhour").each(function(i, obj) {
-              var totalmilk = $(this).attr('data-perminut');
-              var laidmilk = parseInt($(this).text());
-              var perminutmlk = totalmilk / 60;
-              var totalmilkadded = perminutmlk;
-              overalltotalmilk = parseInt(overalltotalmilk + totalmilkadded);
-              $(this).text(parseInt(totalmilkadded));
+              var perminutmlk= $(this).attr('data-perminut');
+              var laidmilk = parseFloat($(this).text());
+              var totalmilkadded = parseFloat(perminutmlk);
+              overalltotalmilk = parseFloat(overalltotalmilk + totalmilkadded);
+              $(this).text(parseInt(laidmilk+totalmilkadded));
+              var minutes=parseInt($(".minutes").text());
+              $(".minutes").text(minutes+1);
           });
-          $("#overalltotalmilk").html(overalltotalmilk + " Litters Milk");
+          $("#overalltotalmilk").html(parseInt(overalltotalmilk)+ " Litters Milk");
+         
       }, 60000);
   </script>
   @endsection

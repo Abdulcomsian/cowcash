@@ -52,6 +52,20 @@ class CowsTableSeeder extends Seeder
                 'litters' => 800,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],
+            [
+                'cowName' => 'Samjon',
+                'color' => 'White',
+                'price' => 20000,
+                'litters' => 900,
+                'image' => 'uploads\cowImages\bulls.jpg',
+            ],
+            [
+                'cowName' => 'Anwarcow',
+                'color' => 'White',
+                'price' => 30000,
+                'litters' => 1000,
+                'image' => 'uploads\cowImages\bulls.jpg',
+            ],
         ];
         foreach ($cows as $cow) {
             Cows::create($cow);
