@@ -55,6 +55,21 @@ class UserSeeder extends Seeder
             'currency' => '1',
         ]);
 
+        $affiliateid = Str::random(10);
+        $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
+        User::create([
+            'name' => 'Areeb',
+            'email' => 'areeb@gmail.com',
+            'email_verified_at' => '2021-07-30',
+            'password' => bcrypt('123456'),
+            'role' => 'farmer',
+            'silver_coins' => 100000,
+            'affiliate_id' => $affiliateid,
+            'referal_link' => $referal_link,
+            'country_id' => '170',
+            'currency' => '1',
+        ]);
+
         $packages = [
             [
                 'Pkgname' => 'Silver Package',
