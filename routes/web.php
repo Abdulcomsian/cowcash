@@ -110,7 +110,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'account'], function () {
 
 Route::group(['middleware' => ['auth']], function () {
     //Payeer Payment Work here
-    Route::get('/ipn', [IpnPayeerController::class, 'getResult']);
+    Route::get('/success', [IpnPayeerController::class, 'Payment_Success']);
+    Route::get('/fail', [IpnPayeerController::class, 'Payment_Fail']);
+    Route::get('/status', [IpnPayeerController::class, 'Payment_Status']);
     Route::post('/createPayment', [PaymentPayeerController::class, 'createPayment']);
     Route::post('/payoff', [PaymentPayeerController::class, 'payoff']);
 });

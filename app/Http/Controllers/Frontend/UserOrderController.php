@@ -21,7 +21,13 @@ class UserOrderController extends Controller
     //profile
     public function Profile()
     {
-        return view('Frontend.profile');
+        $totalmilk=UserCows::where('user_id',Auth()->user()->id)->sum('total_milk');
+        $invitedby='';
+        if(Auth::user()->referred_by)
+        {
+            $invitedby=User::find(Auth::user()->referred_by);
+        }
+        return view('Frontend.profile',compact('totalmilk','invitedby'));
     }
     //settings
     public function Settings()
