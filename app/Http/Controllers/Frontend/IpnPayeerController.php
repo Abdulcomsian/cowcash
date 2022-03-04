@@ -20,9 +20,8 @@ class IpnPayeerController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\RedirectResponse|void
      */
-    public function getResult(Request $request)
+    public function Payment_Success(Request $request)
     {
-        dd($request->all());
         if ($_SERVER['REMOTE_ADDR'] != '37.59.221.230') return;
         $m_key = '123';
         $m_shop = $request->get('m_shop');
@@ -67,5 +66,15 @@ class IpnPayeerController extends Controller
             }
         }
         return redirect()->action('ProfileController@index');
+    }
+
+    public function Payment_Fail(Request $request)
+    {
+        echo "Payment Failed";
+    }
+
+    public function Payment_Status(Request $request)
+    {
+        echo "Payment Status";
     }
 }

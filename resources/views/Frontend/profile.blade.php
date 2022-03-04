@@ -50,22 +50,25 @@
                               </tr>
                               <tr>
                                   <td>Paid out:</td>
-                                  <td>0.00 USD</td>
+                                  <td>0.00  @if(Auth::user()->currency=='1')
+                                            USD
+                                            @elseif(Auth::user()->currency=='2')
+                                            EUR
+                                            @else
+                                            RUB
+                                            @endif
+                                  </td>
                               </tr>
                               <tr>
                                   <td>Total milk:</td>
-                                  <td>dynamic data</td>
+                                  <td>{{$totalmilk ?? ''}} Liters</td>
                               </tr>
-                              <!-- <tr>
-                                  <td>Logout:</td>
+                              <tr>
+                                  <td>You are invited by</td>
                                   <td>
-                                      <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                          <i class="material-icons text-danger">&#xE879;</i> Logout </a>
-                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                          {{ csrf_field() }}
-                                      </form>
+                                     {{$invitedby->name ?? ''}}
                                   </td>
-                              </tr> -->
+                              </tr>
                           </tbody>
                       </table>
                   </div>

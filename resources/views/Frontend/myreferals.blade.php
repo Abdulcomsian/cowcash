@@ -48,14 +48,6 @@
                                                 <td>For each replenishment by a referral of †he 3rd level:</td>
                                                 <td><b>5%</b> of the repenishment sum</td>
                                             </tr>
-                                            <!-- <tr>
-                                                <td>For each replenishment by a referral of †he 4th level:</td>
-                                                <td><b>1%</b> of the repenishment sum</td>
-                                            </tr> -->
-                                            <tr>
-                                                <td>For referral with unique IP address (0/20 per day):</td>
-                                                <td><b>250</b> Silver coins</td>
-                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -68,7 +60,7 @@
                                             <tr>
                                                 <td>Username</td>
                                                 <td>Sign up date</td>
-                                                <td>Income in Silver Coins</td>
+                                                <td>Income in Silver Blocks</td>
                                             </tr>
                                         </thead>
                                         <tbody>

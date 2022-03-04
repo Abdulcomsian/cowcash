@@ -35,11 +35,13 @@ Crystal Coins
                 <div class="multiCrystalDiv">
                     <div class="commonDiv">
                         <p style="font-family: Nexa-Bold !important; font-size: 10px;">Silver coins on your account instead of silver blocks:</p>
-                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">00.0</p>
+                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">{{Auth::user()->withdraw ?? '0.0'}}</p>
                     </div>
                     <div class="commonDiv">
                         <p style="font-family: Nexa-Bold !important; font-size: 10px;">Silver block on your account instead of crystal:</p>
-                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">00.0</p>
+                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">
+                            {{Auth::user()->crystal ?? ''}}</p>
+                        </p>
                     </div>
                 </div>
                 <div class="crystalInstruction">
