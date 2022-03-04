@@ -50,7 +50,7 @@ class FarmController extends Controller
                 $minutes = $to->diffInMinutes($nowtime);
                 $collect_per_milk=$userCows->per_hours_litters/60*$minutes;
                 UserCows::where(['cow_id' => $cow])->update([
-                    'total_milk' => DB::raw('total_milk+'.$collect_per_milk),
+                    'total_milk' => DB::raw('total_milk+'.$collect_per_milk*$userCows->qty),
                     'collect_per_hour_milk' => 0,
                     'cronjobtime'=>date('Y-m-d H:i:s'),
                 ]);

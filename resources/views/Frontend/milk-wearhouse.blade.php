@@ -47,7 +47,7 @@
                   }
                   $total_laid_milk =$total_laid_milk+ $total_milks;
                   @endphp
-                  <span>Cows gives: <b id="overalltotalmilk" data-val="{{$total_laid_milk}}">{{ round($total_laid_milk ?? '')}} Litters Milk</b></span>
+                  <span>Cows gives: <b id="overalltotalmilk" data-val="{{$total_laid_milk}}">{{number_format((float)$total_laid_milk , 2, '.', '');}} Litters Milk</b></span>
                   <span></span>
               </p>
               <div class="scroll-rtl-milkWhareSec">
@@ -73,8 +73,8 @@
                               $minutesmilk=$perhour->litters*$perhour->bought/60*$minutes;
                                }
                                 @endphp
-                             <!--  Minutes: <span class="minutes">{{ $minutes}}</span> -->
-                              <p class="laidmilkperhour" data-perminut="{{number_format((float)$perhour->litters/60*$perhour->bought, 2, '.', '');}}">{{round($perhour->laidmilk+$minutesmilk ?? '')}}</p>
+                             <!--  Minutes: <span class="minutes">{{$minutes}}</span> -->
+                              <p class="laidmilkperhour" data-perminut="{{number_format((float)$perhour->litters/60*$perhour->bought, 2, '.', '');}}">{{number_format((float)$perhour->laidmilk+$minutesmilk , 2, '.', '');}}</p>
                               <input type="hidden" name="item[]" value="{{$perhour->id}}" />
                           </div>
                       </div>
@@ -99,11 +99,12 @@
               var laidmilk = parseFloat($(this).text());
               var totalmilkadded = parseFloat(perminutmlk);
               overalltotalmilk = parseFloat(overalltotalmilk + totalmilkadded);
-              $(this).text(parseInt(laidmilk+totalmilkadded));
+              var cowmilk=laidmilk+totalmilkadded;
+              $(this).text(cowmilk.toFixed(2));
               // var minutes=parseInt($(".minutes").text());
               // $(".minutes").text(minutes+1);
           });
-          $("#overalltotalmilk").html(parseInt(overalltotalmilk)+ " Litters Milk");
+          $("#overalltotalmilk").html(overalltotalmilk.toFixed(2)+ " Litters Milk");
          
       }, 60000);
   </script>
