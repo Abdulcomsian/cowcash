@@ -19,7 +19,7 @@
       <div class="midDiv calculateIncome">
           <div class="bgColor">
               <p class="rightNow">CALCULATE INCOME</p>
-              <p class="title" style="margin-top:60px">Here you can calculate your income</p>
+              <p class="title" style="margin-top:30px; font-family: Nexa-Bold !important; margin-bottom: 10px;">Here you can calculate your income</p>
               <p>Enter a number of cows to see how much silver they will bring you.</p>
               <p>* Please note that you earning will increase exponentially, if you buy new cows
                   for earned silver.</p>

@@ -27,10 +27,6 @@
               <div class="scroll-rtl">
                   <div class="detailDiv">
                       <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
-                      <p>At the shop you can buy different cows. Each cow gives special milk, which can be sold at the market and exchanged for silver coins that are required for the real money withdrawal. Every type of cow has different productivity - the more expensive the cow is, the more milk it gives. You can buy unlimited amount of cows. Our cows don't die and will always produce milk!</p>
                   </div>
               </div>
               <div class="alreadyPurchased">
@@ -64,6 +60,7 @@
                   </div>
               </div>
           </div>
+          <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: bold;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
           @include('Frontend.includes.menues')
 
       </div>

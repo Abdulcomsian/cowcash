@@ -20,7 +20,8 @@
          <div class="bgColor">
              <p class="rightNow">MILK SELLING</p>
              <div class="detailBox">
-                 <p>Here you can see eggs and get silver that is required for  the real money withdrawal. The silver got after selling are divided between two of your accounts - Silver coins (for purchase) and silver blocks (for withdrawal) in proportion: 70% to the Silver coins (account for purchases) and 30% to the silver blocks (account for withdrawal).</p>
+                 <!-- <p>Here you can see eggs and get silver that is required for  the real money withdrawal. The silver got after selling are divided between two of your accounts - Silver coins (for purchase) and silver blocks (for withdrawal) in proportion: 70% to the Silver coins (account for purchases) and 30% to the silver blocks (account for withdrawal).</p> -->
+                 <p>From your farm, milk is sent to the warehouse. Collect it and sell. You can do it once per 1 minute. Milk is always stored in a safe place so you can collect it every minute or even once a month.</p>
                  <p>Sale rate of milk: 100 liter milk = 1 Silver Coin</p>
              </div>
              <p class="notePara">

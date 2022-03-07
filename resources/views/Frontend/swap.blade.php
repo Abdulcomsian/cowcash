@@ -33,7 +33,7 @@
                      <tbody>
                          <tr>
                              <td>
-                                 <font color="#000;">Give silver block (for withdrawal) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [min. 100]:</font>
+                                 <font color="#000;" style="font-family: Nexa-Regular !important; font-size: 10px;">Give silver block (for withdrawal) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [min. 100]:</font>
                              </td>
                              <td align="center">
                                  <input type="number" class="form-control" name="exchange_sum" id="sum" value="100" onkeyup="calculate();" style="background: #fdfdfd; margin:0px; width:130px;height:24px">
@@ -41,7 +41,7 @@
                          </tr>
                          <tr>
                              <td>
-                                 <font color="#000;">Get silver coins (for purchases) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"></font> [+20%]:
+                                 <font color="#000;" style="font-family: Nexa-Regular !important; font-size: 10px;">Get silver coins (for purchases) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [+20%]:</font>
                              </td>
                              <td align="center">
                                  <input type="number" class="form-control" name="res" id="res_sum" value="120" style="background: #fdfdfd; margin:0px; width:130px;height:24px" disabled="disabled">
