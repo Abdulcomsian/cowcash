@@ -55,6 +55,9 @@ Route::get('/support', function () {
 Route::get('account/promo_material', function () {
     return view('Frontend.promo_material');
 });
+Route::get('account/swap', function () {
+    return view('Frontend.swap');
+});
 Route::get('/order_payoff', function () {
     return view('Frontend.order_payoff');
 });

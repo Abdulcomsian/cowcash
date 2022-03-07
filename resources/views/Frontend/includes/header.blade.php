@@ -232,7 +232,7 @@
                          <p>Buy Cows</p>
                      </a>
                      <a href="{{url('account/store')}}">
-                         <p>Milk Wearhouse</p>
+                         <p>Milk Warehouse</p>
                      </a>
                      <a href="{{url('account/market')}}">
                          <p>Milk Selling</p>
@@ -255,6 +255,7 @@
                      <a href="{{url('account/calculate')}}">
                          <p>Calculate Income</p>
                      </a>
+                    
 
                  </div>
                  <div class="board commonWooden">
@@ -333,6 +334,7 @@
                 <div class="logoutBtn">
                     <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         <img src="{{asset ('frontend/assets/img/logout.png')}}" class="img-fluid" alt="logo">
+                        <span>LogOut</span>
                     </a>
                 </div>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -360,7 +362,7 @@
                          <a href="{{url('account/payment')}}">
                              <div class="inputDiv withDrawFunds">
                                  <img src="{{asset('images/12.png')}}" alt="" style="width: 15px;vertical-align: middle;">
-                                 <label for="">{{number_format((float)\Auth::user()->withdraw, 2, '.', '');}} [<a href="{{url('account/payment')}}" style="color:#005f90">Withdraw Funds</a>]</label>
+                                 <label for="">{{number_format((float)\Auth::user()->withdraw, 2, '.', '');}} [<a href="{{url('account/payment')}}" style="color:#005f90;font-size: 12px;font-family: 'Poppins', sans-serif !important;font-weight: 900;">Withdraw Funds</a><span style="font-size: 12px;color: #00000085 !important;font-family: 'Poppins', sans-serif !important;font-weight: 900;">]</span></label>
 
                              </div>
                          </a>
@@ -407,6 +409,9 @@
                  <a href="{{url('account/calculate')}}">
                      <p>Calculate Income</p>
                  </a>
+                 <a href="{{url('account/swap')}}">
+                         <p>Swap Gold</p>
+                     </a>
 
              </td>
              <td class="board commonWooden loginUser">

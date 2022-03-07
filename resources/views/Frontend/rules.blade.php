@@ -29,9 +29,7 @@
                 <div class="main-rulesPara">
                     <div class="rulesPara">
                         <p>
-                            
-                            <br>
-                            1.1. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="/">coin-farm.net</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
+                            1.1. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="https://accrualhub.com/public/home">coin-farm.net</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
                             <br>
                             1.2. To start getting the service a participant accepts all the rules of the present agreement fully and unconditionally and if you do not agree with any of the terms of the present agreement, the coordinator advises you to disclaim using the service.
                             <br>
@@ -47,13 +45,13 @@
                             <br>
                             Playing ground is a hardware-software complex located in the global network Internet aimed for organizing of leisure time. 
                             <br>
-                            Game "<a href="/">coin-farm.net</a>" is an on-line game - isolated and unique name of the playing ground owned by the coordinator and located at the addresses on the Internet <a href="/">coin-farm.net</a>, on which the Coordinator provides the service for the participant in organizing his/her leisure time in the order and on terms stated in the present agreement.
+                            Game "<a href="https://accrualhub.com/public/home">coin-farm.net</a>" is an on-line game - isolated and unique name of the playing ground owned by the coordinator and located at the addresses on the Internet <a href="https://accrualhub.com/public/home">coin-farm.net</a>, on which the Coordinator provides the service for the participant in organizing his/her leisure time in the order and on terms stated in the present agreement.
                             <br>
                             Game inventory is a conditional playing units which are called "Silver" for playing the game, the place of accounting and storing of which is game account of the participant in a computer in the format of accounting system of the playing ground "<a href="/">coin-farm.net</a>".
                             <br>
                             Game account is a virtual account of the participant of the game which is provided by the coordinator to every participant on the playing ground for accounting the game inventory (silver coins, Silver bars and Silver).
                             <br><br>
-                            3.1. The subject of the present Agreement is providing service by the Coordinator for the Participant to organize leisure time in the game "<a href="/">coin-farm.net</a>" according to the terms of the present Agreement. Under such service, particularly, the following ones are meant: service at buying - selling game inventory, accounting significant information: actions on the game account, providing arrangements for identification and security of the participants, development software which is integrated in the playing ground and external appliances, informational and other service necessary for organizing the game and providing service for the participant during the game on the playing ground of the coordinator.
+                            3.1. The subject of the present Agreement is providing service by the Coordinator for the Participant to organize leisure time in the game "<a href="https://accrualhub.com/public/home">coin-farm.net</a>" according to the terms of the present Agreement. Under such service, particularly, the following ones are meant: service at buying - selling game inventory, accounting significant information: actions on the game account, providing arrangements for identification and security of the participants, development software which is integrated in the playing ground and external appliances, informational and other service necessary for organizing the game and providing service for the participant during the game on the playing ground of the coordinator.
                             <br>
                             3.2. The game in general as all it's elements and any other conjugate external playing appliances are made solely for entertaining. The participant admits that all activities in the game on the playing ground are entertainment. The participant agrees that according to the characteristics of the account his/her extent of involving in the game will be accessible in different degree.
                             <br>
@@ -65,7 +63,7 @@
                             <br><br>
                             4.1 Rights and duties of the Participant.
                             <br>
-                            4.1.1. Only those people can take part in the game "<a href="/">coin-farm.net</a>" who have reached legal ability according to the law of their countries. All consequences of non-compliance with the term are entrusted to the participant.
+                            4.1.1. Only those people can take part in the game "<a href="https://accrualhub.com/public/home">coin-farm.net</a>" who have reached legal ability according to the law of their countries. All consequences of non-compliance with the term are entrusted to the participant.
                             <br>
                             4.1.2. Extend and way of participating in the game are decided on the participant him/herself but can't contradict the present Agreement and the rules of the playing ground.
                             <br>

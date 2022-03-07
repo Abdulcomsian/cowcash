@@ -10,6 +10,20 @@
              $("#myModal").css("display", "block")
          }
      })
+     $(".tabeDiv p").click(function(){
+        $(".tabeDiv p").removeClass("active");
+        $(this).addClass("active")
+        var val=$(this).attr("class").split(" ")
+        if("silverBlockTab"===val[0]){
+            $(".silverCoins").css("display","none");
+            $(".silverBlock").css("display","block");
+            
+        } else{
+            $(".silverCoins").css("display","block");
+            $(".silverBlock").css("display","none");
+           
+        }
+     })
  </script>
  <script>
      $(document).on("click", "span.close", function() {
