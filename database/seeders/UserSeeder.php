@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
             'email_verified_at' => '2021-07-30',
             'password' => bcrypt('123456'),
             'role' => 'farmer',
-            'silver_coins' => 100000,
+            'silver_coins' => 1000000,
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'country_id' => '170',

@@ -46,7 +46,7 @@
                                   <h5>{{$cow->cowName ?? ''}}</h5>
                                   <p>Productivity: {{$cow->litters ?? ''}} litter milk per hour</p>
                                   <p>Cost: {{$cow->price ?? ''}} Silver Coins</p>
-                                  <p>Already boughtL {{\App\Utils\HelperFunctions::boughtcows($cow->id)}}</p>
+                                  <p>Already bought: {{\App\Utils\HelperFunctions::boughtcows($cow->id)}}</p>
                                   <div class="inputDiv">
                                       <input type="number" name="qty" id="qty" value="1" required>
                                       <input type="hidden" name="item" id="item" value="{{$cow->id}}" />
