@@ -52,7 +52,7 @@
         <div class="horizontalLine">
           <p>OR</p>
         </div>
-       <!--  <div class="customAmount">
+        <div class="customAmount">
           <div class="inputDiv">
             <label for="">Enter custom amount (USD):</label>
             <input type="number" value="1" class="form-control customcal" min="1">
@@ -62,7 +62,7 @@
               <span id="customcoins">8244</span> silver coins
             </label>
           </div>
-        </div> -->
+        </div>
         <div class="twoThreeStep">
           <div class="checkoutOrder" disable style="opacity:0.5;">
             <div class="inputDiv">
