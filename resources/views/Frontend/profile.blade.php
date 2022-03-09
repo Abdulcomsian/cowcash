@@ -63,12 +63,16 @@
                                   <td>Total milk:</td>
                                   <td>{{$totalmilk ?? ''}} Liters</td>
                               </tr>
+                              
+                              @if(isset($invitedby->name))
                               <tr>
                                   <td>You are invited by</td>
                                   <td>
                                      {{$invitedby->name ?? ''}}
                                   </td>
                               </tr>
+                              @endif
+                              
                           </tbody>
                       </table>
                   </div>

@@ -102,14 +102,15 @@
                 <img src="{{asset('images/Group42.png')}}" alt="">
               </div>
               <div class="paymentDiv">
-                <img src="{{asset('images/Group40.png')}}" alt="">
+                <img src="{{asset('images/faucetpay.jpg')}}" alt="">
               </div>
               <div class="paymentDiv">
-                <img src="{{asset('images/Group 39 (2).png')}}" alt="">
+                <img src="{{asset('images/Group 39.png')}}" alt="">
               </div>
-              <div class="paymentDiv">
+               
+             <!-- <div class="paymentDiv">
                 <img src="{{asset('images/Group 38 (2).png')}}" alt="">
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
