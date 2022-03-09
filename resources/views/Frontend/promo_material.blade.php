@@ -44,7 +44,7 @@ Promo Materials
                                 <p>250x250</p>
                             </div>
                             <div class="selectOption">
-                                <p>160x600</p>
+                                <p>120x600</p>
                             </div>
                             <div class="selectOption">
                                 <p>100x100</p>
@@ -84,26 +84,31 @@ Promo Materials
                     </div>
                 </div>
                 <br><br>
+                <p class="publicpath" style="display: none">@php echo public_path();@endphp</p>
                  
                 <div class="main-htmlDiv">
                     <div class="child-htmlDiv">
                         <div class="htmlDiv">
+                            <img src="{{asset('images/banners/728x90.png')}}">
+                            <p>HTML code for yout referral image (SizeL 728x90)</p>
+                            <div class="box">
+                                <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}">{{auth()->user()->referal_link}} target="_blank">                          <img src="{{asset('images/banners/728x90.png')}}" alt="Profit every 10 minutes">
+                                </a>
+                                </textarea>
+                                
+                            </div>
+                        </div>
+                       <!--  <div class="htmlDiv">
                             <p>HTML code for yout referral image (SizeL 728x90)</p>
                             <div class="box">
                                 <textarea name="" id="" cols="30" rows="7"><a href="">https://coin-farm.net/?en=johndoe" target="_blank"</a>
                                 <img src="https://coin-farm.net/images/proma/en/728x90.gif" alt="Profit every 10 minutes"></a></textarea>
                                 
                             </div>
-                        </div>
-                        <div class="htmlDiv">
-                            <p>HTML code for yout referral image (SizeL 728x90)</p>
-                            <div class="box">
-                                <textarea name="" id="" cols="30" rows="7"><a href="">https://coin-farm.net/?en=johndoe" target="_blank"</a>
-                                <img src="https://coin-farm.net/images/proma/en/728x90.gif" alt="Profit every 10 minutes"></a></textarea>
-                                
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
+
+                    
                 </div>
              </div>
          </div>
@@ -111,4 +116,22 @@ Promo Materials
 
      </div>
  </section>
+ @endsection
+ @section('script')
+ <script type="text/javascript">
+     $(".selectOption").click(function(){
+        var imagename=$(this).children().text();
+        $(".main-htmlDiv").html(`<div class="child-htmlDiv">
+                        <div class="htmlDiv">
+                            <img src="{{asset('images/banners/`+imagename+`.png')}}">
+                            <p>HTML code for yout referral image (SizeL `+imagename+`)</p>
+                            <div class="box">
+                                <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}">{{auth()->user()->referal_link}} target="_blank"</a>
+                                <img src="{{asset('images/banners/`+imagename+`.png')}}" alt="Profit every 10 minutes"></a></textarea>
+                                
+                            </div>
+                        </div>
+                    </div>`);
+     })
+ </script>
  @endsection

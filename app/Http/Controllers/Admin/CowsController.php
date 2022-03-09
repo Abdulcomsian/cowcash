@@ -123,7 +123,13 @@ class CowsController extends Controller
             toastSuccess('Cow deleted successfully!');
             return back();
         } catch (\Exception $exception) {
+            if($exception->getCode=="23000")
+            {
+                 toastError('You can not Delete cow have child relation');
+            }
+            else{
             toastError('Something went wrong, try again');
+            }
             return back();
         }
     }
