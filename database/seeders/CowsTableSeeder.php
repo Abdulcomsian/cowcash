@@ -15,57 +15,58 @@ class CowsTableSeeder extends Seeder
     public function run()
     {
         $cows = [
+            // [
+            //     'cowName' => 'Heifers',
+            //     'color' => 'White',
+            //     'price' => 1000,
+            //     'litters' => 100,
+            //     'image' => 'uploads\cowImages\bulls.jpg',
+            // ],  
             [
-                'cowName' => 'Heifers',
-                'color' => 'White',
-                'price' => 1000,
-                'litters' => 100,
-                'image' => 'uploads\cowImages\bulls.jpg',
-            ],  [
                 'cowName' => 'Bovines',
                 'color' => 'Black',
-                'price' => 2000,
-                'litters' => 200,
+                'price' => 150,
+                'litters' => 5,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],  [
                 'cowName' => 'Holstein-Friesian',
                 'color' => 'Black',
-                'price' => 3000,
-                'litters' => 300,
+                'price' => 5500,
+                'litters' => 55,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],  [
                 'cowName' => 'Bovines',
                 'color' => 'Black',
-                'price' => 4000,
-                'litters' => 400,
+                'price' => 7500,
+                'litters' => 277,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],  [
                 'cowName' => 'Angus',
                 'color' => 'White Black',
-                'price' => 5000,
-                'litters' => 500,
+                'price' => 37500,
+                'litters' => 1430,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],  [
                 'cowName' => 'Sampson',
                 'color' => 'White',
-                'price' => 10000,
-                'litters' => 800,
+                'price' => 150000,
+                'litters' => 7230,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],
             [
                 'cowName' => 'Samjon',
                 'color' => 'White',
-                'price' => 20000,
-                'litters' => 900,
+                'price' => 375000,
+                'litters' => 21925,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],
-            [
-                'cowName' => 'Anwarcow',
-                'color' => 'White',
-                'price' => 30000,
-                'litters' => 1000,
-                'image' => 'uploads\cowImages\bulls.jpg',
-            ],
+            // [
+            //     'cowName' => 'Anwarcow',
+            //     'color' => 'White',
+            //     'price' => 30000,
+            //     'litters' => 1000,
+            //     'image' => 'uploads\cowImages\bulls.jpg',
+            // ],
         ];
         foreach ($cows as $cow) {
             Cows::create($cow);
