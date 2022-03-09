@@ -24,7 +24,7 @@ class FarmController extends Controller
         }
     }
 
-    //Milk wearhouse
+    //Milk warehouse
     public function milk_wearhouse()
     {
         try {

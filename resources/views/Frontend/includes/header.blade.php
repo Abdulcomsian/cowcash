@@ -386,7 +386,7 @@
                      <p>Buy Cows</p>
                  </a>
                  <a href="{{url('account/store')}}">
-                     <p>Milk Wearhouse</p>
+                     <p>Milk warehouse</p>
                  </a>
                  <a href="{{url('account/market')}}">
                      <p>Milk Selling</p>

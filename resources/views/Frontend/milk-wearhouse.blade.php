@@ -7,7 +7,7 @@
   @endphp
   @extends('layouts.frontend.master')
   @section('title')
-  Milk Wearhouse
+  Milk warehouse
   @endsection
   @section('css')
   <style>
