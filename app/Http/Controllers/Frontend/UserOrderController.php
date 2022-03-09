@@ -25,7 +25,7 @@ class UserOrderController extends Controller
         $invitedby='';
         if(Auth::user()->referred_by)
         {
-            $invitedby=User::find(Auth::user()->referred_by);
+            $invitedby=User::where('affiliate_id',Auth::user()->referred_by)->first();
         }
         return view('Frontend.profile',compact('totalmilk','invitedby'));
     }
