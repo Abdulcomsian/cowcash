@@ -92,12 +92,12 @@ Promo Materials
                             <img src="{{asset('images/banners/728x90.png')}}">
                             <p>HTML code for yout referral image (SizeL 728x90)</p>
                             <div class="box">
-                                <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}">{{auth()->user()->referal_link}} target="_blank">                          <img src="{{asset('images/banners/728x90.png')}}" alt="Profit every 10 minutes">
-                                </a>
+                                <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}" target="_blank"><img src="{{asset('images/banners/728x90.png')}}" alt="Profit every 10 minutes"></a>
                                 </textarea>
                                 
                             </div>
                         </div>
+                        <!-- {{auth()->user()->referal_link}} " -->
                        <!--  <div class="htmlDiv">
                             <p>HTML code for yout referral image (SizeL 728x90)</p>
                             <div class="box">
