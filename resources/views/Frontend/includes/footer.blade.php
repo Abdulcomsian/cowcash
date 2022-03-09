@@ -66,13 +66,13 @@
          }, 1000);
      })
 
-     $(document).on('keyup mouseup', '.customcal', function() {
+     $(document).on('keyup mouseup', '.customcal', function() { 
          qty = $(this).val();
          if (qty < 1) {
              $(this).val(1);
              return false;
          }
-         coins = qty * 8244;
+         coins = Math.ceil(qty * 8243.244);
          $("#customcoins").text(coins);
          $("#checkoutqty").val(qty);
          $("#checkoutcoins").text(qty);
