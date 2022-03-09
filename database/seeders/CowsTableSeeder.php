@@ -31,7 +31,7 @@ class CowsTableSeeder extends Seeder
             ],  [
                 'cowName' => 'Holstein-Friesian',
                 'color' => 'Black',
-                'price' => 5500,
+                'price' => 1500,
                 'litters' => 55,
                 'image' => 'uploads\cowImages\bulls.jpg',
             ],  [
