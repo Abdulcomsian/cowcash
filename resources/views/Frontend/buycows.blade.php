@@ -11,7 +11,8 @@
       .bgColor {
           overflow: hidden;
       }
-
+      .cowShop .scroll-rtl, #startRightNow .midDiv{height:auto;}
+      .cowShop .detail-scroll-rtl{height:auto; overflow:auto;}
       /* .cowShop .multipleDiv {
           height: 240px;
           overflow: scroll;
@@ -59,8 +60,9 @@
                       @endforeach
                   </div>
               </div>
+              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: bold;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
           </div>
-          <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: bold;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
+          
           @include('Frontend.includes.menues')
 
       </div>

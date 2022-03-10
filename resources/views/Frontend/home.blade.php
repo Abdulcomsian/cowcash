@@ -82,23 +82,23 @@ Home Page
         <div class="listContent">
             <div class="firstChild">
                 <p>1 Cow At the</p>
-                <p>replenishment above 10 USD - FREE BONUS</p>
+                <p>At the replenishment above 10 EUR</p>
             </div>
             <div class="secondChild">
                 <p>1 Cow At the</p>
-                <p>replenishment above 50 USD - FREE BONUS</p>
+                <p>At the replenishment above 50 EUR</p>
             </div>
             <div class="thirdChild">
                 <p>1 Cow At the</p>
-                <p>replenishment above 100 USD - FREE BONUS</p>
+                <p>At the replenishment above 100 EUR</p>
             </div>
             <div class="forthChild">
                 <p>2 Cow At the replenishment</p>
-                <p>above 250 USD - FREE BONUS</p>
+                <p>At the replenishment above 250 EUR</p>
             </div>
             <div class="fifthChild">
                 <p id="fifthChild-h2" >20 Cow At the replenishment</p>
-                <p id="fifthChild-p">above 500 USD - FREE BONUS</p>
+                <p id="fifthChild-p">At the replenishment above 500 EUR</p>
             </div>
         </div>
     </div>

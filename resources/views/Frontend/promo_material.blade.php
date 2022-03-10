@@ -14,6 +14,7 @@ Promo Materials
      .active{
          background-color: #fff !important;
      }
+     #startRightNow .midDiv p{cursor:pointer;}
  </style>
  @endsection
 
