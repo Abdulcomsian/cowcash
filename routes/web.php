@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontend\PaymentPayeerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\Country;
+use App\Models\Payment;
 
 
 
@@ -41,7 +42,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/payments', function () {
-    return view('Frontend.payments');
+    $payments=Payment::with('user')->paginate(60);
+    return view('Frontend.payments',compact('payments'));
 });
 Route::get('/rules', function () {
     return view('Frontend.rules');
