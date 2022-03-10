@@ -7,6 +7,7 @@ use App\Http\Controllers\Frontend\FarmController;
 use App\Http\Controllers\Frontend\UserOrderController;
 use App\Http\Controllers\Frontend\IpnPayeerController;
 use App\Http\Controllers\Frontend\PaymentPayeerController;
+use App\Http\Controllers\Frontend\FaucetPayController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\Country;
@@ -120,6 +121,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/status', [IpnPayeerController::class, 'Payment_Status']);
     Route::post('/createPayment', [PaymentPayeerController::class, 'createPayment']);
     Route::post('/payoff', [PaymentPayeerController::class, 'payoff']);
+
+    //faucet work here
+    Route::post('/send',[FaucetPayController::class,'sendpay'])->name('send');
 });
 
 
