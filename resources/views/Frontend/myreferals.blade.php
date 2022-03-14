@@ -113,6 +113,96 @@
                                                     <td>30 coins</td>
                                                 </tr>
                                                 @endforeach
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>30 coins</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
