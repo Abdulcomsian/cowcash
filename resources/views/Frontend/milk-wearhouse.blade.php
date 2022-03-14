@@ -18,6 +18,12 @@
       .bgColor {
           overflow: hidden;
       }
+      #startRightNow .midDiv{overflow:auto;height:auto !important;}
+      .bgColor {
+    overflow: auto;
+    height:auto;
+}
+.scroll-rtl-milkWhareSec{height:auto !important;}
   </style>
   @endsection
 

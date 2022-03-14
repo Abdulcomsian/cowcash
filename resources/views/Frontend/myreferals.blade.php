@@ -68,6 +68,7 @@
                                                     <td>30 coins</td>
                                                 </tr>
                                                 @endforeach
+                                            
                                             </tbody>
                                         </table>
                                     </div>
@@ -113,6 +114,7 @@
                                                     <td>30 coins</td>
                                                 </tr>
                                                 @endforeach
+                                               
                                             </tbody>
                                         </table>
                                     </div>
