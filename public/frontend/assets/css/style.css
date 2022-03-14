@@ -269,7 +269,7 @@ button#register_button {
     position: relative;
     background-image: url("../img/Vector Smart Object-5.png");
     height: auto;
-    background-size: auto;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 50px 30px;
     z-index: 0;
@@ -285,7 +285,7 @@ button#register_button {
     background-repeat: no-repeat;
     position: absolute;
     height: 42px;
-    top: -12px;
+    top: 0px;
     width: 100%;
     left: 26%;
     max-width: 44%;
@@ -698,7 +698,7 @@ button.signUpBtn {
     direction: rtl;
     padding: 30px 20px !important;
     height: 90% !important;
-    overflow: scroll !important;
+    overflow: auto  !important;
 }
 .affiliateProgram{
     direction: ltr;
@@ -726,7 +726,7 @@ button.signUpBtn {
     direction: ltr;
 }
 .scroll-rtl-milkWhareSec{
-    overflow: scroll;
+    overflow: auto;
     height: 75%;
     direction: rtl;
 }
@@ -2066,3 +2066,4 @@ input:checked + .slider:before {
 .silverBlock{
     display: none;
 }
+.detailBox p{color:#5e3700 !important;}
