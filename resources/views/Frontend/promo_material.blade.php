@@ -90,10 +90,10 @@ Promo Materials
                 <div class="main-htmlDiv">
                     <div class="child-htmlDiv">
                         <div class="htmlDiv">
-                            <img src="{{asset('images/banners/728x90.png')}}">
+                            <img style="width:100%" src="{{asset('images/banners/728x90.png')}}">
                             <p>HTML code for yout referral image (SizeL 728x90)</p>
                             <div class="box">
-                                <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}" target="_blank"><img src="{{asset('images/banners/728x90.png')}}" alt="Profit every 10 minutes"></a>
+                                <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}" target="_blank"><img style="width:100%" src="{{asset('images/banners/728x90.png')}}" alt="Profit every 10 minutes"></a>
                                 </textarea>
                                 
                             </div>
@@ -124,11 +124,11 @@ Promo Materials
         var imagename=$(this).children().text();
         $(".main-htmlDiv").html(`<div class="child-htmlDiv">
                         <div class="htmlDiv">
-                            <img src="{{asset('images/banners/`+imagename+`.png')}}">
-                            <p>HTML code for yout referral image (SizeL `+imagename+`)</p>
+                            <img style="width:100%" src="{{asset('images/banners/`+imagename+`.png')}}">
+                            <p>HTML code for yout referral image (Size: `+imagename+`)</p>
                             <div class="box">
                                 <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}">{{auth()->user()->referal_link}} target="_blank"</a>
-                                <img src="{{asset('images/banners/`+imagename+`.png')}}" alt="Profit every 10 minutes"></a></textarea>
+                                <img style="width:100%" src="{{asset('images/banners/`+imagename+`.png')}}" alt="Profit every 10 minutes"></a></textarea>
                                 
                             </div>
                         </div>
