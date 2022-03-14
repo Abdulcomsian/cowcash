@@ -285,7 +285,7 @@ button#register_button {
     background-repeat: no-repeat;
     position: absolute;
     height: 42px;
-    top: -12px;
+    top: 0px;
     width: 100%;
     left: 26%;
     max-width: 44%;
@@ -726,7 +726,7 @@ button.signUpBtn {
     direction: ltr;
 }
 .scroll-rtl-milkWhareSec{
-    overflow: scroll;
+    overflow: auto;
     height: 75%;
     direction: rtl;
 }
