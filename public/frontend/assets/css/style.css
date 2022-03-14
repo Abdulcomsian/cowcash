@@ -299,6 +299,7 @@ button#register_button {
 }
 #startRightNow .midDiv .rightNow{
     font-size: 18px;
+    letter-spacing: 5px;
 }
 
 #startRightNow .midDiv .multiDiv {
