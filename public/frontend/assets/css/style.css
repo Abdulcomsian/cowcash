@@ -60,9 +60,9 @@ input:focus {
 
 #header .commonWooden span.signInText {
     position: absolute;
-    top: 26% !important;
-    left: 33%;
-    font-size: 16px;
+    top: 27% !important;
+    left: 28%;
+    font-size: 13px;
     color: #fff;
     font-family: "Bangers", cursive;
     letter-spacing: 2px;
@@ -70,9 +70,9 @@ input:focus {
 
 #header .commonWooden span.statisticsText {
     position: absolute;
-    top: 26%;
-    left: 36%;
-    font-size: 16px;
+    top: 27%;
+    left: 33%;
+    font-size: 13px;
     color: #fff;
     font-family: "Bangers", cursive;
     letter-spacing: 2px;
@@ -86,9 +86,9 @@ input:focus {
 
 #header .commonWooden span.paymentText {
     position: absolute;
-    top: 26%;
-    left: 35%;
-    font-size: 16px;
+    top: 27%;
+    left: 29%;
+    font-size: 13px;
     color: #fff;
     font-family: "Bangers", cursive;
     letter-spacing: 2px;
@@ -349,6 +349,7 @@ button#register_button {
     display: grid;
     justify-content: center;
     align-items: center;
+    letter-spacing: 3px;
 }
 
 #startRightNow .midDiv .startNowView .leftDiv {
