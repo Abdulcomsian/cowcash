@@ -269,7 +269,7 @@ button#register_button {
     position: relative;
     background-image: url("../img/Vector Smart Object-5.png");
     height: auto;
-    background-size: 100% 100%;
+    background-size: auto;
     background-repeat: no-repeat;
     padding: 50px 30px;
     z-index: 0;
