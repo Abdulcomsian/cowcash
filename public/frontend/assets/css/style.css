@@ -998,7 +998,7 @@ table {
     max-width: 91%;
     margin: auto;
     padding: 20px;
-    overflow: scroll;
+    overflow: auto;
     height: 93%;
     margin-top: 55px;
     direction: rtl;
