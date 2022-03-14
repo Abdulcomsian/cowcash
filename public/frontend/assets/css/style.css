@@ -268,7 +268,7 @@ button#register_button {
     margin-top: 20px;
     position: relative;
     background-image: url("../img/Vector Smart Object-5.png");
-    height: 600px;
+    height: auto;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 50px 30px;
@@ -502,9 +502,9 @@ p#fifthChild-p {
     margin-top: 30px;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
-    height: 250px;
+    height: auto;
 }
 
 #startRightNow .midDiv .multiBox .imgBoxInput{
@@ -707,7 +707,7 @@ button.signUpBtn {
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
-    height: 265px;
+    height: auto;
 }
 .child-htmlDiv {
     direction: ltr;
