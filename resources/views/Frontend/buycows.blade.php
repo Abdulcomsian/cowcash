@@ -17,6 +17,43 @@
           height: 240px;
           overflow: scroll;
       } */
+      #startRightNow .midDiv{
+          max-width: 40%;
+      }
+      #startRightNow .midDiv .menuBox{
+          right: -350px;
+      }
+      #startRightNow .midDiv .menuBox .listView .listdiv{
+          margin: 22px;
+      }
+      .cowShop .multipleDiv {
+            direction: ltr;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .cowShop .multipleDiv .commonDiv {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid #ffd9a9;
+            width: 44%;
+        }
+        .cowShop .multipleDiv .commonDiv .imgDiv img{
+            width: 50px;
+        }
+        .commonDiv button{
+            width: 100%;
+            max-width: 56%;
+            /* margin-left: 0px; */
+            float: left;
+            margin-top: 10px;
+            background: #00669b;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+            color: #fff;
+        }
   </style>
   @endsection
 
@@ -52,9 +89,10 @@
                                       <input type="number" name="qty" id="qty" value="1" required>
                                       <input type="hidden" name="item" id="item" value="{{$cow->id}}" />
                                       <label for="">Pcs.</label>
-                                      <button class="cursor-pointer">Buy</button>
+                                      
                                   </div>
                               </div>
+                              <button class="cursor-pointer">Buy</button>
                           </form>
                       </div>
                       @endforeach
@@ -63,7 +101,7 @@
               <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: bold;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
           </div>
           
-          @include('Frontend.includes.menues')
+          @include('Frontend.includes.buyCowMenu')
 
       </div>
   </section>
