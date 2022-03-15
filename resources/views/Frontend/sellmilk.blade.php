@@ -47,7 +47,7 @@
                                  @php
                                  $goldbar=$sell->total_milk/100;
                                  @endphp
-                                 <td> <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> {{$goldbar ?? ''}}</td>
+                                 <td> <img src="{{asset('images/silver-01.png')}}" class="img" width="15px" height="15px" /> {{$goldbar ?? ''}}</td>
                              </tr>
                              <input type="hidden" name="item[]" value="{{$sell->id}}" readonly />
                              @endforeach

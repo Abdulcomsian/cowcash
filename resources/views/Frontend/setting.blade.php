@@ -9,6 +9,7 @@ Account Setting
     }
     .bgColor{
         overflow: hidden !important;
+        background-size: 100% 100%;
     }
 </style>
 @endsection

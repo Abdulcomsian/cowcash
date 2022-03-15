@@ -11,8 +11,11 @@ About Us
     .bgColor {
         height: 93%;
         overflow: hidden;
+        background-size: 100% 100%;
     }
-
+.main-descriptionDiv{
+    overflow: hidden;
+}
 
     .active {
         background-color: #fff !important;

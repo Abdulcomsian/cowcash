@@ -10,6 +10,7 @@ Promo Materials
      .bgColor{
          height: 93%;
           overflow: hidden;
+          background-size: 100% 100%;
       }
      .active{
          background-color: #fff !important;
@@ -133,6 +134,10 @@ Promo Materials
                             </div>
                         </div>
                     </div>`);
+     })
+     $(".promoMaterial .multiSelect .selectOption").click(function(){
+         $(".promoMaterial .multiSelect .selectOption").removeClass("active");
+         $(this).addClass("active")
      })
  </script>
  @endsection
