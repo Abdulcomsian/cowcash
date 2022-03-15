@@ -10,6 +10,7 @@
 
       .bgColor {
           overflow: hidden;
+          background-size: 99% 100%;
       }
       .cowShop .scroll-rtl, #startRightNow .midDiv{height:auto;}
       .cowShop .detail-scroll-rtl{height:auto; overflow:auto;}
@@ -53,6 +54,13 @@
             border: none;
             padding: 5px;
             color: #fff;
+        }
+        .cowShop .scroll-rtl{
+            overflow: hidden;
+
+        }
+        .cowShop .detailDiv{
+            padding: 0px 15px 0px 10px;
         }
   </style>
   @endsection
@@ -98,7 +106,7 @@
                       @endforeach
                   </div>
               </div>
-              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: bold;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
+              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
           </div>
           
           @include('Frontend.includes.buyCowMenu')

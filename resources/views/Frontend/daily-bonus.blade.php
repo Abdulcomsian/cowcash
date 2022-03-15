@@ -72,7 +72,7 @@
              </form>
              @endif
          </div>
-         <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: bold;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
+         <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
          @include('Frontend.includes.menues')
 
      </div>

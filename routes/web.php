@@ -70,6 +70,9 @@ Route::get('/crystal', function () {
 Route::get('/order_card', function () {
     return view('Frontend.order_payoff_card');
 });
+Route::get('/faq', function () {
+    return view('Frontend.faq');
+});
 Route::get('account/calculate', [FarmController::class, 'calculate'])->name('account.calculate');
 
 

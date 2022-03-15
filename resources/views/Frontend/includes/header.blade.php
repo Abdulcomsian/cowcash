@@ -429,5 +429,35 @@
              </td>
          </tbody>
      </table>
+     <div class="rightHeader">
+         <ul>
+             <li>
+                 <select name="" id="">
+                     <option value="English">English</option>
+                     <option value="Español">Español</option>
+                     <option value="Español (Latin)">Español (Latin)</option>
+                     <option value="Français">Français</option>
+                     <option value="Italiano">Italiano</option>
+                     <option value="Türkçe">Türkçe</option>
+                     <option value="Brazil">Brazil</option>
+                     <option value="Português">Português</option>
+                     <option value="Indonesia">Indonesia</option>
+                     <option value="Malay">Malay</option>
+                     <option value="ภาษาไทย">ภาษาไทย</option>
+                     <option value="Русский">Русский</option>
+                 </select>
+             </li>
+             <li>
+                 <a href="/faq">
+                     <img src="{{asset('frontend/assets/img/faq-new.png')}}" alt="">
+                 </a>
+             </li>
+             <li>
+                 <a href="www.youtube.com">
+                     <img src="{{asset('frontend/assets/img/topdesktube.png')}}" alt="">
+                 </a>
+             </li>
+         </ul>
+     </div>
  </section>
  @endauth

@@ -311,7 +311,7 @@ button#register_button {
 }
 
 #startRightNow .midDiv p {
-    font-family: "Source Serif Pro", serif;
+    font-family: Nexa-Bold !important;
     color: #00669b;
     font-weight: 700;
 }
@@ -345,7 +345,7 @@ button#register_button {
     max-width: 44%;
     background-size: auto;
     color: #fff;
-    font-family: "Bangers", cursive;
+    font-family: "Bangers", cursive !important;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -509,7 +509,7 @@ p#fifthChild-p {
 }
 
 #startRightNow .midDiv .multiBox .imgBoxInput{
-    width: 32%;
+    width: 25%;
     margin-bottom: 20px;
 }
 
@@ -684,12 +684,7 @@ button.signUpBtn {
 .affiliateProgram .tabeDiv p.active {
     background-color: #ffddb4;
 }
-.scroll-rtl-milkWhareHouse{
-    overflow: scroll;
-    direction: rtl;
-    height: 115px;
-    overflow-x: hidden;
-}
+
 .scroll-rtl-milkWhareHouse .milkWhareHouse {
     padding: 10px 55px 10px 10px;
     direction: ltr;
@@ -704,7 +699,6 @@ button.signUpBtn {
     direction: ltr;
 }
 .main-htmlDiv{
-    overflow: scroll !important;
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
@@ -716,7 +710,6 @@ button.signUpBtn {
 }
 .main-promoDiv{
     padding: 0px 20px !important;
-    overflow: scroll !important;
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
@@ -962,8 +955,8 @@ table {
 
 .invalid-feedback{
     position: absolute;
-    font-size: 7px;
-    bottom: -9px;
+    font-size: 10px;
+    bottom: -16px;
     right: 0px;
     color: red;
     font-family: Nexa-Regular !important;
@@ -983,6 +976,9 @@ table {
     max-width: 80%;
     margin: auto;
     padding: 20px;
+}
+.registration .formDiv .inputDiv{
+    margin-bottom: 20px;
 }
 .main-descriptionDiv {
     height: 97%;
@@ -1335,7 +1331,6 @@ input:checked + .slider:before {
 
 .support p.title,
 .support p.yourIncome {
-    font-family: "Source Serif Pro", serif !important;
     color: #000 !important;
     font-size: 14px;
     margin-bottom: 20px;
@@ -1660,7 +1655,7 @@ input:checked + .slider:before {
 .multiPackage .packageDiv .percentText {
     top: 11px;
     position: absolute;
-    left: 10px;
+    left: 7px;
     color: #fff;
     transform: rotate(-45deg);
     font-family: Nexa-Bold !important;
@@ -1727,6 +1722,9 @@ input:checked + .slider:before {
     border: 1px solid #c68d40;
     border-radius: 3px;
     padding: 0px 5px;
+}
+.customAmount input{
+    padding: 5px;
 }
 
 .checkoutOrder {
@@ -1802,6 +1800,36 @@ input:checked + .slider:before {
     width: 90px;
 }
 
+
+.silverBlock{
+    display: none;
+}
+.detailBox p{color:#5e3700 !important;}
+
+#header .rightHeader{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+#header .rightHeader ul{
+    list-style: none;
+    padding: none;
+    margin: none;
+}
+#header .rightHeader ul li{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#header .rightHeader select:focus{
+    outline: none;
+}
+#header .rightHeader select{
+    background: #d69434;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
@@ -1812,18 +1840,28 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 1200px) {
+    #header .rightHeader {
+        position: absolute;
+        top: 50px;
+        right: -190px;
+    }
     #startRightNow .stairDiv {
         max-width: 100%;
     }
 }
 
 @media (max-width: 992px) {
+    #header .rightHeader {
+        position: absolute;
+        top: 50px;
+        right: -290px;
+    }
     #startRightNow .stairDiv {
         max-width: 60%;
     }
 
     #header table {
-        min-width: 1200px;
+        min-width: 900px;
     }
 }
 
@@ -2063,7 +2101,3 @@ input:checked + .slider:before {
         padding-right: 38%;
     }
 }
-.silverBlock{
-    display: none;
-}
-.detailBox p{color:#5e3700 !important;}
