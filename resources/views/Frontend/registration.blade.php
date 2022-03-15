@@ -7,6 +7,9 @@ Registraion
     .cursor-pointer {
         cursor: pointer;
     }
+    .bgColor{
+        overflow: hidden;
+    }
 </style>
 @endsection
 

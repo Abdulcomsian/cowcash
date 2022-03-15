@@ -10,6 +10,7 @@
 
       .bgColor {
           overflow: hidden;
+          padding: 10px;
       }
   </style>
   @endsection

@@ -11,6 +11,9 @@
      .bgColor {
          overflow: hidden;
      }
+     .detailBox p:last-child{
+         font-weight: 300 !important;
+     }
  </style>
  @endsection
 
@@ -20,7 +23,7 @@
          <div class="bgColor">
              <p class="rightNow">Exchanger</p>
              <div class="detailBox" style="margin-top:30px">
-                 <p>In this exchanging section you can swap silver block (for withdrawal) to silver coins (for purchases). After the swap you get +20% Silver coins as swap to your account.</p>
+                 <p>In this exchanging section you can swap silver blocks (<span>f</span>or withdrawal) to silver coins (for purchases). After the swap you get +20% Silver coins as swap to your account.</p>
              </div>
              <p class="notePara" style="text-align: center;color:red !important">
                  <span>Only one side exchange is possible</span>
@@ -33,7 +36,7 @@
                      <tbody>
                          <tr>
                              <td>
-                                 <font color="#000;" style="font-family: Nexa-Regular !important; font-size: 10px;">Give silver block (for withdrawal) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [min. 100]:</font>
+                                 <font color="#000;" style="font-family: Nexa-Regular !important; font-size: 10px;">Give silver blocks (<span>f</span>or withdrawal) <img style="width: 24px; vertical-align: middle; margin: -3px 0 0 0;" src="{{asset('images/goldcoin.png')}}"> [min. 100]:</font>
                              </td>
                              <td align="center">
                                  <input type="number" class="form-control" name="exchange_sum" id="sum" value="100" onkeyup="calculate();" style="background: #fdfdfd; margin:0px; width:130px;height:24px">

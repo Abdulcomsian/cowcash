@@ -10,8 +10,9 @@ About Us
 
     .bgColor {
         height: 93%;
+        background-size: 100% 100%;
+        overflow: hidden;
     }
-
     .active {
         background-color: #fff !important;
     }
