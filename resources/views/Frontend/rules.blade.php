@@ -15,6 +15,9 @@
      .title {
          padding: 20px 20px 0px;
      }
+     .rulesProgram .rulesDiv .rulesPara{
+         height: 350px;
+     }
  </style>
  @endsection
 
