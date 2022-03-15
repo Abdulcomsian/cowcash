@@ -45,6 +45,15 @@
                                                     <td>For each replenishment by a referral of †he 3rd level:</td>
                                                     <td><b>5%</b> of the repenishment sum</td>
                                                 </tr>
+                                                 <tr>
+                                                    <td> For each replenishment by a referral of the 4th level:</td>
+                                                    <td><b>1%</b> of the repenishment sum</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>For referral with unique IP address ({{$referalcount}}/20 per day):</td>
+                                                    <td>250  Silver coins (for purchases)</td>
+                                                </tr>
+                                               
                                             </tbody>
                                         </table>
                                     </div>
@@ -65,7 +74,7 @@
                                                 <tr>
                                                     <td>{{$referal->name ?? ''}}</td>
                                                     <td>{{$referal->created_at ?? ''}}</td>
-                                                    <td>30 coins</td>
+                                                    <td>250 coins</td>
                                                 </tr>
                                                 @endforeach
                                             
@@ -82,10 +91,6 @@
                                                 <tr>
                                                     <td>For each replenishment by a referral of †he 1st level:</td>
                                                     <td><b>20%</b> of the repenishment sum</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>For each replenishment by a referral of †he 2nd level:</td>
-                                                    <td><b>10%</b> of the repenishment sum</td>
                                                 </tr>
                                                 <tr>
                                                     <td>For each replenishment by a referral of †he 3rd level:</td>
@@ -111,7 +116,7 @@
                                                 <tr>
                                                     <td>{{$referal->name ?? ''}}</td>
                                                     <td>{{$referal->created_at ?? ''}}</td>
-                                                    <td>30 coins</td>
+                                                    <td>250 coins</td>
                                                 </tr>
                                                 @endforeach
                                                

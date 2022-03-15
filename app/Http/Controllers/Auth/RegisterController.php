@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Cookie;
 use DB;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class RegisterController extends Controller
@@ -82,39 +83,48 @@ class RegisterController extends Controller
         if (!empty(Cookie::get('referral'))) {
             $referred_by = Cookie::get('referral');
         }
-
+            
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
+        $referalcount=User::where(['referred_by'=>$referred_by)->whereDate('created_at', Carbon::today())->count();
+        if($referalcount>=20)
+        {
+            toastError('Your Day wise referals completed');
+            return back();
+        }
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'silver_coins'=>DB::raw('silver_coins +320'),
             'role' => 'farmer',
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'referred_by' => $referred_by,
             'country_id' => $data['country_id'],
             'currency' => $data['currency'],
+            'visitorip'=>$ipaddress,
         ]);
         if ($user) {
             //check parent
-            if ($referred_by != NULL) {
+            if ($user->referred_by != NULL) {
                 //parent have got 30 coins
-                User::where('affiliate_id', $referred_by)->update(['silver_coins' => DB::raw('silver_coins +30'), 'referal_coins' => DB::raw('referal_coins +30')]);
-                $userlevel1parent = User::where(['affiliate_id' => $referred_by])->first();
-                if ($userlevel1parent->referred_by != NULL) {
+                User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
+                // $userlevel1parent = User::where(['affiliate_id' => $referred_by])->first();
+                // if ($userlevel1parent->referred_by != NULL) {
 
-                    $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
-                    if ($userlevel2parent->referred_by != NULL) {
-                        User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins +20'), 'referal_coins' => DB::raw('referal_coins +20')]);
-                        $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
-                        if ($userlevel3parent) {
-                            User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins +10'), 'referal_coins' => DB::raw('referal_coins +10')]);
-                        }
-                    } else {
-                        User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins +20'), 'referal_coins' => DB::raw('referal_coins +20')]);
-                    }
-                }
+                //     $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
+                //     if ($userlevel2parent->referred_by != NULL) {
+                //         User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins +20'), 'referal_coins' => DB::raw('referal_coins +20')]);
+                //         $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
+                //         if ($userlevel3parent) {
+                //             User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins +10'), 'referal_coins' => DB::raw('referal_coins +10')]);
+                //         }
+                //     } else {
+                //         User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins +20'), 'referal_coins' => DB::raw('referal_coins +20')]);
+                //     }
+                // }
             }
             return $user;
         }

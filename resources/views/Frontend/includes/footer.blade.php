@@ -87,6 +87,12 @@
      function pay_ps() {
          $("#checkout-submit").submit();
      }
+
+     function pay_fs()
+     {
+        $('#checkout-submit').attr('action', "{{route('send')}}");
+        $("#checkout-submit").submit();
+     }
  </script>
  @toastr_js
  @toastr_render

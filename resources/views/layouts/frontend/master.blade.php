@@ -91,7 +91,7 @@
               @csrf
               <input type="hidden" name="purchase_sum" value="10" id="checkout-sum-val">
               <input type="hidden" name="purchase_currency" value="USD" id="checkout-currency">
-              <input type="hidden" value="10" id="package_id">
+              <input type="hidden" value="10" name="package_id" id="package_id">
             </form>
             <button class="commonBtn purchase">Purchase</button>
           </div>
@@ -101,16 +101,12 @@
               <div class="paymentDiv cursor-pointer" onclick="pay_ps()">
                 <img src="{{asset('images/Group42.png')}}" alt="">
               </div>
-              <div class="paymentDiv">
+              <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
                 <img src="{{asset('images/faucetpay.jpg')}}" alt="">
               </div>
               <div class="paymentDiv">
                 <img src="{{asset('images/Group 39.png')}}" alt="">
               </div>
-               
-             <!-- <div class="paymentDiv">
-                <img src="{{asset('images/Group 38 (2).png')}}" alt="">
-              </div> -->
             </div>
           </div>
         </div>
@@ -118,5 +114,4 @@
     </div>
   </div>
 </body>
-
 </html>

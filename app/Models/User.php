@@ -37,6 +37,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'bonus_status',
         'bonus_time',
         'withdraw',
+        'visitorip',
     ];
 
     /**
