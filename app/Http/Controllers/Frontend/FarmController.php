@@ -16,7 +16,7 @@ class FarmController extends Controller
     {
         try {
             $cows = Cows::get();
-            $perchasecows = UserOrder::where(['user_id' => Auth::user()->id])->count();
+            $perchasecows = UserOrder::where(['user_id' => Auth::user()->id])->sum('qty');
             return view('Frontend.buycows', compact('cows', 'perchasecows'));
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
