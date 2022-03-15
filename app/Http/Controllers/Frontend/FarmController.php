@@ -30,6 +30,7 @@ class FarmController extends Controller
         try {
             $per_hour_collection = UserCows::join('cows', 'cows.id', '=', 'user_cows.cow_id')
                 ->select('cows.*', 'cronjobtime', DB::raw('sum(user_cows.qty) as bought'), DB::raw('sum(user_cows.collect_per_hour_milk) as laidmilk'))
+                ->where('user_id',Auth::user()->id)
                 ->groupBy('user_cows.cow_id')
                 ->get();
             $total_laid_milk = UserCows::where('user_id', Auth::user()->id)->sum('collect_per_hour_milk');
