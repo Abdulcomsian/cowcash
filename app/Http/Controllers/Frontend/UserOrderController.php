@@ -87,7 +87,7 @@ class UserOrderController extends Controller
                 $toalcowscoins = $qty * $cowcoins;
                 if (Auth::user()->silver_coins >= $toalcowscoins) {
                     //check if cow alread purchase update hte qty
-                    $checkperchase = UserCows::where('cow_id', $request->item)->first();
+                    $checkperchase = UserCows::where(['cow_id'=> $request->item,'user_id'=>Auth::user()->id])->first();
                     if (!$checkperchase) {
                         $usercoworder = UserOrder::create([
                             'user_id' => Auth::user()->id,
@@ -117,11 +117,11 @@ class UserOrderController extends Controller
                             return redirect('account/farm');
                         }
                     } else {
-                        $usercoworder = UserOrder::where('cow_id', $request->item)->update([
+                        $usercoworder = UserOrder::where(['cow_id'=>$request->item,'user_id'=>Auth::user()->id])->update([
                             'qty' =>  DB::raw('qty +' .  $qty . ''),
                         ]);
                         if ($usercoworder) {
-                            UserCows::where('cow_id', $request->item)->update([
+                            UserCows::where(['cow_id'=>$request->item,'user_id'=>Auth::user()->id])->update([
                                 'qty' => DB::raw('qty +' .  $qty . ''),
                             ]);
                             //deduct coins fron user when purchase cows
