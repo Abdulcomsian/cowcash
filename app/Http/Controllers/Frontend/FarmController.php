@@ -44,12 +44,12 @@ class FarmController extends Controller
     {
         try {
             foreach ($request->item as $cow) {
-                $userCows=UserCows::where(['cow_id' => $cow])->first();
+                $userCows=UserCows::where(['cow_id' => $cow,'user_id'=>Auth::user()->id])->first();
                 $nowtime=Carbon::now()->format('Y-m-d H:i:s');
                 $to=Carbon::createFromFormat('Y-m-d H:i:s',$userCows->cronjobtime);
                 $minutes = $to->diffInMinutes($nowtime);
                 $collect_per_milk=$userCows->per_hours_litters/60*$minutes;
-                UserCows::where(['cow_id' => $cow])->update([
+                UserCows::where(['cow_id' => $cow,'user_id'=>Auth::user()->id])->update([
                     'total_milk' => DB::raw('total_milk+'.$collect_per_milk*$userCows->qty),
                     'collect_per_hour_milk' => 0,
                     'cronjobtime'=>date('Y-m-d H:i:s'),
