@@ -1389,6 +1389,7 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 10px;
 }
 
 .promoMaterial .multiSelect .selectOption p {
@@ -1400,8 +1401,8 @@ input:checked + .slider:before {
 
 .promoMaterial .multiSelect {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 .box textarea {
@@ -1486,13 +1487,17 @@ input:checked + .slider:before {
 
 .crystalDiv .multiCrystalDiv {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin: 30px 0px;
     padding: 20px 0px;
     border-top: 1px solid #b57a4b;
     border-bottom: 1px solid #b57a4b;
+}
+
+.crystalDiv .multiCrystalDiv .commonDiv{
+    margin: 0px 10px;
 }
 
 .crystalDiv .multiCrystalDiv .commonDiv p {
@@ -1594,6 +1599,7 @@ input:checked + .slider:before {
 
 .multiCards .cardDiv img {
     width: 120px;
+    height: 82px;
 }
 
 .multiPackage .packageDiv {
