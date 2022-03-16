@@ -49,13 +49,16 @@ class PaymentPayeerController extends Controller
                 $payment->operation = '+';
                 $payment->save();
                 //
-                $PackageTxn = new PackageTxn();
-                $PackageTxn->user_id = $user;
-                $PackageTxn->uid = $m_orderid;
-                $PackageTxn->package_id = $pkgid;
-                $PackageTxn->payment_method = 'Payeer';
-                $PackageTxn->payment_status = 0;
-                $PackageTxn->save();
+                if($pkgid)
+                {
+                    $PackageTxn = new PackageTxn();
+                    $PackageTxn->user_id = $user;
+                    $PackageTxn->uid = $m_orderid;
+                    $PackageTxn->package_id = $pkgid;
+                    $PackageTxn->payment_method = 'Payeer';
+                    $PackageTxn->payment_status = 0;
+                    $PackageTxn->save();
+                }
 
                 DB::commit();
             } catch (\PDOException $e) {

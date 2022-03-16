@@ -31,6 +31,9 @@
      })
 
      $(document).on("click", ".packageDiv", function() {
+         $("#checkoutqty").val(1).show();
+         $(".customcal").css('background',' #f1f1f1');
+        
          pkgid = $(this).attr('data-id');
          coins = parseInt($("#data-coins-" + pkgid + "").text());
          price = parseInt($("#data-price-" + pkgid + "").attr('value'));
@@ -67,15 +70,18 @@
      })
 
      $(document).on('keyup mouseup', '.customcal', function() { 
+        $("#checkoutqty").hide();
          qty = $(this).val();
-         if (qty < 1) {
-             $(this).val(1);
+         if (qty < 0) {
+             qty=1;
+             $(this).val(qty);
+              $("#customcoins").text(Math.ceil(qty * 8243.244));
              return false;
          }
          coins = Math.ceil(qty * 8243.244);
          $("#customcoins").text(coins);
-         $("#checkoutqty").val(qty);
-         $("#checkoutcoins").text(qty);
+         //$("#checkoutqty").val(qty);
+         $("#checkoutcoins").text(coins);
          $("#checkoutprice").text(qty);
          $("#checkout-sum-val").val(qty);
          $("#package_id").val('');

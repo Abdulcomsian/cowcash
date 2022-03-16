@@ -17,12 +17,23 @@
                              @csrf
                              <div class="inputView">
                                  <div class="inputDiv">
+                                    
                                      <label for="">Email</label>
-                                     <input type="text" name="email" id="email" required>
+                                     <input type="email" name="email" id="email" required>
+                                      @error('email')
+                                        <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                  </div>
                                  <div class="inputDiv">
                                      <label for="">Password</label>
                                      <input type="password" name="password" id="password" required>
+                                      @error('password')
+                                        <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                  </div>
                              </div>
                              <div class="multiBtn">
@@ -132,12 +143,23 @@
                          @csrf
                          <div class="inputView">
                              <div class="inputDiv">
+                                
                                  <label for="">Email</label>
-                                 <input type="text" name="email" id="email" required>
+                                 <input type="email" name="email" id="email" required>
+                                  @error('email')
+                                    <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                              </div>
                              <div class="inputDiv">
                                  <label for="">Password</label>
                                  <input type="password" name="password" id="password" required>
+                                  @error('password')
+                                    <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                              </div>
                          </div>
                          <div class="multiBtn">

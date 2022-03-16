@@ -50,36 +50,78 @@ class IpnPayeerController extends Controller
                             //pkg status
                             $packageinsertdata = PackageTxn::where(['user_id' => $user->user_id, 'uid' => $m_orderid])->update(['payment_status' => 1]);
                             $Packagedata = Package::where('id', $packageinsertdata->package_id)->first();
+                            if($Packagedata)
+                            {
                             //covert 40 percent of coinst to crystal 
                             $crystals = $Packagedata->amount / 100 * 40;
                             $addBalanceToUser = User::find($user->user_id);
                             $addBalanceToUser->silver_coins += $Packagedata->coins_to_get;
                             $addBalanceToUser->crystal += $crystals;
                             $addBalanceToUser->update();
+                            }
+                            else{
+                                
+                                 //covert 40 percent of coinst to crystal 
+                                $crystals = $m_amount / 100 * 40;
+                                $addBalanceToUser = User::find($user->user_id);
+                                $addBalanceToUser->silver_coins += $m_amount*8244 ;
+                                $addBalanceToUser->crystal += $crystals;
+                                $addBalanceToUser->update();
+                            }
                         }
                         //working for referal
                          if ($user) {
                                 //check parent
                             if ($user->referred_by != NULL) {
-                                //parent have got 30 coins
-                                $firstlevel=$Packagedata->amount / 100 * 20;
+                                if($Packagedata)
+                                {
+                                  //parent have got 30 coins
+                                 $firstlevel=$Packagedata->amount / 100 * 20;  
+                                }
+                                else{
+                                    $firstlevel=$amount / 100 * 20;
+                                }
+                                
                                 User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevel)]);
                                 $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
                                 if ($userlevel1parent->referred_by != NULL) {
 
                                     $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
                                     if ($userlevel2parent->referred_by != NULL) {
-                                        $secondlevel=$Packagedata->amount / 100 * 10;
-                                        $secondlevelcrystal=$Packagedata->amount / 100 * 5;
+                                        if($Packagedata)
+                                        {
+                                          //parent have got 30 coins
+                                        $secondlevel=$Packagedata->amount / 100 * 10; 
+                                         $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
+                                        }
+                                        else{
+                                            $secondlevel=$amount / 100 * 10; 
+                                           $secondlevelcrystal=$amount / 100 * 5;
+                                        }
                                         User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
                                         $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
                                         if ($userlevel3parent) {
-                                             $thirdlevel=$Packagedata->amount / 100 * 5;
+                                            if($Packagedata)
+                                            {
+                                              $thirdlevel=$amount / 100 * 5; 
+                                            }
+                                            else{
+                                                $thirdlevel=$amount / 100 * 5;
+                                            }
+                                             
                                             User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
                                         }
                                     } else {
-                                       $secondlevel=$Packagedata->amount / 100 * 10;
-                                        $secondlevelcrystal=$Packagedata->amount / 100 * 5;
+                                        if($Packagedata)
+                                            {
+                                               $secondlevel=$Packagedata->amount / 100 * 10;
+                                               $secondlevelcrystal=$Packagedata->amount / 100 * 5;
+                                            }
+                                            else{
+                                                 $secondlevel=$amount / 100 * 10;
+                                                $secondlevelcrystal=$amount / 100 * 5;
+                                            }
+                                      
                                         User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
                                     }
                                 }
