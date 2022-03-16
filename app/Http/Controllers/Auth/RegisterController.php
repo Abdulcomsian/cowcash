@@ -87,7 +87,7 @@ class RegisterController extends Controller
         $ipaddress = $_SERVER['REMOTE_ADDR'];
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
-        $referalcount=User::where(['referred_by'=>$referred_by)->whereDate('created_at', Carbon::today())->count();
+        $referalcount=User::where(['referred_by'=>$referred_by])->whereDate('created_at', Carbon::today())->count();
         if($referalcount>=20)
         {
             toastError('Your Day wise referals completed');
