@@ -21,7 +21,7 @@
                                      <label for="">Email</label>
                                      <input type="email" name="email" id="email" required>
                                       @error('email')
-                                        <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                        <span class="invalid-feedback" style="position:absolute;bottom:-11px;font-size:9px" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
@@ -30,7 +30,7 @@
                                      <label for="">Password</label>
                                      <input type="password" name="password" id="password" required>
                                       @error('password')
-                                        <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                        <span class="invalid-feedback" style="position:absolute;bottom:-11px;font-size:9px" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
@@ -147,7 +147,7 @@
                                  <label for="">Email</label>
                                  <input type="email" name="email" id="email" required>
                                   @error('email')
-                                    <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                    <span class="invalid-feedback" style="position:absolute;bottom:-11px;font-size:9px" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
@@ -156,7 +156,7 @@
                                  <label for="">Password</label>
                                  <input type="password" name="password" id="password" required>
                                   @error('password')
-                                    <span class="invalid-feedback" style="position:absolute;bottom:-5px;font-size:8px" role="alert">
+                                    <span class="invalid-feedback" style="position:absolute;bottom:-11px;font-size:9px" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                     @enderror
