@@ -40,13 +40,16 @@ About Us
                             </div>
                         </a>
                         <div class="cardDiv">
+                            <img src="{{asset('images/Group 39.png')}}" alt="">
+                        </div>
+                        <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group40.png')}}" alt="">
                         </div>
                         <div class="cardDiv">
                             <img src="{{asset('images/Group 39 (2).png')}}" alt="">
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="multiCards">
+                    <!-- <div class="multiCards">
                         <div class="cardDiv">
                             <img src="{{asset('images/Group43.png')}}" alt="">
                         </div>
@@ -67,26 +70,26 @@ About Us
                         <div class="cardDiv">
                             <img src="{{asset('images/Group 47.png')}}" alt="">
                         </div>
-                    </div>
+                    </div> -->
                     <div class="multiCards">
-                        <div class="cardDiv">
+                        <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group 38.png')}}" alt="">
-                        </div>
-                        <div class="cardDiv">
+                        </div> -->
+                        <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group 39.png')}}" alt="">
-                        </div>
-                        <div class="cardDiv">
+                        </div> -->
+                        <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group 34.png')}}" alt="">
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="multiCards">
+                    <!-- <div class="multiCards">
                         <div class="cardDiv">
                             <img src="{{asset('images/Group 37.png')}}" alt="">
                         </div>
                         <div class="cardDiv">
                             <img src="{{asset('images/Group 36.png')}}" alt="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

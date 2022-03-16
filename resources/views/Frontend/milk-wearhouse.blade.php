@@ -24,6 +24,9 @@
     height:auto;
 }
 .scroll-rtl-milkWhareSec{height:auto !important;}
+#startRightNow .midDiv{
+    overflow: inherit;
+}
   </style>
   @endsection
 

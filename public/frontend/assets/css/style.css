@@ -1655,10 +1655,11 @@ input:checked + .slider:before {
 .multiPackage .packageDiv .percentText {
     top: 11px;
     position: absolute;
-    left: 7px;
+    left: 1px;
     color: #fff;
     transform: rotate(-45deg);
     font-family: Nexa-Bold !important;
+    font-size: 16px;
 }
 .modalBody p {
     font-family: Nexa-Regular !important;
@@ -1721,7 +1722,7 @@ input:checked + .slider:before {
 .checkoutOrder .inputDiv input {
     border: 1px solid #c68d40;
     border-radius: 3px;
-    padding: 0px 5px;
+    padding: 5px;
 }
 .customAmount input{
     padding: 5px;

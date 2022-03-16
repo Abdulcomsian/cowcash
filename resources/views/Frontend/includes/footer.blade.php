@@ -26,6 +26,28 @@
      })
  </script>
  <script>
+     function copyTextFromElement(elementID) {
+    let element = document.getElementById(elementID); //select the element
+    let elementText = element.textContent; //get the text content from the element
+    copyText(elementText); //use the copyText function below
+    }
+
+//If you only want to put some Text in the Clipboard just use this function
+// and pass the string to copied as the argument.
+function copyText(text) {
+  navigator.clipboard.writeText(text);
+}
+
+
+
+   function copyFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("linked");
+  let elementText = copyText.textContent;
+  navigator.clipboard.writeText(elementText);
+}
+  </script>
+ <script>
      $(document).on("click", "span.close", function() {
          $("#myModal").css("display", "none")
      })
