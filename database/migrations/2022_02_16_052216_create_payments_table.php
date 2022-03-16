@@ -23,6 +23,8 @@ class CreatePaymentsTable extends Migration
             $table->string('operation')->nullable();
             $table->tinyInteger('payment_status')->default(0);
             $table->string('payment_method')->nullable();
+            $table->string('currency')->nullable();
+            $table->string('purse')->nullable();
             $table->timestamps();
         });
     }

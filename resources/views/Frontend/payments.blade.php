@@ -15,7 +15,7 @@ Payments
 
 @section('content')
 <section id="startRightNow">
-    <div class="midDiv">
+    <div class="midDiv" style="min-height: 220px">
         <p class="rightNow">PAYMENTS</p>
         <div class="paymentTable">
             <table>
@@ -41,9 +41,22 @@ Payments
                     </tr> -->
                     @if(count($payments)>0)
                      @foreach($payments as $payment)
+                      @php
+                        if($payment->currency==1)
+                        {
+                            $currency='USD';
+                        }
+                        elseif($payment->currency==2)
+                        {
+                            $currency='EUR';
+                        }
+                        else{
+                            $currency='RUB';
+                        }
+                      @endphp
                         <tr>
                             <td>{{$payment->user->name ?? ''}}</td>
-                            <td>{{$payment->balance ?? ''}}</td>
+                            <td>{{$payment->balance ?? ''}} {{$currency}}</td>
                             <td> <p style="width: 19px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;">{{$payment->payment_method ?? ''}}</p></td>
                             <td></td>
                             <td>{{$payment->created_at ?? ''}}</td>

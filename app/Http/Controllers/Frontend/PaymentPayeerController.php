@@ -47,6 +47,8 @@ class PaymentPayeerController extends Controller
                 $payment->balance = $m_amount;
                 $payment->description = base64_decode($m_desc);
                 $payment->operation = '+';
+                $payment->payment_method='P';
+                $payment->currency=Auth::user()->currency;
                 $payment->save();
                 //
                 if($pkgid)
