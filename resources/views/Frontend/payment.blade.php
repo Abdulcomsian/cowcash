@@ -42,6 +42,9 @@ About Us
                         <div class="cardDiv">
                             <img src="{{asset('images/Group 39.png')}}" alt="">
                         </div>
+                        <div class="cardDiv">
+                            <img src="{{asset('images/faucetpay.jpg')}}" alt="">
+                        </div>
                         <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group40.png')}}" alt="">
                         </div>

@@ -17,7 +17,20 @@
        .copyText{
            cursor: pointer;
            position: relative;
-    right: 26px;
+            right: 36px;
+       }
+       .hoverText{
+           display: none;
+           position: absolute;
+            right: -24px;
+            top: 3px;
+            font-size: 10px;
+            transition: all .5s;
+            font-family: Nexa-Regular !important;
+
+       }
+       .copyText:hover .hoverText{
+           display: block;
        }
    </style>
    @endsection
@@ -31,8 +44,8 @@
                             <div class="affiliateProgram ">
                                 <p><b>Invite your friends to the game !</b></p>
                                 <div class="tabeDiv">
-                                    <p class="active silverCoinsTab">For earning silver coins</p>
-                                    <p class="silverBlockTab">For earning silver blocks
+                                    <p class="active silverCoinsTab">For earning Silver Coins</p>
+                                    <p class="silverBlockTab">For earning Gold Bars
                                         
                                     </p>
                                 </div>
@@ -66,7 +79,8 @@
                                     <p style="margin-top: 20px;">Your referral link:</p>
                                     <div class="linkCopy">
                                         <p id="linked" class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p> 
-                                        <span class="copyText" onclick="copyFunction()"><i class="fa fa-copy"></i></span>
+                                        <span class="copyText" onclick="copyFunction()"><i class="fa fa-copy"></i>  <span class="hoverText">copy</span></span>
+                                       
                                     </div>
                                    
                                     <div class="amountDiv">
@@ -103,14 +117,18 @@
                                                     <td><b>20%</b> of the repenishment sum</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>For each replenishment by a referral of †he 3rd level:</td>
+                                                    <td>For each replenishment by a referral of †he 2nd level:</td>
                                                     <td><b>5%</b> of the repenishment sum</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
                                     <p style="margin-top: 20px;">Your referral link:</p>
-                                    <p class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p>
+                                    <div class="linkCopy">
+                                        <p class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p>
+                                        <span class="copyText" onclick="copyFunction()"><i class="fa fa-copy"></i> <span class="hoverText">copy</span></span>
+                                        
+                                    </div>
                                     <div class="amountDiv">
                                         <p>Amount of your referrals: {{count($userreferal ?? 0)}} users</p>
                                         <table>
