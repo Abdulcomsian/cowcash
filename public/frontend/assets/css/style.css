@@ -1038,11 +1038,13 @@ table {
 }
 .rulesProgram .rulesDiv .main-rulesPara{
     direction: ltr;
+    width: 100%;
+    max-width: 96%;
 }
 .rulesProgram .rulesDiv .rulesPara {
     overflow: scroll;
     height: 400px;
-    padding: 20px;
+    padding: 10px 20px;
     overflow-x: hidden;
     width: 100%;
     max-width: 90%;
