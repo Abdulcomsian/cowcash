@@ -55,6 +55,7 @@ function copyText(text) {
      $(document).on("click", ".packageDiv", function() {
          $("#checkoutqty").val(1).show();
          $(".customcal").css('background',' #f1f1f1');
+         $(".multiPackage").css('opacity','1');
         
          pkgid = $(this).attr('data-id');
          coins = parseInt($("#data-coins-" + pkgid + "").text());
@@ -70,10 +71,13 @@ function copyText(text) {
          $(".checkoutOrder").css('opacity', '1');
      })
 
-     $(document).on('keyup mouseup', '#checkoutqty', function() {
+     $(document).on('blur mouseup', '#checkoutqty', function() {
          qty = $(this).val();
-         if (qty < 1) {
-             $(this).val(1);
+         if (qty < 0) {
+              qty=1;
+             $(this).val(qty);
+             $("#checkoutcoins").text(parseInt($("#checkoutcoins").attr('value')) * qty);
+             $("#checkoutprice").text(parseInt($("#checkoutprice").attr('value')) * qty);
              return false;
          }
          $("#checkoutcoins").text(parseInt($("#checkoutcoins").attr('value')) * qty);
@@ -93,6 +97,7 @@ function copyText(text) {
 
      $(document).on('keyup mouseup', '.customcal', function() { 
         $("#checkoutqty").hide();
+        $(".multiPackage").css('opacity','0.7');
          qty = $(this).val();
          if (qty < 0) {
              qty=1;

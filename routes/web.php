@@ -43,7 +43,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/payments', function () {
-    $payments=Payment::with('user')->paginate(60);
+    $payments=Payment::with('user')->where('payment_status',1)->get();
     return view('Frontend.payments',compact('payments'));
 });
 Route::get('/rules', function () {
