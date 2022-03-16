@@ -10,6 +10,15 @@
        .bgColor{
            overflow: hidden !important;
        }
+       .linkCopy{
+           display: flex;
+           align-items: center;
+       }
+       .copyText{
+           cursor: pointer;
+           position: relative;
+    right: 26px;
+       }
    </style>
    @endsection
 
@@ -45,10 +54,7 @@
                                                     <td>For each replenishment by a referral of †he 3rd level:</td>
                                                     <td><b>5%</b> of the repenishment sum</td>
                                                 </tr>
-                                                 <tr>
-                                                    <td> For each replenishment by a referral of the 4th level:</td>
-                                                    <td><b>1%</b> of the repenishment sum</td>
-                                                </tr>
+                                               
                                                 <tr>
                                                     <td>For referral with unique IP address ({{$referalcount}}/20 per day):</td>
                                                     <td>250  Silver coins (for purchases)</td>
@@ -58,7 +64,11 @@
                                         </table>
                                     </div>
                                     <p style="margin-top: 20px;">Your referral link:</p>
-                                    <p class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p>
+                                    <div class="linkCopy">
+                                        <p id="linked" class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p> 
+                                        <span class="copyText" onclick="copyFunction()"><i class="fa fa-copy"></i></span>
+                                    </div>
+                                   
                                     <div class="amountDiv">
                                         <p>Amount of your referrals: {{count($userreferal ?? 0)}} users</p>
                                         <table>
@@ -131,4 +141,5 @@
            @include('Frontend.includes.menues')
         </div>
     </section>
+    
 @endsection

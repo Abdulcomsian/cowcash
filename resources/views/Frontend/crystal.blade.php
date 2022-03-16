@@ -10,6 +10,7 @@ Crystal Coins
 
     .bgColor {
         height: 93%;
+        overflow: initial;
     }
 
     .active {
@@ -34,11 +35,11 @@ Crystal Coins
                 </div>
                 <div class="multiCrystalDiv">
                     <div class="commonDiv">
-                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">Silver block on your account instead of silver blocks:</p>
+                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">Silver Blocks on your account:</p>
                         <p style="font-family: Nexa-Bold !important; font-size: 10px;">{{Auth::user()->withdraw ?? '0.0'}}</p>
                     </div>
                     <div class="commonDiv">
-                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">Gold bars on your account instead of crystal:</p>
+                        <p style="font-family: Nexa-Bold !important; font-size: 10px;">Gold Bars on your account:</p>
                         <p style="font-family: Nexa-Bold !important; font-size: 10px;">
                             {{Auth::user()->crystal ?? ''}}</p>
                         </p>
