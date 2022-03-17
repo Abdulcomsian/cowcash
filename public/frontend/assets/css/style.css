@@ -1902,7 +1902,7 @@ margin: auto;
         padding: 0px;
     }
     .modal{
-        top: 90px;
+        top: 8%;
     }
     .modal-content{
         max-width: 90%;
@@ -2088,6 +2088,9 @@ margin: auto;
 }
 
 @media (max-width: 568px) {
+    .multiCards{
+        flex-wrap: wrap;
+    }
     .modalBody .multiPackage .packageDiv{
         width: 30%;
         margin-bottom: 10px;
