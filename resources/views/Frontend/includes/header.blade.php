@@ -227,16 +227,22 @@
                      <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
                      <div class="formDiv">
                          <div class="inputView">
-                             <div class="inputDiv addFunds">
+                         <div class="inputDiv addFunds">
+                             <label for="" id="myMobileBtn">
+                                 <img src="{{asset('images/12.png')}}" alt="" style="width: 15px;vertical-align: middle;">
+                                 {{\Auth::user()->silver_coins ?? ''}} [<a href="#" style="color:#005f90">Add Funds</a>]
+                             </label>
+                         </div>
+                             <!-- <div class="inputDiv addFunds">
                                  <label for="">
                                      <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
                                      {{\Auth::user()->silver_coins ?? ''}} [<a href="#" style="color:#005f90">Add Funds</a>]
                                  </label>
-                             </div>
+                             </div> -->
                              <div class="inputDiv withDrawFunds">
                                  <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
-                                 
-                                 <label for=""> {{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label>
+                                 <label for="">{{\Auth::user()->withdraw ?? ''}} [<a href="{{url('account/payment')}}" style="color:#005f90;font-size: 12px;font-family: 'Poppins', sans-serif !important;font-weight: 900;">Withdraw Funds</a><span style="font-size: 12px;color: #00000085 !important;font-family: 'Poppins', sans-serif !important;font-weight: 900;">]</span></label>
+                                 <!-- <label for=""> {{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label> -->
 
                              </div>
                              <a href="{{url('/account')}}" class="cursor-pointer">

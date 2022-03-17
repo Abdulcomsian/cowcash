@@ -7,7 +7,18 @@
  <script>
      $("#myBtn").on("click", function() {
          if ($("#myModal").css("display") == "none") {
-             $("#myModal").css("display", "block")
+                $("#myModal").css("display", "block")
+             
+         }
+     })
+     $("#myMobileBtn").on("click", function() {
+         if ($("#myModal").css("display") == "none") {
+             if($(".mobileMenu").css("display") == "block"){
+                $(".mobileMenu").css("display","none")
+                $("#myModal").css("display", "block")
+             }
+                
+             
          }
      })
      $(".tabeDiv p").click(function(){
