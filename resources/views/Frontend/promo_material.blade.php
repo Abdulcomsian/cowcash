@@ -40,8 +40,6 @@ Promo Materials
                             <div class="selectOption forthOption">
                                 <p>200x300</p>
                             </div>
-                        </div>
-                        <div class="multiSelect">
                             <div class="selectOption">
                                 <p>250x250</p>
                             </div>
@@ -54,8 +52,6 @@ Promo Materials
                             <div class="selectOption eigthOption">
                                 <p>125x125</p>
                             </div>
-                        </div>
-                        <div class="multiSelect">
                             <div class="selectOption">
                                 <p>320x50</p>
                             </div>
@@ -68,8 +64,6 @@ Promo Materials
                             <div class="selectOption 12Option">
                                 <p>180x150</p>
                             </div>
-                        </div>
-                        <div class="multiSelect">
                             <div class="selectOption 13Option">
                                 <p>200x200</p>
                             </div>

@@ -7,6 +7,14 @@ Home Page
     .cursor-pointer {
         cursor: pointer;
     }
+    @media (max-width: 992px) {
+        #startRightNow .midDiv p:nth-child(2){
+            width: 100%;
+            max-width: 70%;
+            margin: auto;
+        }
+       
+    }
 </style>
 @endsection
 @section('content')
