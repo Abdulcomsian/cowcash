@@ -53,8 +53,11 @@ function copyText(text) {
      })
 
      $(document).on("click", ".packageDiv", function() {
+
          $("#checkoutqty").val(1).show();
          $(".customAmount").css('opacity','.3');
+       
+         $(".multiPackage .packageDiv").css('opacity','.3');
          $(this).css('opacity','1');
         
          pkgid = $(this).attr('data-id');
