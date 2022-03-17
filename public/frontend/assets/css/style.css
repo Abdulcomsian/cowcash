@@ -147,7 +147,9 @@ input:focus {
 .board {
     background-image: url("../img/btnBoard.png");
 }
-
+#header .loginForm .inputDiv{
+    cursor: pointer;
+}
 #header .loginForm .inputDiv input {
     width: 93%;
     font-family: Nexa-Regular;
@@ -171,6 +173,7 @@ input:focus {
     width: 100%;
     font-family: "Poppins", sans-serif !important;
     font-weight: 900;
+    cursor: pointer;
 }
 
 #header .statistics.loginUser p {
@@ -1390,6 +1393,7 @@ input:checked + .slider:before {
     align-items: center;
     justify-content: center;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .promoMaterial .multiSelect .selectOption p {
@@ -1403,6 +1407,8 @@ input:checked + .slider:before {
     display: flex;
     margin-bottom: 10px;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .box textarea {
@@ -1860,6 +1866,17 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 992px) {
+    #header .loginForm .inputDiv{
+        max-width: 90% !important;
+    }
+    #startRightNow .midDiv .advantagesList{
+        width: 100%;
+max-width: 80%;
+margin: auto;
+    }
+    #startRightNow .midDiv .advantagesList ul{
+        padding: 0px;
+    }
     #header .rightHeader {
         position: absolute;
         top: 50px;
@@ -1875,8 +1892,50 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
+    .twoThreeStep{
+        display: block;
+    }
+    .twoThreeStep .checkoutOrder,
+    .twoThreeStep .paymentMethod{
+        width: 100%;
+        margin: 10px;
+        padding: 0px;
+    }
+    .modal{
+        top: 90px;
+    }
+    .modal-content{
+        max-width: 90%;
+        height: 80%;
+        overflow: scroll;
+    }
+    .modalBody .multiPackage{
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+    .modalBody .multiPackage .packageDiv{
+        width: 10%;
+    }
+    .modalBody p{
+        font-size: 10px;
+    }
+    #startRightNow .midDiv .multiBox{
+        width: 100%;
+    }
+    #startRightNow .midDiv .multiBox .imgBoxInput img,
+    .multiPackage .packageDiv img{
+        width: 30px;
+    }
+    .logoutBtn{
+        top: 22px;
+    text-align: center;
+    left: 80px;
+    }
+    .loginForm .formDiv{
+        margin: 0px;
+    }
     .bgColor {
-        background-size: contain;
+        background-size: inherit;
     }
     .multiPackage {
         display: block;
@@ -1907,6 +1966,7 @@ input:checked + .slider:before {
 
     #startRightNow .stairDiv .listContent p {
         font-size: 12px;
+        padding: 0px;
     }
 
     #startRightNow .stairDiv .listContent p:last-child {
@@ -1972,10 +2032,10 @@ input:checked + .slider:before {
         height: 200px;
     }
 
-    #header .statistics p {
+    /* #header .statistics p {
         position: relative;
         top: 53px;
-    }
+    } */
 
     .menuBtn,
     .headerMenu {
@@ -2002,9 +2062,66 @@ input:checked + .slider:before {
         justify-content: space-between;
         align-items: center;
     }
+    #startRightNow .midDiv{
+        max-width: 70% !important;
+    }
+    #header .loginForm .formDiv{
+        padding: 0px;
+        position: relative;
+        top: 50px;
+    }
+    #header .commonWooden .mobileStatistics{
+        position: relative;
+        top: 73px;
+        width: 100%;
+        max-width: 90%;
+        margin: auto;
+    }
+    #header .statistics .mobileStatistics button{
+        top: initial;
+        bottom: initial;
+    }
+    #header .mobilePayment{
+        position: relative;
+        top: 100px;
+    }
 }
 
 @media (max-width: 568px) {
+    .modalBody .multiPackage .packageDiv{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .promoMaterial .multiSelect .selectOption{
+        width: 27%;
+    }
+    .copyText{
+        right: 0px !important;
+    }
+    .cowShop .multipleDiv .commonDiv{
+        max-width: 100%;
+        width: 80% !important;
+    }
+    .setting .main-formDiv{
+        padding: 20px 0px;
+    }
+    .profileDetails .profileTable{
+        margin: 50px 0px;
+    }
+    .registration .formDiv, .setting .formDiv{
+        max-width: 90%;
+    }
+    .registration .formDiv .inputDiv select,
+    .setting .formDiv .inputDiv input,
+    .setting .formDiv .inputDiv select{
+        font-size: 12px;
+    }
+    #startRightNow .midDiv .multiBox .imgBoxInput{
+        width: 32%;
+    }
+    #startRightNow .midDiv .multiBox .imgBoxInput label{
+        font-size: 9px !important;
+    }
     .menuBtn {
         background: #f8d06b;
         z-index: 99999;
@@ -2099,7 +2216,15 @@ input:checked + .slider:before {
     #startRightNow .stairDiv .fifthChild {
         top: 218px;
         transform: rotate(6deg);
-        left: 30px;
+        left: 2px;
+    }
+    #startRightNow .midDiv .multiDiv,
+    #startRightNow .midDiv .multiDiv .leftDiv, 
+    #startRightNow .midDiv .multiDiv .rightDiv{
+        align-items: initial;
+    }
+    #startRightNow .midDiv .multiDiv .leftDiv p, #startRightNow .midDiv .multiDiv .rightDiv p{
+        margin-top: 0px;
     }
     p#fifthChild-h2 {
         transform: rotate(0deg);

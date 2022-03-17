@@ -46,17 +46,21 @@
                  </div>
                  <div class="statistics commonWooden">
                      <span class="statisticsText">statistics</span>
+                     <div class="mobileStatistics">
                      <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                      <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                      <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
                      <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                     </div>
                  </div>
                  <div class="payment commonWooden">
                      <span class="paymentText">Payment System</span>
+                     <div class="mobilePayment">
                      <div class="multiImg">
                          <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
                          <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
                          <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
+                     </div>
                      </div>
                  </div>
                  <div class="board commonWooden">
@@ -226,11 +230,12 @@
                              <div class="inputDiv addFunds">
                                  <label for="">
                                      <img src="{{asset('images/silvercoin.png')}}" class="img" width="15px" height="15px" />
-                                     {{\Auth::user()->silver_coins ?? ''}} [Add Funds]
+                                     {{\Auth::user()->silver_coins ?? ''}} [<a href="#" style="color:#005f90">Add Funds</a>]
                                  </label>
                              </div>
                              <div class="inputDiv withDrawFunds">
                                  <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
+                                 
                                  <label for=""> {{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label>
 
                              </div>
@@ -453,7 +458,7 @@
      </table>
      <div class="rightHeader">
          <ul>
-             <li>
+             <!-- <li>
                  <select name="" id="">
                      <option value="English">English</option>
                      <option value="Español">Español</option>
@@ -468,14 +473,14 @@
                      <option value="ภาษาไทย">ภาษาไทย</option>
                      <option value="Русский">Русский</option>
                  </select>
-             </li>
+             </li> -->
              <li>
                  <a href="/faq">
                      <img src="{{asset('frontend/assets/img/faq-new.png')}}" alt="">
                  </a>
              </li>
              <li>
-                 <a href="www.youtube.com">
+                 <a href="https://www.youtube.com/">
                      <img src="{{asset('frontend/assets/img/topdesktube.png')}}" alt="">
                  </a>
              </li>
