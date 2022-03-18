@@ -138,8 +138,9 @@ function copyText(text) {
 
      function pay_fs()
      {
-        $('#checkout-submit').attr('action', "{{route('send')}}");
-        $("#checkout-submit").submit();
+        $("#faucetform").submit();
+            // $('#checkout-submit').attr('action', "{{route('send')}}");
+        // $("#checkout-submit").submit();
      }
  </script>
  @toastr_js

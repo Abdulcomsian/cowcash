@@ -7,6 +7,7 @@ use App\Models\Payment;
 use App\Models\PackageTxn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\Frontend\PayeerClassController;
 use DB;
 use Auth;
 
@@ -14,8 +15,11 @@ use Auth;
  * Class PaymentPayeerController
  * @package ZaLaravel\LaravelPayeer\Controllers
  */
-class PaymentPayeerController extends Controller
+class PaymentPayeerController extends PayeerClassController
 {
+    public function __construct() {
+        
+    }
     public function createPayment(Request $request)
     {
         $pkgid = $request->package_id;
@@ -88,8 +92,49 @@ class PaymentPayeerController extends Controller
             toastError('The amount of Silver block exceeds your account balance You have ' . $urgoldbar . ' Silver Blocks (for withdrawal)');
             return Redirect::back();
         } else {
-            toastSuccess('Withdraw code working');
-            return Redirect::back();
+             //payeer payout code here
+            $payeer= new PayeerClassController('P1066080920','1624625266','kkxFtKr1Zh2HdMsD');
+            if ($payeer->isAuth())
+            {
+                    $initOutput = $payeer->initOutput(array(
+                    'ps' => '1136053',
+                    //'sumIn' => 1,
+                    'curIn' => 'USD',
+                    'sumOut' => 1,
+                    'curOut' => 'USD',
+                    'param_ACCOUNT_NUMBER' => 'P1030275509',
+                ));
+                if ($initOutput)
+                {
+                    $historyId = $payeer->output();
+                    if ($historyId > 0)
+                    {
+                        User::find(Auth::user()->id)->update([
+                         'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
+                         'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
+                        ]);
+                        toastError('Payout is successful');
+                        return Redirect::back();
+                    }
+                    else
+                    {
+                        toastError(json_encode($payeer->getErrors()));
+                        return Redirect::back();
+                    }
+                }
+                else
+                {
+                    toastError(json_encode($payeer->getErrors()));
+                        return Redirect::back();
+                }
+            }
+            else
+            {
+               toastError(json_encode($payeer->getErrors()));
+                        return Redirect::back();
+            }
         }
+
+       
     }
 }
