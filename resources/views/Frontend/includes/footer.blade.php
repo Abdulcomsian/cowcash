@@ -80,7 +80,9 @@ function copyText(text) {
          $("#checkoutprice").text(price);
          $("#checkoutprice").attr('value', price);
          $("#checkout-sum-val").val(price);
+          $("#fcheckout-sum-val").val(price);
          $("#package_id").val(pkgid);
+         $("#fpackage_id").val(pkgid);
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
      })
@@ -126,6 +128,7 @@ function copyText(text) {
          $("#checkoutcoins").text(coins);
          $("#checkoutprice").text(qty);
          $("#checkout-sum-val").val(qty);
+         $("#fcheckout-sum-val").val(qty);
          $("#package_id").val('');
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');

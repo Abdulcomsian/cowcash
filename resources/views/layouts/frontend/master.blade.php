@@ -94,26 +94,24 @@
               <input type="hidden" value="10" name="package_id" id="package_id">
             </form>
 
-            <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
-            <input type="text" name="merchant_username" value="obijanikust@gmail.com">
-            <br>
-            <input type="text" name="item_description" value="test">
-            <br>
-            <input type="text" name="amount1"  id="checkout-sum-val">
-            <br>
-            <input type="text" name="currency1" value="USD">
-            <br>
-            <input type="text" name="currency2" value="BTC">
-            <br>
-            <input type="text" name="custom" value="[IDENTIFICATION VALUE]">
-            <br>
-            <input type="text" name="callback_url" value="[CALLBACK URL]">
-            <br>
-            <input type="text" name="success_url" value="[SUCCESS URL]">
-            <br>
-            <input type="text" name="cancel_url" value="[CANCEL URL]">
-            <br>
-        </form>
+                <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
+                <input type="text" name="merchant_username" value="obaidjani">
+                <br>
+                <input type="text" name="item_description" value="test">
+                <br>
+                <input type="text" name="amount1"  id="fcheckout-sum-val">
+                <br>
+                <input type="text" name="currency1" value="USD" id="fcheckout-currency">
+
+                <input type="text" name="custom" value="" id="fpackage_id">
+                <br>
+                <input type="text" name="callback_url" value="{{url('faucet-callback')}}">
+                <br>
+                <input type="text" name="success_url" value="{{url('faucet-success')}}">
+                <br>
+                <input type="text" name="cancel_url" value="{{url('faucet-cancel')}}">
+                <br>
+            </form>
             <button class="commonBtn purchase">Purchase</button>
           </div>
           <div class="paymentMethod" disable style="opacity:0.5;">
@@ -125,9 +123,9 @@
               <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
                 <img src="{{asset('images/faucetpay.jpg')}}" alt="">
               </div>
-              <div class="paymentDiv">
+              <!-- <div class="paymentDiv">
                 <img src="{{asset('images/Group 39.png')}}" alt="">
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
