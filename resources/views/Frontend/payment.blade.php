@@ -39,12 +39,11 @@ About Us
                                 <img src="{{asset('images/Group42.png')}}" alt="">
                             </div>
                         </a>
-                        <div class="cardDiv">
-                            <img src="{{asset('images/Group 39.png')}}" alt="">
-                        </div>
+                        <a href="{{url('account/payment',2)}}">
                         <div class="cardDiv">
                             <img src="{{asset('images/faucetpay.jpg')}}" alt="">
                         </div>
+                        </a>
                         <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group40.png')}}" alt="">
                         </div>

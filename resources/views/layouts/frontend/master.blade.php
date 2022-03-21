@@ -45,7 +45,7 @@
             <span>{{$pkg->coins_to_get}}</span>
             <p class="title">Silver Coins</p>
             <img src="{{asset('images/12.png')}}" alt="">
-            <button id="data-price-{{$pkg->id}}" value="{{$pkg->amount}}">{{$pkg->amount}} USD</button>
+            <button id="data-price-{{$pkg->id}}" value="{{$pkg->amount}}">{{$pkg->amount}} {{Auth::user()->currency ?? 'USD'}}</button>
           </div>
           @endforeach
         </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="customAmount">
           <div class="inputDiv">
-            <label for="">Enter custom amount (USD):</label>
+            <label for="">Enter custom amount ({{Auth::user()->currency ?? 'USD'}}):</label>
             <input type="number" value="1" class="form-control customcal" min="1">
             <label for="">=</label>
             <label for="">
@@ -82,28 +82,29 @@
                 <tbody>
                   <tr>
                     <td><b>Amount:</b></td>
-                    <td><b id="checkoutprice" value="1">1.00</b><b> USD</b></td>
+                    <td><b id="checkoutprice" value="1">1.00</b><b> {{Auth::user()->currency ?? 'USD'}}</b></td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            <!-- payeer payement -->
             <form id="checkout-submit" method="POST" action="{{url('/createPayment')}}" target="_blank">
               @csrf
               <input type="hidden" name="purchase_sum" value="10" id="checkout-sum-val">
-              <input type="hidden" name="purchase_currency" value="USD" id="checkout-currency">
+              <input type="hidden" name="purchase_currency" value="{{Auth::user()->currency ?? 'USD'}}" id="checkout-currency">
               <input type="hidden" value="10" name="package_id" id="package_id">
             </form>
-
-                <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
+             <!-- Faucet payement -->
+            <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
                 <input type="text" name="merchant_username" value="obaidjani">
                 <br>
-                <input type="text" name="item_description" value="test">
+                <input type="text" name="item_description" value="Purchase Silver Coins and Crystals">
                 <br>
-                <input type="text" name="amount1"  id="fcheckout-sum-val">
+                <input type="text" name="amount1"  class="fcheckout-sum-val">
                 <br>
-                <input type="text" name="currency1" value="USD" id="fcheckout-currency">
+                <input type="text" name="currency1" value="USD">
 
-                <input type="text" name="custom" value="" id="fpackage_id">
+                <input type="text" name="custom" value="" class="fpackage_id">
                 <br>
                 <input type="text" name="callback_url" value="{{url('faucet-callback')}}">
                 <br>
@@ -117,9 +118,11 @@
           <div class="paymentMethod" disable style="opacity:0.5;">
             <label for="">3. Select the payment method:</label>
             <div class="paymentMulti">
+                <!-- click payment for payyer -->
               <div class="paymentDiv cursor-pointer" onclick="pay_ps()">
                 <img src="{{asset('images/Group42.png')}}" alt="">
               </div>
+               <!-- click payment for faucet-->
               <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
                 <img src="{{asset('images/faucetpay.jpg')}}" alt="">
               </div>

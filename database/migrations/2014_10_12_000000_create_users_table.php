@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->string('bonus_time')->nullable();
             $table->tinyInteger('bonus_status')->default(0);
-            $table->integer('currency')->nullable();
+            $table->string('currency')->nullable();
             $table->unsignedBigInteger('country_id');
             $table->string('visitorip')->nullable();
             $table->foreign('country_id')->references('id')->on('countries');

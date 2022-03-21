@@ -80,9 +80,9 @@ function copyText(text) {
          $("#checkoutprice").text(price);
          $("#checkoutprice").attr('value', price);
          $("#checkout-sum-val").val(price);
-          $("#fcheckout-sum-val").val(price);
+         $(".fcheckout-sum-val").val(price);
          $("#package_id").val(pkgid);
-         $("#fpackage_id").val(pkgid);
+         $(".fpackage_id").val(pkgid);
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
      })
@@ -98,6 +98,8 @@ function copyText(text) {
          }
          $("#checkoutcoins").text(parseInt($("#checkoutcoins").attr('value')) * qty);
          $("#checkoutprice").text(parseInt($("#checkoutprice").attr('value')) * qty);
+         $("#checkout-sum-val").val(parseInt($("#checkoutprice").attr('value'))* qty);
+         $(".fcheckout-sum-val").val(parseInt($("#checkoutprice").attr('value'))* qty);
      })
 
      $(document).on('click', '.purchase', function() {

@@ -9,6 +9,7 @@ use App\Models\Payment;
 use App\Models\PackageTxn;
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class FaucetPayController extends FaucetController
 {
@@ -17,44 +18,39 @@ class FaucetPayController extends FaucetController
         
     }
 
-    //this is without merchant api integration which is not for my working
+    //marchant can send pay to faucet user (Payout withdrawl)
     public function sendpay(Request $request)
     {
          try 
          {
-            $pkgid = $request->package_id;
-            $user = Auth::user();
-            $user = $user->id;
-            $m_amount = number_format($request->purchase_sum, 2, '.', '');
-            $m_orderid = mt_rand();
-            if ($m_amount != 0) {
+            $silverblocks = $request->silverblocks;
+            $ursilverblocks = Auth::user()->withdraw;
+            $crystal = Auth::user()->crystal;
+            $amount = $request->amount;
+            if ($silverblocks >  $ursilverblocks) {
+                toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
+                return Redirect::back();
+            } elseif ($crystal < $amount) {
+                toastError('The amount of Silver block exceeds your account balance You have ' . $urgoldbar . ' Silver Blocks (for withdrawal)');
+                return Redirect::back();
+            } else {
+                 //Faucet payout code here
                  $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
                  $res=$obj->send('obijanikust@gmail.com',$m_amount,'',false);
                  $result=json_decode($res['response']);
-                 if($result->status==200)
-                    {
-                        $payment = new Payment();
-                        $payment->uid = $m_orderid;
-                        $payment->user_id = $user;
-                        $payment->balance = $m_amount;
-                        $payment->description ='test payment';
-                        $payment->operation = '+';
-                        $payment->save();
-                        //
-                        $PackageTxn = new PackageTxn();
-                        $PackageTxn->user_id = $user;
-                        $PackageTxn->uid = $m_orderid;
-                        $PackageTxn->package_id = $pkgid;
-                        $PackageTxn->payment_method = 'Faucet';
-                        $PackageTxn->payment_status = 0;
-                        $PackageTxn->save();
-                        toastSuccess($result->message);
-                        return back();
-                    }
-                    else{
-                        toastError($result->message);
-                        return back();
-                    }
+                if($result->status==200)
+                 {
+                    User::find(Auth::user()->id)->update([
+                         'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
+                         'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
+                        ]);
+                    toastError('Payout is successful');
+                    return Redirect::back();
+                  }
+                  else{
+                    toastError($result->message);
+                    return back();
+                   }       
             }
         } catch (\PDOException $e) {
             toastError('something went wrong');
@@ -77,18 +73,16 @@ class FaucetPayController extends FaucetController
         $amount2 = $payment_info['amount2'];
         $currency2 = $payment_info['currency2'];
         $custom = $payment_info['custom'];
-
         $my_username = "obijani";
         $m_orderid = mt_rand();
         if ($my_username == $merchant_username && $token_status == true) {
-
+            $Packagedata = Package::where('id',$custom)->first();
             $payment = new Payment();
             $payment->uid = $m_orderid;
             $payment->user_id = Auth::user()->id;
             $payment->balance = $amount1;
-            $payment->description ='test payment';
+            $payment->description ='Purchase coins and crystals';
             $payment->payment_method='F';
-            $payment->payment_status=1;
             $payment->operation = '+';
             $payment->save();
             //
@@ -97,40 +91,47 @@ class FaucetPayController extends FaucetController
             $PackageTxn->uid = $m_orderid;
             $PackageTxn->package_id = $custom;
             $PackageTxn->payment_method = 'Faucet';
-            $PackageTxn->payment_status = 1;
-            $PackageTxn->save();
-
-            //giv crsystal and silver coins to user
-
-            if($custom)
+           if($Packagedata)
             {
-                $Packagedata = Package::where('id',$custom)->first();
-            //covert 40 percent of coinst to crystal 
-            $crystals = $Packagedata->amount / 100 * 40;
-            $addBalanceToUser = User::find(Auth::user()->id);
-            $addBalanceToUser->silver_coins += $Packagedata->coins_to_get;
-            $addBalanceToUser->crystal += $crystals;
-            $addBalanceToUser->update();
-            }
-            else{
-                
-                 //covert 40 percent of coinst to crystal 
-                $crystals = $m_amount / 100 * 40;
-                $addBalanceToUser = User::find(Auth::user()->id);
-                $addBalanceToUser->silver_coins += $amount1*8244 ;
-                $addBalanceToUser->crystal += $crystals;
-                $addBalanceToUser->update();
-            }
-            toastSuccess("Pyment Successfully");
-            return back();
+                 if($Packagedata->amount==$amount1)
+                 {
+                    $PackageTxn->payment_status = 1;
+                    //covert 40 percent of coinst to crystal 
+                    $crystals = $Packagedata->amount / 100 * 40;
+                    $addBalanceToUser = User::find(Auth::user()->id);
+                    $addBalanceToUser->silver_coins += $Packagedata->coins_to_get;
+                    $addBalanceToUser->crystal += $crystals;
+                    $addBalanceToUser->update();
+                 }
+                 else{
+                    $PackageTxn->payment_status = 0;
+                 }
+                 
+                }
+                else{
+                     $PackageTxn->payment_status = 1;
+                     //
+                     //covert 40 percent of coinst to crystal 
+                    $crystals = $amount1 / 100 * 40;
+                    $addBalanceToUser = User::find(Auth::user()->id);
+                    $addBalanceToUser->silver_coins += $amount1*8244 ;
+                    $addBalanceToUser->crystal += $crystals;
+                    $addBalanceToUser->update();
+                }
+               
+                $PackageTxn->save();
         } else {
-            toastSuccess("someone is trying to hack you");
-            return back();
         }
     }
 
     public function success(Request $request)
     {
-
+        toastSuccess("Pyment Successfully");
+        return Redirect::to('/home');
+    }
+    public function cancel()
+    {
+         toastSuccess("Pyment cancel unknown error");
+         return Redirect::to('/home');
     }
 }
