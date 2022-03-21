@@ -70,25 +70,16 @@ Account Setting
                     <hr>
                     <div class="inputDiv">
                         <label for="">Account Currency:</label>
-                        <label for="">
-                            @if(Auth::user()->currency=='1')
-                            USD
-                            @elseif(Auth::user()->currency=='2')
-                            EUR
-                            @else
-                            RUB
-                            @endif
-                            
-                        </label>
+                        <label for="" >{{Auth::user()->currency ?? 'USD'}}</label>
                     </div>
                     <form action="{{url('account/update-currency')}}" method="post">
                         @csrf
                         <div class="inputDiv">
                             <label for="">New Account Currency:</label>
                             <select name="currency" id="currency" required>
-                                <option value="1" {{Auth::user()->currency=='1' ? 'selected':''}}>USD</option>
-                                <option value="2" {{Auth::user()->currency=='2' ? 'selected':''}}>EUR</option>
-                                <option value="3" {{Auth::user()->currency=='3' ? 'selected':''}}>RUB</option>
+                                <option value="USD" {{Auth::user()->currency=='USD' ? 'selected':''}}>USD</option>
+                                <option value="EUR" {{Auth::user()->currency=='EUR' ? 'selected':''}}>EUR</option>
+                                <option value="RUB" {{Auth::user()->currency=='RUB' ? 'selected':''}}>RUB</option>
                             </select>
                         </div>
                         <button class="commonBtn cursor-pointer">

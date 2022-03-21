@@ -18,6 +18,15 @@ About Us
     }
 </style>
 @endsection
+@php
+ if($id==1)
+ {
+    $title="Payeer";
+ }
+ else{
+    $title="Faucet";
+}
+@endphp
 
 @section('content')
 <section id="startRightNow">
@@ -26,15 +35,26 @@ About Us
             <div class="descriptionDiv" style="padding: 20px 20px;">
                 <p class="rightNow">ORDER PAYOFF</p>
                 <div class="payoffHeader">
-                    <p>Payeer</p>
+                    <p>{{ $title}}</p>
                 </div>
                 <div class="formDiv">
+                    @if($id==1)
                     <form action="{{url('payoff')}}" method="post">
+                    @else
+                     <form action="{{url('send')}}" method="post">
+                    @endif
                         @csrf
+                        @if($id==1)
                         <div class="inputDiv">
                             <label for="">Wallet [Example: P12345678]:</label>
                             <input type="text" name="pp" class="form-control" required>
                         </div>
+                        @else
+                        <div class="inputDiv">
+                            <label for="">Enter Your Faucet Email</label>
+                            <input type="email" name="pp" class="form-control" required>
+                        </div>
+                        @endif
                         <div class="inputDiv">
                             <label for="">You give resources [Min. <b>388</b> Silver Block]:</label>
                             <input type="number" name="silverblocks" id="sum" class="form-control" value="388" required>

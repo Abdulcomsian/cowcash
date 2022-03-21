@@ -82,11 +82,13 @@
               @endguest
           </div>
           <!-- <button class="signUpBtn cursor-pointer" type="submit">Buy Cows</button> -->
+          @auth
             <div class="collectBtn">
                   <button class="commonBtn">
-                      <a href="{{url('account/registration')}}" style="color: #fff; text-align: center; font-weight: 600;">Buy Cows</a>
+                      <a href="{{url('account/farm')}}" style="color: #fff; text-align: center; font-weight: 600;">Buy Cows</a>
                   </button>
               </div>
+              @endauth
 
           @include('Frontend.includes.menues')
 

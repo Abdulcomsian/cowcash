@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'country_id' => '170',
-            'currency' => '1',
+            'currency' => 'USD',
         ]);
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'http://accrualhub.com') . '/register/?ref=' . $affiliateid;
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'country_id' => '170',
-            'currency' => '1',
+            'currency' => 'USD',
         ]);
 
         $affiliateid = Str::random(10);
@@ -67,7 +67,7 @@ class UserSeeder extends Seeder
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'country_id' => '170',
-            'currency' => '1',
+            'currency' => 'USD',
         ]);
 
         $packages = [
