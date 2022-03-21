@@ -716,7 +716,7 @@ button.signUpBtn {
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
-    height: 160px;
+ 
 }
 .promoDiv {
     direction: ltr;
@@ -2140,15 +2140,6 @@ margin: auto;
         padding: 0px !important;
         direction: initial;
     }
-}
-
-@media (max-width: 568px) {
-    .dailyBonustwo .imgText{
-        display: block;
-    }
-    .linkCopy p{
-        font-size: 9px !important;
-    }
     .mobileMenu .board{
         top: -27px !important;
     }
@@ -2160,6 +2151,16 @@ margin: auto;
     .mobileMenu .payment{
         top: -16px !important;
     }
+}
+
+@media (max-width: 568px) {
+    .dailyBonustwo .imgText{
+        display: block;
+    }
+    .linkCopy p{
+        font-size: 9px !important;
+    }
+   
     .twoThreeStep .imgTable table td {
         font-size: 11px;
         text-align: left;
@@ -2192,7 +2193,7 @@ margin: auto;
         margin-bottom: 10px;
     }
     .promoMaterial .multiSelect .selectOption{
-        width: 18%;
+        width: 14%;
     }
     .copyText{
         right: -10px !important;
@@ -2241,7 +2242,7 @@ margin: auto;
     }
 
     #startRightNow .midDiv p {
-        font-size: 12px;
+        font-size: 8px;
     }
 
     #startRightNow .midDiv,
