@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
             'country_id' => '170',
         ]);
         $affiliateid = Str::random(10);
-        $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
+        $referal_link = env('APP_URL', 'http://accrualhub.com') . '/register/?ref=' . $affiliateid;
         $user = User::create([
             'name' => 'Farmer1',
             'email' => 'farmer1@gmail.com',
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             'currency' => '1',
         ]);
         $affiliateid = Str::random(10);
-        $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
+        $referal_link = env('APP_URL', 'http://accrualhub.com') . '/register/?ref=' . $affiliateid;
         User::create([
             'name' => 'Farmer2',
             'email' => 'farmer2@gmail.com',
@@ -56,7 +56,7 @@ class UserSeeder extends Seeder
         ]);
 
         $affiliateid = Str::random(10);
-        $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
+        $referal_link = env('APP_URL', 'http://accrualhub.com') . '/register/?ref=' . $affiliateid;
         User::create([
             'name' => 'Areeb',
             'email' => 'areeb@gmail.com',
