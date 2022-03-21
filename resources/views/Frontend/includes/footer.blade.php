@@ -6,6 +6,7 @@
 
  <script>
      $("#myBtn").on("click", function() {
+         console.log("here")
          if ($("#myModal").css("display") == "none") {
                 $("#myModal").css("display", "block")
              
@@ -114,7 +115,7 @@ function copyText(text) {
      $(document).on('keyup mouseup', '.customcal', function() { 
         $(".customAmount").css('opacity','1');
         $("#checkoutqty").hide();
-        $(".multiPackage .packageDiv").css('opacity','0.7');
+        $(".multiPackage .packageDiv").css('opacity','0.3');
          qty = $(this).val();
          if (qty < 0) {
              qty=1;

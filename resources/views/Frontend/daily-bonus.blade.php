@@ -72,7 +72,10 @@
              </form>
              @endif
          </div>
-         <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>.</p>
+         <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br>
+         <span id="myBtnModal" style="cursor: pointer;"><b style="color: #7d3701;">replenish the account</b></span>.
+        </p>
+        
          @include('Frontend.includes.menues')
 
      </div>
@@ -81,6 +84,12 @@
  @endsection
  @section('script')
  <script>
+      $("#myBtnModal").on("click", function() {
+         if ($("#myModal").css("display") == "none") {
+                $("#myModal").css("display", "block")
+             
+         }
+     })
      $(function() {
          function getCounterData(obj) {
              var days = parseInt($('.e-m-days', obj).text());

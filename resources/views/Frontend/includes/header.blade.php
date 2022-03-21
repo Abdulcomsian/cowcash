@@ -67,9 +67,9 @@
                      <span class="paymentText">Payment System</span>
                      <div class="mobilePayment">
                      <div class="multiImg">
-                         <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Untitled-1-03 (1).png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Untitled-1-02.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Untitled-1-01.png')}}" alt="" class="img-fluid">
                      </div>
                      </div>
                  </div>
