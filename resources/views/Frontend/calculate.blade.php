@@ -74,14 +74,18 @@
                   @endforeach
               </div>
               @guest
-              <button class="commonBtn">Sign Up</button>
+              <button class="commonBtn">
+                  <a href="{{url('account/registration')}}" style="color: #fff; text-align: center; font-weight: 600;">Sign Up</a>
+              </button>
               <p style="color: #5e3700; text-align: center; font-weight: 600;">Sign Up right now and get Brown cow<br> +300 silver coins as a gift</p>
               <img style="width: 300px" src="../assets/img/Group 291.png" alt="">
               @endguest
           </div>
           <!-- <button class="signUpBtn cursor-pointer" type="submit">Buy Cows</button> -->
             <div class="collectBtn">
-                  <button class="commonBtn">Buy Cows</button>
+                  <button class="commonBtn">
+                      <a href="{{url('account/registration')}}" style="color: #fff; text-align: center; font-weight: 600;">Buy Cows</a>
+                  </button>
               </div>
 
           @include('Frontend.includes.menues')

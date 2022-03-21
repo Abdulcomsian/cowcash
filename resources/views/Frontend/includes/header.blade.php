@@ -37,20 +37,30 @@
                                  </div>
                              </div>
                              <div class="multiBtn">
-
-                                 <button type="submit" class="cursor-pointer">Login</button>
+                                <div id="commonBtn">
+                                    <button type="submit" class="cursor-pointer">Login</button>
+                                </div>
+                                 <div id="commonBtn">
                                  <a href="{{url('account/registration')}}" class="cursor-pointer">Register</a>
+                                 </div>
+                                 
                              </div>
                          </form>
                      </div>
                  </div>
-                 <div class="statistics commonWooden">
+                 <div class="statistics loginForm  commonWooden">
                      <span class="statisticsText">statistics</span>
                      <div class="mobileStatistics">
                      <p><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                      <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                      <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                     <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
+                    
+                     <div id="commonBtn"> <a href="{{url('account/registration')}}">Create Account
+                           
+                            
+                      
+                    </a>
+                    </div>
                      </div>
                  </div>
                  <div class="payment commonWooden">
@@ -182,7 +192,7 @@
                  <p id="allPartici"><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                  <p id="allPartici"><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                  <p id="allPartici"><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
-                 <div id="commonBtnn">
+                 <div id="commonBtn">
                      <a href="{{url('account/registration')}}"><button class="cursor-pointer">Create Account</button></a>
                  </div>
 
