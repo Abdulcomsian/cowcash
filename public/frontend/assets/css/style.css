@@ -1892,6 +1892,57 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    .mobileMenu #login .inputView{
+        position: relative;
+        top: 24px;
+    }
+    .mobileMenu #login .multiBtn{
+        position: relative;
+        top: 12px;
+        right: 0px;
+    }
+    #header .commonWooden .mobileStatistics #commonBtn{
+        padding: 5px 4px 12px;
+    max-width: 53% !important;
+    }
+    .mobileMenu .multiImg img {
+        width: 50px;
+        height: 50px;
+    }
+    .mobileMenu .payment{
+        position: relative !important;
+        top: -63px !important;
+    }
+    .mobileMenu .board{
+        position: relative !important;
+        top: -73px !important;
+    }
+    .mobileMenu #login .multiBtn button,
+    .mobileMenu #login .multiBtn a,
+    #header .commonWooden .mobileStatistics #commonBtn a{
+        width: initial !important;
+        text-align: center;
+        margin: 0px 5px;
+        background: transparent;
+        border: 0px solid #00000085;
+        color: #fff;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+    .mobileMenu #login .multiBtn #commonBtn{
+        width: 20% !important;
+    }
+    #startRightNow .midDiv .advantagesList{
+        max-width: 100%;
+    }
+    #startRightNow .midDiv .advantagesList li{
+        width: 22%;
+    }
+#startRightNow .midDiv .multiDiv{
+    margin-bottom: 30px;
+}
     .twoThreeStep{
         display: block;
     }
@@ -2085,9 +2136,54 @@ margin: auto;
         position: relative;
         top: 100px;
     }
+    .main-promoDiv{
+        padding: 0px !important;
+        direction: initial;
+    }
 }
 
 @media (max-width: 568px) {
+    .dailyBonustwo .imgText{
+        display: block;
+    }
+    .linkCopy p{
+        font-size: 9px !important;
+    }
+    .mobileMenu .board{
+        top: -27px !important;
+    }
+    .mobileMenu{
+        height: 93vh;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    .mobileMenu .payment{
+        top: -16px !important;
+    }
+    .twoThreeStep .imgTable table td {
+        font-size: 11px;
+        text-align: left;
+    }
+    .twoThreeStep .imgTable table {
+        margin-left: 0px;
+    }
+    .horizontalLine p{
+        left: 40%;
+    }
+    .twoThreeStep .paymentMethod label{
+        font-size: 12px;
+    }
+    .paymentMulti img {
+        width: 79px;
+        height: 50px;
+    }
+    .checkoutOrder .inputDiv label:nth-child(1){
+        font-size: 12px;
+        margin-right: 2px;
+    }
+    .twoThreeStep .checkoutOrder, .twoThreeStep .paymentMethod{
+        margin: 0px;
+    }
     .multiCards{
         flex-wrap: wrap;
     }
@@ -2096,10 +2192,10 @@ margin: auto;
         margin-bottom: 10px;
     }
     .promoMaterial .multiSelect .selectOption{
-        width: 27%;
+        width: 18%;
     }
     .copyText{
-        right: 0px !important;
+        right: -10px !important;
     }
     .cowShop .multipleDiv .commonDiv{
         max-width: 100%;
@@ -2120,7 +2216,10 @@ margin: auto;
         font-size: 12px;
     }
     #startRightNow .midDiv .multiBox .imgBoxInput{
-        width: 32%;
+        width: 34%;
+    }
+    #startRightNow .midDiv .multiBox{
+        justify-content: space-around !important;
     }
     #startRightNow .midDiv .multiBox .imgBoxInput label{
         font-size: 9px !important;
