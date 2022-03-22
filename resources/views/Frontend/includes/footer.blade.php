@@ -110,7 +110,8 @@ function copyText(text) {
              $(".checkoutOrder").css('opacity', '0.5');
              $(".paymentMethod").removeAttr('disable');
              $(".paymentMethod").css('opacity', '1');
-             $(".purchase").text("Purchase");
+             $(".paymentMethod").css('opacity', '1');
+             $(".paymentMethod").css('pointer-events', 'auto');
          }, 1000);
      })
 
@@ -135,6 +136,7 @@ function copyText(text) {
          $("#package_id").val('');
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
+         $(".checkoutOrder").css('pointer-events', 'auto');
      })
  </script>
  <script type="text/javascript">

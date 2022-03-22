@@ -40,7 +40,7 @@ Promo Materials
                             <div class="selectOption forthOption">
                                 <p>200x300</p>
                             </div>
-                            <div class="selectOption">
+                            <div class="selectOption fifthOption">
                                 <p>250x250</p>
                             </div>
                             <!-- <div class="selectOption sixthOption">
@@ -52,7 +52,7 @@ Promo Materials
                             <!-- <div class="selectOption eigthOption">
                                 <p>125x125</p>
                             </div> -->
-                            <div class="selectOption">
+                            <div class="selectOption 320Option">
                                 <p>320x50</p>
                             </div>
                             <div class="selectOption seventhOption">
@@ -134,6 +134,10 @@ Promo Materials
          $(".htmlDiv img").css("width","200px")
          $(".htmlDiv img").css("height","300px")
      })
+     $(".fifthOption").click(function(){
+         $(".htmlDiv img").css("width","250px")
+         $(".htmlDiv img").css("height","250px")
+     })
      $(".sixthOption").click(function(){
          $(".htmlDiv img").css("width","120px")
          $(".htmlDiv img").css("height","600px")
@@ -163,8 +167,11 @@ Promo Materials
          $(".htmlDiv img").css("height","280px")
      })
      $(".16Option").click(function(){
-         $(".htmlDiv img").css("width","970px")
          $(".htmlDiv img").css("height","90px")
+     })
+     $(".320Option").click(function(){
+         $(".htmlDiv img").css("width","320px")
+         $(".htmlDiv img").css("height","50px")
      })
  </script>
  @endsection
