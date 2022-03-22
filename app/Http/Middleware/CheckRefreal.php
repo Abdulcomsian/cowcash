@@ -17,8 +17,7 @@ class CheckRefreal
     public function handle(Request $request, Closure $next)
     {
         if ($request->hasCookie('referral')) {
-            cookie('referral',$request->query('ref'));
-            return $next($request);
+            return redirect($request->fullUrl())->withCookie(cookie()->forever('referral', $request->query('ref')));
         } else {
             if ($request->query('ref')) {
                 return redirect($request->fullUrl())->withCookie(cookie()->forever('referral', $request->query('ref')));
