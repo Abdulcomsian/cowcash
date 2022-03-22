@@ -67,9 +67,9 @@
                      <span class="paymentText">Payment System</span>
                      <div class="mobilePayment">
                      <div class="multiImg">
-                         <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Untitled-1-03 (1).png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Untitled-1-02.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/Untitled-1-01.png')}}" alt="" class="img-fluid">
                      </div>
                      </div>
                  </div>
@@ -187,7 +187,7 @@
                      </form>
                  </div>
              </td>
-             <td class="statistics commonWooden">
+             <td class="statistics loginForm commonWooden">
                  <span class="statisticsText">statistics</span>
                  <p id="allPartici"><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                  <p id="allPartici"><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>

@@ -129,14 +129,14 @@ input:focus {
 } */
 
 #header .statistics button {
-    position: absolute;
-    left: 18%;
+  
     background: transparent;
     border: none;
-    color: #ffff;
-    font-family: Nexa-Regular;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
     font-size: 11px;
-    top: 7px;
+   
 }
 
 #header .payment {
@@ -224,12 +224,17 @@ button#register_button {
     display: flex;
     justify-content: space-between;
     /* padding: 5px 20px 8px 20px !important; */
-    padding: 21px 20px 3px 20px !important;
+    padding: 15px 20px 3px 20px !important;
     color: #00000085;
     position: relative;
-    top: 40px !important;
+    top: 31px !important;
     font-weight: 1000;
     font-family: "Poppins", sans-serif;
+}
+#header .statistics #commonBtn{
+    max-width: 44% !important;
+    position: relative;
+    top: 42px;
 }
 #header .statistics p {
     font-family: Nexa-Regular;
@@ -716,7 +721,7 @@ button.signUpBtn {
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
-    height: 160px;
+ 
 }
 .promoDiv {
     direction: ltr;
@@ -1892,6 +1897,9 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    #header .statistics #commonBtn{
+        top: initial;
+    }
     .mobileMenu #login .inputView{
         position: relative;
         top: 24px;
@@ -1909,14 +1917,14 @@ margin: auto;
         width: 50px;
         height: 50px;
     }
-    .mobileMenu .payment{
+    /* .mobileMenu .payment{
         position: relative !important;
         top: -63px !important;
-    }
-    .mobileMenu .board{
+    } */
+    /* .mobileMenu .board{
         position: relative !important;
         top: -73px !important;
-    }
+    } */
     .mobileMenu #login .multiBtn button,
     .mobileMenu #login .multiBtn a,
     #header .commonWooden .mobileStatistics #commonBtn a{
@@ -2140,6 +2148,17 @@ margin: auto;
         padding: 0px !important;
         direction: initial;
     }
+    /* .mobileMenu .board{
+        top: -27px !important;
+    } */
+    .mobileMenu{
+        height: 93vh;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    /* .mobileMenu .payment{
+        top: -16px !important;
+    } */
 }
 
 @media (max-width: 568px) {
@@ -2149,17 +2168,7 @@ margin: auto;
     .linkCopy p{
         font-size: 9px !important;
     }
-    .mobileMenu .board{
-        top: -27px !important;
-    }
-    .mobileMenu{
-        height: 93vh;
-        overflow: scroll;
-        overflow-x: hidden;
-    }
-    .mobileMenu .payment{
-        top: -16px !important;
-    }
+   
     .twoThreeStep .imgTable table td {
         font-size: 11px;
         text-align: left;
@@ -2192,7 +2201,7 @@ margin: auto;
         margin-bottom: 10px;
     }
     .promoMaterial .multiSelect .selectOption{
-        width: 18%;
+        width: 14%;
     }
     .copyText{
         right: -10px !important;
@@ -2241,7 +2250,7 @@ margin: auto;
     }
 
     #startRightNow .midDiv p {
-        font-size: 12px;
+        font-size: 8px;
     }
 
     #startRightNow .midDiv,

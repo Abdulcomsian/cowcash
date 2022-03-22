@@ -11,6 +11,8 @@
       .bgColor {
           overflow: hidden;
           background-size: 99% 100%;
+          height: 100% !important;
+          padding-bottom: 50px;
       }
       .cowShop .scroll-rtl, #startRightNow .midDiv{height:auto;}
       .cowShop .detail-scroll-rtl{height:auto; overflow:auto;}
@@ -106,11 +108,23 @@
                       @endforeach
                   </div>
               </div>
-              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br> <a id="myBtn" type="button"><b style="color: #7d3701;">replenish the account</b></a>. “</p>
+              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br> 
+              <a id="myBtnModal" style="cursor: pointer;"><b style="color: #7d3701;">replenish the account</b></a>.
+            </p>
           </div>
           
           @include('Frontend.includes.buyCowMenu')
 
       </div>
   </section>
+  @endsection
+  @section('script')
+  <script>
+         $("#myBtnModal").on("click", function() {
+         if ($("#myModal").css("display") == "none") {
+                $("#myModal").css("display", "block")
+             
+         }
+     })
+  </script>
   @endsection
