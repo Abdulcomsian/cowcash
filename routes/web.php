@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\Country;
 use App\Models\Payment;
+use Cookie;
 
 
 
@@ -82,6 +83,7 @@ Route::get('account/calculate', [FarmController::class, 'calculate'])->name('acc
 
 // registraion url
 Route::get('account/registration', function () {
+    Cookie::queue('referral',$_GET['ref']);
     $countries = Country::get();
     return view('Frontend.registration', compact('countries'));
 });

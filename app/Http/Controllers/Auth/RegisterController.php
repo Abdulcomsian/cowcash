@@ -66,7 +66,7 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        Cookie::queue('referral',$_GET['ref']);
+        Cookie::queue('referral', $_GET['ref']);
         $countries = Country::get();
         return view('auth.register', compact('countries'));
     }
@@ -83,13 +83,13 @@ class RegisterController extends Controller
         if (!empty(Cookie::get('referral'))) {
             $referred_by = Cookie::get('referral');
         }
-            
+
         $ipaddress = $_SERVER['REMOTE_ADDR'];
         $affiliateid = Str::random(10);
-        $referal_link = env('APP_URL', 'http://accrualhub.com/') . '/register/?ref=' . $affiliateid;
-        $referalcount=User::where(['referred_by'=>$referred_by])->whereDate('created_at', Carbon::today())->count();
-        if($referalcount>=20)
-        {
+        // $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/register/?ref=' . $affiliateid;
+        $referal_link = env('APP_URL', 'http://127.0.0.1:8000') . '/account/registration/?ref=' . $affiliateid;
+        $referalcount = User::where(['referred_by' => $referred_by])->whereDate('created_at', Carbon::today())->count();
+        if ($referalcount >= 20) {
             toastError('Your Day wise referals completed');
             return back();
         }
@@ -97,14 +97,14 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'silver_coins'=>DB::raw('silver_coins +320'),
+            'silver_coins' => DB::raw('silver_coins +320'),
             'role' => 'farmer',
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
             'referred_by' => $referred_by,
             'country_id' => $data['country_id'],
             'currency' => $data['currency'],
-            'visitorip'=>$ipaddress,
+            'visitorip' => $ipaddress,
         ]);
         if ($user) {
             //check parent
