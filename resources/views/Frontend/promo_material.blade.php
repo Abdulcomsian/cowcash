@@ -43,15 +43,15 @@ Promo Materials
                             <div class="selectOption">
                                 <p>250x250</p>
                             </div>
-                            <div class="selectOption sixthOption">
+                            <!-- <div class="selectOption sixthOption">
                                 <p>120x600</p>
-                            </div>
+                            </div> -->
                             <div class="selectOption seventhOption">
                                 <p>100x100</p>
                             </div>
-                            <div class="selectOption eigthOption">
+                            <!-- <div class="selectOption eigthOption">
                                 <p>125x125</p>
-                            </div>
+                            </div> -->
                             <div class="selectOption">
                                 <p>320x50</p>
                             </div>
