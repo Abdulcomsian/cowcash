@@ -64,10 +64,9 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function showRegistrationForm(Request $request)
+    public function showRegistrationForm()
     {
-        $response = new Illuminate\Http\Response('Hello World');
-        $response->withCookie(cookie()->forever('referral', $_GET['ref']));
+        Cookie::queue('referral',$_GET['ref']);
         $countries = Country::get();
         return view('auth.register', compact('countries'));
     }
