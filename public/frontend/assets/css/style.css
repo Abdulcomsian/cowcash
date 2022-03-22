@@ -1897,6 +1897,9 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    /* .htmlDiv img{
+        width: 100% !important;
+    } */
     #header .statistics #commonBtn{
         top: initial;
     }
