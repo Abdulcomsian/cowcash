@@ -1770,6 +1770,7 @@ input:checked + .slider:before {
 .twoThreeStep .checkoutOrder {
     width: 35%;
     text-align: center;
+    pointer-events: none;
 }
 
 .twoThreeStep .imgTable {
@@ -1801,6 +1802,7 @@ input:checked + .slider:before {
 .twoThreeStep .paymentMethod {
     width: 50%;
     padding: 38px;
+    pointer-events: none;
 }
 
 .twoThreeStep .paymentMethod label {
@@ -1811,13 +1813,14 @@ input:checked + .slider:before {
 
 .paymentMulti {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     margin-top: 5px;
 }
 
 .paymentMulti img {
     width: 90px;
+    height: 60px;
+    margin-right: 10px;
 }
 
 
