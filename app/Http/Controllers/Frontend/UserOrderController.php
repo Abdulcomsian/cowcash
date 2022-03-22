@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Redirect;
 use Auth;
 use DB;
 use Carbon\Carbon;
+use Cookie;
 
 class UserOrderController extends Controller
 {
@@ -284,5 +285,12 @@ class UserOrderController extends Controller
     public function payment($id)
     {
         return view('Frontend.order_payoff', compact('id'));
+    }
+
+    public function registration()
+    {
+        Cookie::queue('referral',$_GET['ref']);
+        $countries = Country::get();
+        return view('Frontend.registration', compact('countries'));
     }
 }
