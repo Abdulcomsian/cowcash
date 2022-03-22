@@ -187,7 +187,7 @@
                      </form>
                  </div>
              </td>
-             <td class="statistics commonWooden">
+             <td class="statistics loginForm commonWooden">
                  <span class="statisticsText">statistics</span>
                  <p id="allPartici"><span>All Participants:</span> <span><b>{{ $allusers ?? '0'}} Users</b></span></p>
                  <p id="allPartici"><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
