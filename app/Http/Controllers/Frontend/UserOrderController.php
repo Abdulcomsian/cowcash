@@ -290,7 +290,10 @@ class UserOrderController extends Controller
 
     public function registration()
     {
-        Cookie::queue('referral',$_GET['ref']);
+        if(isset($_GET['ref']))
+        {
+         Cookie::queue('referral',$_GET['ref']);
+        }
         $countries = Country::get();
         return view('Frontend.registration', compact('countries'));
     }
