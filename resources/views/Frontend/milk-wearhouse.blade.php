@@ -65,7 +65,7 @@
                       @foreach( $per_hour_collection as $perhour)
                       <div class="commonBox">
                           <div class="imgDiv">
-                              <img src="{{asset('frontend/assets/img/main.png')}}" alt="">
+                              <img src="{{asset($perhour->image)}}" alt="">
                           </div>
                           <div class="detailDiv">
                               <p class="title">{{$perhour->cowName ?? ''}}</p>

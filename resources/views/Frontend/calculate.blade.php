@@ -64,7 +64,7 @@
               <div class="multiBox">
                   @foreach($cows as $cow)
                   <div class="imgBoxInput">
-                      <img src="{{asset('frontend/assets/img/coinsCow.png')}}" alt="">
+                      <img src="{{asset($cow->image)}}" alt="">
                       <br>
                       <label style="font-size:10px;font-family: Nexa-Regular !important;">{{$cow->cowName}}</label>
                       <br>

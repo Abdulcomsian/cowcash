@@ -39,7 +39,7 @@
                      <table>
                          <thead>
                              <tr>
-                                 <td>Name</td>
+                                 <td>Image</td>
                                  <td>You have at the warehouse</td>
                                  <td>Worth (Silver Coins)</td>
                              </tr>
@@ -47,7 +47,11 @@
                          <tbody>
                              @foreach($milkforsell as $sell)
                              <tr>
-                                 <td>{{$sell->cow->cowName ?? ''}}</td>
+                                 <td>
+                                      <div class="imgDiv">
+                                        <img src="{{asset($sell->cow->image)}}" width="50px" height="50px" alt="">
+                                    </div>
+                                 </td>
                                  <td>{{$sell->total_milk ?? ''}} liter milk</td>
                                  @php
                                  $goldbar=$sell->total_milk/100;
