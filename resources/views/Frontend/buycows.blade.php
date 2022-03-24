@@ -86,7 +86,7 @@
                       @foreach($cows as $cow)
                       <div class="commonDiv">
                           <div class="imgDiv">
-                              <img src="{{asset('frontend/assets/img/cow1.png')}}" alt="">
+                              <img src="{{asset($cow->image)}}" alt="">
                           </div>
                           <form method="post" action="{{url('account/take-order')}}">
                               @csrf
