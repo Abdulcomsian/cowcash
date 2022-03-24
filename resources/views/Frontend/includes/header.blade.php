@@ -55,7 +55,7 @@
                      <p><span>New for 24 Hours:</span> <span><b>{{ $newuser ?? 0}} Users</b></span></p>
                      <p><span>Active Today:</span> <span><b>{{ $todayActive ?? ''}} Users</b></span></p>
                     
-                     <div id="commonBtn"> <a href="{{url('account/registration')}}">Create Account
+                     <div  id="commonBtn"> <a href="{{url('account/registration')}}">Create Account
                            
                             
                       
@@ -153,7 +153,7 @@
              <td class="loginForm commonWooden">
                  <span class="signInText">SIGN IN ACCOUNT</span>
                  <div class="formDiv">
-                     <form id="login" style="position:Relative;top:15px;" method="POST" action="{{route('login')}}">
+                     <form id="login" style="position:Relative;top:3px;" method="POST" action="{{route('login')}}">
                          @csrf
                          <div class="inputView">
                              <div class="inputDiv">
@@ -177,11 +177,11 @@
                              </div>
                          </div>
                          <div class="multiBtn">
-                             <div id="commonBtn" style="max-width:25%;margin:0px;">
-                                 <button id="login_button" type="submit" class="cursor-pointer">Login</button>
+                             <div id="commonBtn" style="max-width:40%;margin:0px; padding: 0px; background-size: 100% 100%;">
+                                 <button style="padding: 0px 5px 4px !important;" id="login_button" type="submit" class="cursor-pointer">Login</button>
                              </div>
-                             <div id="commonBtn" style="max-width:25%;margin:0px;">
-                                 <a href="{{url('account/registration')}}"><button style="margin-left:0px;" id="register_button" type="button" class="cursor-pointer">Register</button></a>
+                             <div id="commonBtn" style="max-width:40%;margin:0px; padding: 0px; background-size: 100% 100%;">
+                                 <a href="{{url('account/registration')}}"><button style="margin-left:0px; padding: 0px 5px 4px !important;" id="register_button" type="button" class="cursor-pointer">Register</button></a>
                              </div>
                          </div>
                      </form>

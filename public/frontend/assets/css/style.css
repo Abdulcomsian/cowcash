@@ -224,15 +224,15 @@ button#register_button {
     display: flex;
     justify-content: space-between;
     /* padding: 5px 20px 8px 20px !important; */
-    padding: 15px 20px 3px 20px !important;
+    padding: 5px 20px 8px 20px !important;
     color: #00000085;
     position: relative;
-    top: 31px !important;
+    top: 48px !important;
     font-weight: 1000;
     font-family: "Poppins", sans-serif;
 }
 #header .statistics #commonBtn{
-    max-width: 44% !important;
+    max-width: 50% !important;
     position: relative;
     top: 42px;
 }
@@ -1381,7 +1381,7 @@ input:checked + .slider:before {
     width: 100%;
     max-width: 80%;
     margin: auto;
-    margin-top: 45px;
+    margin-top: 25px;
 }
 
 .multiImg img {
