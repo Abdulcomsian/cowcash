@@ -17,6 +17,11 @@
       p{
         font-family: Nexa-Regular !important;
       }
+      @media (max-width: 1400px) {
+        #startRightNow .midDiv p.title{
+            padding-right: 80px;
+        }
+     }
   </style>
   @endsection
 

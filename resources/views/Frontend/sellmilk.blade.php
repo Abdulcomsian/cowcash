@@ -11,6 +11,11 @@
      .bgColor {
          overflow: hidden;
      }
+     @media (min-width: 1600px) {
+        #startRightNow .midDiv .detailBox p{
+            padding-right: 80px;
+        }
+     }
  </style>
  @endsection
 
