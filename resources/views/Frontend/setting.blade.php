@@ -60,14 +60,14 @@ Account Setting
                         </select>
                     </div>
                     <hr>
-                    <div class="inputDiv">
+                    <!-- <div class="inputDiv">
                         <label style="width: 95%;" for="">Use mobile version on mobile devices:</label>
                         <label class="switch">
                             <input type="checkbox" checked>
                             <span class="slider round"></span>
                         </label>
-                    </div>
-                    <hr>
+                    </div> -->
+                    <!-- <hr> -->
                     <div class="inputDiv">
                         <label for="">Account Currency:</label>
                         <label for="" >{{Auth::user()->currency ?? 'USD'}}</label>

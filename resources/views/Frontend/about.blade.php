@@ -31,12 +31,12 @@
                  <p>In the process of the game new blocks will be added which will allow to fill up reserve for buying the blik that will give additional guarantee to the players!</p>
                  <p>Maximal fast payoffs of money to your wallet!</p>
                  <p>You will find a lot of cows, each cow has its own price and its productivity, each subsequent cow will bring more income than the previous one.</p>
-                 <p>There are several types of resources in the project - gold bars and silver, there are 2 types of silver: «silver coins» (for purchases) and «silver blocks» (for withdrawal). For silver coins (for purchases), you can <a href="">buy new</a> cows. Silver blocks for the withdrawal and Gold bars you can <a href="">exchange</a> for real money, and withdraw them to your electronic wallet automatically.</p>
+                 <p>There are several types of resources in the project - gold bars and silver, there are 2 types of silver: «silver coins» (for purchases) and «silver blocks» (for withdrawal). For silver coins (for purchases), you can <a href="account/farm">buy new</a> cows. Silver blocks for the withdrawal and Gold bars you can <a href="account/swap">exchange</a> for real money, and withdraw them to your electronic wallet automatically.</p>
                  <hr>
-                 <p>To buy cows you have to <a href="">replenish</a> your balance for purchases on the amount you need.</p>
-                 <p>After replenishing your account, go to <a href="">«Cow shop»</a> And buy the cows you want.</p>
-                 <p>Right after the purchase of cows you will automatically receive milk from them, you can see their number in the section «Milk warehouse» and collect them for further <a href="">sale</a> for silver and use silver blocks to <a href="">withdraw real money.</a></p>
-                 <p>Still have questions related to Cow-Farm? To solve the problem it is enough to apply for help in <a href="">support</a> of our project and you will be answered by our support service, which works 24/7 especially for you!</p>
+                 <p>To buy cows you have to <a href="account/payment">replenish</a> your balance for purchases on the amount you need.</p>
+                 <p>After replenishing your account, go to <a href="account/farm">«Cow shop»</a> And buy the cows you want.</p>
+                 <p>Right after the purchase of cows you will automatically receive milk from them, you can see their number in the section «Milk warehouse» and collect them for further <a href="account/market">sale</a> for silver and use silver blocks to <a href="account/payment">withdraw real money.</a></p>
+                 <p>Still have questions related to Cow-Farm? To solve the problem it is enough to apply for help in <a href="support">support</a> of our project and you will be answered by our support service, which works 24/7 especially for you!</p>
              </div>
          </div>
          @include('Frontend.includes.menues')
