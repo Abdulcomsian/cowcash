@@ -11,11 +11,15 @@
      .bgColor {
          overflow: hidden;
      }
-     @media (min-width: 1600px) {
+     #startRightNow .midDiv .detailBox p{
+         width: 100%;
+         max-width: 90%;
+     }
+     /* @media (min-width: 1600px) {
         #startRightNow .midDiv .detailBox p{
             padding-right: 80px;
         }
-     }
+     } */
  </style>
  @endsection
 
@@ -36,7 +40,7 @@
              <form method="post" action="{{url('account/sold-milk')}}">
                  @csrf
                  <div class="dailyBonusTable">
-                     <table>
+                     <table class="table-responsive">
                          <thead>
                              <tr>
                                  <td>Image</td>

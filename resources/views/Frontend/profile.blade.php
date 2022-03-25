@@ -46,7 +46,7 @@
                               </tr>
                               <tr>
                                   <td>Got from referrals:</td>
-                                  <td>{{\Auth::user()->referal_coins ?? ''}} coins</td>
+                                  <td>{{\Auth::user()->referal_coins ?? ''}} bars</td>
                               </tr>
                               <tr>
                                   <td>Paid out:</td>

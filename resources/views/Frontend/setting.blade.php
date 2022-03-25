@@ -53,13 +53,13 @@ Account Setting
                         </button>
                     </form>
                     <hr>
-                    <div class="inputDiv">
+                    <!-- <div class="inputDiv">
                         <label for="">Interface Language:</label>
                         <select name="" id="">
                             <option value="English">English</option>
                         </select>
                     </div>
-                    <hr>
+                    <hr> -->
                     <!-- <div class="inputDiv">
                         <label style="width: 95%;" for="">Use mobile version on mobile devices:</label>
                         <label class="switch">

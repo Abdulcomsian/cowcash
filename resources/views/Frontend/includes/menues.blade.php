@@ -3,19 +3,19 @@
         <div class="listView">
             <div class="listdiv">
                 <a href="{{url('/home')}}">
-                    <img src="{{asset('frontend/assets/img/main.png')}}" alt="">
+                    <img src="{{asset('images/main.png')}}" alt="">
                     <p>Main</p>
                 </a>
             </div>
             <div class="listdiv">
                 <a href="{{url('/payments')}}">
-                    <img src="{{asset('frontend/assets/img/paymentMenu.png')}}" alt="">
+                    <img src="{{asset('images/payment.png')}}" alt="">
                     <p>Payments</p>
                 </a>
             </div>
             <div class="listdiv">
                 <a href="{{url('/rules')}}">
-                    <img src="{{asset('frontend/assets/img/rules.png')}}" alt="">
+                    <img src="{{asset('images/rules.png')}}" alt="">
                     <p>Rules</p>
                 </a>
             </div>
@@ -23,19 +23,19 @@
         <div class="listView">
             <div class="listdiv">
                 <a href="{{url('/about')}}">
-                    <img src="{{asset('frontend/assets/img/about.png')}}" alt="">
+                    <img src="{{asset('images/about.png')}}" alt="">
                     <p>About</p>
                 </a>
             </div>
             <div class="listdiv">
                 <a href="{{url('account/calculate')}}">
-                    <img src="{{asset('frontend/assets/img/calculate.png')}}" alt="">
+                    <img src="{{asset('images/calculate.png')}}" alt="">
                     <p>Calculate</p>
                 </a>
             </div>
             <div class="listdiv">
                 <a href="{{url('/support')}}">
-                    <img src="{{asset('frontend/assets/img/support.png')}}" alt="">
+                    <img src="{{asset('images/support.png')}}" alt="">
                     <p>Support</p>
                 </a>
             </div>

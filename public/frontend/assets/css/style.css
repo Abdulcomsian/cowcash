@@ -1832,7 +1832,7 @@ input:checked + .slider:before {
 #header .rightHeader{
     position: absolute;
     top: 50px;
-    right: 50px;
+    right: 10px;
 }
 #header .rightHeader ul{
     list-style: none;

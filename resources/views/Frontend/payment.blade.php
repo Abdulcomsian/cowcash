@@ -20,6 +20,9 @@ About Us
     .active {
         background-color: #fff !important;
     }
+    .multiCards a{
+        margin: 0px 5px;
+    }
 </style>
 @endsection
 
@@ -42,6 +45,11 @@ About Us
                         <a href="{{url('account/payment',2)}}">
                         <div class="cardDiv">
                             <img src="{{asset('images/faucetpay.jpg')}}" alt="">
+                        </div>
+                        </a>
+                        <a href="{{url('account/payment',2)}}">
+                        <div class="cardDiv">
+                            <img src="{{asset('images/Group 39.png')}}" alt="">
                         </div>
                         </a>
                         <!-- <div class="cardDiv">

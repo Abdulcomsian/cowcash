@@ -6,7 +6,18 @@
 
  <script>
      $("#myBtn").on("click", function() {
-         console.log("here")
+         if ($("#myModal").css("display") == "none") {
+                $("#myModal").css("display", "block")
+             
+         }
+     })
+     $("#myBtnReplenish").on("click", function() {
+         if ($("#myModal").css("display") == "none") {
+                $("#myModal").css("display", "block")
+             
+         }
+     })
+     $("#supportReplenishBtn").on("click", function() {
          if ($("#myModal").css("display") == "none") {
                 $("#myModal").css("display", "block")
              

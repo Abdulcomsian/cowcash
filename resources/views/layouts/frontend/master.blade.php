@@ -126,9 +126,9 @@
               <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
                 <img src="{{asset('images/faucetpay.jpg')}}" alt="">
               </div>
-              <!-- <div class="paymentDiv">
+              <div class="paymentDiv">
                 <img src="{{asset('images/Group 39.png')}}" alt="">
-              </div> -->
+              </div>
             </div>
           </div>
         </div>

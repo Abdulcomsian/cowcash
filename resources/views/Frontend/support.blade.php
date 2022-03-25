@@ -17,11 +17,10 @@
       p{
         font-family: Nexa-Regular !important;
       }
-      @media (max-width: 1400px) {
-        #startRightNow .midDiv p.title{
-            padding-right: 80px;
-        }
-     }
+      #startRightNow .midDiv p.title{
+        width: 100%;
+        max-width: 90%;
+      }
   </style>
   @endsection
 
