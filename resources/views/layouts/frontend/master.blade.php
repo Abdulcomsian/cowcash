@@ -87,6 +87,7 @@
                 </tbody>
               </table>
             </div>
+            <button type="button" class="commonBtn purchase cursor-pointer" id="purchase">Purchase</button>
             <!-- payeer payement -->
             <form id="checkout-submit" method="POST" action="{{url('/createPayment')}}" target="_blank">
               @csrf
@@ -113,7 +114,7 @@
                 <input type="text" name="cancel_url" value="{{url('faucet-cancel')}}">
                 <br>
             </form>
-            <button class="commonBtn purchase">Purchase</button>
+            
           </div>
           <div class="paymentMethod" disable style="opacity:0.5;">
             <label for="">3. Select the payment method:</label>
