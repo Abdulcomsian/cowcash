@@ -97,6 +97,7 @@ function copyText(text) {
          $(".fpackage_id").val(pkgid);
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
+          $(".checkoutOrder").css('pointer-events', 'auto');
      })
 
      $(document).on('blur mouseup', '#checkoutqty', function() {
@@ -114,7 +115,7 @@ function copyText(text) {
          $(".fcheckout-sum-val").val(parseInt($("#checkoutprice").attr('value'))* qty);
      })
 
-     $(document).on('click', '.purchase', function() {
+     $(document).on('click', '#purchase', function() {
          $(this).text("Processing.....");
          setTimeout(function() {
              $(".checkoutOrder").attr('disable');
@@ -124,6 +125,7 @@ function copyText(text) {
              $(".paymentMethod").css('opacity', '1');
              $(".paymentMethod").css('pointer-events', 'auto');
          }, 1000);
+         
      })
 
      $(document).on('keyup mouseup', '.customcal', function() { 
@@ -161,6 +163,7 @@ function copyText(text) {
             // $('#checkout-submit').attr('action', "{{route('send')}}");
         // $("#checkout-submit").submit();
      }
+
  </script>
  @toastr_js
  @toastr_render
