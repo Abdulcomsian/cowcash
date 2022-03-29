@@ -63,9 +63,9 @@ Registraion
                     <div class="inputDiv">
                         <label for="">Currency: <span>*</span></label>
                         <select name="currency" id="currency" class="form-control @error('currency') is-invalid @enderror" value="{{ old('currency') }}" required>
-                            <option value="1">USD</option>
-                            <option value="2">EUR</option>
-                            <option value="3">RUB</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="RUB">RUB</option>
                         </select>
 
                         @error('currency')
