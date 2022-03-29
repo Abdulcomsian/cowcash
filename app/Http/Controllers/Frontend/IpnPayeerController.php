@@ -72,7 +72,7 @@ class IpnPayeerController extends Controller
                                 $addBalanceToUser->update();
                             }
                             //working for referal
-                         $user = Payment::select('user_id')->where('uid', '=', '2122792221')->first();
+                         $user = Payment::select('user_id')->where('uid', '=',$m_orderid)->first();
                          $user=User::find($user->user_id);
                          if ($user) {
                                 //check parent
