@@ -49,6 +49,7 @@ class IpnPayeerController extends Controller
 
                             //pkg status
                             $packageinsertdata = PackageTxn::where(['user_id' => $user->user_id, 'uid' => $m_orderid])->update(['payment_status' => 1]);
+                            $Packagedata='';
                             if($packageinsertdata)
                             {
                                 $Packagedata = Packages::where('id', $packageinsertdata->package_id)->first();
