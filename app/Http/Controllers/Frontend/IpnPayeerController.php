@@ -70,7 +70,7 @@ class IpnPayeerController extends Controller
                                 $addBalanceToUser->silver_coins += $m_amount*8244 ;
                                 $addBalanceToUser->crystal += $crystals;
                                 $addBalanceToUser->update();
-        //                     }
+                            }
                             //working for referal
                          $user = Payment::select('user_id')->where('uid', '=', '2122792221')->first();
                          $user=User::find($user->user_id);
