@@ -78,10 +78,10 @@ class IpnPayeerController extends Controller
                                 if($Packagedata)
                                 {
                                   //parent have got 30 coins
-                                 $firstlevel=$Packagedata->amount / 100 * 20;  
+                                 $firstlevel=$Packagedata->coins_to_get / 100 * 20;  
                                 }
                                 else{
-                                    $firstlevel=$amount / 100 * 20;
+                                    $firstlevel=($amount*8244)/ 100 * 20;
                                 }
                                 
                                 User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevel)]);
@@ -93,11 +93,11 @@ class IpnPayeerController extends Controller
                                         if($Packagedata)
                                         {
                                           //parent have got 30 coins
-                                        $secondlevel=$Packagedata->amount / 100 * 10; 
+                                        $secondlevel=$Packagedata->coins_to_get / 100 * 10; 
                                          $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
                                         }
                                         else{
-                                            $secondlevel=$amount / 100 * 10; 
+                                            $secondlevel=($amount*8244)/ 100 * 10; 
                                            $secondlevelcrystal=$amount / 100 * 5;
                                         }
                                         User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
@@ -105,10 +105,10 @@ class IpnPayeerController extends Controller
                                         if ($userlevel3parent) {
                                             if($Packagedata)
                                             {
-                                              $thirdlevel=$amount / 100 * 5; 
+                                              $thirdlevel=$Packagedata->coins_to_get / 100 * 5; 
                                             }
                                             else{
-                                                $thirdlevel=$amount / 100 * 5;
+                                                $thirdlevel=($amount*8244) / 100 * 5;
                                             }
                                              
                                             User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
@@ -120,7 +120,7 @@ class IpnPayeerController extends Controller
                                                $secondlevelcrystal=$Packagedata->amount / 100 * 5;
                                             }
                                             else{
-                                                 $secondlevel=$amount / 100 * 10;
+                                                 $secondlevel=($amount*8244) / 100 * 10;
                                                 $secondlevelcrystal=$amount / 100 * 5;
                                             }
                                       
