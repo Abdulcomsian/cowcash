@@ -31,12 +31,15 @@ class FaucetPayController extends FaucetController
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
             } elseif ($crystal < $amount) {
-                toastError('The amount of Silver block exceeds your account balance You have ' . $urgoldbar . ' Silver Blocks (for withdrawal)');
+                toastError('The amount of Silver block exceeds your account balance You have  Silver Blocks (for withdrawal)');
                 return Redirect::back();
-            } else {
+            } elseif($amount<5){
+                toastError('Minuminum 5 dolar can be withdrawl');
+                return Redirect::back();
+            }else {
                  //Faucet payout code here
                  $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
-                 $res=$obj->send('obijanikust@gmail.com',$m_amount,'',false);
+                 $res=$obj->send('obijanikust@gmail.com',$amount,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
@@ -44,6 +47,14 @@ class FaucetPayController extends FaucetController
                          'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
                          'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
                         ]);
+                    //save data in payoff table
+                    PayOff::create([
+                        'user_id'=>Auth::user()->id,
+                        'gateway'=>'F',
+                        'wallet'=>$request->pp,
+                        'sum'=>$amount,
+                        'status'=>1,
+                    ]);
                     toastError('Payout is successful');
                     return Redirect::back();
                   }
@@ -105,22 +116,24 @@ class FaucetPayController extends FaucetController
                  }
                  else{
                     $PackageTxn->payment_status = 0;
-                 }
-                 
-                }
-                else{
-                     $PackageTxn->payment_status = 1;
-                     //
-                     //covert 40 percent of coinst to crystal 
-                    $crystals = $amount1 / 100 * 40;
-                    $addBalanceToUser = User::find(Auth::user()->id);
-                    $addBalanceToUser->silver_coins += $amount1*8244 ;
-                    $addBalanceToUser->crystal += $crystals;
-                    $addBalanceToUser->update();
-                }
+                 }   
+            }
+            else{
+                 $PackageTxn->payment_status = 1;
+                 //covert 40 percent of coinst to crystal 
+                $crystals = $amount1 / 100 * 40;
+                $addBalanceToUser = User::find(Auth::user()->id);
+                $addBalanceToUser->silver_coins += $amount1*8244 ;
+                $addBalanceToUser->crystal += $crystals;
+                $addBalanceToUser->update();
+            }
                
                 $PackageTxn->save();
+                toastSuccess("Pyment Successfully");
+                return Redirect::to('/home');
         } else {
+            toastSuccess("Pyment cancel unknown error");
+            return Redirect::back();
         }
     }
 

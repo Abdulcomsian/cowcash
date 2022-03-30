@@ -12,6 +12,7 @@ use App\Utils\Validations;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Country;
+use App\Models\PayOff;
 use Auth;
 use DB;
 use Carbon\Carbon;
@@ -79,68 +80,66 @@ class UserOrderController extends Controller
     //when user perchase cows from admin
     public function Take_order(Request $request)
     {
-
         //check if cows exist or not
         try {
             $cow = Cows::find($request->item);
-            if ($cow) {
-                $cowcoins = $cow->price;
-                $qty = $request->qty;
-                $toalcowscoins = $qty * $cowcoins;
-                if (Auth::user()->silver_coins >= $toalcowscoins) {
-                    //check if cow alread purchase update hte qty
-                    $checkperchase = UserCows::where(['cow_id'=> $request->item,'user_id'=>Auth::user()->id])->first();
-                    if (!$checkperchase) {
-                        $usercoworder = UserOrder::create([
-                            'user_id' => Auth::user()->id,
-                            'cow_id' => $cow->id,
-                            'coins_to_pay' => $toalcowscoins,
-                            'qty' => $qty,
-                            'status' => 1,
-                        ]);
-                        if ($usercoworder) {
-                            UserCows::create([
-                                'user_id' => Auth::user()->id,
-                                'cow_id' => $cow->id,
-                                'qty' => $qty,
-                                'per_hours_litters' => $cow->litters,
-                                'total_milk' => 0,
-                                'available_milk' => 0,
-                                'sold_milk' => 0,
-                                'collect_per_hour_milk' => 0,
-                                'cronjobtime'=>date('Y-m-d H:i:s'),
-                                'status' => 1,
-                            ]);
-                            //deduct coins fron user when purchase cows
-                            $User = Auth::user();
-                            $User->silver_coins = $User->silver_coins - $toalcowscoins;
-                            $User->save();
-                            toastSuccess('You have successfully purchased cow!');
-                            return redirect('account/farm');
-                        }
-                    } else {
-                        $usercoworder = UserOrder::where(['cow_id'=>$request->item,'user_id'=>Auth::user()->id])->update([
-                            'qty' =>  DB::raw('qty +' .  $qty . ''),
-                        ]);
-                        if ($usercoworder) {
-                            UserCows::where(['cow_id'=>$request->item,'user_id'=>Auth::user()->id])->update([
-                                'qty' => DB::raw('qty +' .  $qty . ''),
-                            ]);
-                            //deduct coins fron user when purchase cows
-                            $User = Auth::user();
-                            $User->silver_coins = $User->silver_coins - $toalcowscoins;
-                            $User->save();
-                            toastSuccess('You have successfully purchased cow!');
-                            return redirect('account/farm');
-                        }
-                    }
-                } else {
-                    toastError('You dont have enough coins to buy this cow');
-                    return back();
-                }
-            } else {
+            if(!$cow)
+            {
                 toastError('Now Cows Found Suspecious Data Found!!!!');
                 return back();
+            }
+            $cowcoins = $cow->price;
+            $qty = $request->qty;
+            $toalcowscoins = $qty * $cowcoins;
+            if (Auth::user()->silver_coins < $toalcowscoins) {
+                toastError('You dont have enough coins to buy this cow');
+                return back();
+             }
+            //check if cow alread purchase update hte qty
+            $checkperchase = UserCows::where(['cow_id'=> $request->item,'user_id'=>Auth::user()->id])->first();
+            if (!$checkperchase) {
+                $usercoworder = UserOrder::create([
+                    'user_id' => Auth::user()->id,
+                    'cow_id' => $cow->id,
+                    'coins_to_pay' => $toalcowscoins,
+                    'qty' => $qty,
+                    'status' => 1,
+                ]);
+                if ($usercoworder) {
+                    UserCows::create([
+                        'user_id' => Auth::user()->id,
+                        'cow_id' => $cow->id,
+                        'qty' => $qty,
+                        'per_hours_litters' => $cow->litters,
+                        'total_milk' => 0,
+                        'available_milk' => 0,
+                        'sold_milk' => 0,
+                        'collect_per_hour_milk' => 0,
+                        'cronjobtime'=>date('Y-m-d H:i:s'),
+                        'status' => 1,
+                    ]);
+                    //deduct coins fron user when purchase cows
+                    $User = Auth::user();
+                    $User->silver_coins = $User->silver_coins - $toalcowscoins;
+                    $User->save();
+                    toastSuccess('You have successfully purchased cow!');
+                    return redirect('account/farm');
+                }
+            } else {
+                $usercoworder = UserOrder::where(['cow_id'=>$request->item,'user_id'=>Auth::user()->id])->update([
+                    'qty' =>  DB::raw('qty +' .  $qty . ''),
+                ]);
+                if ($usercoworder) {
+                    UserCows::where(['cow_id'=>$request->item,'user_id'=>Auth::user()->id])->update([
+                        'qty' => DB::raw('qty +' .  $qty . ''),
+                    ]);
+                    //deduct coins fron user when purchase cows
+                    $User = Auth::user();
+                    $User->silver_coins = $User->silver_coins - $toalcowscoins;
+                    $User->save();
+                    toastSuccess('You have successfully purchased cow!');
+                    return redirect('account/farm');
+                }
             }
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
@@ -285,7 +284,8 @@ class UserOrderController extends Controller
 
     public function payment($id)
     {
-        return view('Frontend.order_payoff', compact('id'));
+        $lasttenpayments=PayOff::orderBy('id', 'desc')->take(10)->get();
+        return view('Frontend.order_payoff', compact('id','lasttenpayments'));
     }
 
     public function registration()

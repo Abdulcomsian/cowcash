@@ -72,12 +72,7 @@ class PayeerClassController extends Controller
         curl_setopt($handler, CURLOPT_RETURNTRANSFER, 1);
 
         $content = curl_exec($handler);
-        //print_r($content);
-
-        //$arRequest = curl_getinfo($handler); print_r($arRequest);
-
         curl_close($handler);
-        //print_r($content);
 
         $content = json_decode($content, true);
 
@@ -213,7 +208,7 @@ class PayeerClassController extends Controller
         $arPost['form'] = json_encode($arPost['form']);
         $arPost['ps'] = json_encode($arPost['ps']);
 
-        if (empty($arPost['ip'])) $arPost['ip'] = $_SERVER['REMOTE_ADDR'];
+         if (empty($arPost['ip'])) $arPost['ip'] = $_SERVER['REMOTE_ADDR'];
 
         $response = $this->getResponse($arPost);
 
