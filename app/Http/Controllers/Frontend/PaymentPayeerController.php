@@ -8,6 +8,8 @@ use App\Models\PackageTxn;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Frontend\PayeerClassController;
+use App\Models\User;
+use App\Models\PayOff;
 use DB;
 use Auth;
 
@@ -85,56 +87,50 @@ class PaymentPayeerController extends PayeerClassController
         $ursilverblocks = Auth::user()->withdraw;
         $crystal = Auth::user()->crystal;
         $amount = $request->amount;
-        if ($silverblocks >  $ursilverblocks) {
+        if ($silverblocks >  $ursilverblocks && $crystal < $amount) {
             toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
             return Redirect::back();
-        } elseif ($crystal < $amount) {
-            toastError('The amount of Silver block exceeds your account balance You have ' . $urgoldbar . ' Silver Blocks (for withdrawal)');
-            return Redirect::back();
-        } else {
-             //payeer payout code here
-            $payeer= new PayeerClassController('P1066080920','1624625266','kkxFtKr1Zh2HdMsD');
-            if ($payeer->isAuth())
-            {
-                    $initOutput = $payeer->initOutput(array(
-                    'ps' => '1136053',
-                    //'sumIn' => 1,
-                    'curIn' => 'USD',
-                    'sumOut' => 1,
-                    'curOut' => 'USD',
-                    'param_ACCOUNT_NUMBER' => 'P1030275509',
-                ));
-                if ($initOutput)
-                {
-                    $historyId = $payeer->output();
-                    if ($historyId > 0)
-                    {
-                        User::find(Auth::user()->id)->update([
-                         'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
-                         'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
-                        ]);
-                        toastError('Payout is successful');
-                        return Redirect::back();
-                    }
-                    else
-                    {
-                        toastError(json_encode($payeer->getErrors()));
-                        return Redirect::back();
-                    }
-                }
-                else
-                {
-                    toastError(json_encode($payeer->getErrors()));
-                        return Redirect::back();
-                }
-            }
-            else
-            {
-               toastError(json_encode($payeer->getErrors()));
-                        return Redirect::back();
-            }
+        } 
+         //payeer payout code here
+        $payeer= new PayeerClassController('P1066080920','1624625266','kkxFtKr1Zh2HdMsD');
+        if(!$payeer->isAuth()){
+             toastError(json_encode($payeer->getErrors()));
+             return Redirect::back();
         }
-
-       
+        $initOutput = $payeer->initOutput(array(
+                'ps' => '1136053',
+                'curIn' => 'USD',
+                'sumOut' => $amount,
+                'curOut' => 'USD',
+                'param_ACCOUNT_NUMBER' =>$request->pp,
+            ));
+        if(!$initOutput)
+        {
+            toastError(json_encode($payeer->getErrors()));
+            return Redirect::back();
+        }
+         $historyId = $payeer->output();
+        if ($historyId > 0)
+        {
+            User::find(Auth::user()->id)->update([
+             'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
+             'crystal'=> DB::raw('crystal -' .  $amount. ''),
+            ]);
+            //save data in payoff table
+            PayOff::create([
+                'user_id'=>Auth::user()->id,
+                'gateway'=>'P',
+                'wallet'=>$request->pp,
+                'sum'=>$amount,
+                'status'=>1,
+            ]);
+            toastSuccess('Payout is successful');
+            return Redirect::back();
+        }
+        else
+        {
+            toastError(json_encode($payeer->getErrors()));
+            return Redirect::back();
+        }
     }
 }

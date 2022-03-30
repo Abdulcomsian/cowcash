@@ -51,7 +51,7 @@ About Us
                         </div>
                         @else
                         <div class="inputDiv">
-                            <label for="">Enter Your Faucet Email</label>
+                            <label for="">Enter Your Faucet Address or Email</label>
                             <input type="email" name="pp" class="form-control" required>
                         </div>
                         @endif
@@ -64,7 +64,7 @@ About Us
                             <select name="currency" id="currency" class="form-control">
                                 <option value="USD">USD</option>
                             </select>
-                            <input type="text" name="amount" id="amount" class="form-control" value="0.04" disabled>
+                            <input type="text" name="amount" id="amount" class="form-control" value="0.04" readonly>
                         </div>
                         <button type="submit" class="commonBtn cursor-pointer">Order Payoff</button>
                     </form>
@@ -82,9 +82,21 @@ About Us
                             </tr>
                         </thead>
                         <tbody>
+                            @if(count($lasttenpayments)>0)
+                             @foreach($lasttenpayments as $pay)
+                              <tr>
+                                <td>{{$pay->sum}}</td>
+                                <td>{{$pay->wallet}}</td>
+                                <td>{{$pay->gateway}}</td>
+                                <td>{{$pay->created_at}}</td>
+                                <td>{{$pay->status==1 ? 'Success':'Failed'}}</td>
+                              </tr>
+                             @endforeach
+                            @else
                             <tr>
                                 <td colspan="5">No Data</td>
                             </tr>
+                            @endif
                         </tbody>
                     </table>
                 </div>
