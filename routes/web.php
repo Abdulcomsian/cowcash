@@ -126,6 +126,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //faucet work here
     Route::post('/send',[FaucetPayController::class,'sendpay'])->name('send');
+    Route::post('/btc',[FaucetPayController::class,'sendpaybtc'])->name('btc');
 
     Route::get('/faucet-success',[FaucetPayController::class,'sucess'])->name('faucet.sucess');
     Route::get('/faucet-cancel',[FaucetPayController::class,'cancel'])->name('faucet.cancel');

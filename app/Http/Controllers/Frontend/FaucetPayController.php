@@ -27,11 +27,13 @@ class FaucetPayController extends FaucetController
             $ursilverblocks = Auth::user()->withdraw;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
+            $dollars= 1/ 7834 * $silverblocks;
+            $amount =number_format((float)$dollars, 2, '.', '');
             if ($silverblocks >  $ursilverblocks) {
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
             } elseif ($crystal < $amount) {
-                toastError('The amount of Silver block exceeds your account balance You have  Silver Blocks (for withdrawal)');
+                toastError('You have not enough Crystals');
                 return Redirect::back();
             } elseif($amount<5){
                 toastError('Minuminum 5 dolar can be withdrawl');
@@ -39,7 +41,7 @@ class FaucetPayController extends FaucetController
             }else {
                  //Faucet payout code here
                  $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
-                 $res=$obj->send('obijanikust@gmail.com',$amount,'',false);
+                 $res=$obj->send($request->pp,$amount,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
@@ -71,6 +73,59 @@ class FaucetPayController extends FaucetController
        
     }
 
+
+    public function sendpaybtc(Request $request)
+    {
+        try 
+         {
+            $silverblocks = $request->silverblocks;
+            $ursilverblocks = Auth::user()->withdraw;
+            $crystal = Auth::user()->crystal;
+            $amount = $request->amount;
+            $dollars= 1/ 7834 * $silverblocks;
+            $amount =number_format((float)$dollars, 2, '.', '');
+            if ($silverblocks >  $ursilverblocks) {
+                toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
+                return Redirect::back();
+            } elseif ($crystal < $amount) {
+                toastError('You have not enough Crystals');
+                return Redirect::back();
+            } elseif($amount<150){
+                toastError('Minuminum 150 dolar can be withdrawl For BTC');
+                return Redirect::back();
+            }else {
+                 //Faucet payout code here
+                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
+                 $res=$obj->send($request->pp,$amount,'',false);
+                 $result=json_decode($res['response']);
+                if($result->status==200)
+                 {
+                    User::find(Auth::user()->id)->update([
+                         'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
+                         'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
+                        ]);
+                    //save data in payoff table
+                    PayOff::create([
+                        'user_id'=>Auth::user()->id,
+                        'gateway'=>'F',
+                        'wallet'=>$request->pp,
+                        'sum'=>$amount,
+                        'status'=>1,
+                    ]);
+                    toastError('Payout is successful');
+                    return Redirect::back();
+                  }
+                  else{
+                    toastError($result->message);
+                    return back();
+                   }       
+            }
+        } catch (\PDOException $e) {
+            toastError('something went wrong');
+           return back();  
+        }
+    }
+
     //this si merchant side payment call back 
     public function callback(Request $request)
     {
@@ -79,7 +134,7 @@ class FaucetPayController extends FaucetController
         $payment_info = json_decode($payment_info, true);
         $token_status = $payment_info['valid'];
         $merchant_username = $payment_info['merchant_username'];
-        $amount1 = $payment_info['amount1'];
+        $m_amount = $payment_info['amount1'];
         $currency1 = $payment_info['currency1'];
         $amount2 = $payment_info['amount2'];
         $currency2 = $payment_info['currency2'];
@@ -127,7 +182,73 @@ class FaucetPayController extends FaucetController
                 $addBalanceToUser->crystal += $crystals;
                 $addBalanceToUser->update();
             }
-               
+
+            //work for referal earnings
+            $user=User::find(Auth::user()->id);
+                 if ($user) {
+                        //check parent
+                    if ($user->referred_by != NULL) {
+                        if($Packagedata)
+                        {
+                          //parent have got 30 coins
+                         $firstlevel=$Packagedata->coins_to_get / 100 * 20;
+                         $firstlevelcrys=$Packagedata->amount / 100 * 20;
+                        }
+                        else{
+                            $firstlevel=($m_amount*8244)/ 100 * 20;
+                            $firstlevelcrys=$m_amount/ 100 * 20;
+                        }
+                        
+                        User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
+                        $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
+                        
+                        if ($userlevel1parent->referred_by != NULL) {
+                            
+                            $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
+                
+                            if ($userlevel2parent->referred_by != NULL) {
+                                if($Packagedata)
+                                {
+                                  //parent have got 30 coins
+                                $secondlevel=$Packagedata->coins_to_get / 100 * 10; 
+                                 $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
+                                }
+                                else{
+                                    $secondlevel=($m_amount*8244)/ 100 * 10; 
+                                   $secondlevelcrystal=$m_amount / 100 * 5;
+                                }
+                               
+                                 
+                                User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                                $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
+                                if ($userlevel3parent) {
+                                    if($Packagedata)
+                                    {
+                                      $thirdlevel=$Packagedata->coins_to_get / 100 * 5; 
+                                    }
+                                    else{
+                                        $thirdlevel=($m_amount*8244) / 100 * 5;
+                                    }
+                                   
+                                     
+                                    User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
+                                }
+                            } else {
+                                if($Packagedata)
+                                    {
+                                      $secondlevel=$Packagedata->amount / 100 * 10;
+                                      $secondlevelcrystal=$Packagedata->amount / 100 * 5;
+                                    }
+                                    else{
+                                         $secondlevel=($m_amount*8244) / 100 * 10;
+                                        $secondlevelcrystal=$m_amount / 100 * 5;
+                                    }
+                              
+                                User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                            }
+                        }
+                    }
+                }
                 $PackageTxn->save();
                 toastSuccess("Pyment Successfully");
                 return Redirect::to('/home');
