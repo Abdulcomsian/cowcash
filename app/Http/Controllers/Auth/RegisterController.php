@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\Country;
+use App\Models\UserReferal;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -106,6 +107,10 @@ class RegisterController extends Controller
             'visitorip' => $ipaddress,
         ]);
         if ($user) {
+            UserReferal::create([
+                'referred_by'=>$referred_by,
+                'referal_coins'=> DB::raw('referal_coins +250')
+            ]);
             //check parent
             if ($user->referred_by != NULL) {
                 User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
