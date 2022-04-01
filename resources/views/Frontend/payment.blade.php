@@ -47,7 +47,7 @@ About Us
                             <img src="{{asset('images/faucetpay.jpg')}}" alt="">
                         </div>
                         </a>
-                        <a href="{{url('account/payment',2)}}">
+                        <a href="{{url('account/payment',3)}}">
                         <div class="cardDiv">
                             <img src="{{asset('images/Group 39.png')}}" alt="">
                         </div>
