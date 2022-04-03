@@ -111,7 +111,7 @@ About Us
                                 <td>{{$pay->sum}}</td>
                                 <td>{{$pay->wallet}}</td>
                                 <td>{{$pay->gateway}}</td>
-                                <td>{{$pay->created_at}}</td>
+                                <td>{{$pay->created_at->toDateString();}}</td>
                                 <td>{{$pay->status==1 ? 'Success':'Failed'}}</td>
                               </tr>
                              @endforeach
