@@ -98,7 +98,11 @@
                                                 <tr>
                                                     <td>{{$referal->name ?? ''}}</td>
                                                     <td>{{$referal->created_at ?? ''}}</td>
-                                                    <td>250 coins</td>
+                                                    <td>
+                                                        @php $res=\App\Models\UserReferal::where('referred_by',$referal->referred_by)->first();
+                                                        @endphp
+                                                        {{$res->referal_coins ?? ''}}
+                                                   </td>
                                                 </tr>
                                                 @endforeach
                                             

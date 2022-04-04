@@ -7,6 +7,7 @@ use App\Models\Payment;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\PackageTxn;
+use App\Models\UserReferal;
 use DB;
 use Carbon\Carbon;
 use App\Models\Packages;
@@ -90,6 +91,11 @@ class IpnPayeerController extends Controller
                                     }
                                     
                                     User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
+                                    //user referal
+                                    UserReferal::where('referred_by',$user->referred_by)->update([
+                                        'referal_coins'=> DB::raw('referal_coins+'. $firstlevel)
+                                    ]);
+
                                     $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
                                     
                                     if ($userlevel1parent->referred_by != NULL) {
@@ -110,6 +116,11 @@ class IpnPayeerController extends Controller
                                            
                                              
                                             User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                                            
+                                            //user referal
+                                            UserReferal::where('referred_by',$userlevel1parent->referred_by)->update([
+                                                'referal_coins'=> DB::raw('referal_coins+'. $secondlevel)
+                                            ]);
                                             $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
                                             if ($userlevel3parent) {
                                                 if($Packagedata)
@@ -122,6 +133,10 @@ class IpnPayeerController extends Controller
                                                
                                                  
                                                 User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
+                                                //user referal
+                                                UserReferal::where('referred_by',$userlevel2parent->referred_by)->update([
+                                                'referal_coins'=> DB::raw('referal_coins+'. $thirdlevel)
+                                                ]);
                                             }
                                         } else {
                                             if($Packagedata)
@@ -135,6 +150,10 @@ class IpnPayeerController extends Controller
                                                 }
                                           
                                             User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                                            //user referal
+                                            UserReferal::where('referred_by',$userlevel1parent->referred_by)->update([
+                                                'referal_coins'=> DB::raw('referal_coins+'. $secondlevel)
+                                            ]);
                                         }
                                     }
                                 }
