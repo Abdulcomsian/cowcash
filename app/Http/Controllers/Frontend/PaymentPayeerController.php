@@ -125,6 +125,7 @@ class PaymentPayeerController extends PayeerClassController
                 'wallet'=>$request->pp,
                 'sum'=>$amount,
                 'status'=>1,
+                'currency'=>'USD',
             ]);
             toastSuccess('Payout is successful');
             return Redirect::back();

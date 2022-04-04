@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Models\Country;
 use App\Models\Payment;
+use App\Models\PayOff;
 
 
 
@@ -44,7 +45,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/payments', function () {
-    $payments=Payment::with('user')->where('payment_status',1)->get();
+    $payments=PayOff::with('user')->where(['status'=>1,'gateway'=>'P'])->orderBy('id', 'desc')->take(20)->get();
     return view('Frontend.payments',compact('payments'));
 });
 Route::get('/rules', function () {

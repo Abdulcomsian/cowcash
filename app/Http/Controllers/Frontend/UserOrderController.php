@@ -285,7 +285,7 @@ class UserOrderController extends Controller
 
     public function payment($id)
     {
-        $lasttenpayments=PayOff::where('user_id',Auth::user()->id)->orderBy('id', 'desc')->take(10)->get();
+        $lasttenpayments=PayOff::with('user')->where(['user_id'=>Auth::user()->id])->orderBy('id', 'desc')->take(10)->get();
         return view('Frontend.order_payoff', compact('id','lasttenpayments'));
     }
 

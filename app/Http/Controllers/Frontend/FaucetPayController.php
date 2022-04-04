@@ -56,6 +56,7 @@ class FaucetPayController extends FaucetController
                         'wallet'=>$request->pp,
                         'sum'=>$amount,
                         'status'=>1,
+                        'currency'=>'USD',
                     ]);
                     toastError('Payout is successful');
                     return Redirect::back();
