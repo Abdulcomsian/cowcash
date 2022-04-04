@@ -23,6 +23,7 @@ class CreatePayOffsTable extends Migration
             $table->string('wallet')->nullable();
             $table->string('gateway')->nullable();
             $table->tinyInteger('status')->nullable();
+            $table->string('currency')->nullable();
 
             $table->timestamps();
         });

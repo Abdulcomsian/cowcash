@@ -56,6 +56,7 @@ class FaucetPayController extends FaucetController
                         'wallet'=>$request->pp,
                         'sum'=>$amount,
                         'status'=>1,
+                        'currency'=>'USD',
                     ]);
                     toastError('Payout is successful');
                     return Redirect::back();
@@ -150,6 +151,7 @@ class FaucetPayController extends FaucetController
             $payment->description ='Purchase coins and crystals';
             $payment->payment_method='F';
             $payment->operation = '+';
+            $payment->currency= $currency1;
             $payment->save();
             //
             $PackageTxn = new PackageTxn();

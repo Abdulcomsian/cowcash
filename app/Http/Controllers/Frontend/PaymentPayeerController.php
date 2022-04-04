@@ -54,7 +54,7 @@ class PaymentPayeerController extends PayeerClassController
                 $payment->description = base64_decode($m_desc);
                 $payment->operation = '+';
                 $payment->payment_method='P';
-                $payment->currency=Auth::user()->currency;
+                $payment->currency= $m_curr;
                 $payment->save();
                 //
                 if($pkgid)
@@ -125,6 +125,7 @@ class PaymentPayeerController extends PayeerClassController
                 'wallet'=>$request->pp,
                 'sum'=>$amount,
                 'status'=>1,
+                'currency'=>'USD',
             ]);
             toastSuccess('Payout is successful');
             return Redirect::back();
