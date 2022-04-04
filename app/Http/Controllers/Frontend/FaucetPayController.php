@@ -187,73 +187,73 @@ class FaucetPayController extends FaucetController
 
             //work for referal earnings
             $user=User::find(Auth::user()->id);
-                 if ($user) {
-                        //check parent
-                    if ($user->referred_by != NULL) {
-                        if($Packagedata)
-                        {
-                          //parent have got 30 coins
-                         $firstlevel=$Packagedata->coins_to_get / 100 * 20;
-                         $firstlevelcrys=$Packagedata->amount / 100 * 20;
-                        }
-                        else{
-                            $firstlevel=($m_amount*8244)/ 100 * 20;
-                            $firstlevelcrys=$m_amount/ 100 * 20;
-                        }
+             if ($user) {
+                    //check parent
+                if ($user->referred_by != NULL) {
+                    if($Packagedata)
+                    {
+                      //parent have got 30 coins
+                     $firstlevel=$Packagedata->coins_to_get / 100 * 20;
+                     $firstlevelcrys=$Packagedata->amount / 100 * 20;
+                    }
+                    else{
+                        $firstlevel=($m_amount*8244)/ 100 * 20;
+                        $firstlevelcrys=$m_amount/ 100 * 20;
+                    }
+                    
+                    User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
+                    $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
+                    
+                    if ($userlevel1parent->referred_by != NULL) {
                         
-                        User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
-                        $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
-                        
-                        if ($userlevel1parent->referred_by != NULL) {
-                            
-                            $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
-                
-                            if ($userlevel2parent->referred_by != NULL) {
+                        $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
+            
+                        if ($userlevel2parent->referred_by != NULL) {
+                            if($Packagedata)
+                            {
+                              //parent have got 30 coins
+                            $secondlevel=$Packagedata->coins_to_get / 100 * 10; 
+                             $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
+                            }
+                            else{
+                                $secondlevel=($m_amount*8244)/ 100 * 10; 
+                               $secondlevelcrystal=$m_amount / 100 * 5;
+                            }
+                           
+                             
+                            User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                            $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
+                            if ($userlevel3parent) {
                                 if($Packagedata)
                                 {
-                                  //parent have got 30 coins
-                                $secondlevel=$Packagedata->coins_to_get / 100 * 10; 
-                                 $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
+                                  $thirdlevel=$Packagedata->coins_to_get / 100 * 5; 
                                 }
                                 else{
-                                    $secondlevel=($m_amount*8244)/ 100 * 10; 
-                                   $secondlevelcrystal=$m_amount / 100 * 5;
+                                    $thirdlevel=($m_amount*8244) / 100 * 5;
                                 }
                                
                                  
-                                User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
-                                $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
-                                if ($userlevel3parent) {
-                                    if($Packagedata)
-                                    {
-                                      $thirdlevel=$Packagedata->coins_to_get / 100 * 5; 
-                                    }
-                                    else{
-                                        $thirdlevel=($m_amount*8244) / 100 * 5;
-                                    }
-                                   
-                                     
-                                    User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
-                                }
-                            } else {
-                                if($Packagedata)
-                                    {
-                                      $secondlevel=$Packagedata->amount / 100 * 10;
-                                      $secondlevelcrystal=$Packagedata->amount / 100 * 5;
-                                    }
-                                    else{
-                                         $secondlevel=($m_amount*8244) / 100 * 10;
-                                        $secondlevelcrystal=$m_amount / 100 * 5;
-                                    }
-                              
-                                User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                                User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
                             }
+                        } else {
+                            if($Packagedata)
+                                {
+                                  $secondlevel=$Packagedata->amount / 100 * 10;
+                                  $secondlevelcrystal=$Packagedata->amount / 100 * 5;
+                                }
+                                else{
+                                     $secondlevel=($m_amount*8244) / 100 * 10;
+                                    $secondlevelcrystal=$m_amount / 100 * 5;
+                                }
+                          
+                            User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
                         }
                     }
                 }
-                $PackageTxn->save();
-                toastSuccess("Pyment Successfully");
-                return Redirect::to('/home');
+            }
+            $PackageTxn->save();
+            toastSuccess("Pyment Successfully");
+            return Redirect::to('/home');
         } else {
             toastSuccess("Pyment cancel unknown error");
             return Redirect::back();

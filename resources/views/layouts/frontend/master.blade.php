@@ -101,7 +101,7 @@
                 <br>
                 <input type="text" name="item_description" value="Purchase Silver Coins and Crystals">
                 <br>
-                <input type="text" name="amount1"  class="fcheckout-sum-val">
+                <input type="text" name="amount1"  id="amount1" class="fcheckout-sum-val">
                 <br>
                 <input type="text" name="currency1" value="USD">
 

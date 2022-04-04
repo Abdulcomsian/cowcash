@@ -145,8 +145,9 @@ function copyText(text) {
          $("#checkoutcoins").text(coins);
          $("#checkoutprice").text(qty);
          $("#checkout-sum-val").val(qty);
-         $("#fcheckout-sum-val").val(qty);
+         $("#amount1").val(qty);
          $("#package_id").val('');
+         $(".fpackage_id").val('');
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
          $(".checkoutOrder").css('pointer-events', 'auto');
