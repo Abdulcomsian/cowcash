@@ -16,6 +16,9 @@ About Us
     .active {
         background-color: #fff !important;
     }
+    td{
+        font-size: 13px !important;
+    }
 </style>
 @endsection
 @php
