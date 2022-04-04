@@ -31,22 +31,9 @@ Payments
                 <tbody>
                     @if(count($payments)>0)
                      @foreach($payments as $payment)
-                      @php
-                        if($payment->currency==1)
-                        {
-                            $currency='USD';
-                        }
-                        elseif($payment->currency==2)
-                        {
-                            $currency='EUR';
-                        }
-                        else{
-                            $currency='RUB';
-                        }
-                      @endphp
                         <tr>
                             <td>{{$payment->user->name ?? ''}}</td>
-                            <td>{{$payment->sum ?? ''}} {{$currency}}</td>
+                            <td>{{$payment->sum ?? ''}} {{$payment->currency}}</td>
                             <td> <p style="width: 19px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;">{{$payment->gateway ?? ''}}</p></td>
                             <td>{{substr($payment->wallet, 0, -3) . ''}} <span style="color:red">xxx</span></td>
                             <td>{{$payment->created_at->toDateString() ?? ''}}</td>

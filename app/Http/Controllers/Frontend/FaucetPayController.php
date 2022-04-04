@@ -151,6 +151,7 @@ class FaucetPayController extends FaucetController
             $payment->description ='Purchase coins and crystals';
             $payment->payment_method='F';
             $payment->operation = '+';
+            $payment->currency= $currency1;
             $payment->save();
             //
             $PackageTxn = new PackageTxn();
