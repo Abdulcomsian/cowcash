@@ -2,6 +2,7 @@
 <style>
     .bgColor{
         overflow: hidden;
+        background-size: 100% 100%;
     }
 </style>
 @section('content')
