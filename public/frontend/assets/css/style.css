@@ -1857,7 +1857,7 @@ input:checked + .slider:before {
 
 @media (max-width: 1400px) {
     #startRightNow .midDiv {
-        max-width: 50%;
+        max-width: 26%;
         background-size: 100% 100%;
     }
 }
