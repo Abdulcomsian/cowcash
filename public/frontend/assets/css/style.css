@@ -185,7 +185,7 @@ input:focus {
 
 #header .loginForm .inputDiv {
     width: 100%;
-    max-width: 97%;
+    max-width: 80%;
     margin: auto;
 }
 
@@ -1856,6 +1856,9 @@ input:checked + .slider:before {
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
+    #startRightNow .midDiv p{
+        font-size: 12px;
+    }
     #startRightNow .midDiv {
         max-width: 26%;
         background-size: 100% 100%;
