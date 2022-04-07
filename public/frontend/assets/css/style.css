@@ -1860,6 +1860,25 @@ input:checked + .slider:before {
         max-width: 26%;
         background-size: 100% 100%;
     }
+    #startRightNow .midDiv .advantagesList ul{
+        padding: 0px 20px;
+    }
+    #startRightNow .midDiv .advantagesList img{
+        width: 50px;
+        height: 50px;
+    }
+    #startRightNow .midDiv .advantagesList ul li p{
+        font-size: 10px;
+    }
+    p#fifthChild-p{
+        padding-right: 0px;
+    }
+    #startRightNow .midDiv .multiDiv .leftDiv p, #startRightNow .midDiv .multiDiv .rightDiv p{
+        margin-left: 5px;
+    }
+    #startRightNow .midDiv .multiDiv .leftDiv img, #startRightNow .midDiv .multiDiv .rightDiv img{
+        width: 60px;
+    }
 }
 
 @media (max-width: 1200px) {
