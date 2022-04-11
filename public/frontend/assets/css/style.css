@@ -1864,25 +1864,26 @@ input:checked + .slider:before {
     padding: 0px;
     margin: 0px;
 }
-.leftSideContent ul li .commonBoard{
+.commonBoard{
     position: relative;
     width: 200px;
-    height: 150px;
+    height: 180px;
 }
-.leftSideContent ul li .commonBoard img{
+.commonBoard img{
     width: 100%;
     height: 100%;
 }
-.leftSideContent ul li .commonBoard p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: -93px;
-    font-family: "Bangers", cursive;
-    color: #005f90;
-    font-size: 26px;
+.commonBoard p{
+    top:70px;
+    left: 15px;
+    font-size: 29px !important;
+    font-family: "Bangers", cursive !important;
+    color: #005f90 !important;
     text-align: center;
+    display: block !important;
+}
+.registerHeader .commonWooden{
+    background-image: url("../img/logoBadge.png") !important;
 }
 /*********** Media Query ************/
 
@@ -1953,6 +1954,26 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    .commonBoard p{
+        position: absolute;
+        left: 0%;
+        top: 80px;
+        width: 100%;
+    }
+    .commonBoard{
+        width: 100%;
+    }
+    .registerHeader .loginForm h2{
+        font-family: "Bangers", cursive;
+        text-align: center;
+        color: #005f90;
+        font-size: 45px;
+        position: relative;
+        top: 82px;
+    }
+    .leftSideContent{
+        position: relative;
+    }
     /* .htmlDiv img{
         width: 100% !important;
     } */
