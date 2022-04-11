@@ -1,4 +1,4 @@
-@extends('layouts.frontend.master')
+@extends('layouts.frontend.master-register')
 @section('title')
 Registraion
 @endsection
@@ -15,7 +15,7 @@ Registraion
 
 @section('content')
 <section id="startRightNow">
-    <div class="leftSideContent">
+    <!-- <div class="leftSideContent mobileHide">
         <ul>
             <li>
                 <a href="">
@@ -42,7 +42,7 @@ Registraion
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <div class="midDiv registration">
         <div class="bgColor">
             <p class="rightNow">REGISTRATION</p>
@@ -125,5 +125,33 @@ Registraion
         @include('Frontend.includes.menues')
 
     </div>
+    <!-- <div class="leftSideContent desktopHide">
+        <ul>
+            <li>
+                <a href="">
+                    <div class="commonBoard">
+                        <img src="{{asset('images/board.png')}}" alt="" class="img-fluid">
+                        <p>Play to earn</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="commonBoard">
+                        <img src="{{asset('images/board.png')}}" alt="" class="img-fluid">
+                        <p>Real crypto</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <div class="commonBoard">
+                        <img src="{{asset('images/board.png')}}" alt="" class="img-fluid">
+                        <p>Bonus 30% first Deposit</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div> -->
 </section>
 @endsection
