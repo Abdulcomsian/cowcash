@@ -171,7 +171,7 @@ Registraion
                                 <div class="inputDiv">
                                     
                                     <label for="">Email</label>
-                                    <input type="email" name="email" id="email" required>
+                                    <input style="width: 100%" type="email" name="email" id="email" required>
                                     @error('email')
                                         <span class="invalid-feedback" style="position:absolute;bottom:-11px;font-size:9px" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -180,7 +180,7 @@ Registraion
                                 </div>
                                 <div class="inputDiv">
                                     <label for="">Password</label>
-                                    <input type="password" name="password" id="password" required>
+                                    <input style="width: 100%" type="password" name="password" id="password" required>
                                     @error('password')
                                         <span class="invalid-feedback" style="position:absolute;bottom:-11px;font-size:9px" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -192,8 +192,8 @@ Registraion
                                  <button  id="login_button" type="submit" class="commonBtn  cursor-pointer">Login</button>
                              
                              
-                                 <a href="{{url('account/registration')}}">
-                                     <button id="register_button" type="button" class="commonBtn cursor-pointer">Register</button></a>
+                                 <!-- <a href="{{url('account/registration')}}">
+                                     <button id="register_button" type="button" class="commonBtn cursor-pointer">Register</button></a> -->
                            
                          </div>
                      </form>
