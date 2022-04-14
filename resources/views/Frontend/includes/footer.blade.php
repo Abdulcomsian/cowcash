@@ -5,6 +5,17 @@
  
 
  <script>
+      $(".nav-pills li a").click(function(){
+        var text= $(this).text();
+        console.log(text)
+        if(text=="REGISTRATION"){
+            $("#register").css("display", "block");
+            $("#loginForm").css("display", "none");
+        } else if(text=="LOGIN"){
+            $("#register").css("display", "none");
+            $("#loginForm").css("display", "block");
+        }
+    });
      $("#myBtn").on("click", function() {
          if ($("#myModal").css("display") == "none") {
                 $("#myModal").css("display", "block")

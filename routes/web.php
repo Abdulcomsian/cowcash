@@ -42,7 +42,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
 
 
 //front end home page without login
-Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [UserOrderController::class, 'registration']);
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/payments', function () {
     $payments=PayOff::with('user')->where(['status'=>1,'gateway'=>'P'])->orderBy('id', 'desc')->take(20)->get();
