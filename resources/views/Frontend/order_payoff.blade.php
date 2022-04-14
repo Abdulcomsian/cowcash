@@ -78,7 +78,7 @@ About Us
                         @endphp
                         <div class="inputDiv">
                             <label for="">Enter Your Faucet Username</label>
-                            <input type="email" name="pp" class="form-control" required>
+                            <input type="text" name="pp" class="form-control" required>
                         </div>
                         @endif
                         <div class="inputDiv">
