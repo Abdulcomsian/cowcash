@@ -17,7 +17,7 @@ Registraion
         justify-content: center;
         align-items: center;
     }
-    #startRightNow .midDiv .rightNow a{
+    #startRightNow .midDiv.registration .rightNow a{
         color: #fff;
     }
     #loginForm{
@@ -25,6 +25,22 @@ Registraion
     }
     #loginForm h3{
         font-family: Nexa-Bold !important;
+    }
+    #startRightNow .midDiv.registration .rightNow{
+        position: relative;
+        max-width: initial;
+        left: initial;
+        margin: 0px 10px;
+    }
+    .registration .nav-pills{
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+        top: 0px;
+        z-index: 999999;
+        width: 85%;
+        left: 7%;
     }
 </style>
 @endsection
@@ -64,7 +80,8 @@ Registraion
         <ul class="nav nav-pills" role="tablist">
             <li class="nav-item rightNow">
                 <a class="nav-link active" data-toggle="pill" href="#register">REGISTRATION</a>
-                <span>/ </span>
+            </li>
+            <li class="nav-item rightNow">
                 <a class="nav-link" data-toggle="pill" href="#loginForm">LOGIN</a>
             </li>
         </ul>

@@ -1954,6 +1954,13 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    .registration .nav-pills{
+        width: 92% !important;
+        left: 4% !important;
+    }
+    #startRightNow .midDiv.registration .rightNow a{
+        font-size: 12px;
+    }
     .commonBoard p{
         position: absolute;
         left: 0%;
