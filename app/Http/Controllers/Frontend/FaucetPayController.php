@@ -35,12 +35,12 @@ class FaucetPayController extends FaucetController
             } elseif ($crystal < $amount) {
                 toastError('You have not enough Crystals');
                 return Redirect::back();
-            } elseif($amount<5){
+            } elseif($amount<1){
                 toastError('Minuminum 5 dolar can be withdrawl');
                 return Redirect::back();
             }else {
                  //Faucet payout code here
-                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
+                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','dash','');
                  $res=$obj->send($request->pp,$amount,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
@@ -260,14 +260,16 @@ class FaucetPayController extends FaucetController
         }
     }
 
-    public function success(Request $request)
+    public function sucess(Request $request)
     {
+        
         toastSuccess("Pyment Successfully");
         return Redirect::to('/home');
+        
     }
     public function cancel()
     {
-         toastSuccess("Pyment cancel unknown error");
+         toastSuccess("Pyment cancel");
          return Redirect::to('/home');
     }
 }

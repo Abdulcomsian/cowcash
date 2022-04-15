@@ -23,7 +23,7 @@ class FaucetController extends Controller
         'verify_peer' => true
     );
 
-    public function __construct($api_key, $currency = "BTC", $connection_options = null) {
+    public function __construct($api_key, $currency = "DASH", $connection_options = null) {
         $this->api_key = $api_key;
         $this->currency = $currency;
         if($connection_options)
@@ -83,7 +83,6 @@ class FaucetController extends Controller
 
     public function __execCURL($url, $params = array()) {
         $params = array_merge($params, array("api_key" => $this->api_key, "currency" => $this->currency));
-
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
