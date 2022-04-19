@@ -201,7 +201,7 @@ Registraion
         </div>
         </div>
 
-        @include('Frontend.includes.menues')
+        <!-- @include('Frontend.includes.menues') -->
 
     </div>
     <!-- <div class="leftSideContent desktopHide">
