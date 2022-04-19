@@ -37,6 +37,19 @@
                 </a>
 
                  </div>
+                 <div class="payment commonWooden">
+                 <div class="multiBtn">
+                     <img src="{{asset('frontend/assets/img/Euro Coin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
+                 </div>
+                 <div class="multiBtn">
+                     <img src="{{asset('frontend/assets/img/dogecoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/bitcoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/eth.png')}}" alt="" class="img-fluid">
+                 </div>
+
+                 </div>
              </li>
          </ul>
      </div>
@@ -123,6 +136,19 @@
                         <p>Bonus 30% first Deposit</p>
                     </div>
                 </a>
+
+             </td>
+             <td class="board commonWooden" style="background-image: url({{asset('frontend/assets/img/btnBoard.png')}}) !important;">
+                 <div class="multiBtn">
+                     <img src="{{asset('frontend/assets/img/Euro Coin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/USD Coin.png')}}" alt="" class="img-fluid">
+                 </div>
+                 <div class="multiBtn">
+                     <img src="{{asset('frontend/assets/img/dogecoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/bitcoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('frontend/assets/img/eth.png')}}" alt="" class="img-fluid">
+                 </div>
 
              </td>
          </tbody>

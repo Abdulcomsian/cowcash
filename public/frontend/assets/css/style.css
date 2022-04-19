@@ -1875,8 +1875,7 @@ input:checked + .slider:before {
 }
 .commonBoard p{
     top:70px;
-    left: 15px;
-    font-size: 29px !important;
+    font-size: 24px !important;
     font-family: "Bangers", cursive !important;
     color: #005f90 !important;
     text-align: center;
@@ -1954,6 +1953,14 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    #header .commonWooden .multiBtn{
+        position: absolute;
+        top: 50px;
+        left: 40px;
+    }
+    #header .commonWooden .multiBtn:last-child{
+        top: 112px;
+    }
     .registration .nav-pills{
         width: 92% !important;
         left: 4% !important;
