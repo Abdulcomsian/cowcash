@@ -86,9 +86,13 @@ class PaymentPayeerController extends PayeerClassController
         $ursilverblocks = Auth::user()->withdraw;
         $crystal = Auth::user()->crystal;
         $amount = $request->amount;
-        $silverblocks = $request->silverblocks;
-        $dollars= 1/ 7834 * $silverblocks;
-        $amount =number_format((float)$dollars, 2, '.', '');
+        $silverblocks = (float)$request->silverblocks;
+        $dollars=(1/7834)*($silverblocks);
+        if($amount==0.04)
+        {
+            $dollars=0.04;
+        }
+        $amount =number_format($dollars,2,'.','');
         if ($silverblocks >  $ursilverblocks && $crystal < $amount) {
             toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
             return Redirect::back();

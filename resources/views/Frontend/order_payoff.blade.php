@@ -142,7 +142,7 @@ About Us
             $("#amount").val(0);
         } else {
             $converttodolar = 1 / 7834 * $silverblocks;
-            $("#amount").val(parseFloat($converttodolar).toFixed(2));
+            $("#amount").val($converttodolar).toFixed(2);
         }
 
 
