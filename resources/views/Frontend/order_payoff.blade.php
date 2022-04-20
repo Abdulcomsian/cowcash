@@ -56,7 +56,8 @@ About Us
                         @if($id==1)
                         @php
                          $goldbars=388;
-                         $value=0.04;
+                         $value=(1/7834)*(388);
+                         $value=number_format($value,2,'.','');
                         @endphp
                         <div class="inputDiv">
                             <label for="">Wallet [Example: P12345678]:</label>
