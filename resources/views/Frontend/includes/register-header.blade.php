@@ -11,7 +11,7 @@
          <ul>
              <li>
                  <div class="loginForm commonWooden">
-                 <a href="{{ url('/home') }}">
+                 <a href="{{ url('/') }}">
                      <h2><span>CASH</span> <br>COW</h2>
                  </a>
                  </div>
@@ -109,7 +109,7 @@
      <table>
          <tbody>
              <td class="logo commonWooden">
-                 <a href="{{ url('/home') }}">
+                 <a href="{{ url('/') }}">
                      <h2><span>CASH</span> <br>COW</h2>
                  </a>
              </td>
