@@ -40,8 +40,8 @@ class FaucetPayController extends FaucetController
                 return Redirect::back();
             }else {
                  //Faucet payout code here
-                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','dash','');
-                 $res=$obj->send($request->pp,$amount,'',false);
+                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
+                 $res=$obj->send($request->pp,'1000000','',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
