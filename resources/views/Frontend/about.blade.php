@@ -24,7 +24,7 @@
      <div class="midDiv aboutSection">
          <div class="bgColor">
              <div class="descriptionDiv" style="padding: 20px; text-align: left;">
-                 <p class="rightNow">ABOUT PROJECT</p>
+                 <p class="rightNow">ABOUT</p>
                  <p>Cows price starts with 150 Silver coins.</p>
                  <p>Automatic system of milk collecting! Collecting milk without losses and restrictions in time! collect milk as it's convenient for you!</p>
                  <p>Even once an hour, even once a day, even once a month! The milk doesn't disappear or get rotten! Well organized market allows to sell all the milk for silver coins and gold blocks immediately!</p>
