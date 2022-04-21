@@ -54,7 +54,7 @@ class UserOrderController extends Controller
         $currentDateTime = Carbon::now();
         if ($currentDateTime > Auth::user()->bonus_time) {
             if (Auth::user()->bonus_status == 0) {
-                $bonuscoins = rand(2, 100);
+                $bonuscoins = rand(10, 100);
                 $newDateTime = Carbon::now()->addHour(12);
                 Auth::user()->update([
                     'bonus_status' => 1,

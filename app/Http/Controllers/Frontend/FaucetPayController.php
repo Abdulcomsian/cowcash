@@ -21,14 +21,19 @@ class FaucetPayController extends FaucetController
     //marchant can send pay to faucet user (Payout withdrawl)
     public function sendpay(Request $request)
     {
+        $request->validate([
+            'wallet' => ['required'],
+            'amount' => ['required'],
+            'silverblocks'=>['required'],
+        ],[
+            'wallet' => 'Please Enter Wallet',
+        ]);
          try 
          {
             $silverblocks = $request->silverblocks;
             $ursilverblocks = Auth::user()->withdraw;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
-            $dollars= 1/ 7834 * $silverblocks;
-            $amount =number_format((float)$dollars, 2, '.', '');
             if ($silverblocks >  $ursilverblocks) {
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
@@ -41,7 +46,7 @@ class FaucetPayController extends FaucetController
             }else {
                  //Faucet payout code here
                  $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','DASH','');
-                 $res=$obj->send($request->pp,'1000000','',false);
+                 $res=$obj->send($request->wallet,'0.000039','',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
@@ -53,7 +58,7 @@ class FaucetPayController extends FaucetController
                     PayOff::create([
                         'user_id'=>Auth::user()->id,
                         'gateway'=>'F',
-                        'wallet'=>$request->pp,
+                        'wallet'=>$request->wallet,
                         'sum'=>$amount,
                         'status'=>1,
                         'currency'=>'USD',
@@ -83,8 +88,6 @@ class FaucetPayController extends FaucetController
             $ursilverblocks = Auth::user()->withdraw;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
-            $dollars= 1/ 7834 * $silverblocks;
-            $amount =number_format((float)$dollars, 2, '.', '');
             if ($silverblocks >  $ursilverblocks) {
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
@@ -97,7 +100,7 @@ class FaucetPayController extends FaucetController
             }else {
                  //Faucet payout code here
                  $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
-                 $res=$obj->send($request->pp,$amount,'',false);
+                 $res=$obj->send($request->wallet,$amount,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
@@ -109,7 +112,7 @@ class FaucetPayController extends FaucetController
                     PayOff::create([
                         'user_id'=>Auth::user()->id,
                         'gateway'=>'F',
-                        'wallet'=>$request->pp,
+                        'wallet'=>$request->wallet,
                         'sum'=>$amount,
                         'status'=>1,
                     ]);
