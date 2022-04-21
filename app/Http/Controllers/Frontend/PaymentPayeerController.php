@@ -82,14 +82,20 @@ class PaymentPayeerController extends PayeerClassController
 
     //user payoff
     public function payoff(Request $request)
-    {
+    {   
+        $request->validate([
+            'wallet' => ['required'],
+            'amount' => ['required'],
+            'silverblocks'=>['required'],
+        ],[
+            'wallet' => 'Please Enter Wallet',
+        ]);
         $ursilverblocks = Auth::user()->withdraw;
         $crystal = Auth::user()->crystal;
         $amount = $request->amount;
-        $silverblocks = (float)$request->silverblocks;
-        $dollars=(1/7834)*($silverblocks);
-        $amount=bcdiv($dollars,1,2);
-        if ($silverblocks >  $ursilverblocks && $crystal > $amount) {
+        $silverblocks = $request->silverblocks;
+        echo $amount;exit;
+        if ($silverblocks > $ursilverblocks && $crystal > $amount) {
             toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
             return Redirect::back();
         } 
@@ -104,7 +110,7 @@ class PaymentPayeerController extends PayeerClassController
                 'curIn' => 'USD',
                 'sumOut' => $amount,
                 'curOut' => 'USD',
-                'param_ACCOUNT_NUMBER' =>$request->pp,
+                'param_ACCOUNT_NUMBER' =>$request->wallet,
             ));
         if(!$initOutput)
         {
