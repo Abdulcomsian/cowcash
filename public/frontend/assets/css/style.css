@@ -1028,7 +1028,6 @@ table {
 
 .registration .formDiv .acceptText {
     display: flex;
-    align-items: center;
     justify-self: unset;
 }
 
