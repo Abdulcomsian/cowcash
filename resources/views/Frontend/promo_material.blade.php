@@ -143,8 +143,8 @@ Promo Materials
          $(".htmlDiv img").css("height","600px")
      })
      $(".seventhOption").click(function(){
-         $(".htmlDiv img").css("width","100px")
-         $(".htmlDiv img").css("height","100px")
+         $(".htmlDiv img").css("width","120px")
+         $(".htmlDiv img").css("height","600px")
      })
      $(".eigthOption").click(function(){
          $(".htmlDiv img").css("width","125px")
@@ -173,5 +173,6 @@ Promo Materials
          $(".htmlDiv img").css("width","320px")
          $(".htmlDiv img").css("height","50px")
      })
+  
  </script>
  @endsection

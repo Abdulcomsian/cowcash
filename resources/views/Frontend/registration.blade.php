@@ -157,7 +157,7 @@ Registraion
                             </span>
                             @enderror
                         </div>
-                        <p class="acceptText">I have read and accept the rules of the project: <input type="checkbox" name="" id="" required="required"></p>
+                        <p class="acceptText"><input type="checkbox" name="" id="" required="required"> I have read and accept the rules of the project: </p>
                     </div>
                     <button class="commonBtn cursor-pointer" type="submit">Sign Up</button>
                 </form>

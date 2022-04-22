@@ -58,6 +58,10 @@
            
         }
      })
+     $(document).ready(function(){
+        var text=$(".loginUser .signInText").text().split(" ");
+        $(".loginUser .signInText").text(text[1])
+     })
  </script>
  <script>
      function copyTextFromElement(elementID) {
