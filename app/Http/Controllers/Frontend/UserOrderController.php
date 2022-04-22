@@ -17,6 +17,7 @@ use Auth;
 use DB;
 use Carbon\Carbon;
 use Cookie;
+use AmrShawky\LaravelCurrency\Facade\Currency;
 
 class UserOrderController extends Controller
 {
@@ -54,7 +55,7 @@ class UserOrderController extends Controller
         $currentDateTime = Carbon::now();
         if ($currentDateTime > Auth::user()->bonus_time) {
             if (Auth::user()->bonus_status == 0) {
-                $bonuscoins = rand(2, 100);
+                $bonuscoins = rand(10, 100);
                 $newDateTime = Carbon::now()->addHour(12);
                 Auth::user()->update([
                     'bonus_status' => 1,
@@ -75,12 +76,13 @@ class UserOrderController extends Controller
        
       $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->get();
       $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->whereDate('created_at', Carbon::today())->count();
-      return view('Frontend.myreferals', compact('userreferal','referalcount'));
+    return view('Frontend.myreferals', compact('userreferal','referalcount'));
     }
-   
-    //when user perchase cows from admin
-    public function Take_order(Request $request)
-    {
+       
+        //when user perchase cows from admin
+        public function Take_order(Request $request)
+        {
+            
         //check if cows exist or not
         try {
             $cow = Cows::find($request->item);
