@@ -30,10 +30,12 @@ class FaucetPayController extends FaucetController
         ]);
          try 
          {
+
             $silverblocks = $request->silverblocks;
             $ursilverblocks = Auth::user()->withdraw;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
+            
             if ($silverblocks >  $ursilverblocks) {
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
@@ -45,8 +47,29 @@ class FaucetPayController extends FaucetController
                 return Redirect::back();
             }else {
                  //Faucet payout code here
-                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','DASH','');
-                 $res=$obj->send($request->wallet,'0.000039','',false);
+                //convert amount to btc
+                $curl = curl_init();
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => "https://blockchain.info/tobtc?currency=USD&value=" . $amount,
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "GET",
+                    CURLOPT_HTTPHEADER => array(
+                        "cache-control: no-cache",
+                        "postman-token: fc62ebce-6d0b-ef4f-ba02-fcb05e284a02"
+                    ),
+                ));
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+                curl_close($curl);
+                $btc = json_decode($response);
+                //convert btc to satoshi
+                $satoshi= ($btc)*(pow(10, 8));
+                 $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
+                 $res=$obj->send($request->wallet,$satoshi,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
@@ -99,8 +122,29 @@ class FaucetPayController extends FaucetController
                 return Redirect::back();
             }else {
                  //Faucet payout code here
+                //convert amount to btc
+                $curl = curl_init();
+                curl_setopt_array($curl, array(
+                    CURLOPT_URL => "https://blockchain.info/tobtc?currency=USD&value=" . $amount,
+                    CURLOPT_RETURNTRANSFER => true,
+                    CURLOPT_ENCODING => "",
+                    CURLOPT_MAXREDIRS => 10,
+                    CURLOPT_TIMEOUT => 30,
+                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                    CURLOPT_CUSTOMREQUEST => "GET",
+                    CURLOPT_HTTPHEADER => array(
+                        "cache-control: no-cache",
+                        "postman-token: fc62ebce-6d0b-ef4f-ba02-fcb05e284a02"
+                    ),
+                ));
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+                curl_close($curl);
+                $btc = json_decode($response);
+                //convert btc to satoshi
+                $satoshi= ($btc)*(pow(10, 8));
                  $obj=new FaucetController('efa543728afab33a3ebe8e802d56206b2ba7c74f','BTC','');
-                 $res=$obj->send($request->wallet,$amount,'',false);
+                 $res=$obj->send($request->wallet,$satoshi,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
                  {
