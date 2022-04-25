@@ -1303,7 +1303,7 @@ input:checked + .slider:before {
 }
 
 .loginUser .signInText {
-    left: 37% !important;
+    left: 90px !important;
 }
 .header_col2 a{
     position:relative;
