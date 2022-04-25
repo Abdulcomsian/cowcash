@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Frontend\FaucetController;
 use App\Models\Payment;
 use App\Models\PackageTxn;
+use App\Models\User;
+use App\Models\PayOff;
 use DB;
 use Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -35,14 +37,13 @@ class FaucetPayController extends FaucetController
             $ursilverblocks = Auth::user()->withdraw;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
-            
             if ($silverblocks >  $ursilverblocks) {
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
             } elseif ($crystal < $amount) {
                 toastError('You have not enough Crystals');
                 return Redirect::back();
-            } elseif($amount<1){
+            } elseif($amount<0){
                 toastError('Minuminum 5 dolar can be withdrawl');
                 return Redirect::back();
             }else {
@@ -74,8 +75,8 @@ class FaucetPayController extends FaucetController
                 if($result->status==200)
                  {
                     User::find(Auth::user()->id)->update([
-                         'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
-                         'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
+                         'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks),
+                         'crystal'=> DB::raw('crystal -' .  $crystal),
                         ]);
                     //save data in payoff table
                     PayOff::create([
@@ -86,7 +87,7 @@ class FaucetPayController extends FaucetController
                         'status'=>1,
                         'currency'=>'USD',
                     ]);
-                    toastError('Payout is successful');
+                    toastSuccess('Payout is successful');
                     return Redirect::back();
                   }
                   else{
