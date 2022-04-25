@@ -265,7 +265,11 @@
          <ul>
              <li>
                  <div class="loginForm commonWooden loginUser">
-                     <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
+                    @php 
+                        $name=explode(' ',Auth::user()->name)
+                       
+                    @endphp
+                     <span class="signInText">{{$name[0]}}</span>
                      <div class="formDiv">
                          <div class="inputView">
                          <div class="inputDiv addFunds">
@@ -424,7 +428,11 @@
                 </a>
              </td>
              <td class="loginForm commonWooden loginUser header_col1">
-                 <span class="signInText">{{\Auth::user()->name ?? ''}}</span>
+                @php 
+                        $name=explode(' ',\Auth::user()->name);
+
+                    @endphp
+                 <span class="signInText">{{$name[0]}}</span>
                  <div class="formDiv">
                      <div class="inputView">
                          <div class="inputDiv addFunds">
