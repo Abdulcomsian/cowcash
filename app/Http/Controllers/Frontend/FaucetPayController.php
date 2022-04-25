@@ -43,7 +43,7 @@ class FaucetPayController extends FaucetController
             } elseif ($crystal < $amount) {
                 toastError('You have not enough Crystals');
                 return Redirect::back();
-            } elseif($amount<0){
+            } elseif($amount<5){
                 toastError('Minuminum 5 dolar can be withdrawl');
                 return Redirect::back();
             }else {
@@ -76,7 +76,7 @@ class FaucetPayController extends FaucetController
                  {
                     User::find(Auth::user()->id)->update([
                          'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks),
-                         'crystal'=> DB::raw('crystal -' .  $crystal),
+                         'crystal'=> DB::raw('crystal -' .  $amount),
                         ]);
                     //save data in payoff table
                     PayOff::create([
@@ -151,7 +151,7 @@ class FaucetPayController extends FaucetController
                  {
                     User::find(Auth::user()->id)->update([
                          'withdraw'=> DB::raw('withdraw -' .  $request->silverblocks. ''),
-                         'crystal'=> DB::raw('crystal -' .  $request->crystal. ''),
+                         'crystal'=> DB::raw('crystal -' .  $amount. ''),
                         ]);
                     //save data in payoff table
                     PayOff::create([
