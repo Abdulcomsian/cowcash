@@ -309,13 +309,13 @@ class FaucetPayController extends FaucetController
         }
     }
 
-    public function sucess(Request $request)
-    {
+    // public function sucess(Request $request)
+    // {
         
-        toastSuccess("Pyment Successfully");
-        return Redirect::to('/home');
+    //     toastSuccess("Pyment Successfully");
+    //     return Redirect::to('/home');
         
-    }
+    // }
     public function cancel()
     {
          toastSuccess("Pyment cancel");
