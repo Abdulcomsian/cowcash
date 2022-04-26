@@ -109,7 +109,7 @@
                 <br>
                 <input type="text" name="callback_url" value="{{url('faucet-callback')}}">
                 <br>
-                <input type="text" name="success_url" value="{{url('faucet-success')}}">
+                <!-- <input type="text" name="success_url" value="{{url('faucet-success')}}"> -->
                 <br>
                 <input type="text" name="cancel_url" value="{{url('faucet-cancel')}}">
                 <br>
