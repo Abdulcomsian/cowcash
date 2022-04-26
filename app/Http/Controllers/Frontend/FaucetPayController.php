@@ -303,10 +303,7 @@ class FaucetPayController extends FaucetController
             $PackageTxn->save();
             toastSuccess("Pyment Successfully");
             return Redirect::to('/home');
-        } else {
-            toastSuccess("Pyment cancel unknown error");
-            return Redirect::back();
-        }
+        } 
     }
 
     public function sucess(Request $request)
