@@ -106,7 +106,7 @@
                 <input type="text" name="currency1" value="USD">
                 <input type="text" name="currency2" value="BTC">
                 <input type="text" name="custom" value="" class="fpackage_id">
-                <input type="text" name="custom1" value="" class="{{\Auth::user()->id}}">
+                <input type="text" name="custom1" value="{{Auth::user()->id ?? ''}}" class="">
                 <br>
                 <input type="text" name="callback_url" value="{{url('faucet-callback')}}">
                 <br>
