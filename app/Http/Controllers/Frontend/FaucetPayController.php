@@ -9,6 +9,7 @@ use App\Models\Payment;
 use App\Models\PackageTxn;
 use App\Models\User;
 use App\Models\PayOff;
+use App\Models\Packages;
 use DB;
 use Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -43,7 +44,7 @@ class FaucetPayController extends FaucetController
             } elseif ($crystal < $amount) {
                 toastError('You have not enough Crystals');
                 return Redirect::back();
-            } elseif($amount<5){
+            } elseif($amount<0){
                 toastError('Minuminum 5 dolar can be withdrawl');
                 return Redirect::back();
             }else {
@@ -183,7 +184,8 @@ class FaucetPayController extends FaucetController
         // $payment_info = file_get_contents("https://faucetpay.io/merchant/get-payment/" . $token);
         // $payment_info = json_decode($payment_info, true);
 
-        // $payment_info='{"valid":true,"transaction_id":"c5c34307bdb4520179956549022a2ccee2debca4","merchant_username":"obaidjani","amount1":"1.00000000","currency1":"USD","amount2":"0.00002603","currency2":"BTC","custom":""}';
+        // $payment_info='{"valid":true,"transaction_id":"c5c34307bdb4520179956549022a2ccee2debca4","merchant_username":"obaidjani","amount1":"1.00000000","currency1":"USD","amount2":"0.00002603","currency2":"BTC","custom":"0,2"}';
+        // $payment_info = json_decode($payment_info, true);
         // $token_status = $payment_info['valid'];
         // $merchant_username = $payment_info['merchant_username'];
         // $m_amount = $payment_info['amount1'];
@@ -191,6 +193,9 @@ class FaucetPayController extends FaucetController
         // $amount2 = $payment_info['amount2'];
         // $currency2 = $payment_info['currency2'];
         // $custom = $payment_info['custom'];
+        // $customarray=explode(',',$custom);
+        // $custom=$customarray[0];
+        // $userid=$customarray[1];
         // $my_username = "obaidjani";
         // $m_orderid = mt_rand();
         // $Packagedata='';
@@ -198,11 +203,11 @@ class FaucetPayController extends FaucetController
 
         //     if($custom)
         //     {
-        //         $Packagedata = Package::where('id',$custom)->first();
+        //         $Packagedata = Packages::where('id',$custom)->first();
         //     }
         //     $payment = new Payment();
         //     $payment->uid = $m_orderid;
-        //     $payment->user_id = Auth::user()->id ?? 1;
+        //     $payment->user_id = $userid;
         //     $payment->balance = $m_amount;
         //     $payment->description ='Purchase coins and crystals';
         //     $payment->payment_method='F';
@@ -213,7 +218,7 @@ class FaucetPayController extends FaucetController
         //     if($custom)
         //     {
         //         $PackageTxn = new PackageTxn();
-        //         $PackageTxn->user_id = Auth::user()->id;
+        //         $PackageTxn->user_id = $userid;
         //         $PackageTxn->uid = $m_orderid;
         //         $PackageTxn->package_id = $custom;
         //         $PackageTxn->payment_method = 'Faucet';
@@ -227,7 +232,7 @@ class FaucetPayController extends FaucetController
         //             $PackageTxn->save();
         //             //covert 40 percent of coinst to crystal 
         //             $crystals = $Packagedata->amount / 100 * 40;
-        //             $addBalanceToUser = User::find(Auth::user()->id);
+        //             $addBalanceToUser = User::find($userid);
         //             $addBalanceToUser->silver_coins += $Packagedata->coins_to_get;
         //             $addBalanceToUser->crystal += $crystals;
         //             $addBalanceToUser->update();
@@ -238,82 +243,82 @@ class FaucetPayController extends FaucetController
                 
         //          //covert 40 percent of coinst to crystal 
         //         $crystals = $m_amount / 100 * 40;
-        //         $addBalanceToUser = User::find(Auth::user()->id);
+        //         $addBalanceToUser = User::find($userid);
         //         $addBalanceToUser->silver_coins += $m_amount*8244 ;
         //         $addBalanceToUser->crystal += $crystals;
         //         $addBalanceToUser->update();
         //     }
 
         //     //work for referal earnings
-        //     // $user=User::find(Auth::user()->id);
-        //     //  if ($user) {
-        //     //         //check parent
-        //     //     if ($user->referred_by != NULL) {
-        //     //         if($Packagedata)
-        //     //         {
-        //     //           //parent have got 30 coins
-        //     //          $firstlevel=$Packagedata->coins_to_get / 100 * 20;
-        //     //          $firstlevelcrys=$Packagedata->amount / 100 * 20;
-        //     //         }
-        //     //         else{
-        //     //             $firstlevel=($m_amount*8244)/ 100 * 20;
-        //     //             $firstlevelcrys=$m_amount/ 100 * 20;
-        //     //         }
+        //     $user=User::find($userid);
+        //      if ($user) {
+        //             //check parent
+        //         if ($user->referred_by != NULL) {
+        //             if($Packagedata)
+        //             {
+        //               //parent have got 30 coins
+        //              $firstlevel=$Packagedata->coins_to_get / 100 * 20;
+        //              $firstlevelcrys=$Packagedata->amount / 100 * 20;
+        //             }
+        //             else{
+        //                 $firstlevel=($m_amount*8244)/ 100 * 20;
+        //                 $firstlevelcrys=$m_amount/ 100 * 20;
+        //             }
                     
-        //     //         User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
-        //     //         $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
+        //             User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
+        //             $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
                     
-        //     //         if ($userlevel1parent->referred_by != NULL) {
+        //             if ($userlevel1parent->referred_by != NULL) {
                         
-        //     //             $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
+        //                 $userlevel2parent = User::where(['affiliate_id' => $userlevel1parent->referred_by])->first();
             
-        //     //             if ($userlevel2parent->referred_by != NULL) {
-        //     //                 if($Packagedata)
-        //     //                 {
-        //     //                   //parent have got 30 coins
-        //     //                 $secondlevel=$Packagedata->coins_to_get / 100 * 10; 
-        //     //                  $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
-        //     //                 }
-        //     //                 else{
-        //     //                     $secondlevel=($m_amount*8244)/ 100 * 10; 
-        //     //                    $secondlevelcrystal=$m_amount / 100 * 5;
-        //     //                 }
+        //                 if ($userlevel2parent->referred_by != NULL) {
+        //                     if($Packagedata)
+        //                     {
+        //                       //parent have got 30 coins
+        //                     $secondlevel=$Packagedata->coins_to_get / 100 * 10; 
+        //                      $secondlevelcrystal=$Packagedata->amount / 100 * 5; 
+        //                     }
+        //                     else{
+        //                         $secondlevel=($m_amount*8244)/ 100 * 10; 
+        //                        $secondlevelcrystal=$m_amount / 100 * 5;
+        //                     }
                            
                              
-        //     //                 User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
-        //     //                 $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
-        //     //                 if ($userlevel3parent) {
-        //     //                     if($Packagedata)
-        //     //                     {
-        //     //                       $thirdlevel=$Packagedata->coins_to_get / 100 * 5; 
-        //     //                     }
-        //     //                     else{
-        //     //                         $thirdlevel=($m_amount*8244) / 100 * 5;
-        //     //                     }
+        //                     User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+        //                     $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
+        //                     if ($userlevel3parent) {
+        //                         if($Packagedata)
+        //                         {
+        //                           $thirdlevel=$Packagedata->coins_to_get / 100 * 5; 
+        //                         }
+        //                         else{
+        //                             $thirdlevel=($m_amount*8244) / 100 * 5;
+        //                         }
                                
                                  
-        //     //                     User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
-        //     //                 }
-        //     //             } else {
-        //     //                 if($Packagedata)
-        //     //                     {
-        //     //                       $secondlevel=$Packagedata->amount / 100 * 10;
-        //     //                       $secondlevelcrystal=$Packagedata->amount / 100 * 5;
-        //     //                     }
-        //     //                     else{
-        //     //                          $secondlevel=($m_amount*8244) / 100 * 10;
-        //     //                         $secondlevelcrystal=$m_amount / 100 * 5;
-        //     //                     }
+        //                         User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
+        //                     }
+        //                 } else {
+        //                     if($Packagedata)
+        //                         {
+        //                           $secondlevel=$Packagedata->amount / 100 * 10;
+        //                           $secondlevelcrystal=$Packagedata->amount / 100 * 5;
+        //                         }
+        //                         else{
+        //                              $secondlevel=($m_amount*8244) / 100 * 10;
+        //                             $secondlevelcrystal=$m_amount / 100 * 5;
+        //                         }
                           
-        //     //                 User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
-        //     //             }
-        //     //         }
-        //     //     }
-        //     // }
+        //                     User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+        //                 }
+        //             }
+        //         }
+        //     }
             
-        //     toastSuccess("Pyment Successfully");
-        //     return Redirect::to('/home');
-        // } 
+            toastSuccess("Pyment Successfully");
+            return Redirect::to('/home');
+        } 
     }
 
     public function sucess(Request $request)
