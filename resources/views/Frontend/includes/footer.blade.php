@@ -106,7 +106,7 @@ function copyText(text) {
          $("#checkout-sum-val").val(price);
          $(".fcheckout-sum-val").val(price);
          $("#package_id").val(pkgid);
-         $(".fpackage_id").val(pkgid+','+{{Auth::user()->id}});
+         $(".fpackage_id").val(pkgid+','+{{Auth::user()->id ?? ''}});
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
           $(".checkoutOrder").css('pointer-events', 'auto');
@@ -159,7 +159,7 @@ function copyText(text) {
          $("#checkout-sum-val").val(qty);
          $("#amount1").val(qty);
          $("#package_id").val('');
-         $(".fpackage_id").val('0,'+{{Auth::user()->id}});
+         $(".fpackage_id").val('0,'+{{Auth::user()->id ?? ''}});
          $(".checkoutOrder").removeAttr('disable');
          $(".checkoutOrder").css('opacity', '1');
          $(".checkoutOrder").css('pointer-events', 'auto');
