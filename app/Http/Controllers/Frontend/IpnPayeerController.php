@@ -58,9 +58,10 @@ class IpnPayeerController extends Controller
                                 if($Packagedata)
                                 {
                                 //covert 40 percent of coinst to crystal 
-                                $crystals = $Packagedata->amount / 100 * 40;
+                                $discountcoins=$Packagedata->coins_to_get/100*$Packagedata->discount;
+                                $crystals = $Packagedata->amount*$packageid->pkgqty / 100 * 40;
                                 $addBalanceToUser = User::find($user->user_id);
-                                $addBalanceToUser->silver_coins += $Packagedata->coins_to_get;
+                                $addBalanceToUser->silver_coins += $Packagedata->coins_to_get*$packageid->pkgqty+$discountcoins;
                                 $addBalanceToUser->crystal += $crystals;
                                 $addBalanceToUser->update();
                                 }

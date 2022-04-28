@@ -196,6 +196,7 @@ class FaucetPayController extends FaucetController
         $customarray=explode(',',$custom);
         $custom=$customarray[0];
         $userid=$customarray[1];
+        $pkgqty=$customarray[2];
         $my_username = "obaidjani";
         $m_orderid = mt_rand();
         $Packagedata='';
@@ -221,6 +222,7 @@ class FaucetPayController extends FaucetController
                 $PackageTxn->user_id = $userid;
                 $PackageTxn->uid = $m_orderid;
                 $PackageTxn->package_id = $custom;
+                $PackageTxn->qty=$pkgqty;
                 $PackageTxn->payment_method = 'Faucet';
 
             }
@@ -231,9 +233,10 @@ class FaucetPayController extends FaucetController
                     $PackageTxn->payment_status = 1;
                     $PackageTxn->save();
                     //covert 40 percent of coinst to crystal 
-                    $crystals = $Packagedata->amount / 100 * 40;
+                     $discountcoins=$Packagedata->coins_to_get/100*$Packagedata->discount;
+                    $crystals = $Packagedata->amount*$pkgqty / 100 * 40;
                     $addBalanceToUser = User::find($userid);
-                    $addBalanceToUser->silver_coins += $Packagedata->coins_to_get;
+                    $addBalanceToUser->silver_coins += $Packagedata->coins_to_get*$pkgqty+$discountcoins;
                     $addBalanceToUser->crystal += $crystals;
                     $addBalanceToUser->update();
                  }
