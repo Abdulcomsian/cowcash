@@ -53,7 +53,8 @@ class IpnPayeerController extends Controller
                             $Packagedata='';
                             if($packageinsertdata)
                             {
-                                $Packagedata = Packages::where('id', $packageinsertdata->package_id)->first();
+                                $packageid=PackageTxn::where(['user_id' => $user->user_id, 'uid' => $m_orderid])->first();
+                                $Packagedata = Packages::where('id', $packageid->package_id)->first();
                                 if($Packagedata)
                                 {
                                 //covert 40 percent of coinst to crystal 
