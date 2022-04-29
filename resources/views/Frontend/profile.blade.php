@@ -28,7 +28,7 @@
                           <thead>
                               <tr>
                                   <td>Username:</td>
-                                  <td>{{\Auth::user()->name ?? ''}}:</td>
+                                  <td>{{\Auth::user()->name ?? ''}}</td>
                               </tr>
                           </thead>
                           <tbody>

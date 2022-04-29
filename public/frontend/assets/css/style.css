@@ -1887,6 +1887,10 @@ input:checked + .slider:before {
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
+
+    .copyText{
+        right: 0px !important;
+    }
     #startRightNow .midDiv p{
         font-size: 12px;
     }
@@ -1919,7 +1923,10 @@ input:checked + .slider:before {
     #header .rightHeader {
         position: absolute;
         top: 50px;
-        right: -190px;
+        right: -30px;
+    }
+    #startRightNow .midDiv .menuBox{
+        right: -420px;
     }
     #startRightNow .stairDiv {
         max-width: 100%;
@@ -1950,9 +1957,19 @@ margin: auto;
     #header table {
         min-width: 900px;
     }
+    .main-promoDiv{
+        padding: 0px !important;
+    }
+    .htmlDiv img{
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 768px) {
+   
+    .copyText{
+        right: 36px !important;
+    }
     #startRightNow .midDiv .rightNow{
         font-size: 15px;
     }
@@ -2050,6 +2067,7 @@ margin: auto;
 }
     .twoThreeStep{
         display: block;
+        margin-top: 30px;
     }
     .twoThreeStep .checkoutOrder,
     .twoThreeStep .paymentMethod{
@@ -2083,9 +2101,9 @@ margin: auto;
         width: 30px;
     }
     .logoutBtn{
-        top: 22px;
+        top: 46px;
     text-align: center;
-    left: 80px;
+    left: 83px;
     }
     .loginForm .formDiv{
         margin: 0px;
@@ -2115,7 +2133,25 @@ margin: auto;
     .statistics.loginUser p {
         top: 77px !important;
     }
-
+    .mobileMenu .payment.loginUser p{
+        top: 76px;
+    }
+    .mobileMenu .loginUser .addFunds{
+        top: -10px;
+    }
+    .mobileMenu .loginUser .withDrawFunds {
+        top: 0px;
+    }
+    .mobileMenu .loginUser .myProfile {
+        top: 10px;
+    }
+    .mobileMenu .loginUser .accountSetting {
+        top: 22px;
+    }
+    
+    
+    
+    
     .payment.loginUser p {
         top: 100px;
     }
@@ -2350,9 +2386,20 @@ margin: auto;
     }
 
     #startRightNow .midDiv p {
-        font-size: 8px;
+        font-size: 12px;
     }
-
+    .setting .formDiv .inputDiv label{
+        font-size: 10px;
+    }
+    .commonBtn{
+        width: 150px;
+        background-size: contain;
+        font-size: 12px;
+    }
+    .profileDetails .profileTable table tr td{
+        font-size: 10px;
+        line-break: anywhere;
+    }
     #startRightNow .midDiv,
     #startRightNow .stairDiv {
         max-width: 80%;
