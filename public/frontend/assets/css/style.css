@@ -1887,6 +1887,9 @@ input:checked + .slider:before {
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
+    .htmlDiv img{
+        width: 100% !important;
+    }
 
     .copyText{
         right: 0px !important;
@@ -1920,6 +1923,7 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 1200px) {
+    
     #header .rightHeader {
         position: absolute;
         top: 50px;
