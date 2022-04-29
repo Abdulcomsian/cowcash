@@ -112,7 +112,7 @@ Promo Materials
         var imagename=$(this).children().text();
         $(".main-htmlDiv").html(`<div class="child-htmlDiv">
                         <div class="htmlDiv">
-                            <img style="width:100%" src="{{asset('images/banners/`+imagename+`.png')}}">
+                            <img class="img-fluid" style="width:100%" src="{{asset('images/banners/`+imagename+`.png')}}">
                             <p>HTML code for yout referral image (Size: `+imagename+`)</p>
                             <div class="box">
                                 <textarea name="" id="" cols="30" rows="7"><a href="{{auth()->user()->referal_link}}">{{auth()->user()->referal_link}} target="_blank"</a>
