@@ -20,7 +20,7 @@ class CreatePackageTxnsTable extends Migration
             $table->integer('uid')->nullable();
             $table->unsignedBigInteger('package_id');
             $table->foreign('package_id')->references('id')->on('packages');
-
+            $table->integer('qty')->nullable();
             $table->string('payment_method')->nullable();
             $table->tinyInteger('payment_status')->nullable();
             $table->timestamps();

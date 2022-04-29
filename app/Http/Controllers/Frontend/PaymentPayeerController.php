@@ -25,6 +25,7 @@ class PaymentPayeerController extends PayeerClassController
     public function createPayment(Request $request)
     {
         $pkgid = $request->package_id;
+        $pkgqty=$request->pkgqty;
         $user = Auth::user();
         $user = $user->id;
         $m_shop =  '1614478614';
@@ -63,6 +64,7 @@ class PaymentPayeerController extends PayeerClassController
                     $PackageTxn->user_id = $user;
                     $PackageTxn->uid = $m_orderid;
                     $PackageTxn->package_id = $pkgid;
+                    $packageTxn->qty=$pkgqty;
                     $PackageTxn->payment_method = 'Payeer';
                     $PackageTxn->payment_status = 0;
                     $PackageTxn->save();

@@ -94,6 +94,7 @@
               <input type="hidden" name="purchase_sum" value="10" id="checkout-sum-val">
               <input type="hidden" name="purchase_currency" value="{{Auth::user()->currency ?? 'USD'}}" id="checkout-currency">
               <input type="hidden" value="10" name="package_id" id="package_id">
+              <input type="hidden" name="pkgqty" id="pkgqty" value="1">
             </form>
              <!-- Faucet payement -->
             <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
