@@ -16,6 +16,7 @@
                          <form id="login" method="POST" action="{{route('login')}}">
                              @csrf
                              <div class="inputView">
+                                 
                                  <div class="inputDiv">
                                     
                                      <label for="">Email</label>
@@ -264,7 +265,14 @@
      <div class="mobileMenu" style="display: none;">
          <ul>
              <li>
+
                  <div class="loginForm commonWooden loginUser">
+                 <div class="logoutBtn">
+                    <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        <img src="{{asset ('frontend/assets/img/logout.png')}}" class="img-fluid" alt="logo">
+                        <span>LogOut</span>
+                    </a>
+                </div>
                     @php 
                         $name=explode(' ',Auth::user()->name)
                        
@@ -285,7 +293,7 @@
                                  </label>
                              </div> -->
                              <div class="inputDiv withDrawFunds">
-                                 <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" />
+                                 <!-- <img src="{{asset('images/goldcoin.png')}}" class="img" width="15px" height="15px" /> -->
                                  <label for="">{{\Auth::user()->withdraw ?? ''}} <a href="{{url('account/payment')}}" style="color:#005f90;font-size: 12px;font-family: 'Poppins', sans-serif !important;font-weight: 900;">[ Withdraw Funds</a><span style="font-size: 12px;color: #00000085 !important;font-family: 'Poppins', sans-serif !important;font-weight: 900;">]</span></label>
                                  <!-- <label for=""> {{\Auth::user()->withdraw ?? ''}} [Withdraw Funds]</label> -->
 
