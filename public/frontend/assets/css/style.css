@@ -1887,9 +1887,7 @@ input:checked + .slider:before {
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
-    .htmlDiv img{
-        width: 100% !important;
-    }
+  
 
     .copyText{
         right: 0px !important;
