@@ -293,6 +293,9 @@ class UserOrderController extends Controller
 
     public function registration()
     {
+        if(Auth::check()){
+            return Redirect('/home');
+        }
         if(isset($_GET['ref']))
         {
          Cookie::queue('referral',$_GET['ref']);

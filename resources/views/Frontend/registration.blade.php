@@ -75,18 +75,25 @@ Registraion
             </li>
         </ul>
     </div> -->
+    @php $errormsg='';@endphp
+    @error('email')
+     @php 
+      $errormsg=$message;
+     @endphp
+    @enderror
     <div class="midDiv registration">
         <div class="bgColor">
         <ul class="nav nav-pills" role="tablist">
             <li class="nav-item rightNow">
-                <a class="nav-link active" data-toggle="pill" href="#register">REGISTRATION</a>
+               
+                <a class="nav-link {{$errormsg =='These credentials do not match our records.' ? '':'ative'}}" data-toggle="pill" href="#register">REGISTRATION</a>
             </li>
             <li class="nav-item rightNow">
-                <a class="nav-link" data-toggle="pill" href="#loginForm">LOGIN</a>
+                <a class="nav-link {{$errormsg =='These credentials do not match our records.' ? 'ative show':''}}" data-toggle="pill" href="#loginForm">LOGIN</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div id="register" class="container tab-pane active">
+            <div id="register" class="container tab-pane {{$errormsg =='These credentials do not match our records.' ? '':'active'}}" style="{{$errormsg =='These credentials do not match our records.' ? 'display: none':''}}">
                 <div class="detailBox">
                     <p>Do not register multiple accounts.<br> The system will quickly recognize them and they will be
                         blocked</p>
@@ -162,7 +169,7 @@ Registraion
                     <button class="commonBtn cursor-pointer" type="submit">Sign Up</button>
                 </form>
             </div>
-            <div id="loginForm" class="container tab-pane fade"><br>
+            <div id="loginForm" class="container tab-pane fade {{$errormsg =='These credentials do not match our records.' ? 'active show':''}}" style="{{$errormsg =='These credentials do not match our records.' ? 'display: block':''}}"><br>
                 <h3>Sign In Account</h3>
                 <form id="login" style="position:Relative;top:3px;" method="POST" action="{{route('login')}}">
                          @csrf
