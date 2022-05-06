@@ -435,7 +435,7 @@
                     <h2><span>CASH</span> <br>COW</h2>
                 </a>
              </td>
-             <td class="loginForm commonWooden loginUser header_col1">
+             <td class="loginForm commonWooden loginUser header_col1" style="width:23% !important">
                 @php 
                         $name=explode(' ',\Auth::user()->name);
 
@@ -470,7 +470,7 @@
                      </div>
                  </div>
              </td>
-             <td class="statistics commonWooden loginUser header_col2">
+             <td class="statistics commonWooden loginUser header_col2" style="min-width: 113px !important;">
                  <span class="statisticsText">MY FARM</span>
                  <a href="{{url('account/farm')}}">
                      <p>Buy Cows</p>
@@ -485,7 +485,7 @@
                      <p>Daily Bonus</p>
                  </a>
              </td>
-             <td class="payment commonWooden loginUser">
+             <td class="payment commonWooden loginUser" style="min-width: 113px !important;">
                  <span class="paymentText">Other</span>
                  <!-- <a href="{{url('account/promotion')}}">
                      <p>Referral Promotion</p>
@@ -504,7 +504,7 @@
                      </a>
 
              </td>
-             <td class="board commonWooden loginUser">
+             <td class="board commonWooden loginUser" style="min-width:113px !important;">
                  <div class="multiBtn">
                      <img src="{{asset('frontend/assets/img/Euro Coin.png')}}" alt="" class="img-fluid">
                      <img src="{{asset('frontend/assets/img/Layer 5.png')}}" alt="" class="img-fluid">

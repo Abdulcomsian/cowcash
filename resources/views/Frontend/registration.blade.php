@@ -164,7 +164,7 @@ Registraion
                             </span>
                             @enderror
                         </div>
-                        <p class="acceptText"><input type="checkbox" name="" id="" required="required"> I have read and accept the rules of the project: </p>
+                        <p class="acceptText"><input type="checkbox" name="" id="" required="required"> I have read and accept the &nbsp; <a style="display:contents; color: #ffd9a9;" href="https://accrualhub.com/public/rules">rules</a> of the project: </p>
                     </div>
                     <button class="commonBtn cursor-pointer" type="submit">Sign Up</button>
                 </form>

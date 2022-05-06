@@ -1314,7 +1314,7 @@ input:checked + .slider:before {
     top:4px;
 }
 #header .loginUser {
-    min-width: 115px;
+    min-width: 135px;
 }
 
 .statistics.loginUser p {
