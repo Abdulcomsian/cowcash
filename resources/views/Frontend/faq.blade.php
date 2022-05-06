@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
  @section('title')
- Sell Milk
+ FAQs
  @endsection
  @section('css')
  <style>
