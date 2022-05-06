@@ -58,7 +58,7 @@
             <input type="number" value="1" class="form-control customcal" min="1">
             <label for="">=</label>
             <label for="">
-              <img src="{{asset('images/silver-01.png')}}" alt="">
+              <img src="{{asset('images/1121.png')}}" alt="">
               <span id="customcoins">8244</span> silver coins
             </label>
           </div>
@@ -68,7 +68,7 @@
             <div class="inputDiv">
               <label for="">2. Checkout order:</label>
               <input class="form-control" type="number" value="1" id="checkoutqty" min="1">
-              <img src="{{asset('images/silver-01.png')}}" alt="">
+              <img src="{{asset('images/1121.png')}}" alt="">
             </div>
             <div class="imgTable">
               <img src="{{asset('images/basket.png')}}" alt="">
