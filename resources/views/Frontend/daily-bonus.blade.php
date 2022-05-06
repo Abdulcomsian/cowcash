@@ -43,7 +43,7 @@
          <p class="rightNow">DAILY BONUS</p>
          <div class="bgColor">
              <div class="imgText" >
-                 <img src="{{asset('images/12.png')}}" alt="">
+                 <img src="{{asset('images/112.png')}}" alt="">
                 <p >You can receive bonus every 12 hours.<br>Bonus is credited in silver coins to the account for purchases. The sum of the bonus is generated randomly form 10 to 100 silver coins.</p>
              </div>
              @if(\Auth::user()->bonus_status==1)

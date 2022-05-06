@@ -33,10 +33,10 @@
                 <p><b style="font-family: 'Poppins', sans-serif !important">Question:</b> I want to change my referrer/referral, how to do that?<br> <b style="font-family: 'Poppins', sans-serif !important">Answer:</b> Unfortunately this data is impossible to be changed! If your friend didn't become your referral after registration, it means that he registered by not your link.</p>
                 <p><b style="font-family: 'Poppins', sans-serif !important">Question:</b> Levels of referrals - what is that?<br> <b style="font-family: 'Poppins', sans-serif !important">Answer:</b> 1 level is your referral. 2 level is a referral of your referral. 3 level is a referral of your referral's referral.</p>
                 </div>
-             <p class="notePara">
+             <!-- <p class="notePara">
                  <span>You have at the warehouse {{$totalmilkforsale ?? ''}} liter milk for sale</span>
                  <span></span>
-             </p>
+             </p> -->
          </div>
 
          @include('Frontend.includes.menues')
