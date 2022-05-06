@@ -44,7 +44,7 @@
             <p><b id="data-coins-{{$pkg->id}}">{{round($afterdisccoins)}}</b></p>
             <span>{{$pkg->coins_to_get}}</span>
             <p class="title">Silver Coins</p>
-            <img src="{{asset('images/12.png')}}" alt="">
+            <img src="{{asset('images/112.png')}}" alt="">
             <button id="data-price-{{$pkg->id}}" value="{{$pkg->amount}}">{{$pkg->amount}} {{Auth::user()->currency ?? 'USD'}}</button>
           </div>
           @endforeach
