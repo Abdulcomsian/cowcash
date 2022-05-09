@@ -2563,12 +2563,12 @@ margin: auto;
 
 @media (max-width: 375px){
 #startRightNow .midDiv .multiDiv {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 }
 @media (max-width: 320px){
     #startRightNow .midDiv .multiDiv {
-        margin-bottom: 70px;
+        margin-bottom: 80px;
     }
 }
 
