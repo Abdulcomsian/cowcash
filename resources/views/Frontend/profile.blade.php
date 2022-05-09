@@ -11,6 +11,13 @@
       .bgColor {
           overflow: hidden;
       }
+      .tdp{
+         padding: 8px 20px;
+        border: 1px solid #5e3700 ;
+    }
+    .trd{
+        background: #fffcf5;
+    }
   </style>
   @endsection
 
@@ -26,31 +33,31 @@
                   <div class="profileTable">
                       <table>
                           <thead>
-                              <tr>
-                                  <td>Username:</td>
-                                  <td>{{\Auth::user()->name ?? ''}}</td>
+                              <tr class="trd">
+                                  <td class="tdp">Username:</td>
+                                  <td class="tdp">{{\Auth::user()->name ?? ''}}</td>
                               </tr>
                           </thead>
                           <tbody>
-                              <tr>
-                                  <td>Email:</td>
-                                  <td>{{\Auth::user()->email ?? ''}}</td>
+                              <tr class="trd">
+                                  <td class="tdp">Email:</td>
+                                  <td class="tdp">{{\Auth::user()->email ?? ''}}</td>
                               </tr>
-                              <tr>
-                                  <td>Silver Coins(for purchases):</td>
-                                  <td>{{\Auth::user()->silver_coins ?? ''}} coins</td>
+                              <tr class="trd">
+                                  <td class="tdp">Silver Coins <br> (for purchases):</td>
+                                  <td class="tdp">{{\Auth::user()->silver_coins ?? ''}} coins</td>
                               </tr>
-                              <tr>
-                                  <td>Silver Coins(for withdrawal):</td>
-                                  <td>{{\Auth::user()->withdraw ?? ''}} coins </td>
+                              <tr class="trd">
+                                  <td class="tdp">Silver Coins <br> (for withdrawal):</td>
+                                  <td class="tdp">{{\Auth::user()->withdraw ?? ''}} coins </td>
                               </tr>
-                              <tr>
-                                  <td>Got from referrals:</td>
-                                  <td>{{\Auth::user()->referal_coins ?? ''}} bars</td>
+                              <tr class="trd">
+                                  <td class="tdp">Got from referrals:</td>
+                                  <td class="tdp">{{\Auth::user()->referal_coins ?? ''}} bars</td>
                               </tr>
-                              <tr>
-                                  <td>Paid out:</td>
-                                  <td>0.00  @if(Auth::user()->currency=='1')
+                              <tr class="trd">
+                                  <td class="tdp">Paid out:</td>
+                                  <td class="tdp">0.00  @if(Auth::user()->currency=='1')
                                             USD
                                             @elseif(Auth::user()->currency=='2')
                                             EUR
@@ -59,15 +66,15 @@
                                             @endif
                                   </td>
                               </tr>
-                              <tr>
-                                  <td>Total milk:</td>
-                                  <td>{{$totalmilk ?? ''}} Liters</td>
+                              <tr class="trd">
+                                  <td class="tdp">Total milk:</td>
+                                  <td class="tdp">{{$totalmilk ?? ''}} Liters</td>
                               </tr>
                               
                               @if(isset($invitedby->name))
-                              <tr>
-                                  <td>You are invited by</td>
-                                  <td>
+                              <tr class="trd">
+                                  <td class="tdp">You are invited by</td>
+                                  <td class="tdp">
                                      {{$invitedby->name ?? ''}}
                                   </td>
                               </tr>

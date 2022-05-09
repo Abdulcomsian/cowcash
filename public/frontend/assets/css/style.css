@@ -659,6 +659,7 @@ button.signUpBtn {
     font-weight: 400 !important;
     font-family: Nexa-Regular !important;
     font-size: 14px;
+   
 }
 
 .affiliateProgram p {
@@ -1930,9 +1931,7 @@ input:checked + .slider:before {
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
-    #startRightNow .midDiv .multiDiv {
-        margin-top:65px;
-    }
+   
     .copyText{
         right: 0px !important;
     }

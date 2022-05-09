@@ -91,15 +91,15 @@ Home Page
         <div class="listContent">
             <div class="firstChild">
                 <p>1 Cow At the</p>
-                <p>At the replenishment above 10 EUR</p>
+                <p>At the replenishment above 10 USD</p>
             </div>
             <div class="secondChild">
-                <p>1 Cow At the</p>
-                <p>At the replenishment above 50 EUR</p>
+                <p>3 Cow At the</p>
+                <p>At the replenishment above 50 USD</p>
             </div>
             <div class="thirdChild">
-                <p>1 Cow At the</p>
-                <p>At the replenishment above 100 EUR</p>
+                <p>10 Cow At the</p>
+                <p>At the replenishment above 100 USD</p>
             </div>
             <div class="forthChild">
                 <p>2 Cow At the replenishment</p>
