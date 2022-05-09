@@ -35,7 +35,7 @@ Payments
                             <td>{{$payment->user->name ?? ''}}</td>
                             <td>{{$payment->sum ?? ''}} {{$payment->currency}}</td>
                             <td> <p style="width: 19px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;">{{$payment->gateway ?? ''}}</p></td>
-                            <td>{{substr($payment->wallet, 0, -3) . ''}} <span style="color:red">xxx</span></td>
+                            <td>{{substr($payment->wallet, 0, 3) . ''}}<span style="color:red">******</span>{{substr($payment->wallet, 7, 2) . ''}}</td>
                             <td>{{$payment->created_at->toDateString() ?? ''}}</td>
                         </tr>
                      @endforeach
