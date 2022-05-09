@@ -45,7 +45,7 @@
             <span>{{$pkg->coins_to_get}}</span>
             <p class="title">Silver Coins</p>
             <img src="{{asset('images/112.png')}}" alt="">
-            <button id="data-price-{{$pkg->id}}" value="{{$pkg->amount}}">{{$pkg->amount}} {{Auth::user()->currency ?? 'USD'}}</button>
+            <button id="data-price-{{$pkg->id}}" value="{{$pkg->amount}}">{{$pkg->amount}} {{'USD'}}</button>
           </div>
           @endforeach
         </div>
@@ -54,7 +54,7 @@
         </div>
         <div class="customAmount">
           <div class="inputDiv">
-            <label for="">Enter custom amount ({{Auth::user()->currency ?? 'USD'}}):</label>
+            <label for="">Enter custom amount ({{'USD'}}):</label>
             <input type="number" value="1" class="form-control customcal" min="1">
             <label for="">=</label>
             <label for="">
@@ -82,7 +82,7 @@
                 <tbody>
                   <tr>
                     <td><b>Amount:</b></td>
-                    <td><b id="checkoutprice" value="1">1.00</b><b> {{Auth::user()->currency ?? 'USD'}}</b></td>
+                    <td><b id="checkoutprice" value="1">1.00</b><b> {{'USD'}}</b></td>
                   </tr>
                 </tbody>
               </table>
@@ -92,7 +92,7 @@
             <form id="checkout-submit" method="POST" action="{{url('/createPayment')}}" target="_blank">
               @csrf
               <input type="hidden" name="purchase_sum" value="10" id="checkout-sum-val">
-              <input type="hidden" name="purchase_currency" value="{{Auth::user()->currency ?? 'USD'}}" id="checkout-currency">
+              <input type="hidden" name="purchase_currency" value="{{'USD'}}" id="checkout-currency">
               <input type="hidden" value="10" name="package_id" id="package_id">
               <input type="hidden" name="pkgqty" id="pkgqty" value="1">
             </form>
