@@ -2561,7 +2561,7 @@ margin: auto;
     
 }
 
-@media (max-width: 375px){
+@media (max-width: 380px){
 #startRightNow .midDiv .multiDiv {
     margin-bottom: 60px;
 }
