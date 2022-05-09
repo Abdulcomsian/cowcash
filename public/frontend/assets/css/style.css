@@ -1894,6 +1894,39 @@ input:checked + .slider:before {
     border: none;
     position: relative;
 }
+#buyCow .modalHeader{
+    margin-bottom: 30px;
+    position: absolute;
+    top: 10%;
+    left: 29%;
+}
+#buyCow .modalHeader h1{
+    color: #fff;
+    font-size: 18px;
+    font-family: "Bangers", cursive;
+    letter-spacing: 2px;
+}
+#buyCow .modalBody{
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 10%;
+    width: 100%;
+    max-width: 80%;
+}
+#buyCow .close{
+    color: #00669b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    right: 13px;
+}
+#buyCow .modalBody p{
+    font-size: 18px;
+    font-family: Nexa-Bold !important;
+    color: #7d3701 !important;
+}
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
@@ -1978,6 +2011,10 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
+    #buyCow .modal-content{
+        width: 50%;
+        overflow: hidden;
+    }
    
     .copyText{
         right: 36px !important;
@@ -1990,8 +2027,23 @@ margin: auto;
         top: 50px;
         left: 40px;
     }
+    .registerHeader .commonWooden .multiBtn:last-child{
+        top: 50px;
+        left: 40px;
+    }
     #header .commonWooden .multiBtn:last-child{
-        top: 112px;
+        top: 10px;
+        left: 0px;
+    }
+    .registerHeader .commonWooden .multiBtn:last-child{
+        top: 100px !important;
+        left: 50px !important;
+    }
+    .mobileMenu #login .multiBtn button{
+        margin: 0px !important;
+    }
+    #login .formDiv .inputDiv input{
+        width: 80% !important;
     }
     .registration .nav-pills{
         width: 92% !important;
