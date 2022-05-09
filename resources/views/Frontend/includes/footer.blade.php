@@ -87,6 +87,10 @@ function copyText(text) {
          $("#myModal").css("display", "none")
      })
 
+     $(document).on("click", "#buyCow span.close", function() {
+         $("#buyCow").css("display", "none")
+     })
+
      $(document).on("click", ".packageDiv", function() {
 
          $("#checkoutqty").val(1).show();
