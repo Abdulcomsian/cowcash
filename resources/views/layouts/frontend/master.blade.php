@@ -144,7 +144,7 @@
         <h1>Insufficient Balance</h1>
       </div>
       <div class="modalBody">
-        <p>You don't enough silver coin for purchasing this cow.</p>
+        <p>You don't have enough silver coin for purchasing this cow.</p>
       </div>
     </div>
   </div>
