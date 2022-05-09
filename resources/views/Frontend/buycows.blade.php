@@ -99,20 +99,19 @@
                                       <input type="number" name="qty" id="qty" value="1" required>
                                       <input type="hidden" name="item" id="item" value="{{$cow->id}}" />
                                       <label for="">Pcs.</label>
-                                      
+
                                   </div>
                               </div>
-                              <button class="cursor-pointer">Buy</button>
+                              <button class="cursor-pointer @if(Auth::user()->silver_coins < $cow->price){{'errorMessage'}}@endif">Buy</button>
                           </form>
                       </div>
                       @endforeach
                   </div>
               </div>
-              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br> 
+              <p style="font-family: Nexa-Regular !important;font-size: 14px;font-weight: 300;color: #000;">You will be able to buy much more cows if you<br>
               <a id="myBtnModal" style="cursor: pointer;"><b style="color: #7d3701;">replenish the account</b></a>.
             </p>
           </div>
-          
           @include('Frontend.includes.buyCowMenu')
 
       </div>
@@ -123,8 +122,11 @@
          $("#myBtnModal").on("click", function() {
          if ($("#myModal").css("display") == "none") {
                 $("#myModal").css("display", "block")
-             
          }
      })
+         $('.errorMessage').click(function (event) {
+             event.preventDefault();
+             $('#buyCow').css('display','flex')
+         });
   </script>
   @endsection
