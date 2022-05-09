@@ -1884,6 +1884,16 @@ input:checked + .slider:before {
 .registerHeader .commonWooden{
     background-image: url("../img/logoBadge.png") !important;
 }
+#buyCow .modal-content{
+    width: 25%;
+    background-image: url(../img/Group\ 36.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 30%;
+    border: none;
+    position: relative;
+}
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
