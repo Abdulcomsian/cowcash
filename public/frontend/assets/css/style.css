@@ -2560,3 +2560,14 @@ margin: auto;
 .htmlDiv .imgDiv{
     
 }
+
+@media (max-width: 360px){
+#startRightNow .midDiv .multiDiv {
+    margin-bottom: 50px;
+}
+}
+@media (max-width: 320px){
+    #startRightNow .midDiv .multiDiv {
+        margin-bottom: 70px;
+    }
+    }
