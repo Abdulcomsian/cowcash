@@ -136,5 +136,17 @@
       </div>
     </div>
   </div>
+  <div id="buyCow" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modalHeader">
+        <h1>Insufficient Balance</h1>
+      </div>
+      <div class="modalBody">
+        <p>You don't enough silver coin for purchasing this cow.</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
