@@ -102,12 +102,12 @@ Home Page
                 <p>At the replenishment above 100 USD</p>
             </div>
             <div class="forthChild">
-                <p>2 Cow At the replenishment</p>
-                <p>At the replenishment above 250 EUR</p>
+                <p>Play to earn real crypto</p>
+                <p style="visibility:hidden;">At the replenishment above 250 EUR</p>
             </div>
             <div class="fifthChild">
-                <p id="fifthChild-h2" >20 Cow At the replenishment</p>
-                <p id="fifthChild-p">At the replenishment above 500 EUR</p>
+                <p id="fifthChild-h2" >http://cashcow.com/</p>
+                <!-- <p id="fifthChild-p">At the replenishment above 500 EUR</p> -->
             </div>
         </div>
     </div>

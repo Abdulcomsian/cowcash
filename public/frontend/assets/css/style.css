@@ -437,7 +437,7 @@ button#register_button {
 }
 #startRightNow .stairDiv .forthChild {
     position: relative;
-    top: 132px;
+    top: 160px;
     line-height: 2;
     right: 44px;
     transform: rotate(0deg);
@@ -461,7 +461,7 @@ button#register_button {
 }
 p#fifthChild-h2 {
     transform: rotate(3deg);
-    padding-left: 13%;
+    padding-left: 6%;
 }
 p#fifthChild-p {
     transform: rotate(3deg);
@@ -2253,7 +2253,7 @@ margin: auto;
     }
 
     #startRightNow .stairDiv .forthChild {
-        top: 167px;
+        top: 195px;
     }
 
     #startRightNow .stairDiv .fifthChild {
@@ -2530,7 +2530,7 @@ margin: auto;
     }
 
     #startRightNow .stairDiv .forthChild {
-        top: 164px;
+        top: 194px;
         left: -36px;
         line-height: 3;
         transform: rotate(1deg);
@@ -2551,7 +2551,7 @@ margin: auto;
     }
     p#fifthChild-h2 {
         transform: rotate(0deg);
-        padding-left: 6%;
+        padding-left: 0%;
     }
     p#fifthChild-p {
         transform: rotate(0deg);
