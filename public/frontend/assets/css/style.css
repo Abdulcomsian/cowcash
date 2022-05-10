@@ -2225,7 +2225,7 @@ margin: auto;
         font-size: 12px;
         padding: 0px;
     }
-
+    #startRightNow .stairDiv .forthChild p{font-size:14px;}
     #startRightNow .stairDiv .listContent p:last-child {
         font-size: 10px;
     }
@@ -2566,6 +2566,10 @@ margin: auto;
 #startRightNow .midDiv .multiDiv {
     margin-bottom: 60px;
 }
+#buyCow .modalBody p{
+    font-size:16px;
+}
+#buyCow .modalHeader h1{font-size:8px !important;}
 }
 @media (max-width: 320px){
     #startRightNow .midDiv .multiDiv {
