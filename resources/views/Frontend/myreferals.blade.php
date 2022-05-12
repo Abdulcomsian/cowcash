@@ -17,7 +17,7 @@
        .copyText{
            cursor: pointer;
            position: relative;
-            right: 10px;
+            right: 0px;
        }
        .hoverText{
            display: none;
