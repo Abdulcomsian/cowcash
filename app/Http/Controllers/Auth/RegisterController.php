@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use App\Models\UserCows;
 use App\Models\Country;
 use App\Models\UserReferal;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -115,6 +116,14 @@ class RegisterController extends Controller
             if ($user->referred_by != NULL) {
                 User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
             }
+        if($user){
+            $userCows = UserCows::create([
+                'user_id' => $user['id'],
+                'cow_id' => 1,
+                'qty' => 1,
+                'per_hours_litters' => 5,
+            ]);
+        }
             return $user;
         }
     }
