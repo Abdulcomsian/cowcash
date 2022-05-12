@@ -81,7 +81,7 @@ function copyText(text) {
   let elementText = copyText.textContent;
   navigator.clipboard.writeText(elementText);
   $(".copiedText").show(); 
-  $(".copiedText").hide("slow");
+  $(".copiedText").hide(2000);
 }
   </script>
  <script>
