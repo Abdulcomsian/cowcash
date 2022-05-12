@@ -80,8 +80,8 @@ function copyText(text) {
   var copyText = document.getElementById("linked");
   let elementText = copyText.textContent;
   navigator.clipboard.writeText(elementText);
-  $(".copiedText").show();
-  $(".copiedText").hide().fadeOut(1000);
+  $(".copiedText").show(); 
+  $(".copiedText").hide("slow");
 }
   </script>
  <script>
