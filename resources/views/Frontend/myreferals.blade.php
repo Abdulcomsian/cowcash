@@ -17,7 +17,7 @@
        .copyText{
            cursor: pointer;
            position: relative;
-            right: 36px;
+            right: 10px;
        }
        .hoverText{
            display: none;
@@ -29,6 +29,7 @@
             font-family: Nexa-Regular !important;
 
        }
+       .copiedText{display:none;}
        .copyText:hover .hoverText{
            display: block;
        }
@@ -79,7 +80,9 @@
                                     <p style="margin-top: 20px;">Your referral link:</p>
                                     <div class="linkCopy">
                                         <p id="linked" class="linkText"><a href="">{{\Auth::user()->referal_link ?? ''}}</a></p> 
-                                        <span class="copyText" onclick="copyFunction()"><i class="fa fa-copy"></i>  <span class="hoverText">copy</span></span>
+                                        <span class="copyText" onclick="copyFunction()"><i class="fa fa-copy"></i>  
+                                        <span class="copiedText">copied</span></span>
+                                        <span class="hoverText">copy</span></span>
                                        
                                     </div>
                                    
