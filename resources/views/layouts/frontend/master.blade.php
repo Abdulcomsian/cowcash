@@ -12,9 +12,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}">
+  <link rel="stylesheet" href="{{asset('css/tour-default.css')}}">
   <style>
     .cursor-pointer {
       cursor: pointer;
+    }
+    #first{
+      left: 82px;
+    top: 65px;
+    }
+    #second{
+      margin-top: 15px;
+    opacity: 1;
+    top: 93px;
+    left: 80px;
+
     }
   </style>
   @toastr_css
@@ -22,6 +34,7 @@
 </head>
 
 <body class="mainContent">
+<div class="backDrop"></div>
   @include('Frontend.includes.header')
   @yield('content')
   @include('Frontend.includes.footer')
@@ -148,5 +161,64 @@
       </div>
     </div>
   </div>
+  <script src="{{asset('js/jquery.guide.js')}}"></script>
+  <script src="{{asset('js/tour.js')}}"></script>
+  <script>
+    const tour = new Tour("Demo");
+    $(document).on("click", ".tourBtn",function(){
+      console.log("Hello")
+      tour.start();
+      $(".backDrop").css("display","block")
+    })
+    tour.style({
+        accentColor: "#2478b5"
+    });
+    tour.addStep("first", {
+        title: "User Profile",
+        text: "You can click here to View our Profile",
+        hook: ".profileDiv",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+           
+        ]
+    });
+    tour.addStep("second", {
+        title: "Buy Cow",
+        text: "You can click here to Buy cows",
+        hook: ".buyCows",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            }
+        ],
+        links: [
+           
+        ]
+    });
+    function stop(){
+      tour.stop()
+      $(".backDrop").css("display","none")
+    }
+  </script>
 </body>
 </html>

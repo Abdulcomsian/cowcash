@@ -7,7 +7,9 @@ Home Page
     .cursor-pointer {
         cursor: pointer;
     }
-    
+    .tourBtn{
+    cursor: pointer;
+}
     @media (max-width: 992px) {
         #startRightNow .midDiv p:nth-child(2){
             width: 100%;
@@ -19,6 +21,7 @@ Home Page
 </style>
 @endsection
 @section('content')
+
 <section id="startRightNow">
     
     <div class="midDiv">
