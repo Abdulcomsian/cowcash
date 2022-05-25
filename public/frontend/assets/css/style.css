@@ -1,3 +1,6 @@
+.tourBtn{
+    cursor: pointer;
+}
 @font-face {
     font-family: Nexa-Regular;
     src: url("../fonts/Nexa\ Regular.otf");
@@ -1641,9 +1644,12 @@ input:checked + .slider:before {
     text-align: center;
     left: 70px;
 }
+.logoutBtn a.dropdown-item{
+    position: relative;
+}
 .logoutBtn span{
     position: absolute;
-    top: 25px;
+    top: 0px;
     z-index: 999;
     background: #005f90;
     color: #fff;
@@ -1652,10 +1658,44 @@ input:checked + .slider:before {
     font-size: 12px;
     display: none;
     transition: all .5s;
-    right: 40px;
+    right: -50px;
 }
-.logoutBtn a:hover span{
+.logoutBtn a.dropdown-item:hover span{
     display: block;
+}
+.tour .actionContainer button {
+    background-color: #763202 !important;
+    border: none !important;
+    color: white !important;
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 7px 15px;
+    cursor: pointer;
+    outline: none;
+    border-radius: var(--TourBorderRadius) !important;
+    -webkit-animation: none;
+    animation: none;
+}
+.tour .titleContainer{
+    background-color: #763202 !important;
+}
+.tour {
+    background-color: #fff5e0 !important;
+}
+.tour .mainContainer p{
+    text-align: left !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: #00000085 !important;
+}
+.tour .tour-arrow{
+    background-color: #763202 !important;
+    border-color: #fff !important;
+}
+.tour .titleContainer h3{
+    color: #fff !important;
+    font-family: Nexa-Bold !important;
 }
 .logoutBtn img {
     width: 100%;
@@ -1833,7 +1873,7 @@ input:checked + .slider:before {
 
 #header .rightHeader{
     position: absolute;
-    top: 50px;
+    top: 0px;
     right: 10px;
 }
 #header .rightHeader ul{
@@ -1844,6 +1884,8 @@ input:checked + .slider:before {
 #header .rightHeader ul li{
     text-align: center;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 99999999;
 }
 #header .rightHeader select:focus{
     outline: none;
@@ -1885,6 +1927,12 @@ input:checked + .slider:before {
 .registerHeader .commonWooden{
     background-image: url("../img/logoBadge.png") !important;
 }
+#registrationModal .modal-content{
+    width: 30%;
+}
+#registrationModal .modalHeader{
+    margin-bottom: 50px;
+}
 #buyCow .modal-content{
     width: 25%;
     background-image: url(../img/Group\ 36.png);
@@ -1906,6 +1954,38 @@ input:checked + .slider:before {
     font-size: 18px;
     font-family: "Bangers", cursive;
     letter-spacing: 2px;
+}
+#registrationModal .modalBody{
+    height: 550px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#registrationModal .modalFooter{
+    text-align: center;
+    margin: 20px 0px;
+}
+.backDrop{
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .2;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+#registrationModal .modalFooter button{
+    background-color: #763202;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: #fff5e0;
+    cursor: pointer;
+}
+#registrationModal .modalBody h3{
+    margin-bottom: 20px;
+}
+#registrationModal .modalBody p{
+    margin-bottom: 5px;
 }
 #buyCow .modalBody{
     position: absolute;

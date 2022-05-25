@@ -88,6 +88,8 @@ function copyText(text) {
      $(document).on("click", "span.close", function() {
          $("#myModal").css("display", "none")
      })
+     
+      
 
      $(document).on("click", "#buyCow span.close", function() {
          $("#buyCow").css("display", "none")

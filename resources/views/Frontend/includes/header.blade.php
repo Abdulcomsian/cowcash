@@ -253,6 +253,11 @@
                      <img src="{{asset('frontend/assets/img/topdesktube.png')}}" alt="">
                  </a>
              </li>
+              <li>
+                 <a class="tourBtn">
+                     <img style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt="">
+                 </a>
+             </li>
          </ul>
      </div>
  </section>
@@ -315,7 +320,7 @@
                  <div class="statistics commonWooden loginUser ">
                      <span class="statisticsText">MY FARM</span>
                      <a href="{{url('account/farm')}}">
-                         <p>Buy Cows</p>
+                         <p class="buyCows">Buy Cows</p>
                      </a>
                      <a href="{{url('account/store')}}">
                          <p>Milk Warehouse</p>
@@ -456,11 +461,13 @@
 
                              </div>
                          </a>
-                         <a href="{{url('/account')}}" class="cursor-pointer">
+                       <div class="profileDiv">
+                       <a href="{{url('/account')}}" class="cursor-pointer">
                              <div class="inputDiv myProfile">
                                  <label for="">Profile</label>
                              </div>
                          </a>
+                       </div>
                          <a href="{{url('account/settings')}}" class="cursor-pointer">
                              <div class="inputDiv accountSetting">
                                  <label for="">Account Settings</label>
@@ -472,9 +479,12 @@
              </td>
              <td class="statistics commonWooden loginUser header_col2" style="min-width: 113px !important;">
                  <span class="statisticsText">MY FARM</span>
+                 <div class="buyCows">
                  <a href="{{url('account/farm')}}">
                      <p>Buy Cows</p>
                  </a>
+                 </div>
+                
                  <a href="{{url('account/store')}}">
                      <p>Milk warehouse</p>
                  </a>
@@ -545,6 +555,11 @@
              <li>
                  <a href="https://www.youtube.com/">
                      <img src="{{asset('frontend/assets/img/topdesktube.png')}}" alt="">
+                 </a>
+             </li>
+              <li>
+                 <a class="tourBtn">
+                     <img style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt="">
                  </a>
              </li>
          </ul>

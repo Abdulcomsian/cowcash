@@ -28,6 +28,40 @@
   @php
   $packages=\App\Models\Packages::get();
   @endphp
+  <div id="registrationModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modalHeader">
+        <h1>Rules of the project</h1>
+      </div>
+      <div class="modalBody">
+        <h3>Rules</h3>
+        <p>Generalities.</p>
+        <p>1.1. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="">cow cash</a>, hereinafter referred to as "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)</p>
+        <p>1.2. To start getting the service a participant accepts all the rules of the present agreement fully and unconditionally and if you do not agree with any of the terms of the present agreement, the coordinator advises you to disclaim using the service.</p>
+        <p>1.3. The coordinator and the participant accept the order and form of concluding of the present agreement as equivalent in legal validity to an agreement made in a written form.</p>
+        <p>1.4. Administration of coin-farm.net reserves the right to make any changes and additions to the User's agreement and to the site without noticing the users.</p>
+        <br>
+        <br>
+        <p>2.1 Terms and definitions.</p>
+        <p>Game is an activity aimed at satisfying a person's needs in entertainment, pleasure, stress relieving and also at the development of specified skills in the form of free self-expression which doesn't concern achieving utilitarian aims and which bring gladness per se.</p>
+        <p>Playing ground is a hardware-software complex located in the global network Internet aimed for organizing of leisure time.</p>
+        <p>Game "coin-farm.net" is an on-line game - isolated and unique name of the playing ground owned by the coordinator and located at the addresses on the Internet coin-farm.net, on which the Coordinator provides the service for the participant in organizing his/her leisure time in the order and on terms stated in the present agreement.</p>
+        <p>Game inventory is a conditional playing units which are called "gold" for playing the game, the place of accounting and storing of which is game account of the participant in a computer in the format of accounting system of the playing ground "coin-farm.net".</p>
+        <p>Game account is a virtual account of the participant of the game which is provided by the coordinator to every participant on the playing ground for accounting the game inventory (gold coins, gold bars and crystals).</p>
+        <br>
+        <br>
+        <p>3.1. The subject of the present Agreement is providing service by the Coordinator for the Participant to organize leisure time in the game "coin-farm.net" according to the terms of the present Agreement. Under such service, particularly, the following ones are meant: service at buying - selling game inventory, accounting significant information: actions on the game account, providing arrangements for identification and security of the participants, development software which is integrated in the playing ground and external appliances, informational and other service necessary for organizing the game and providing service for the participant during the game on the playing ground of the coordinator.</p>
+        <p>3.2. The game in general as all it's elements and any other conjugate external playing appliances are made solely for entertaining. The participant admits that all activities in the game on the playing ground are entertainment. The participant agrees that according to the characteristics of the account his/her extent of involving in the game will be accessible in different degree.</p>
+        <p>3.3. The participant agrees that he/she is personally responsible for all the actions done with the game inventory (gold coins, gold bars and crystals): buying, selling, input and output and also for any actions on the playing ground: creating, buying-selling, operations with all playing objects and other game attributes and objects used for the playing process.</p>
+        <p>3.4. The participant agrees that extent and possibility of participating in entertainment on the server of the Game are the main characteristics of the rendered service.</p>
+      </div>
+      <p class="acceptText" style="font-family: Nexa-Regular !important;font-size: 14px; margin-top: 20px;"><input type="checkbox" name="" id="" required="required" checked> I have read and accept the &nbsp; <a style="display:contents; color: #ffd9a9;" href="https://accrualhub.com/public/rules">rules</a> of the project: </p>
+      <div class="modalFooter">
+        <button>I have read and accept the rules of the project</button>
+      </div>
+    </div>
+  </div>
   <div id="myModal" class="modal">
     <!-- Modal content -->
     <div class="modal-content">
@@ -137,4 +171,25 @@
     </div>
   </div>
 </body>
+<script>
+    $("#termCondition").click(function(){
+            $("#registrationModal").css("display","block");
+            $("#termCondition").prop("checked", true);
+            $(".modal-content .acceptText input").prop("checked", true)
+        })
+        $("#registrationModal .modalFooter button").click(function(){
+            $("#registrationModal").css("display","none");
+        })
+        $(".modal-content .acceptText input").click(function(){
+          if($(".modal-content .acceptText input").attr("checked")=="checked"){
+            console.log("hello")
+            $(".modal-content .acceptText input").prop("checked", false)
+            $("#termCondition").prop("checked", false);
+          } else{
+            console.log("hello2")
+            $(".modal-content .acceptText input").prop("checked", true)
+            $("#termCondition").prop("checked", true)
+          }
+        })
+</script>
 </html>
