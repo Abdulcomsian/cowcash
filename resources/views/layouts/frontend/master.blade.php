@@ -19,14 +19,29 @@
     }
     #first{
       left: 82px;
-    top: 65px;
+      top: 94px;
     }
     #second{
-      margin-top: 15px;
-    opacity: 1;
-    top: 93px;
+    top: 180px;
     left: 80px;
 
+    }
+    #third{
+      top: 120px;
+    left: 80px;
+    }
+    #fourth{
+      top: 150px;
+    left: 75px;
+    }
+    #sixth{
+      top: 10px;
+    left: 10px;
+    }
+    #seventh{
+      top: 90px;
+    left: 72px;
+    z-index: 99999999999;
     }
   </style>
   @toastr_css
@@ -161,11 +176,46 @@
       </div>
     </div>
   </div>
+  <div id="welcomeModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modalHeader">
+        <h5>Welcome, user123</h5>
+      </div>
+      <div class="modalBody">
+        <p>We boldly declare that our project is stable and always fulfills its commitments. This can be confirmed by thousands of users who are consistently earning money in our project. Nevertheless, the administration of the project does not guarantee the derivation of profit from participation in the project. Your income depends entirely on you and on the deepness of participation in the project!</p>
+      </div>
+      <div class="modalFooter">
+        <button>Great</button>
+      </div>
+    </div>
+  </div>
+  <div id="congratulationModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modalHeader">
+        <h5>Congratulations, <b>user123</b></h5>
+      </div>
+      <div class="modalBody">
+        <p>You have successfully accomplished the tour! Accept these <b style='color:#763202 !important;font-family: Nexa-Bold !important;'>20 silver coins</b> and begin an exciting adventure in the big world of Coin Farm!</p>
+      </div>
+      <div class="modalFooter">
+        <button>Great</button>
+      </div>
+    </div>
+  </div>
   <script src="{{asset('js/jquery.guide.js')}}"></script>
   <script src="{{asset('js/tour.js')}}"></script>
   <script>
+    $(document).ready(function(){
+      var path=window.location.pathname;
+      if(path=="/home"){
+        $("#welcomeModal").css("display","block")
+      }
+    })
     const tour = new Tour("Demo");
-    $(document).on("click", ".tourBtn",function(){
+    $(document).on("click", "#welcomeModal .modalFooter button",function(){
+      $("#welcomeModal").css("display","none")
       console.log("Hello")
       tour.start();
       $(".backDrop").css("display","block")
@@ -174,9 +224,9 @@
         accentColor: "#2478b5"
     });
     tour.addStep("first", {
-        title: "User Profile",
-        text: "You can click here to View our Profile",
-        hook: ".profileDiv",
+        title: "How to Buy Cow",
+        text: "In this section you can buy Cows!<br>You have 300 silver coins on the balance, go to the section «Buy Cow» and make your first purchase.",
+        hook: ".buyCows",
         onShow: function() {
             // Function
         },
@@ -187,7 +237,7 @@
             },
             {
                 text: "Next",
-                action: "tour.next()"
+                action: "buyCowPage()"
             }
         ],
         links: [
@@ -197,7 +247,7 @@
     tour.addStep("second", {
         title: "Buy Cow",
         text: "You can click here to Buy cows",
-        hook: ".buyCows",
+        hook: ".cowShop .multipleDiv .commonDiv",
         onShow: function() {
             // Function
         },
@@ -218,6 +268,9 @@
     function stop(){
       tour.stop()
       $(".backDrop").css("display","none")
+    }
+    function buyCowPage(){
+      window.location='account/farm';
     }
   </script>
 </body>
