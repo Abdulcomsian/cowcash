@@ -38,7 +38,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'bonus_time',
         'withdraw',
         'visitorip',
-        'crystal'
+        'crystal',
+        'is_servey',
     ];
 
     /**

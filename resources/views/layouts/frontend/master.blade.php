@@ -180,7 +180,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modalHeader">
-        <h5>Welcome, user123</h5>
+        <h5>Welcome, <b>{{Auth::user()->name ?? ''}}</b></h5>
       </div>
       <div class="modalBody">
         <p>We boldly declare that our project is stable and always fulfills its commitments. This can be confirmed by thousands of users who are consistently earning money in our project. Nevertheless, the administration of the project does not guarantee the derivation of profit from participation in the project. Your income depends entirely on you and on the deepness of participation in the project!</p>
@@ -194,13 +194,17 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modalHeader">
-        <h5>Congratulations, <b>user123</b></h5>
+        <h5>Congratulations, <b>{{Auth::user()->name ?? ''}}</b></h5>
       </div>
       <div class="modalBody">
         <p>You have successfully accomplished the tour! Accept these <b style='color:#763202 !important;font-family: Nexa-Bold !important;'>20 silver coins</b> and begin an exciting adventure in the big world of Coin Farm!</p>
       </div>
       <div class="modalFooter">
-        <button>Great</button>
+        <form method="post" action="{{route('servey')}}">
+         @csrf
+         <input type="hidden" name="servey">
+        <button type="submit">Great</button>
+        </form>
       </div>
     </div>
   </div>
@@ -208,9 +212,13 @@
   <script src="{{asset('js/tour.js')}}"></script>
   <script>
     $(document).ready(function(){
+      var is_servey='{{Auth::user()->is_servey ?? ''}}';
       var path=window.location.pathname;
       if(path=="/home"){
-        $("#welcomeModal").css("display","block")
+        if(is_servey!='1')
+        {
+        $("#welcomeModal").css("display","block");
+        }
       }
     })
     const tour = new Tour("Demo");
