@@ -16,6 +16,7 @@ class HomeController extends Controller
     public function index()
     {
         try {
+        
             $allusers = User::where('role', 'farmer')->count();
             $newuser = User::where('role', 'farmer')->where('created_at', '>', Carbon::now()->subDays(1))->count();
             $todayActive = User::where('role', 'farmer')->whereDate('created_at', Carbon::today())->count();
@@ -25,7 +26,13 @@ class HomeController extends Controller
             return back();
         }
     }
+    
 
+    public function servey(Request $request)
+    {
+        User::find(Auth::user()->id)->update(['is_servey'=>1]);
+        return redirect('/home');
+    }
 
 
     //cron job for calculating per hour milk cow and user should be active
