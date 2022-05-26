@@ -148,10 +148,13 @@
         accentColor: "#2478b5"
     });
     $(document).ready(function(){
+        $('html, body').animate({scrollTop: '+=250px'}, 800);
       var path=window.location.pathname;
       if(path=="/account/farm"){
+        
         tour.start();
       $(".backDrop").css("display","block")
+      
       }
     })
     
@@ -169,8 +172,8 @@
                 action: "milkWareHouse()"
             },
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "buyCowBack()"
             },
             
         ],
@@ -187,8 +190,8 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "milkWareBack()"
             },
             {
                 text: "Next",
@@ -210,8 +213,8 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "tour.previous()"
             },
             {
                 text: "Next",
@@ -233,8 +236,8 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "tour.previous()"
             },
             {
                 text: "Next",
@@ -256,8 +259,8 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "tour.previous()"
             },
             {
                 text: "Next",
@@ -279,8 +282,8 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "tour.previous()"
             },
             {
                 text: "Next",
@@ -308,6 +311,17 @@
         tour.stop()
         $(".backDrop").css("display","none");
         $("#congratulationModal").css("display","block")
+    }
+    function buyCowBack(){
+        window.location='/home';
+    }
+    function shopCow(){
+        tour.back()
+    }
+    function milkWareBack(){
+        $('html, body').animate({scrollTop: '+=250px'}, 800);
+        $("#startRightNow .midDiv").css("z-index","99999999999999");
+        tour.previous();
     }
   </script>
   @endsection
