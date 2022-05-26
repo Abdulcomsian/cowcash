@@ -72,7 +72,25 @@ class RegisterController extends Controller
         $countries = Country::get();
         return view('auth.register', compact('countries'));
     }
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
 
+        //event(new Registered($user = $this->create($request->all())));
+        $user = $this->create($request->all());
+
+
+
+        $this->guard()->login($user);
+
+        if ($response = $this->registered($request, $user)) {
+            return $response;
+        }
+
+        return $request->wantsJson()
+                    ? new JsonResponse([], 201)
+                    : redirect($this->redirectPath());
+    }
     /**
      * Create a new user instance after a valid registration.
      *

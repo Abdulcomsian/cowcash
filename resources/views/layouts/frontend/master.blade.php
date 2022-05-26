@@ -232,10 +232,6 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
-            },
-            {
                 text: "Next",
                 action: "buyCowPage()"
             }
@@ -253,8 +249,8 @@
         },
         buttons: [
             {
-                text: "Finish",
-                action: "stop()"
+                text: "Back",
+                action: "tour.previous()"
             },
             {
                 text: "Next",
