@@ -11,6 +11,7 @@ use App\Models\UserReferal;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 use Cookie;
 use DB;
 use Carbon\Carbon;
@@ -72,6 +73,8 @@ class RegisterController extends Controller
         $countries = Country::get();
         return view('auth.register', compact('countries'));
     }
+
+
     public function register(Request $request)
     {
         $this->validator($request->all())->validate();
@@ -88,8 +91,8 @@ class RegisterController extends Controller
         }
 
         return $request->wantsJson()
-                    ? new JsonResponse([], 201)
-                    : redirect($this->redirectPath());
+            ? new JsonResponse([], 201)
+            : redirect($this->redirectPath());
     }
     /**
      * Create a new user instance after a valid registration.
@@ -116,7 +119,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'silver_coins' => DB::raw('silver_coins +300'),
-            'crystal'=>DB::raw('crystal + 0.1'),
+            'crystal' => DB::raw('crystal + 0.1'),
             'role' => 'farmer',
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
@@ -127,21 +130,21 @@ class RegisterController extends Controller
         ]);
         if ($user) {
             UserReferal::create([
-                'referred_by'=>$referred_by,
-                'referal_coins'=> DB::raw('referal_coins +250')
+                'referred_by' => $referred_by,
+                'referal_coins' => DB::raw('referal_coins +250')
             ]);
             //check parent
             if ($user->referred_by != NULL) {
                 User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
             }
-        if($user){
-            $userCows = UserCows::create([
-                'user_id' => $user['id'],
-                'cow_id' => 1,
-                'qty' => 1,
-                'per_hours_litters' => 5,
-            ]);
-        }
+            if ($user) {
+                $userCows = UserCows::create([
+                    'user_id' => $user['id'],
+                    'cow_id' => 1,
+                    'qty' => 1,
+                    'per_hours_litters' => 5,
+                ]);
+            }
             return $user;
         }
     }
