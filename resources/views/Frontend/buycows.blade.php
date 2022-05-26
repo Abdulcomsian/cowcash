@@ -4,8 +4,18 @@
   @endsection
   @section('css')
   <style>
+      .backDrop{
+          height:173vh;
+      }
+      #startRightNow .midDiv{
+        position: relative;
+        z-index: 99999;
+      }
       .cursor-pointer {
           cursor: pointer;
+      }
+      .cowShop .detail-scroll-rtl{
+          position: relative;
       }
 
       .bgColor {
@@ -118,6 +128,9 @@
   </section>
   @endsection
   @section('script')
+  <link rel="stylesheet" href="{{asset('css/tour-default.css')}}">
+  <script src="{{asset('js/jquery.guide.js')}}"></script>
+  <script src="{{asset('js/tour.js')}}"></script>
   <script>
          $("#myBtnModal").on("click", function() {
          if ($("#myModal").css("display") == "none") {
@@ -128,5 +141,173 @@
              event.preventDefault();
              $('#buyCow').css('display','flex')
          });
+  </script>
+   <script>
+       const tour = new Tour("Demo");
+    tour.style({
+        accentColor: "#2478b5"
+    });
+    $(document).ready(function(){
+      var path=window.location.pathname;
+      if(path=="/account/farm"){
+        tour.start();
+      $(".backDrop").css("display","block")
+      }
+    })
+    
+
+    tour.addStep("second", {
+        title: "How to buy Cow",
+        text: "Select the amount of Cow you want to purchase and click <b style='color:#763202 !important;'>Buy</b>",
+        hook: ".cowShop .multipleDiv",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Next",
+                action: "milkWareHouse()"
+            },
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            
+        ],
+        links: [
+           
+        ]
+    });
+    tour.addStep("third", {
+        title: "How to Collect Milk",
+        text: "You have successfully bought a Cow !<br>After some time you will be able to collect Milk in your «Warehouse»!",
+        hook: ".milkWareHouse",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            },
+           
+            
+        ],
+        links: [
+           
+        ]
+    });
+    tour.addStep("fourth", {
+        title: "How to Sell Milk",
+        text: "Sell the collected milk and get silver coins to make purchases and withdraw funds.",
+        hook: ".sellMilk",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            },
+           
+            
+        ],
+        links: [
+           
+        ]
+    });
+    tour.addStep("fifth", {
+        title: "Withdrawal of Funds",
+        text: "Exchange withdrawal resources for real money and withdraw them to your wallet in the section «Withdraw funds».",
+        hook: ".withDraw",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            },
+           
+            
+        ],
+        links: [
+           
+        ]
+    });
+    tour.addStep("sixth", {
+        title: "How to buy silver coins",
+        text: "Click «Add funds» to purchase silver coins and buy more cows!",
+        hook: ".addFunds",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "tour.next()"
+            },
+           
+            
+        ],
+        links: [
+           
+        ]
+    });
+    tour.addStep("seventh", {
+        title: "Affliate Program",
+        text: "Invite your friends to the game and get additional resources with our affiliate program!",
+        hook: ".myRefferal",
+        onShow: function() {
+            // Function
+        },
+        buttons: [
+            {
+                text: "Finish",
+                action: "stop()"
+            },
+            {
+                text: "Next",
+                action: "congratulationModal()"
+            },
+           
+            
+        ],
+        links: [
+           
+        ]
+    });
+    function stop(){
+      tour.stop()
+      $(".backDrop").css("display","none")
+    }
+    function buyCowPage(){
+      window.location='account/farm';
+    }
+    function milkWareHouse(){
+        $("#startRightNow .midDiv").css("z-index","-1");
+        tour.next()
+    }
+    function congratulationModal(){
+        tour.stop()
+        $(".backDrop").css("display","none");
+        $("#congratulationModal").css("display","block")
+    }
   </script>
   @endsection

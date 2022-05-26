@@ -454,6 +454,7 @@
                                  {{number_format((float)\Auth::user()->silver_coins, 2, '.', '');}} [<a href="#" style="color:#005f90">Add Funds</a>]
                              </label>
                          </div>
+                         <div class="withDraw">
                          <a href="{{url('account/payment')}}">
                              <div class="inputDiv withDrawFunds">
                                  <img src="{{asset('images/112.png')}}" alt="" style="width: 15px;vertical-align: middle;">
@@ -461,6 +462,8 @@
 
                              </div>
                          </a>
+                         </div>
+                        
                        <div class="profileDiv">
                        <a href="{{url('/account')}}" class="cursor-pointer">
                              <div class="inputDiv myProfile">
@@ -484,13 +487,17 @@
                      <p>Buy Cows</p>
                  </a>
                  </div>
-                
-                 <a href="{{url('account/store')}}">
-                     <p>Milk warehouse</p>
-                 </a>
+                <div class="milkWareHouse">
+                    <a href="{{url('account/store')}}">
+                        <p>Milk warehouse</p>
+                    </a>
+                 </div>
+                 <div class="sellMilk">
                  <a href="{{url('account/market')}}">
                      <p>Milk Selling</p>
                  </a>
+                 </div>
+                 
                  <a href="{{url('account/bonus')}}">
                      <p>Daily Bonus</p>
                  </a>
@@ -500,9 +507,11 @@
                  <!-- <a href="{{url('account/promotion')}}">
                      <p>Referral Promotion</p>
                  </a> -->
-                 <a href="{{url('account/referal')}}">
-                     <p>My referrals</p>
-                 </a>
+                <div class="myRefferal">
+                    <a href="{{url('account/referal')}}">
+                        <p>My referrals</p>
+                    </a>
+                </div>
                  <a href="{{url('account/promo_material')}}">
                      <p>Promo materials</p>
                  </a>
