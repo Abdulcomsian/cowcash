@@ -214,12 +214,16 @@
   <script src="{{asset('js/tour.js')}}"></script>
   <script>
     $(document).ready(function(){
+      var screenWidth=$(window).width();
+      
       var is_servey='{{Auth::user()->is_servey ?? ''}}';
       var path=window.location.pathname;
       if(path=="/home"){
-        if(is_servey!='1')
-        {
-        $("#welcomeModal").css("display","block");
+        if(screenWidth>=992){
+          if(is_servey!='1')
+          {
+          $("#welcomeModal").css("display","block");
+          }
         }
       }
     })
