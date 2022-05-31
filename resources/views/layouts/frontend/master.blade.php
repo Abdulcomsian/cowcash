@@ -171,8 +171,10 @@
       <div class="modalHeader">
         <h1>Insufficient Balance</h1>
       </div>
-      <div class="modalBody">
+      <div class="modalBody commonDiv">
         <p>You don't have enough silver coin for purchasing this cow.</p>
+        <br>
+        <button class="cursor-pointer addFunds" style="float:none !important" id="myBtn">Add Fund</button>
       </div>
     </div>
   </div>
@@ -276,6 +278,7 @@
     function buyCowPage(){
       window.location='account/farm';
     }
+    
   </script>
 </body>
 </html>

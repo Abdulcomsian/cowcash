@@ -36,16 +36,16 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/dashboard', [AdminController::class, 'dashboard']);
 });
 
-
-
+Route::group(['middleware' => ['auth']],function () {
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+});
 // Frontend user farmer work
 
 
 //front end home page without login
 // Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/', [UserOrderController::class, 'registration']);
+Route::get('/', [UserOrderController::class, 'registration'])->name('/homee');
 Route::post('completed-servey',[HomeController::class, 'servey'])->name('servey');
-Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/payments', function () {
     $payments=PayOff::with('user')->where(['status'=>1,'gateway'=>'P'])->orderBy('id', 'desc')->take(20)->get();
     return view('Frontend.payments',compact('payments'));
