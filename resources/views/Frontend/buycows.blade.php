@@ -149,21 +149,23 @@
   </script>
    <script>
        const tour = new Tour("Demo");
-    tour.style({
-        accentColor: "#2478b5"
-    });
+        tour.style({
+            accentColor: "#2478b5"
+        });
     $(document).ready(function(){
-         var is_servey='{{Auth::user()->is_servey ?? ''}}';
-        $('html, body').animate({scrollTop: '+=250px'}, 800);
-      var path=window.location.pathname;
-      if(path=="/account/farm"){
-         if(is_servey!='1')
-        {
-          tour.start();
-          $(".backDrop").css("display","block")
-        }
-      
-      }
+          var is_servey='{{Auth::user()->is_servey ?? ''}}';
+            $('html, body').animate({scrollTop: '+=250px'}, 800);
+           var path=window.location.pathname;
+              if(path=="/account/farm"){
+                
+                 if(is_servey != '1')
+                {
+                    tour.start();
+                  
+                  $(".backDrop").css("display","block");
+                }
+              
+              }
     })
     
 
