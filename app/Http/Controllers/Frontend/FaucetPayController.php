@@ -317,6 +317,50 @@ class FaucetPayController extends FaucetController
                         }
                     }
                 }
+
+                //cows work here
+                if($Packagedata)
+                {
+                    if($Packagedata->amount==10)
+                    {
+                        $qty=1;
+                    }elseif($Packagedata->amount==50)
+                    {
+                        $qty=3;
+                    }elseif($Packagedata->amount==100)
+                    {
+                        $qty=10;
+                    }
+                    elseif($Packagedata->amount==150)
+                    {
+                        $qty=10;
+                    }
+                    elseif($Packagedata->amount==200)
+                    {
+                        $qty=10;
+                    }
+                    $usercoworder = UserOrder::create([
+                        'user_id' => $user->id,
+                        'cow_id' => 1,
+                        'coins_to_pay' => $qty*150,
+                        'qty' => $qty,
+                        'status' => 1,
+                    ]);
+                    if ($usercoworder) {
+                        UserCows::create([
+                            'user_id' => $user->id,
+                            'cow_id' => 1,
+                            'qty' => $qty,
+                            'per_hours_litters' => 5,
+                            'total_milk' => 0,
+                            'available_milk' => 0,
+                            'sold_milk' => 0,
+                            'collect_per_hour_milk' => 0,
+                            'cronjobtime'=>date('Y-m-d H:i:s'),
+                            'status' => 1,
+                        ]);
+                    }
+                }
             }
             
             toastSuccess("Pyment Successfully");

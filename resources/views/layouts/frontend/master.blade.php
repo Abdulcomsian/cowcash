@@ -174,7 +174,7 @@
       <div class="modalBody commonDiv">
         <p>You don't have enough silver coin for purchasing this cow.</p>
         <br>
-        <button class="cursor-pointer addFunds" style="float:none !important" id="myBtn">Add Fund</button>
+        <button class="cursor-pointer" style="float:none !important" id="myBtn">Add Fund</button>
       </div>
     </div>
   </div>
@@ -224,6 +224,7 @@
           {
           $("#welcomeModal").css("display","block");
           }
+
         }
       }
     })
@@ -284,5 +285,6 @@
     }
     
   </script>
+  @yield('script')
 </body>
 </html>
