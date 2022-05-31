@@ -141,6 +141,11 @@
              event.preventDefault();
              $('#buyCow').css('display','flex')
          });
+         $(document).on('click',"button#myBtn",function() {
+                $('#buyCow').css('display','none');
+                $("#myModal").css("display", "block");
+             
+     })
   </script>
    <script>
        const tour = new Tour("Demo");
@@ -148,12 +153,15 @@
         accentColor: "#2478b5"
     });
     $(document).ready(function(){
+         var is_servey='{{Auth::user()->is_servey ?? ''}}';
         $('html, body').animate({scrollTop: '+=250px'}, 800);
       var path=window.location.pathname;
       if(path=="/account/farm"){
-        
-        tour.start();
-      $(".backDrop").css("display","block")
+         if(is_servey!='1')
+        {
+          tour.start();
+          $(".backDrop").css("display","block")
+        }
       
       }
     })

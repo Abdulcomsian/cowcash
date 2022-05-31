@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Models\UserCows;
+use App\Models\UserOrder;
 use App\Models\Country;
 use App\Models\UserReferal;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -16,6 +17,7 @@ use Cookie;
 use DB;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Auth;
 
 class RegisterController extends Controller
 {
@@ -138,12 +140,27 @@ class RegisterController extends Controller
                 User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
             }
             if ($user) {
-                $userCows = UserCows::create([
-                    'user_id' => $user['id'],
+                 $usercoworder = UserOrder::create([
+                    'user_id' => $user->id,
                     'cow_id' => 1,
+                    'coins_to_pay' => 150,
                     'qty' => 1,
-                    'per_hours_litters' => 5,
+                    'status' => 1,
                 ]);
+                if ($usercoworder) {
+                    UserCows::create([
+                        'user_id' => $user->id,
+                        'cow_id' => 1,
+                        'qty' => 1,
+                        'per_hours_litters' => 5,
+                        'total_milk' => 0,
+                        'available_milk' => 0,
+                        'sold_milk' => 0,
+                        'collect_per_hour_milk' => 0,
+                        'cronjobtime'=>date('Y-m-d H:i:s'),
+                        'status' => 1,
+                    ]);
+                }
             }
             return $user;
         }
