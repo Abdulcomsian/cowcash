@@ -254,12 +254,14 @@
                  </a>
              </li>
               <li>
+                @if(Route::current()->getName() != 'home')
                 <form method="post" action="{{url('account/collect-bonus')}}">
                      @csrf
                      
                      <button type="submit" style="background: none;border:none"><img  style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt=""></button>
                  
                  </form>
+                 @endif
                  <!-- <a class="tourBtn">
                      <img style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt="">
                  </a> -->
@@ -573,11 +575,13 @@
                  </a>
              </li>
               <li>
+               @if(Route::current()->getName() != 'home')
                  <form method="post" action="{{url('account/collect-bonus')}}">
                      @csrf
                      
                      <button type="submit" style="cursor:pointer;background: none;border:none"><img  style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt=""></button>
                  </form>
+                 @endif
                  <!-- <a class="tourBtn">
                      <img style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt="">
                  </a> -->

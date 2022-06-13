@@ -128,8 +128,6 @@
             <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
                 <input type="text" name="merchant_username" value="obaidjani">
                 <br>
-                <input type="text" name="item_description" value="Purchase Silver Coins and Crystals">
-                <br>
                 <input type="text" name="amount1"  id="amount1" class="fcheckout-sum-val">
                 <br>
                 <input type="text" name="currency1" value="USD">
