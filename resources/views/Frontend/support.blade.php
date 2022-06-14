@@ -34,7 +34,7 @@
                 
                 <hr style="border: 0.5px solid #e1d7d785;">
                 <p class="yourIncome">To apply for the technical support sign in, please!<br>
-                    Email: support@cow-cash.com</p>
+                    Email: support@cow4cash.com</p>
                   </div>
           </div>
 
