@@ -35,10 +35,10 @@
                             1.1. The coordinator and the participant accept the order and form of concluding of the present agreement as equivalent in legal validity to an agreement made in a written form. 
   
                             <br>
-                            1.2. Administration of <a href="https://accrualhub.com/public/home">cashcow.net</a> reserves the right to make any changes and additions to the User's agreement and to the site without noticing the users. 
+                            1.2. Administration of <a href="https://cow4cash.com/">cow4cash.com</a> reserves the right to make any changes and additions to the User's agreement and to the site without noticing the users. 
 
                             <br>
-                            1.3. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="https://accrualhub.com/public/home">cashcow.net</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
+                            1.3. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="https://cow4cash.com/">cow4cash.com</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
                             <br>
                             1.4. To start getting the service a participant accepts all the rules of the present agreement fully and unconditionally and if you do not agree with any of the terms of the present agreement, the coordinator advises you to disclaim using the service.
                         </p>
@@ -50,16 +50,16 @@
                             <br>
                             Game is an activity aimed at satisfying a person's needs in entertainment, pleasure, stress relieving and also at the development of specified skills in the form of free self-expression which doesn't concern achieving utilitarian aims and which bring gladness per se.
                             <br>
-                            Game "<a href="https://accrualhub.com/public/home">cashcow.net</a>" is an on-line game - isolated and unique name of the playing ground owned by the coordinator and located at the addresses on the Internet <a href="https://accrualhub.com/public/home">cashcow.net</a>, on which the Coordinator provides the service for the participant in organizing his/her leisure time in the order and on terms stated in the present agreement.
+                            Game "<a href="https://cow4cash.com/">cow4cash.com</a>" is an on-line game - isolated and unique name of the playing ground owned by the coordinator and located at the addresses on the Internet <a href="https://cow4cash.com/">cow4cash.com</a>, on which the Coordinator provides the service for the participant in organizing his/her leisure time in the order and on terms stated in the present agreement.
                             <br>
-                            Game inventory is a conditional playing units which are called "Silver" for playing the game, the place of accounting and storing of which is game account of the participant in a computer in the format of accounting system of the playing ground "<a href="https://accrualhub.com/public/home">cashcow.net</a>".
+                            Game inventory is a conditional playing units which are called "Silver" for playing the game, the place of accounting and storing of which is game account of the participant in a computer in the format of accounting system of the playing ground "<a href="https://cow4cash.com/">cow4cash.com</a>".
                             <br>
                             Game account is a virtual account of the participant of the game which is provided by the coordinator to every participant on the playing ground for accounting the game inventory (Silver coins, Silver bars and Gold bars).
                             <br><br>
                             3.1. The game in general as all it's elements and any other conjugate external playing appliances are made solely for entertaining. The participant admits that all activities in the game on the playing ground are entertainment. The participant agrees that according to the characteristics of the account his/her extent of involving in the game will be accessible in different degree. 
               
                             <br>
-                            3.2. The subject of the present Agreement is providing service by the Coordinator for the Participant to organize leisure time in the game "<a href="https://accrualhub.com/public/home">cashcow.net</a>" according to the terms of the present Agreement. Under such service, particularly, the following ones are meant: service at buying - selling game inventory, accounting significant information: actions on the game account, providing arrangements for identification and security of the participants, development software which is integrated in the playing ground and external appliances, informational and other service necessary for organizing the game and providing service for the participant during the game on the playing ground of the coordinator.
+                            3.2. The subject of the present Agreement is providing service by the Coordinator for the Participant to organize leisure time in the game "<a href="https://cow4cash.com/">cow4cash.com</a>" according to the terms of the present Agreement. Under such service, particularly, the following ones are meant: service at buying - selling game inventory, accounting significant information: actions on the game account, providing arrangements for identification and security of the participants, development software which is integrated in the playing ground and external appliances, informational and other service necessary for organizing the game and providing service for the participant during the game on the playing ground of the coordinator.
                             <br>
                             3.3. The participant agrees that he/she is personally responsible for all the actions done with the game inventory (Silver coins, Silver bars and Gold bars): buying, selling, input and output and also for any actions on the playing ground: creating, buying-selling, operations with all playing objects and other game attributes and objects used for the playing process.
                             <br>
@@ -69,7 +69,7 @@
                             <br><br>
                             4.1 Rights and duties of the Participant.
                             <br>
-                            4.1.1. Only those people can take part in the game "<a href="https://accrualhub.com/public/home">cashcow.net</a>" who have reached legal ability according to the law of their countries. All consequences of non-compliance with the term are entrusted to the participant.
+                            4.1.1. Only those people can take part in the game "<a href="https://cow4cash.com/">cow4cash.com</a>" who have reached legal ability according to the law of their countries. All consequences of non-compliance with the term are entrusted to the participant.
                             <br>
                             4.1.2. Extend and way of participating in the game are decided on the participant him/herself but can't contradict the present Agreement and the rules of the playing ground.
                             <br>
