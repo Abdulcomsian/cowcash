@@ -203,7 +203,7 @@
                  <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
                      <div class="multiImg">
                          <img src="{{asset('frontend/assets/img/Layer 6.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('frontend/assets/img/bitcoin 2.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('frontend/assets/img/bitcoin2.png')}}" alt="" class="img-fluid">
                      </div>
                      <div class="text-center" style="text-align: center;">
                          <img style="width: 50px; padding-top:9px;" src="{{asset('frontend/assets/img/payeer.png')}}" alt="" class="img-fluid">
