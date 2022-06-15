@@ -253,13 +253,23 @@
                      <img src="{{asset('frontend/assets/img/topdesktube.png')}}" alt="">
                  </a>
              </li>
+<<<<<<< HEAD
               <!-- <li>
+=======
+              <li>
+                @if(Route::current()->getName() != 'home')
+>>>>>>> ca49d4e2ce3bfebbff2f3f827c780d9416832646
                 <form method="post" action="{{url('account/collect-bonus')}}">
                      @csrf
                      
                      <button type="submit" style="background: none;border:none"><img  style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt=""></button>
                  
+<<<<<<< HEAD
                  </form> -->
+=======
+                 </form>
+                 @endif
+>>>>>>> ca49d4e2ce3bfebbff2f3f827c780d9416832646
                  <!-- <a class="tourBtn">
                      <img style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt="">
                  </a> -->
@@ -572,12 +582,22 @@
                      <img src="{{asset('frontend/assets/img/topdesktube.png')}}" alt="">
                  </a>
              </li>
+<<<<<<< HEAD
               <!-- <li>
+=======
+              <li>
+               @if(Route::current()->getName() != 'home')
+>>>>>>> ca49d4e2ce3bfebbff2f3f827c780d9416832646
                  <form method="post" action="{{url('account/collect-bonus')}}">
                      @csrf
                      
                      <button type="submit" style="cursor:pointer;background: none;border:none"><img  style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt=""></button>
+<<<<<<< HEAD
                  </form> -->
+=======
+                 </form>
+                 @endif
+>>>>>>> ca49d4e2ce3bfebbff2f3f827c780d9416832646
                  <!-- <a class="tourBtn">
                      <img style="width: 137px; height: 137px;" src="{{asset('images/1.png')}}" alt="">
                  </a> -->

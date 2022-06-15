@@ -35,10 +35,17 @@
                             1.1. The coordinator and the participant accept the order and form of concluding of the present agreement as equivalent in legal validity to an agreement made in a written form. 
   
                             <br>
+<<<<<<< HEAD
                             1.2. Administration of <a href="https://cow4cash.com/">cow4cash.com</a> reserves the right to make any changes and additions to the User's agreement and to the site without noticing the users. 
 
                             <br>
                             1.3. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="https://cow4cash.com/">cow4cash.com</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
+=======
+                            1.2. Administration of <a href="{{url('/home')}}">cashcow.net</a> reserves the right to make any changes and additions to the User's agreement and to the site without noticing the users. 
+
+                            <br>
+                            1.3. Present User's Agreement (hereinafter referred to as "Agreement") regulates the order and terms of rendering of service by the site <a href="{{url('/home')}}">cashcow.net</a>, hereinafter referred to as  "Coordinator", and is addressed to an individual who desires to get service from the stated site (hereinafter referred to as "Participant".)
+>>>>>>> ca49d4e2ce3bfebbff2f3f827c780d9416832646
                             <br>
                             1.4. To start getting the service a participant accepts all the rules of the present agreement fully and unconditionally and if you do not agree with any of the terms of the present agreement, the coordinator advises you to disclaim using the service.
                         </p>
@@ -127,7 +134,7 @@
                             <br>
                             4.2.1.4. to comply with the privacy policy with regard to the Participant's personal data in the order of pt. 6 of the present agreement;
                             <br>
-                            4.2.1.5. Order of payoffs by the user is restricted by availability of <a href="account/coins">Gold Bars</a> on the account. 1 Silver gives the right to withdraw 1 EUR (or other user's account currency).
+                            4.2.1.5. Order of payoffs by the user is restricted by availability of <a href="{{url('account/coins')}}">Gold Bars</a> on the account. 1 Silver gives the right to withdraw 1 EUR (or other user's account currency).
                             Silver Coin are credited for replenishment of the silver coins account:
                             <br>
                             - your replenishments of the account (40% of the paid sum);
