@@ -26,7 +26,7 @@ Home Page
     
     <div class="midDiv">
         <p class="rightNow">EARN MONEY BY PLAYING</p>
-        <p>Cow fram with money withdrawal <br> Stable earnings with our affiliate program</p>
+        <p>Cow farm with money withdrawal <br> Stable earnings with our affiliate program</p>
         <div class="multiDiv">
             <div class="leftDiv">
                 <div class="imgDiv">
