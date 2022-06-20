@@ -130,6 +130,7 @@
                 <br>
                 <input type="text" name="amount1"  id="amount1" class="fcheckout-sum-val">
                 <br>
+                <input type="text" name="item_description" value="Payment for merchant">
                 <input type="text" name="currency1" value="USD">
                 <input type="text" name="currency2" value="BTC">
                 <input type="text" name="custom" value="" class="fpackage_id">
