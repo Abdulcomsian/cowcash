@@ -126,7 +126,7 @@
             </form>
              <!-- Faucet payement -->
             <form style="display: none" id="faucetform" action="https://faucetpay.io/merchant/webscr" method="post">
-                <input type="text" name="merchant_username" value="obaidjani">
+                <input type="text" name="merchant_username" value="cowcashbtc">
                 <br>
                 <input type="text" name="amount1"  id="amount1" class="fcheckout-sum-val">
                 <br>
