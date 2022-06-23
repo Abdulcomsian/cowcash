@@ -64,7 +64,7 @@ class PaymentPayeerController extends PayeerClassController
                     $PackageTxn->user_id = $user;
                     $PackageTxn->uid = $m_orderid;
                     $PackageTxn->package_id = $pkgid;
-                    $packageTxn->qty=$pkgqty;
+                    $PackageTxn->qty=$pkgqty;
                     $PackageTxn->payment_method = 'Payeer';
                     $PackageTxn->payment_status = 0;
                     $PackageTxn->save();
