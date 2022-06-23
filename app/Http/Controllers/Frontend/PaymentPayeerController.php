@@ -24,16 +24,16 @@ class PaymentPayeerController extends PayeerClassController
     }
     public function createPayment(Request $request)
     {
-        $pkgid = $request->package_id;
+         $pkgid = $request->package_id;
         $pkgqty=$request->pkgqty;
         $user = Auth::user();
         $user = $user->id;
-        $m_shop =  '1614478614';
+        $m_shop =  '1672659702';
         $m_orderid = mt_rand();
         $m_amount = number_format($request->purchase_sum, 2, '.', '');
         $m_curr = 'USD';
         $m_desc = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
-        $m_key = '123';
+        $m_key = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
 
         $arHash = array(
             $m_shop,
