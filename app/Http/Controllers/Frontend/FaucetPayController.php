@@ -44,8 +44,8 @@ class FaucetPayController extends FaucetController
             } elseif ($crystal < $amount) {
                 toastError('You have not enough Crystals');
                 return Redirect::back();
-            } elseif($amount <= 0.04){
-                toastError('Minuminum 5 dolar can be withdrawl');
+            } elseif($amount < 0.03){
+                toastError('Minuminum 0.04 dollar can be withdrawl');
                 return Redirect::back();
             }else {
                  //Faucet payout code here
@@ -120,7 +120,7 @@ class FaucetPayController extends FaucetController
                 toastError('You have not enough Crystals');
                 return Redirect::back();
             } elseif($amount<150){
-                toastError('Minuminum 150 dolar can be withdrawl For BTC');
+                toastError('Minuminum 150 dollar can be withdrawl For BTC');
                 return Redirect::back();
             }else {
                  //Faucet payout code here
