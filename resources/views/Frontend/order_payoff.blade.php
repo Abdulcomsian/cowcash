@@ -118,7 +118,7 @@ About Us
                             <select name="currency" id="currency" class="form-control">
                                 <option value="USD">USD</option>
                             </select>
-                            <input type="text" name="amount" id="amount" class="form-control" value="5.04" readonly>
+                            <input type="text" name="amount" id="amount" class="form-control" value="5.03" readonly>
                         </div>
                         <button type="button" class="commonBtn cursor-pointer payeerpayoff">Order Payoff</button>
                          
