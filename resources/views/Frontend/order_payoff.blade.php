@@ -109,8 +109,8 @@ About Us
                             <input type="text" name="wallet" class="form-control" required>
                         </div>
                         <div class="inputDiv">
-                            <label for="">You give resources [Min. <b>39170</b> Silver Block]:</label>
-                            <input type="number" name="silverblocks" id="sum" class="form-control" value="39170" required>
+                            <label for="">You give resources [Min. <b>388</b> Silver Block]:</label>
+                            <input type="number" name="silverblocks" id="sum" class="form-control" value="388" required>
                             
                         </div>
                         <div class="inputDiv">
@@ -118,7 +118,7 @@ About Us
                             <select name="currency" id="currency" class="form-control">
                                 <option value="USD">USD</option>
                             </select>
-                            <input type="text" name="amount" id="amount" class="form-control" value="5.03" readonly>
+                            <input type="text" name="amount" id="amount" class="form-control" value="0.04" readonly>
                         </div>
                         <button type="button" class="commonBtn cursor-pointer payeerpayoff">Order Payoff</button>
                          
