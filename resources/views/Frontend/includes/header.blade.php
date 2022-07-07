@@ -243,7 +243,7 @@
                      <option value="Русский">Русский</option>
                  </select>
              </li> -->
-             <li>
+             <li style="z-index: 0">
                  <a href="/faq">
                      <img src="{{asset('frontend/assets/img/faq-new.png')}}" alt="">
                  </a>
@@ -564,7 +564,7 @@
                      <option value="Русский">Русский</option>
                  </select>
              </li> -->
-             <li>
+             <li style="z-index: 0">
                  <a href="/faq">
                      <img src="{{asset('frontend/assets/img/faq-new.png')}}" alt="">
                  </a>

@@ -39,10 +39,12 @@ class FaucetPayController extends FaucetController
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
             if ($silverblocks >  $ursilverblocks) {
-                toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
+                $error='You dont have enough <a href="/rules" style="z-index:999999999">gold bars</a> to complete this withdrawal';
+                toastError($error);
                 return Redirect::back();
             } elseif ($crystal < $amount) {
-                toastError('You have not enough Crystals');
+                 $error='You dont have enough <a href="/rules" style="z-index:999999999">Crystals</a> to complete this withdrawal';
+                toastError($error);
                 return Redirect::back();
             } elseif($amount < 0.03){
                 toastError('Minuminum 0.04 dollar can be withdrawl');

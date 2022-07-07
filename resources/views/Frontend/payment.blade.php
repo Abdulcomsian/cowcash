@@ -23,6 +23,10 @@ About Us
     .multiCards a{
         margin: 0px 5px;
     }
+    #toast-container{
+        z-index: 999999999 !important;
+    }
+
 </style>
 @endsection
 
