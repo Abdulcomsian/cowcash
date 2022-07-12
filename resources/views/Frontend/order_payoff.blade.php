@@ -19,6 +19,11 @@ About Us
     td{
         font-size: 13px !important;
     }
+    .notify-warning {
+    color: #8a6d3b !important;
+    background-color: #fff1d5 !important;
+    border-color: #f7e6c2 !important;
+}
 </style>
 @endsection
 @php
@@ -36,6 +41,7 @@ About Us
 @endphp
 
 @section('content')
+
 <section id="startRightNow">
     <div class="midDiv orderPayoff">
         <div class="bgColor">
@@ -44,13 +50,18 @@ About Us
                 <div class="payoffHeader">
                     <p>{{ $title}}</p>
                 </div>
-                 
+                @if( session()->get('error')=='goldbarerror')
+                <p class="notify-warning">You dont have enough <a href="/account/coins">gold bars</a> to complete this withdrawal</p>
+                @elseif(session()->get('error')=='crystalerror')
+                <p class="notify-warning">You dont have enough <a href="/account/coins">Crystals</a> to complete this withdrawal</p>
+                @endif
                 <div class="formDiv">
                     @if ($errors->any())
                      @foreach ($errors->all() as $error)
                          <div class="text-danger" style="color: red">{{$error}}</div>
                      @endforeach
                      @endif
+
                      <br>
                     @if($id==1)
                     <form action="{{url('payoff')}}" method="post" class="withdrawform">
