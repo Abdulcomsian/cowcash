@@ -50,6 +50,7 @@ About Us
                 <div class="payoffHeader">
                     <p>{{ $title}}</p>
                 </div>
+                <br>
                 @if( session()->get('error')=='goldbarerror')
                 <p class="notify-warning">You dont have enough <a href="/account/coins">gold bars</a> to complete this withdrawal</p>
                 @elseif(session()->get('error')=='crystalerror')
