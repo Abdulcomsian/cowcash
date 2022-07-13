@@ -47,7 +47,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/', [UserOrderController::class, 'registration'])->name('/homee');
 Route::post('completed-servey',[HomeController::class, 'servey'])->name('servey');
 Route::get('/payments', function () {
-    $payments=PayOff::with('user')->where(['status'=>1,'gateway'=>'P'])->orderBy('id', 'desc')->take(20)->get();
+    $payments=PayOff::with('user')->where(['status'=>1])->orderBy('id', 'desc')->take(20)->get();
     return view('Frontend.payments',compact('payments'));
 });
 Route::get('/rules', function () {
