@@ -52,9 +52,9 @@ About Us
                 </div>
                 <br>
                 @if( session()->get('error')=='goldbarerror')
-                <p class="notify-warning">You dont have enough <a href="/account/coins">Silver Blocks</a> to complete this withdrawal</p>
+                <p class="notify-warning">You dont have enough <a href="#" class="addFunds">Silver Blocks</a> to complete this withdrawal</p>
                 @elseif(session()->get('error')=='crystalerror')
-                <p class="notify-warning">You dont have enough <a href="/account/coins">Crystals</a> to complete this withdrawal</p>
+                <p class="notify-warning">You dont have enough <a href="#" class="addFunds">Crystals</a> to complete this withdrawal</p>
                 @endif
                 <div class="formDiv">
                     @if ($errors->any())

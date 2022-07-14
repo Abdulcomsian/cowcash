@@ -16,6 +16,14 @@
             $("#loginForm").css("display", "block");
         }
     });
+
+    $(".addFunds").on('click',function(){
+        if ($("#myModal").css("display") == "none") {
+                $("#myModal").css("display", "block")
+             
+         }
+      })
+
      $("#myBtn").on("click", function() {
          if ($("#myModal").css("display") == "none") {
                 $("#myModal").css("display", "block")
