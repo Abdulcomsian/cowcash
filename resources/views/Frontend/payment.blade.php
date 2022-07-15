@@ -43,12 +43,12 @@ About Us
                     <div class="multiCards">
                         <a href="{{url('account/payment',1)}}">
                             <div class="cardDiv">
-                                <img src="{{asset('images/Group42.png')}}" alt="">
+                                <img src="{{asset('images/Payeer1.png')}}" alt="">
                             </div>
                         </a>
                         <a href="{{url('account/payment',2)}}">
                         <div class="cardDiv">
-                            <img src="{{asset('images/faucetpay.jpg')}}" alt="">
+                            <img src="{{asset('images/faucetpay1.png')}}" alt="">
                         </div>
                         </a>
                         <a href="{{url('account/payment',3)}}">
