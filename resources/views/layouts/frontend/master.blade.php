@@ -148,11 +148,11 @@
             <div class="paymentMulti">
                 <!-- click payment for payyer -->
               <div class="paymentDiv cursor-pointer" onclick="pay_ps()">
-                <img src="{{asset('images/Group42.png')}}" alt="">
+                <img src="{{asset('images/Payeer1.png')}}" alt="">
               </div>
                <!-- click payment for faucet-->
               <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
-                <img src="{{asset('images/faucetpay.jpg')}}" alt="">
+                <img src="{{asset('images/faucetpay1.png')}}" alt="">
               </div>
               <div class="paymentDiv">
                 <img src="{{asset('images/Group 39.png')}}" alt="">
