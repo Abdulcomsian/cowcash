@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Cows;
 use App\Models\UserCows;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -97,5 +98,11 @@ class AdminController extends Controller
     public function profile()
     {
         return view('backend.Admin.profile');
+    }
+    //paymetns
+    public function admin_payments()
+    {
+        $payments=Payment::latest()->limit(100)->get();
+         return view('backend.Admin.payments',compact('payments'));
     }
 }
