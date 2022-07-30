@@ -85,7 +85,6 @@ class RegisterController extends Controller
         $user = $this->create($request->all());
 
 
-
         $this->guard()->login($user);
 
         if ($response = $this->registered($request, $user)) {

@@ -83,6 +83,15 @@ About Us
                             </select>
                             <input type="text" name="amount" id="amount" class="form-control" value="0.04" readonly>
                         </div>
+                        <div class="inputDiv ">
+                          {!! NoCaptcha::display() !!}
+                          @error('g-recaptcha-response')
+                          <span class="invalid-feedback" style="display: block !important" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
+                        </div>
+
                         <button type="button" class="commonBtn cursor-pointer payeerpayoff">Order Payoff</button>
                          
                        <!--  <button type="submit" class="commonBtn cursor-pointer">Order Payoff</button> -->
@@ -106,6 +115,14 @@ About Us
                                 <option value="USD">USD</option>
                             </select>
                             <input type="text" name="amount" id="amount" class="form-control" value="" readonly>
+                        </div>
+                        <div class="inputDiv ">
+                          {!! NoCaptcha::display() !!}
+                          @error('g-recaptcha-response')
+                          <span class="invalid-feedback" style="display: block !important" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
                         </div>
                         <button type="button" class="commonBtn cursor-pointer payeerpayoff">Order Payoff</button>
                          
@@ -131,6 +148,14 @@ About Us
                                 <option value="USD">USD</option>
                             </select>
                             <input type="text" name="amount" id="amount" class="form-control" value="0.04" readonly>
+                        </div>
+                        <div class="inputDiv ">
+                          {!! NoCaptcha::display() !!}
+                          @error('g-recaptcha-response')
+                          <span class="invalid-feedback" style="display: block !important" role="alert">
+                            <strong>{{ $message }}</strong>
+                          </span>
+                          @enderror
                         </div>
                         <button type="button" class="commonBtn cursor-pointer payeerpayoff">Order Payoff</button>
                          
@@ -179,6 +204,7 @@ About Us
 </section>
 @endsection
 @section('script')
+
 <script>
     (function(){
 
