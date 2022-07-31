@@ -112,6 +112,7 @@
                             </span>
                             @enderror
                         </div>
+                        
 
                         <div class="flex-sb-m w-full mb-5 pt-3">
                             <div class="forgot-col">

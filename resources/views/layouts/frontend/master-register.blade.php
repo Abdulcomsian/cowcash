@@ -171,6 +171,7 @@
     </div>
   </div>
 </body>
+{!! NoCaptcha::renderJs() !!}
 <script>
     $("#termCondition").click(function(){
             $("#registrationModal").css("display","block");

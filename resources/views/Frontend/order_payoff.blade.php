@@ -213,8 +213,9 @@ About Us
         if (typeof exp === 'undefined' || +exp === 0) {
             return Math[type](value);
         }
+        console.log("first "+ value);
         value = +value;
-        console.log(value);
+        console.log("second " +value);
         exp = +exp;
         // If the value is not a number or the exp is not an integer...
         if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
@@ -256,7 +257,6 @@ About Us
         var serebro_usd_1 = Math.floor10($silverblocks / 7387, -2);
         var serebro_usd_2 = Math.floor10(((serebro_usd_1 * fee) - fee2), -2);
         var serebro_usd = Math.floor10(serebro_usd_2, -2);
-        console.log(serebro_usd);
         $('#amount').val(serebro_usd);
         var sum11 = ($silverblocks / 1);
         $('#sum').val( ((sum11).toFixed(0) ));
