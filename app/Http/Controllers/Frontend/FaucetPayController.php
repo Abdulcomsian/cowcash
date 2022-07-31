@@ -28,7 +28,7 @@ class FaucetPayController extends FaucetController
             'wallet' => ['required'],
             'amount' => ['required'],
             'silverblocks'=>['required'],
-            'g-recaptcha-response' => 'required|captcha',
+             'g-recaptcha-response' => 'required|captcha',
         ],[
             'wallet' => 'Please Enter Wallet',
         ]);
@@ -39,10 +39,14 @@ class FaucetPayController extends FaucetController
 
             $silverblocks = $request->silverblocks;
             $ursilverblocks = Auth::user()->withdraw;
+            $fee = 0.95;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
-            $serebro_usd_1 = 1 / 7834 * $silverblocks;
+            $serebro_usd_1 = $silverblocks / 7387;
             $amount=bcdiv($serebro_usd_1, 1, 2);
+            $amount=$amount*$fee;
+            $amount=bcdiv($amount, 1, 2);
+
             if ($silverblocks >  $ursilverblocks) {
                 $error='You dont have enough <a href="/account/coins" style="z-index:999999999">Silver Blocks</a> to complete this withdrawal';
                 toastError($error);
@@ -114,14 +118,25 @@ class FaucetPayController extends FaucetController
 
     public function sendpaybtc(Request $request)
     {
+        $request->validate([
+            'wallet' => ['required'],
+            'amount' => ['required'],
+            'silverblocks'=>['required'],
+            'g-recaptcha-response' => 'required|captcha',
+        ],[
+            'wallet' => 'Please Enter Wallet',
+        ]);
         try 
          {
             $silverblocks = $request->silverblocks;
             $ursilverblocks = Auth::user()->withdraw;
+            $fee = 0.95;
             $crystal = Auth::user()->crystal;
             $amount = $request->amount;
-            $serebro_usd_1 = 1 / 7834 * $silverblocks;
+            $serebro_usd_1 = $silverblocks / 7387;
             $amount=bcdiv($serebro_usd_1, 1, 2);
+            $amount=$amount*$fee;
+            $amount=bcdiv($amount, 1, 2);
             if ($silverblocks >  $ursilverblocks) {
                 toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
                 return Redirect::back();
