@@ -112,6 +112,9 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class="col-md-6 d-flex" style="margin-bottom:10px">
+                                      {{$userreferal->links("pagination::bootstrap-4")}}
+                                   </div>
                                 </div>
                                 <div class="silverBlock">
                                     <p style="margin: 20px 0px; color: #000 !important;">You will get <b style="font-family: Nexa-Bold;">Gold bars</b> from every replenishment of the Silver coins account by the person invited by you. <b style="font-family: Nexa-Bold;">Affiliate income is unlimited.</b> Even several invited people can bring you more than 1000 Gold bars.</p>
