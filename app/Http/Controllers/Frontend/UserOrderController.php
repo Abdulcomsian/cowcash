@@ -73,7 +73,7 @@ class UserOrderController extends Controller
     //referal
     public function Referal()
     {
-      $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->paginate(5);
+      $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->paginate(20);
       $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->count();
       return view('Frontend.myreferals', compact('userreferal','referalcount'));
     }
