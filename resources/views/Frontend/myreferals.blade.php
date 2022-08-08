@@ -33,6 +33,14 @@
        .copyText:hover .hoverText{
            display: block;
        }
+       .pagination
+       {
+        display: flex;
+        list-style: none;
+       }
+       .pagination li{
+        padding:10px;
+       }
    </style>
    @endsection
 
@@ -112,7 +120,7 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="col-md-6 d-flex" style="margin-bottom:10px">
+                                    <div class="col-md-6" style="margin-bottom:10px">
                                       {{$userreferal->links("pagination::bootstrap-4")}}
                                    </div>
                                 </div>

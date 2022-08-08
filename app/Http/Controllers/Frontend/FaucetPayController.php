@@ -143,7 +143,7 @@ class FaucetPayController extends FaucetController
             } elseif ($crystal < $amount) {
                 toastError('You have not enough Crystals');
                 return Redirect::back();
-            } elseif($amount<150){
+            } elseif($amount < 150){
                 toastError('Minuminum 150 dollar can be withdrawl For BTC');
                 return Redirect::back();
             }else {
