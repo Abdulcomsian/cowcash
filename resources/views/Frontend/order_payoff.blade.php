@@ -106,7 +106,7 @@ About Us
                         </div>
                          <div class="inputDiv">
                             <label for="">You give resources [Min. <b>1175100</b> Silver Block]:</label>
-                            <input type="number" name="silverblocks" id="sum" class="form-control" value="1175100" required>
+                            <input type="number" name="silverblocks" id="sum2" class="form-control" value="1175100" required>
                             
                         </div>
                         <div class="inputDiv">
@@ -114,7 +114,7 @@ About Us
                             <select name="currency" id="currency" class="form-control">
                                 <option value="USD">USD</option>
                             </select>
-                            <input type="text" name="amount" id="amount" class="form-control" value="" readonly>
+                            <input type="text" name="amount" id="btcamount" class="form-control" value="0.00358734" readonly>
                         </div>
                         <div class="inputDiv ">
                           {!! NoCaptcha::display() !!}
@@ -261,27 +261,19 @@ About Us
         var sum11 = ($silverblocks / 1);
         $('#sum').val( ((sum11).toFixed(0) ));
         $('#sum').val($('#sum').val().replace(/[^0-9]/g,''));
-        // if ($silverblocks < 0 || $silverblocks == 0) {
-        //     $("#sum").val(0);
-        //     $("#amount").val(0);
-        // } else {
-        //     $converttodolar = 1 / 7834 * $silverblocks;
-        //     $("#amount").val($converttodolar.toFixed(2));
-        // }
-
-
     })
 
-    // var m_btc = 0.015;
-    // var fee = 0.95;
-    // var fee2 = 0;
-    // var ser_btc = 311189198;
-    // $("#sum2").on('keyup', function() {
-    //     $silverblocks = $("#sum2").val();
-    //     var serebro_btc_1 = Math.floor10($silverblocks/ ser_btc, -8);
-    //     var serebro_btc_2 = Math.floor10(((serebro_btc_1 * fee) - fee2), -8);
-    //     $('#amount').val(serebro_btc_2);
-    // })
+    var m_btc = 0.015;
+    var fee = 0.95;
+    var fee2 = 0;
+    var ser_btc = 311189198;
+    $("#sum2").on('keyup', function() {
+        console.log("here");
+        $silverblocks = $("#sum2").val();
+        var serebro_btc_1 = Math.floor10($silverblocks/ ser_btc, -8);
+        var serebro_btc_2 = Math.floor10(((serebro_btc_1 * fee) - fee2), -8);
+        $('#btcamount').val(serebro_btc_2);
+    })
 
     $(document).on('click','.payeerpayoff',function(){
         var fee = 0.95;

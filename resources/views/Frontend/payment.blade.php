@@ -51,7 +51,7 @@ About Us
                         <a href="{{url('account/payment',3)}}">
                         <div class="cardDiv">
                            
-                             <div style="color:#000;font-family: Nexa-Bold !important;font-size: 14px;">Coming Soon</div>
+                             <div style="color:green;font-family: Nexa-Bold !important;font-size: 14px;">Active</div>
                              <img src="{{asset('images/Group 39.png')}}" alt="">
                            
                         </div>
