@@ -546,7 +546,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .inputDiv  .g-recaptcha{
     transform: scale(0.70);
   }

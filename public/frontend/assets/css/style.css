@@ -2500,6 +2500,10 @@ margin: auto;
 }
 
 @media (max-width: 568px) {
+    
+    .inputDiv  .g-recaptcha{
+         transform: scale(0.70);
+    }
     .dailyBonusTable table thead td{
         font-size: 10px;
     }
