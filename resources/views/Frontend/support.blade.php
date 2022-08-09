@@ -30,7 +30,7 @@
           <div class="bgColor">
               <p class="rightNow">HELP SERVICES</p>
               <div class>
-                <p class="title">Before creating a new application, make sure that there is no necessary for you information in  <span style="color: #dc5f05">Frequently Asked Questions</span></p>
+                <p class="title">Before creating a new application, make sure that there is no necessary for you information in  <a  style="color: #dc5f05" href="/faq"><span style="color: #dc5f05">Frequently Asked Questions</span></a></p>
                 
                 <hr style="border: 0.5px solid #e1d7d785;">
                 <p class="yourIncome">To apply for the technical support sign in, please!<br>

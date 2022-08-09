@@ -164,7 +164,7 @@ function copyText(text) {
         $("#checkoutqty").hide();
         $(".multiPackage .packageDiv").css('opacity','0.3');
          qty = $(this).val();
-         if (qty < 0) {
+         if (qty < 1) {
              qty=1;
              $(this).val(qty);
               $("#customcoins").text(Math.ceil(qty * 8243.244));
