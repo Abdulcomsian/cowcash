@@ -546,7 +546,12 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-
+@media (min-width: 576px) {
+  .inputDiv  .g-recaptcha{
+    transform: scale(0.70);
+  }
+}
+.inputDiv .g-recaptcha{transform: scale(0.70);}
 @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
