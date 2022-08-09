@@ -43,7 +43,7 @@ Registraion
         left: 7%;
     }
     .inputDiv  .g-recaptcha{
-        transform: scale(0.70);
+        transform: scale(0.60);
     }
 </style>
 @endsection
