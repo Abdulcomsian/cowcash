@@ -197,14 +197,14 @@ Registraion
                                         </span>
                                         @enderror
                                 </div>
-                                <!-- <div class="inputDiv ">
+                                <div class="inputDiv ">
                                   {!! NoCaptcha::display() !!}
                                   @error('g-recaptcha-response')
                                   <span class="invalid-feedback" style="display: block !important" role="alert">
                                     <strong>{{ $message }}</strong>
                                   </span>
                                   @enderror
-                              </div> -->
+                              </div>
                         </div>
                             </div>
                          <div class="multiBtn">
