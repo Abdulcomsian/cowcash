@@ -57,7 +57,7 @@
                               </tr>
                               <tr class="trd">
                                   <td class="tdp">Paid out:</td>
-                                  <td class="tdp">0.00  {{Auth::user()->currency}}
+                                  <td class="tdp">{{$totalpaidout ?? '0.00'}}  {{Auth::user()->currency}}
                                   </td>
                               </tr>
                               <tr class="trd">

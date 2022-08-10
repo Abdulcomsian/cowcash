@@ -27,12 +27,13 @@ class UserOrderController extends Controller
     public function Profile()
     {
         $totalmilk=UserCows::where('user_id',Auth()->user()->id)->sum('total_milk');
+        $totalpaidout=PayOff::where('user_id',Auth::user()->id)->sum('sum');
         $invitedby='';
         if(Auth::user()->referred_by)
         {
             $invitedby=User::where('affiliate_id',Auth::user()->referred_by)->first();
         }
-        return view('Frontend.profile',compact('totalmilk','invitedby'));
+        return view('Frontend.profile',compact('totalmilk','invitedby','totalpaidout'));
     }
     //settings
     public function Settings()
