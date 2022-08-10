@@ -2724,8 +2724,7 @@ margin: auto;
         margin-bottom: 80px;
     }
 }
-
-
+/* for landscape screen */
 @media screen and (orientation:landscape) and (max-width: 900px){
     #startRightNow .midDiv .multiDiv {
         margin-bottom: 60px;
@@ -3310,3 +3309,4 @@ margin: auto;
         top: -16px !important;
     } */
 }
+
