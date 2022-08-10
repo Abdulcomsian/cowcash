@@ -4,6 +4,16 @@ ALL Payments List
 @endsection
 @section('css')
 @include('layouts.sweetalert.sweetalert_css')
+<style type="text/css">
+    .pagination
+       {
+        display: flex;
+        list-style: none;
+       }
+       .pagination li{
+        padding:10px;
+       }
+</style>
 @endsection
 @section('content')
 
@@ -17,7 +27,7 @@ ALL Payments List
                         <div class="card-header border-bottom">
                             <div class="row">
                                 <div class="col-md-6 ">
-                                    <h2>Payments List</h2>
+                                    <h2>Withdraw List</h2>
                                 </div>
                             </div>
                         </div>
@@ -27,10 +37,10 @@ ALL Payments List
                                     <tr>
                                         <th class="th-sm">#S-No</th>
                                         <th class="th-sm">User</th>
-                                        <th class="th-sm">Sum</th>
+                                        <th class="th-sm">Wallet</th>
+                                        <th class="th-sm">Balance</th>
                                         <th class="th-sm">Payment Method</th>
                                         <th class="th-sm">Date</th>
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -39,18 +49,22 @@ ALL Payments List
                                             <tr>
                                                 <td>{{$loop->index+1}}</td>
                                                 <td>{{$payment->user->name ?? ''}}</td>
-                                                <td>{{$payment->balance ?? ''}} {{$payment->currency}}</td>
-                                                <td> <p style="width: 19px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;">{{$payment->payment_method ?? ''}}</p></td>
+                                                <td>{{substr($payment->wallet, 0, 3) . ''}}<span style="color:red;vertical-align: sub">******</span>{{substr($payment->wallet, 7, 2) . ''}}</td>
+                                                <td>{{$payment->sum ?? ''}} {{$payment->currency}}</td>
+                                                <td> <p style="width: 19px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;">{{$payment->gateway ?? ''}}</p></td>
                                                 <td>{{$payment->created_at ?? ''}}</td>
                                             </tr>
                                          @endforeach
                                         @else
                                         <tr>
-                                            <td colspan="5">No Record Found!</td>
+                                            <td colspan="6">No Record Found!</td>
                                         </tr>
                                         @endif
                                 </tbody>
                             </table>
+                             <div class="col-md-6" style="margin-bottom:10px">
+                                      {{$payments->links("pagination::bootstrap-4")}}
+                             </div>
                         </div>
                     </div>
                 </div>

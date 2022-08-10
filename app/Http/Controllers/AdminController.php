@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Cows;
 use App\Models\UserCows;
 use App\Models\Payment;
+use App\Models\PayOff;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -104,5 +105,12 @@ class AdminController extends Controller
     {
         $payments=Payment::latest()->limit(100)->get();
          return view('backend.Admin.payments',compact('payments'));
+    }
+
+    //withdraw payments
+    public function admin_withdraw_payments(Request $request)
+    {
+         $payments=PayOff::latest()->paginate(50);
+         return view('backend.Admin.withdrawpaymetns',compact('payments'));
     }
 }

@@ -35,6 +35,8 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/', [AdminController::class, 'index']);
     Route::get('/dashboard', [AdminController::class, 'dashboard']);
     Route::get('/payments', [AdminController::class, 'admin_payments'])->name('admin.payments');
+    Route::get('/withdraw-payments', [AdminController::class, 'admin_withdraw_payments'])->name('admin.withdraw.payments');
+   
     
 });
 

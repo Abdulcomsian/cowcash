@@ -182,7 +182,7 @@ About Us
                              @foreach($lasttenpayments as $pay)
                               <tr>
                                 <td>{{$pay->sum}}</td>
-                                <td>{{substr($pay->wallet, 0, 3) . ''}}<span style="color:red">******</span>{{substr($pay->wallet, 7, 2) . ''}}</td>
+                                <td>{{substr($pay->wallet, 0, 3) . ''}}<span style="color:red;vertical-align: sub;">******</span>{{substr($pay->wallet, 7, 2) . ''}}</td>
                                 <td>{{$pay->gateway}}</td>
                                 <td>{{$pay->created_at->toDateString();}}</td>
                                 <td>{{$pay->status==1 ? 'Success':'Failed'}}</td>
