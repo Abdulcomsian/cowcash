@@ -2131,27 +2131,27 @@ margin: auto;
 }
 
 @media (max-width: 768px) {
-    #registrationModal .modal-content,
-    #welcomeModal .modal-content, #congratulationModal .modal-content {
-    width: 85%;
-    height: auto;
-}
- #registrationModal .modal-content h1{
-    font-size: 18px;
-    font-family: poppins;
-    font-weight: 600
- }
- #registrationModal .modalHeader{
-    margin-bottom: 20px;
- }
- .acceptText{
-    font-size: 12px !important;
- }
-  #registrationModal .modal-content h3{
-    font-size: 16px;
-    font-family: poppins;
-    font-weight: 400
- }
+        #registrationModal .modal-content,
+        #welcomeModal .modal-content, #congratulationModal .modal-content {
+        width: 85%;
+        height: auto;
+    }
+    #registrationModal .modal-content h1{
+        font-size: 18px;
+        font-family: poppins;
+        font-weight: 600
+    }
+    #registrationModal .modalHeader{
+        margin-bottom: 20px;
+    }
+    .acceptText{
+        font-size: 12px !important;
+    }
+    #registrationModal .modal-content h3{
+        font-size: 16px;
+        font-family: poppins;
+        font-weight: 400
+    }
     #buyCow .modal-content{
         width: 50%;
         overflow: hidden;
@@ -2267,9 +2267,9 @@ margin: auto;
     #startRightNow .midDiv .advantagesList li{
         width: 22%;
     }
-#startRightNow .midDiv .multiDiv{
-    margin-bottom: 30px;
-}
+    #startRightNow .midDiv .multiDiv{
+        margin-bottom: 30px;
+    }
     .twoThreeStep{
         display: block;
         margin-top: 30px;
@@ -2701,6 +2701,10 @@ margin: auto;
         transform: rotate(0deg);
         padding-right: 38%;
     }
+    .displayPayment{
+        text-align: center !important;
+        margin-top: 12px;
+    }
 }
 .htmlDiv .imgDiv{
     
@@ -2710,14 +2714,602 @@ margin: auto;
 #startRightNow .midDiv .multiDiv {
     margin-bottom: 60px;
 }
+
 #buyCow .modalBody p{
     font-size:16px;
 }
 #buyCow .modalHeader h1{font-size:8px !important;}
 }
+
 @media (max-width: 320px){
     #startRightNow .midDiv .multiDiv {
         margin-bottom: 80px;
     }
+}
+
+/* for landscape screen */
+@media screen and (orientation:landscape) and (max-width: 900px){
+    #startRightNow .midDiv{
+        padding-top: 60px;
+    }
+    #startRightNow .midDiv .multiDiv {
+        margin-bottom: 60px;
+    }
+    #buyCow .modalBody p{
+        font-size:16px;
+    }
+    #buyCow .modalHeader h1{font-size:8px !important;}
+    #startRightNow .midDiv .multiDiv {
+        margin-bottom: 80px;
+    }
+    .inputDiv  .g-recaptcha{
+        transform: scale(0.70);
+    }
+
+    .dailyBonusTable table thead td{
+        font-size: 10px;
+    }
+    .dailyBonustwo .imgText{
+        display: block;
+    }
+    .linkCopy p{
+        font-size: 9px !important;
+    }
+   
+    .twoThreeStep .imgTable table td {
+        font-size: 11px;
+        text-align: left;
+    }
+    .twoThreeStep .imgTable table {
+        margin-left: 0px;
+    }
+    .horizontalLine p{
+        left: 40%;
+    }
+    .twoThreeStep .paymentMethod label{
+        font-size: 12px;
+    }
+    .paymentMulti img {
+        width: 79px;
+        height: 50px;
+    }
+    .checkoutOrder .inputDiv label:nth-child(1){
+        font-size: 12px;
+        margin-right: 2px;
+    }
+    .twoThreeStep .checkoutOrder, .twoThreeStep .paymentMethod{
+        margin: 0px;
+    }
+    .multiCards{
+        flex-wrap: wrap;
+    }
+    .modalBody .multiPackage .packageDiv{
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .promoMaterial .multiSelect .selectOption{
+        width: 14%;
+    }
+    .copyText{
+        right: -10px !important;
+    }
+    .cowShop .multipleDiv .commonDiv{
+        max-width: 100%;
+        width: 80% !important;
+    }
+    .setting .main-formDiv{
+        padding: 20px 0px;
+    }
+    .profileDetails .profileTable{
+        margin: 50px 0px;
+    }
+    .registration .formDiv, .setting .formDiv{
+        max-width: 90%;
+    }
+    .registration .formDiv .inputDiv select,
+    .setting .formDiv .inputDiv input,
+    .setting .formDiv .inputDiv select{
+        font-size: 12px;
+    }
+    #startRightNow .midDiv .multiBox .imgBoxInput{
+        width: 34%;
+    }
+    #startRightNow .midDiv .multiBox{
+        justify-content: space-around !important;
+    }
+    #startRightNow .midDiv .multiBox .imgBoxInput label{
+        font-size: 9px !important;
+    }
+    .menuBtn {
+        background: #f8d06b;
+        z-index: 99999;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .headerMenu ul li .listdiv img {
+        width: 20px;
+        margin-bottom: 5px;
+    }
+
+    .headerMenu ul li p {
+        font-size: 8px;
+    }
+
+    #startRightNow .midDiv p {
+        font-size: 12px;
+        text-align: center !important;
+        margin-top: 12px;
+    }
+    .setting .formDiv .inputDiv label{
+        font-size: 10px;
+    }
+    .commonBtn{
+        width: 150px;
+        background-size: contain;
+        font-size: 12px;
+    }
+    .profileDetails .profileTable table tr td{
+        font-size: 10px;
+        line-break: anywhere;
+    }
+    #startRightNow .midDiv,
+    #startRightNow .stairDiv {
+        max-width: 80%;
+    }
+
+    #startRightNow .midDiv .menuBox .listView img {
+        width: 50px;
+    }
+
+    #startRightNow .midDiv .menuBox {
+        right: -65%;
+    }
+
+    #header .commonWooden {
+        min-width: 200px;
+    }
+
+    #startRightNow {
+        padding: 80px 0px;
+    }
+
+    #startRightNow .midDiv .multiDiv .leftDiv img,
+    #startRightNow .midDiv .multiDiv .rightDiv img {
+        width: 40px;
+    }
+
+    #startRightNow .midDiv .advantagesList img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #startRightNow .midDiv .startNowView .leftDiv .imgDiv img {
+        width: 120px;
+    }
+
+    #startRightNow .midDiv .startNowView .leftDiv,
+    #startRightNow .midDiv .advantagesList ul {
+        padding: 0px;
+    }
+
+    #startRightNow .midDiv .multiDiv .leftDiv p,
+    #startRightNow .midDiv .multiDiv .rightDiv p {
+        margin-left: 5px;
+    }
+
+    #startRightNow {
+        margin-top: 10px;
+    }
+
+    #startRightNow .stairDiv .listContent .firstChild {
+        top: 20px;
+    }
+
+    #startRightNow .stairDiv .secondChild {
+        top: 81px !important;
+        transform: rotate(0deg);
+    
+    }
+
+    #startRightNow .stairDiv .thirdChild {
+        top: 135px;
+        transform: rotate(6deg);
+    }
+
+    #startRightNow .stairDiv .forthChild {
+        top: 194px;
+        left: -36px;
+        line-height: 3;
+        transform: rotate(1deg);
+    }
+
+    #startRightNow .stairDiv .fifthChild {
+        top: 218px;
+        transform: rotate(6deg);
+        left: 2px;
+    }
+    #startRightNow .midDiv .multiDiv,
+    #startRightNow .midDiv .multiDiv .leftDiv, 
+    #startRightNow .midDiv .multiDiv .rightDiv{
+        align-items: initial;
+    }
+    #startRightNow .midDiv .multiDiv .leftDiv p, #startRightNow .midDiv .multiDiv .rightDiv p{
+        margin-top: 0px;
+    }
+    p#fifthChild-h2 {
+        transform: rotate(0deg);
+        padding-left: 0%;
+    }
+    p#fifthChild-p {
+        transform: rotate(0deg);
+        padding-right: 38%;
+    }
+        #registrationModal .modal-content,
+        #welcomeModal .modal-content, #congratulationModal .modal-content {
+        width: 85%;
+        height: auto;
+    }
+    #registrationModal .modal-content h1{
+        font-size: 18px;
+        font-family: poppins;
+        font-weight: 600
+    }
+    #registrationModal .modalHeader{
+        margin-bottom: 20px;
+    }
+    .acceptText{
+        font-size: 12px !important;
+    }
+    #registrationModal .modal-content h3{
+        font-size: 16px;
+        font-family: poppins;
+        font-weight: 400
+    }
+    #buyCow .modal-content{
+        width: 50%;
+        overflow: hidden;
+    }
+   
+    .copyText{
+        right: 10px !important;
+    }
+    #startRightNow .midDiv .rightNow{
+        font-size: 15px;
+    }
+    #header .commonWooden .multiBtn{
+        position: absolute;
+        top: 50px;
+        left: 40px;
+    }
+    .registerHeader .commonWooden .multiBtn:last-child{
+        top: 50px;
+        left: 40px;
+    }
+    #header .commonWooden .multiBtn:last-child{
+        top: 10px;
+        left: 0px;
+    }
+    .registerHeader .commonWooden .multiBtn:last-child{
+        top: 100px !important;
+        left: 50px !important;
+    }
+    .mobileMenu #login .multiBtn button{
+        margin: 0px !important;
+    }
+    #login .formDiv .inputDiv input{
+        width: 80% !important;
+    }
+    .registration .nav-pills{
+        width: 92% !important;
+        left: 4% !important;
+    }
+    #startRightNow .midDiv.registration .rightNow a{
+        font-size: 12px;
+    }
+    .commonBoard p{
+        position: absolute;
+        left: 0%;
+        top: 80px;
+        width: 100%;
+    }
+    .commonBoard{
+        width: 100%;
+    }
+    .registerHeader .loginForm h2{
+        font-family: "Bangers", cursive;
+        text-align: center;
+        color: #005f90;
+        font-size: 45px;
+        position: relative;
+        top: 82px;
+    }
+    .leftSideContent{
+        position: relative;
+    }
+    /* .htmlDiv img{
+        width: 100% !important;
+    } */
+    #header .statistics #commonBtn{
+        top: initial;
+    }
+    .mobileMenu #login .inputView{
+        position: relative;
+        top: 24px;
+    }
+    .mobileMenu #login .multiBtn{
+        position: relative;
+        top: 12px;
+        right: 0px;
+    }
+    #header .commonWooden .mobileStatistics #commonBtn{
+        padding: 5px 4px 12px;
+    max-width: 53% !important;
+    }
+    .mobileMenu .multiImg img {
+        width: 50px;
+        height: 50px;
+    }
+    /* .mobileMenu .payment{
+        position: relative !important;
+        top: -63px !important;
+    } */
+    /* .mobileMenu .board{
+        position: relative !important;
+        top: -73px !important;
+    } */
+    .mobileMenu #login .multiBtn button,
+    .mobileMenu #login .multiBtn a,
+    #header .commonWooden .mobileStatistics #commonBtn a{
+        width: initial !important;
+        text-align: center;
+        margin: 0px 5px;
+        background: transparent;
+        border: 0px solid #00000085;
+        color: #fff;
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+        border-radius: 3px;
+        font-size: 12px;
+    }
+    .mobileMenu #login .multiBtn #commonBtn{
+        width: 20% !important;
+    }
+    #startRightNow .midDiv .advantagesList{
+        max-width: 100%;
+    }
+    #startRightNow .midDiv .advantagesList li{
+        width: 22%;
+    }
+    #startRightNow .midDiv .multiDiv{
+        margin-bottom: 30px;
+    }
+    .twoThreeStep{
+        display: block;
+        margin-top: 30px;
+    }
+    .twoThreeStep .checkoutOrder,
+    .twoThreeStep .paymentMethod{
+        width: 100%;
+        margin: 10px;
+        padding: 0px;
+    }
+    .modal{
+        top: 8%;
+    }
+    .modal-content{
+        max-width: 90%;
+        height: 80%;
+        overflow: scroll;
+    }
+    .modalBody .multiPackage{
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+    .modalBody .multiPackage .packageDiv{
+        width: 10%;
+    }
+    .modalBody p{
+        font-size: 10px;
+    }
+    #startRightNow .midDiv .multiBox{
+        width: 100%;
+    }
+    #startRightNow .midDiv .multiBox .imgBoxInput img,
+    .multiPackage .packageDiv img{
+        width: 30px;
+    }
+    .logoutBtn{
+        top: 46px;
+    text-align: center;
+    left: 83px;
+    }
+    .loginForm .formDiv{
+        margin: 0px;
+    }
+    .bgColor {
+        background-size: inherit;
+    }
+    .multiPackage {
+        display: block;
+    }
+    .loginUser .addFunds {
+        top: 23px;
+    }
+
+    .loginUser .withDrawFunds {
+        top: 35px;
+    }
+
+    .loginUser .myProfile {
+        top: 48px;
+    }
+
+    .loginUser .accountSetting {
+        top: 64px;
+    }
+
+    .statistics.loginUser p {
+        top: 77px !important;
+    }
+    .mobileMenu .payment.loginUser p{
+        top: 76px;
+    }
+    .mobileMenu .loginUser .addFunds{
+        top: -10px;
+    }
+    .mobileMenu .loginUser .withDrawFunds {
+        top: 0px;
+    }
+    .mobileMenu .loginUser .myProfile {
+        top: 10px;
+    }
+    .mobileMenu .loginUser .accountSetting {
+        top: 22px;
+    }
+    
+    
+    
+    
+    .payment.loginUser p {
+        top: 100px;
+    }
+
+    #startRightNow .stairDiv .listContent p {
+        font-size: 12px;
+        padding: 0px;
+    }
+    #startRightNow .stairDiv .forthChild p{font-size:14px;}
+    #startRightNow .stairDiv .listContent p:last-child {
+        font-size: 10px;
+    }
+
+    #startRightNow .stairDiv .listContent .firstChild {
+        position: relative;
+        top: 18px;
+    }
+
+    #header {
+        display: flex;
+    }
+
+    #header .statistics {
+        position: relative;
+        top: -7px;
+    }
+
+    #startRightNow .stairDiv .secondChild {
+        top: 80px;
+    }
+
+    #startRightNow .stairDiv .thirdChild {
+        top: 130px;
+    }
+
+    #startRightNow .stairDiv .forthChild {
+        top: 195px;
+    }
+
+    #startRightNow .stairDiv .fifthChild {
+        top: 235px;
+    }
+
+    #header .statistics button {
+        bottom: 11%;
+        left: 30%;
+    }
+
+    #header .payment {
+        top: -16px;
+    }
+
+    #header .board {
+        top: -27px;
+    }
+
+    #header .board.commonWooden .multiBtn {
+        top: 45%;
+        left: 26%;
+    }
+
+    #header .board.commonWooden .multiBtn img {
+        width: 33px;
+    }
+
+    #header .commonWooden {
+        width: 100%;
+        max-width: 80%;
+        margin: auto;
+        height: 200px;
+    }
+
+    /* #header .statistics p {
+        position: relative;
+        top: 53px;
+    } */
+
+    .menuBtn,
+    .headerMenu {
+        display: block;
+    }
+
+    #header table,
+    #startRightNow .midDiv .menuBox {
+        display: none;
+    }
+
+    #startRightNow .midDiv {
+        max-width: 70%;
+    }
+
+    #header {
+        padding: 0px 20px;
+        margin-bottom: 50px;
+        background: #ead5b4;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 99999999;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #startRightNow .midDiv{
+        max-width: 70% !important;
+    }
+    #header .loginForm .formDiv{
+        padding: 0px;
+        position: relative;
+        top: 50px;
+    }
+    #header .commonWooden .mobileStatistics{
+        position: relative;
+        top: 73px;
+        width: 100%;
+        max-width: 90%;
+        margin: auto;
+    }
+    #header .statistics .mobileStatistics button{
+        top: initial;
+        bottom: initial;
+    }
+    #header .mobilePayment{
+        position: relative;
+        top: 100px;
+    }
+    .main-promoDiv{
+        padding: 0px !important;
+        direction: initial;
+    }
+    /* .mobileMenu .board{
+        top: -27px !important;
+    } */
+    .mobileMenu{
+        height: 93vh;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    /* .mobileMenu .payment{
+        top: -16px !important;
+    } */
 }
 
