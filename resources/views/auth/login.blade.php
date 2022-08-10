@@ -91,7 +91,7 @@
                     <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                         @csrf
                         <a href="dashboard">
-                            <div class="logo-login text-center pb-4"><img src="images/cows.png	" width="80%" height="auto"></div>
+                           <!--  <div class="logo-login text-center pb-4"><img src="images/cows.png	" width="80%" height="auto"></div> -->
                         </a>
                         <span class="login100-form-title pb-4">
                             Login to continue
@@ -112,7 +112,14 @@
                             </span>
                             @enderror
                         </div>
-                        
+                         <div class="inputDiv ">
+                              {!! NoCaptcha::display() !!}
+                              @error('g-recaptcha-response')
+                              <span class="invalid-feedback" style="display: block !important" role="alert">
+                                <strong>{{ $message }}</strong>
+                              </span>
+                              @enderror
+                        </div>
 
                         <div class="flex-sb-m w-full mb-5 pt-3">
                             <div class="forgot-col">
@@ -121,7 +128,7 @@
                                 </a>
                             </div>
                         </div>
-
+                       
 
                         <div class="container-login100-form-btn">
                             <button type="submit" class="login100-form-btn btn btn-primary">
@@ -140,6 +147,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
+      {!! NoCaptcha::renderJs() !!}
 </body>
 
 </html>

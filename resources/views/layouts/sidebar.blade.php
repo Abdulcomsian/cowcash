@@ -6,7 +6,7 @@
                 <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
                     <a class="navbar-brand w-100 mr-0" href="dashboard" style="line-height: 25px;">
                         <div class="d-table m-auto logo">
-                            <img src="{{asset('images/cows.png')}}" alt="loho" />
+                            
                         </div>
                     </a>
                     <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">

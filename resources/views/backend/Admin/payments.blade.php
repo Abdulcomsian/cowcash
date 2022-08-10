@@ -28,6 +28,7 @@ ALL Payments List
                                         <th class="th-sm">#S-No</th>
                                         <th class="th-sm">User</th>
                                         <th class="th-sm">Sum</th>
+                                        <th class="th-sm">Wallet</th>
                                         <th class="th-sm">Payment Method</th>
                                         <th class="th-sm">Date</th>
                                         </th>
@@ -40,7 +41,8 @@ ALL Payments List
                                                 <td>{{$loop->index+1}}</td>
                                                 <td>{{$payment->user->name ?? ''}}</td>
                                                 <td>{{$payment->balance ?? ''}} {{$payment->currency}}</td>
-                                                <td> <p style="width: 19px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;">{{$payment->payment_method ?? ''}}</p></td>
+                                                <td>{{$payment->purse ?? ''}}</td>
+                                                <td> <p style="width: 18px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;text-align: center;">{{$payment->payment_method ?? ''}}</p></td>
                                                 <td>{{$payment->created_at ?? ''}}</td>
                                             </tr>
                                          @endforeach

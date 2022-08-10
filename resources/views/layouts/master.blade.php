@@ -39,6 +39,7 @@
     {{--<script src="{{asset('scripts/dashboards.1.1.0.min.js')}}"></script>--}}
     {{--<script src="{{asset('scripts/app/app-chart.js')}}"></script>--}}
     <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    {!! NoCaptcha::renderJs() !!}
     @toastr_js
     @toastr_render
     @yield('script')    
