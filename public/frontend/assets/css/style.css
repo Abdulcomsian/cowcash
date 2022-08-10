@@ -2736,9 +2736,6 @@ margin: auto;
     #startRightNow .midDiv .multiDiv {
         margin-bottom: 80px;
     }
-    .commonBoard{
-        display: none;
-    }
     .inputDiv  .g-recaptcha{
         transform: scale(0.70);
     }
