@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Country;
 use App\Models\PayOff;
+use App\Models\UserReferal;
 use Auth;
 use DB;
 use Carbon\Carbon;
@@ -71,12 +72,28 @@ class UserOrderController extends Controller
         }
     }
     //referal
-    public function Referal()
+    public function Referal(Request $request)
     {
+
       $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->paginate(20);
       $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->count();
+       $list='';
+       if ($request->ajax()) {
+         foreach($userreferal as $referal)
+             {
+                $res=UserReferal::where('referred_by',$referal->referred_by)->first();
+                $list .= '<tr>';
+                $list .= '<td>'.$referal->name ?? "".'</td>';
+                $list .= '<td>'.$referal->created_at .'</td>';
+                $list .= '<td>'.$res->referal_coins.'</td>';
+                $list .='</tr>';
+             }
+                
+           return $list; 
+       }
       return view('Frontend.myreferals', compact('userreferal','referalcount'));
     }
+
        
         //when user perchase cows from admin
         public function Take_order(Request $request)
