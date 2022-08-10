@@ -72,6 +72,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="{{route('admin.withdraw.payments')}}">
+                            <i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <span>Withdraws</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link " href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             <i><img src="{{asset('images/logout-icon.png')}}"></i>
                             <span>Log out</span>

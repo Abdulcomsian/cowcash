@@ -238,6 +238,8 @@ class FaucetPayController extends FaucetController
             $payment->payment_method='F';
             $payment->operation = '+';
             $payment->currency= $currency1;
+            $paymemt->purse=$merchant_username;
+            $payment->payment_status=1;
             $payment->save();
             //
             if($custom)

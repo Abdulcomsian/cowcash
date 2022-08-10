@@ -131,7 +131,9 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    @if(count($userreferal)>0)
                                      <button class="cursor-pointer see-more" data-page="2" data-link="{{url('account/referal')}}?page=" data-div="#referals">show more</button>
+                                     @endif
                                     
                                    <!--  <div class="col-md-6" style="margin-bottom:10px">
                                       {{$userreferal->links("pagination::bootstrap-4")}}
