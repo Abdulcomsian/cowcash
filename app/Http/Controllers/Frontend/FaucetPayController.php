@@ -10,6 +10,7 @@ use App\Models\PackageTxn;
 use App\Models\User;
 use App\Models\PayOff;
 use App\Models\Packages;
+use App\Models\UserReferal;
 use DB;
 use Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -203,12 +204,13 @@ class FaucetPayController extends FaucetController
     //this si merchant side payment call back 
     public function callback(Request $request)
     {
-        $token = $_POST['token'];
-        //User::find(2)->update(['name'=>$token]);
+       $token = $_POST['token'];
+        // User::find(2)->update(['name'=>$token]);
+        // exit;
         $payment_info = file_get_contents("https://faucetpay.io/merchant/get-payment/" . $token);
         $payment_info = json_decode($payment_info, true);
 
-        // $payment_info='{"valid":true,"transaction_id":"c5c34307bdb4520179956549022a2ccee2debca4","merchant_username":"obaidjani","amount1":"1.00000000","currency1":"USD","amount2":"0.00002603","currency2":"BTC","custom":"0,2"}';
+        // $payment_info='{"valid":true,"transaction_id":"c5c34307bdb4520179956549022a2ccee2debca4","merchant_username":"cowcashbtc","amount1":"1.00000000","currency1":"USD","amount2":"0.00002603","currency2":"BTC","custom":"0,5,1"}';
         // $payment_info = json_decode($payment_info, true);
         $token_status = $payment_info['valid'];
         $merchant_username = $payment_info['merchant_username'];
@@ -238,7 +240,7 @@ class FaucetPayController extends FaucetController
             $payment->payment_method='F';
             $payment->operation = '+';
             $payment->currency= $currency1;
-            $paymemt->purse=$merchant_username;
+            $payment->purse=$merchant_username;
             $payment->payment_status=1;
             $payment->save();
             //
@@ -295,6 +297,9 @@ class FaucetPayController extends FaucetController
                     }
                     
                     User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins+'. $firstlevel), 'referal_coins' => DB::raw('referal_coins+'. $firstlevel),'crystal'=> DB::raw('crystal+'. $firstlevelcrys)]);
+                    UserReferal::where(['referred_by' => $user->referred_by,'affiliate_id'=>$user->affiliate_id])->update([
+                                            'referal_coins' => DB::raw('referal_coins+'.$firstlevel),
+                                        ]);
                     $userlevel1parent = User::where(['affiliate_id' => $user->referred_by])->first();
                     
                     if ($userlevel1parent->referred_by != NULL) {
@@ -315,6 +320,9 @@ class FaucetPayController extends FaucetController
                            
                              
                             User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                            UserReferal::where(['referred_by' => $userlevel2parent->referred_by,'affiliate_id'=>$userlevel2parent->affiliate_id])->update([
+                                            'referal_coins' => DB::raw('referal_coins+'.$secondlevel),
+                                        ]);
                             $userlevel3parent = User::where(['affiliate_id' => $userlevel2parent->referred_by])->first();
                             if ($userlevel3parent) {
                                 if($Packagedata)
@@ -327,6 +335,9 @@ class FaucetPayController extends FaucetController
                                
                                  
                                 User::where('id', $userlevel3parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$thirdlevel), 'referal_coins' => DB::raw('referal_coins+'.$thirdlevel)]);
+                                 UserReferal::where(['referred_by' => $userlevel3parent->referred_by,'affiliate_id'=>$userlevel3parent->affiliate_id])->update([
+                                            'referal_coins' => DB::raw('referal_coins+'.$thirdlevel),
+                                        ]);
                             }
                         } else {
                             if($Packagedata)
@@ -340,6 +351,9 @@ class FaucetPayController extends FaucetController
                                 }
                           
                             User::where('id', $userlevel2parent->id)->update(['silver_coins' => DB::raw('silver_coins+'.$secondlevel), 'referal_coins' => DB::raw('referal_coins+'.$secondlevel),'crystal'=>DB::raw('crystal+'.$secondlevelcrystal)]);
+                            UserReferal::where(['referred_by' => $userlevel2parent->referred_by,'affiliate_id'=>$userlevel2parent->affiliate_id])->update([
+                                            'referal_coins' => DB::raw('referal_coins+'.$secondlevel),
+                                        ]);
                         }
                     }
                 }

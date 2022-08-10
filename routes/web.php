@@ -135,9 +135,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/send',[FaucetPayController::class,'sendpay'])->name('send');
     Route::post('/btc',[FaucetPayController::class,'sendpaybtc'])->name('btc');  
 });
+
+
+
+Route::get('/faucet-callback',[FaucetPayController::class,'callback'])->name('faucet.callback');
 Route::get('/faucet-success',[FaucetPayController::class,'sucess'])->name('faucet.sucess');
 Route::get('/faucet-cancel',[FaucetPayController::class,'cancel'])->name('faucet.cancel');
-Route::post('/faucet-callback',[FaucetPayController::class,'callback'])->name('faucet.callback');
+
 
 Auth::routes(['verify' => true]);
 
