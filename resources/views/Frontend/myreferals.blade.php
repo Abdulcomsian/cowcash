@@ -41,6 +41,17 @@
        .pagination li{
         padding:10px;
        }
+
+       button{
+            width: 100%;
+            max-width: 25%;
+            margin-top: 10px;
+            background: #00669b;
+            border-radius: 5px;
+            border: none;
+            padding: 5px;
+            color: #fff;
+       }
    </style>
    @endsection
 
@@ -104,7 +115,7 @@
                                                     <td>Income in Silver Blocks</td>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="referals">
                                                 @foreach($userreferal as $referal)
                                                 <tr>
                                                     <td>{{$referal->name ?? ''}}</td>
@@ -120,9 +131,11 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="col-md-6" style="margin-bottom:10px">
+                                     <button class="cursor-pointer see-more" data-page="2" data-link="{{url('account/referal')}}?page=" data-div="#referals">show more</button>
+                                    
+                                   <!--  <div class="col-md-6" style="margin-bottom:10px">
                                       {{$userreferal->links("pagination::bootstrap-4")}}
-                                   </div>
+                                   </div> -->
                                 </div>
                                 <div class="silverBlock">
                                     <p style="margin: 20px 0px; color: #000 !important;">You will get <b style="font-family: Nexa-Bold;">Gold bars</b> from every replenishment of the Silver coins account by the person invited by you. <b style="font-family: Nexa-Bold;">Affiliate income is unlimited.</b> Even several invited people can bring you more than 1000 Gold bars.</p>
@@ -178,4 +191,35 @@
         </div>
     </section>
     
+@endsection
+@section('script')
+<script type="text/javascript">
+    $(document).unbind().on("click",".see-more",function() {
+        console.log("here");
+      $link = $(this).data('link'); //current URL
+      $page = $(this).data('page'); //get the next page #
+      $href = $link + $page; //complete URL
+        $.ajax({
+                url: $href,
+                datatype: "html",
+                type: "get",
+                beforeSend: function () {
+                    
+                }
+            })
+            .done(function (response) {
+                if (response.length == 0) {
+                    alert("We don't have more data to display :(");
+                    return;
+                }
+                 $("#referals").append(response);
+                 $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+            })
+            .fail(function (jqXHR, ajaxOptions, thrownError) {
+                console.log('Server error occured');
+            });
+     
+      $(this).data('page', (parseInt($page) + 1)); //update page #
+    });
+</script>
 @endsection
