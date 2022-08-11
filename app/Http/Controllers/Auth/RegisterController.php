@@ -66,7 +66,13 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country_id' => ['required'],
             'currency' => ['required'],
-        ]);
+            'g-recaptcha-response' => 'required|captcha',
+        ]
+        ,
+         [
+            'g-recaptcha-response.required'=> 'Registration captcha requuired', // custom message
+        ]
+        );
     }
 
     public function showRegistrationForm()
@@ -83,18 +89,33 @@ class RegisterController extends Controller
 
         //event(new Registered($user = $this->create($request->all())));
         $user = $this->create($request->all());
-
-
-       // $this->guard()->login($user);
-         Auth::login($user);
-
-        if ($response = $this->registered($request, $user)) {
-            return $response;
+         
+        if($user)
+        {
+             toastSuccess('Successfully Registered please login');
+                return back();
+        }
+        else{
+            toastError('Something went wrong due to server load');
+            return back();
         }
 
-        return $request->wantsJson()
-            ? new JsonResponse([], 201)
-            : redirect($this->redirectPath());
+       // $this->guard()->login($user);
+        //Auth::login($user);
+
+        // if ($response = $this->registered($request, $user)) {
+        //     return $response;
+        // }
+
+        // return $request->wantsJson()
+        //     ? new JsonResponse([], 201)
+        //     : redirect($this->redirectPath());
+    }
+
+
+    protected function registered(Request $request, $user)
+    {
+        //
     }
     /**
      * Create a new user instance after a valid registration.
