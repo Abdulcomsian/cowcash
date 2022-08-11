@@ -46,6 +46,9 @@ class LoginController extends Controller
             $this->username() => 'required|string',
             'password' => 'required|string',
             'g-recaptcha-response' => 'required|captcha',
+        ],
+         [
+            'g-recaptcha-response.required'=> 'login captcha required', // custom message
         ]);
     }
 
