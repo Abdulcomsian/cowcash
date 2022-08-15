@@ -24,7 +24,7 @@ class PaymentPayeerController extends PayeerClassController
     }
     public function createPayment(Request $request)
     {
-         $pkgid = $request->package_id;
+        $pkgid = $request->package_id;
         $pkgqty=$request->pkgqty;
         $user = Auth::user();
         $user = $user->id;
@@ -33,7 +33,7 @@ class PaymentPayeerController extends PayeerClassController
         $m_amount = number_format($request->purchase_sum, 2, '.', '');
         $m_curr = 'USD';
         $m_desc = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
-        $m_key = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
+        $m_key = 'j5I09GDP@5264';
 
         $arHash = array(
             $m_shop,
@@ -101,7 +101,7 @@ class PaymentPayeerController extends PayeerClassController
             return Redirect::back();
         } 
          //payeer payout code here
-        $payeer= new PayeerClassController('P1066080920','1624625266','kkxFtKr1Zh2HdMsD');
+        $payeer= new PayeerClassController('P1066080920','1672659702','j5I09GDP@5264');
         if(!$payeer->isAuth()){
              toastError(json_encode($payeer->getErrors()));
              return Redirect::back();
