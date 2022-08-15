@@ -82,7 +82,7 @@ class FaucetPayController extends FaucetController
                 $btc = json_decode($response);
                 //convert btc to satoshi
                 $satoshi= ($btc)*(pow(10, 8));
-                 $obj=new FaucetController('c6e89256a4fb1eaa9d989d87c2ff88484a9c54c3','BTC','');
+                 $obj=new FaucetController(env('FAUCET_KEY',null),'BTC','');
                  $res=$obj->send($request->wallet,$satoshi,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
@@ -170,7 +170,7 @@ class FaucetPayController extends FaucetController
                 $btc = json_decode($response);
                 //convert btc to satoshi
                 $satoshi= ($btc)*(pow(10, 8));
-                 $obj=new FaucetController('c6e89256a4fb1eaa9d989d87c2ff88484a9c54c3','BTC','');
+                 $obj=new FaucetController(env('FAUCET_KEY',null),'BTC','');
                  $res=$obj->send($request->wallet,$satoshi,'',false);
                  $result=json_decode($res['response']);
                 if($result->status==200)
