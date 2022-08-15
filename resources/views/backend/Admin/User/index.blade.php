@@ -8,11 +8,11 @@ ALL Users
 @section('content')
 
 <!-- Table section -->
-<div class="container-fluid">
-    <div class="row">
-        <main class="main-content col-lg-11 col-md-1 col-sm-12 p-0 offset-lg-1">
-            <div class="page-header row py-1 justify-content-center">
-                <div class="col-md-9" style=" margin: 70px">
+<div style="width: calc(100% - 240px); margin-left: auto;">
+    <div>
+        <main class="main-content p-0">
+            <div class="page-header py-1 justify-content-center">
+                <div>
                     <div class="card card-small clinic-card d-flex">
                         <div class="card-header border-bottom">
                             <div class="row">
@@ -21,8 +21,8 @@ ALL Users
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body" style="overflow-x:scroll;">
-                            <table id="dtMaterialDesignExample" class="table table-striped" cellspacing="0" width="100%">
+                        <div class="table-responsive mb-4">
+                            <table id="dtMaterialDesignExample" class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th class="th-sm">Name</th>
@@ -83,7 +83,7 @@ ALL Users
                             </table>
                              <div class="col-md-6" style="margin-bottom:10px">
                                       {{$users->links("pagination::bootstrap-4")}}
-                                   </div>
+                             </div>
                         </div>
                     </div>
                 </div>
