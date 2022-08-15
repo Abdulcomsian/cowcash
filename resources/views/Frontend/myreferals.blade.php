@@ -106,7 +106,7 @@
                                     </div>
                                    
                                     <div class="amountDiv">
-                                        <p>Amount of your referrals: {{count($userreferal ?? 0)}} users</p>
+                                        <p>Amount of your referrals: {{$userreferaltotal}} users</p>
                                         <table>
                                             <thead style="background-color: #e6ceaf;padding: 5px;">
                                                 <tr>

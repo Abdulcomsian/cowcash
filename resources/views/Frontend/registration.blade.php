@@ -92,11 +92,11 @@ Registraion
                 <a class="nav-link {{$errormsg =='These credentials do not match our records.' ? '':'ative'}}" data-toggle="pill" href="#register">REGISTRATION</a>
             </li>
             <li class="nav-item rightNow">
-                <a class="nav-link {{$errormsg =='These credentials do not match our records.' ? 'ative show':''}}" data-toggle="pill" href="#loginForm">LOGIN</a>
+                <a class="nav-link {{$errormsg =='These credentials do not match our records.' || Session::has('logintab') ? 'ative show':''}}" data-toggle="pill" href="#loginForm">LOGIN</a>
             </li>
         </ul>
         <div class="tab-content">
-            <div id="register" class="container tab-pane {{$errormsg =='These credentials do not match our records.' ? '':'active'}}" style="{{$errormsg =='These credentials do not match our records.' ? 'display: none':''}}">
+            <div id="register" class="container tab-pane {{$errormsg =='These credentials do not match our records.' || Session::has('logintab') ? '':'active'}}" style="{{$errormsg =='These credentials do not match our records.' ||  Session::has('logintab') ? 'display: none':''}}">
                 <div class="detailBox">
                     <p>Do not register multiple accounts.<br> The system will quickly recognize them and they will be
                         blocked</p>
@@ -180,7 +180,7 @@ Registraion
                     <button class="commonBtn cursor-pointer" type="submit">Sign Up</button>
                 </form>
             </div>
-            <div id="loginForm" class="container tab-pane fade {{$errormsg =='These credentials do not match our records.' ? 'active show':''}}" style="{{$errormsg =='These credentials do not match our records.' ? 'display: block':''}}"><br>
+            <div id="loginForm" class="container tab-pane fade {{$errormsg =='These credentials do not match our records.' || Session::has('logintab') ? 'active show':''}}" style="{{$errormsg =='These credentials do not match our records.' || Session::has('logintab') ? 'display: block':''}}"><br>
                 <h3>Sign In Account</h3>
                 <form id="login" style="position:Relative;top:3px;" method="POST" action="{{route('login')}}">
                          @csrf

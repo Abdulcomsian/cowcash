@@ -93,7 +93,7 @@ class RegisterController extends Controller
         if($user)
         {
              toastSuccess('Successfully Registered please login');
-                return back();
+                return back()->with('logintab','logintab');
         }
         else{
             toastError('Something went wrong due to server load');
