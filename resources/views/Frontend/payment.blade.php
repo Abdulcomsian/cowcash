@@ -56,7 +56,7 @@ About Us
                            
                         </div>
                         </a>
-                        <a href="#"> 
+                        <a href="{{url('account/payment',1)}}"> 
                         <!--//{{url('account/payment',1)}}-->
                             <div style="color:#000;font-family: Nexa-Bold !important;font-size: 14px;">Coming Soon</div>
                             <div class="cardDiv">
