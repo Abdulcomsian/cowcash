@@ -89,13 +89,21 @@ class PaymentPayeerController extends PayeerClassController
             'wallet' => ['required'],
             'amount' => ['required'],
             'silverblocks'=>['required'],
+            'g-recaptcha-response' => 'required|captcha',
         ],[
             'wallet' => 'Please Enter Wallet',
         ]);
+
+        $fee = 0.95;
+        $silverblocks = $request->silverblocks;
         $ursilverblocks = Auth::user()->withdraw;
         $crystal = Auth::user()->crystal;
         $amount = $request->amount;
-        $silverblocks = $request->silverblocks;
+        $serebro_usd_1 = $silverblocks / 7387;
+        $amount=bcdiv($serebro_usd_1, 1, 2);
+        $amount=$amount*$fee;
+        $amount=bcdiv($amount, 1, 2);
+      
         if ($silverblocks > $ursilverblocks && $crystal > $amount) {
             toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
             return Redirect::back();
