@@ -36,15 +36,17 @@ ALL Payments List
                                 </thead>
                                 <tbody>
                                      @if(count($payments)>0)
+                                         @php $i=$payments->perPage() * ($payments->currentPage() - 1);@endphp
                                          @foreach($payments as $payment)
                                             <tr>
-                                                <td>{{$loop->index+1}}</td>
+                                                <td>{{$i+1}}</td>
                                                 <td>{{$payment->user->name ?? ''}}</td>
                                                 <td>{{$payment->balance ?? ''}} {{$payment->currency}}</td>
                                                 <td>{{$payment->purse ?? ''}}</td>
                                                 <td> <p style="width: 18px;height: 19px;border-radius: 100%;background-color: #00669b;margin: auto;font-size: 14px;color: #fff;text-align: center;">{{$payment->payment_method ?? ''}}</p></td>
                                                 <td>{{$payment->created_at ?? ''}}</td>
                                             </tr>
+                                              @php $i++;@endphp
                                          @endforeach
                                         @else
                                         <tr>
@@ -54,8 +56,8 @@ ALL Payments List
                                 </tbody>
                             </table>
                             <div class="col-md-6" style="margin-bottom:10px">
-                                      {{$payments->links("pagination::bootstrap-4")}}
-                             </div>
+                                {{$payments->links("pagination::bootstrap-4")}}
+                            </div>
                         </div>
                     </div>
                 </div>
