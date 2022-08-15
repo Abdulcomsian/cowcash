@@ -41,7 +41,7 @@ class AdminController extends Controller
     public function AllUsers()
     {
         try {
-            $users = User::with('totalaffiliate')->where('role', 'farmer')->get();
+            $users = User::with('totalaffiliate')->where('role', 'farmer')->paginate(100);
             return view('backend.Admin.User.index', compact('users'));
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');

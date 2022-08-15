@@ -53,6 +53,9 @@ ALL Payments List
                                         @endif
                                 </tbody>
                             </table>
+                            <div class="col-md-6" style="margin-bottom:10px">
+                                      {{$payments->links("pagination::bootstrap-4")}}
+                             </div>
                         </div>
                     </div>
                 </div>
