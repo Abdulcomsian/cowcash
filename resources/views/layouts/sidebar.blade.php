@@ -59,12 +59,12 @@
                             <span>Packages</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                   <!--  <li class="nav-item">
                         <a class="nav-link active" href="{{route('pkg.transaction')}}">
                             <i class="fa fa-credit-card" aria-hidden="true"></i>
                             <span>Package Transactions</span>
                         </a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link active" href="{{route('admin.payments')}}">
                             <i class="fa fa-credit-card" aria-hidden="true"></i>
