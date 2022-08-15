@@ -103,7 +103,7 @@ class AdminController extends Controller
     //paymetns
     public function admin_payments()
     {
-        $payments=Payment::latest()->limit(100)->get();
+        $payments=Payment::latest()->paginate(100);
          return view('backend.Admin.payments',compact('payments'));
     }
 
