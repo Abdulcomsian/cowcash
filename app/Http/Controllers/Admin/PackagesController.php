@@ -20,7 +20,7 @@ class PackagesController extends Controller
     {
         try {
             $packages = Packages::get();
-            return view('backend.Admin.packages.index', compact('packages'));
+            return view('backend.Admin.Packages.index', compact('packages'));
         } catch (\Exception $exception) {
             toastError('Something went wrong,try again');
             return back();
@@ -34,7 +34,7 @@ class PackagesController extends Controller
      */
     public function create()
     {
-        return view('backend.Admin.packages.create');
+        return view('backend.Admin.Packages.create');
     }
 
     /**
@@ -78,7 +78,7 @@ class PackagesController extends Controller
     {
         try {
             $pkg = Packages::find($id);
-            return view('backend.Admin.packages.edit', compact('pkg'));
+            return view('backend.Admin.Packages.edit', compact('pkg'));
         } catch (\Exception $exception) {
             toastError('Something went wrong, try again');
             return back();
@@ -128,7 +128,7 @@ class PackagesController extends Controller
     {
         try {
             $allpkgtrans = PackageTxn::with('package', 'user')->paginate(100);
-            return view('backend.Admin.packages.all_transac', compact('allpkgtrans'));
+            return view('backend.Admin.Packages.all_transac', compact('allpkgtrans'));
         } catch (\Exception $exception) {
             toastError('Something went wrong, try again');
             return back();
