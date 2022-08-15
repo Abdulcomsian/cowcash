@@ -77,7 +77,9 @@ class UserOrderController extends Controller
     {
 
       $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->paginate(20);
-      $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->count();
+      $userreferaltotal = User::where('referred_by', Auth::user()->affiliate_id)->count();
+
+      $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->whereDate('created_at', Carbon::today())->count();
        $list='';
        if ($request->ajax()) {
          foreach($userreferal as $referal)
@@ -92,7 +94,7 @@ class UserOrderController extends Controller
                 
            return $list; 
        }
-      return view('Frontend.myreferals', compact('userreferal','referalcount'));
+      return view('Frontend.myreferals', compact('userreferal','referalcount','userreferaltotal'));
     }
 
        
