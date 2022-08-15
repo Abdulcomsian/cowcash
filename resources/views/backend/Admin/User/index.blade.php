@@ -81,6 +81,9 @@ ALL Users
 
                                 </tbody>
                             </table>
+                             <div class="col-md-6" style="margin-bottom:10px">
+                                      {{$users->links("pagination::bootstrap-4")}}
+                                   </div>
                         </div>
                     </div>
                 </div>
