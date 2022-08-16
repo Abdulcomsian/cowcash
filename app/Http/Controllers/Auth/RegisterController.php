@@ -147,7 +147,7 @@ class RegisterController extends Controller
             'role' => 'farmer',
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
-            'referred_by' => $referred_by,
+            'referred_by' => $referred_by ?? NULL,
             'country_id' => $data['country_id'],
             'currency' => $data['currency'],
             'visitorip' => $ipaddress,
