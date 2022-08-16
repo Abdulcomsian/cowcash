@@ -89,27 +89,16 @@ class RegisterController extends Controller
 
         //event(new Registered($user = $this->create($request->all())));
         $user = $this->create($request->all());
-         
-        if($user)
-        {
-             toastSuccess('Successfully Registered please login');
-                return back()->with('logintab','logintab');
-        }
-        else{
-            toastError('Something went wrong due to server load');
-            return back();
+       $this->guard()->login($user);
+        Auth::login($user);
+
+        if ($response = $this->registered($request, $user)) {
+            return $response;
         }
 
-       // $this->guard()->login($user);
-        //Auth::login($user);
-
-        // if ($response = $this->registered($request, $user)) {
-        //     return $response;
-        // }
-
-        // return $request->wantsJson()
-        //     ? new JsonResponse([], 201)
-        //     : redirect($this->redirectPath());
+        return $request->wantsJson()
+            ? new JsonResponse([], 201)
+            : redirect($this->redirectPath());
     }
 
 
