@@ -29,7 +29,7 @@ class FaucetPayController extends FaucetController
             'wallet' => ['required'],
             'amount' => ['required'],
             'silverblocks'=>['required'],
-             'g-recaptcha-response' => 'required|captcha',
+             //'g-recaptcha-response' => 'required|captcha',
         ],[
             'wallet' => 'Please Enter Wallet',
         ]);

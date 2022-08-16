@@ -128,7 +128,7 @@ function copyText(text) {
           $(".checkoutOrder").css('pointer-events', 'auto');
      })
 
-     $(document).on('blur mouseup', '#checkoutqty', function() {
+     $(document).on('change keyup', '#checkoutqty', function() {
          qty = $(this).val();
          if (qty < 0) {
               qty=1;
@@ -144,6 +144,25 @@ function copyText(text) {
          $("#checkoutprice").text(parseInt($("#checkoutprice").attr('value')) * qty);
          $("#checkout-sum-val").val(parseInt($("#checkoutprice").attr('value'))* qty);
          $(".fcheckout-sum-val").val(parseInt($("#checkoutprice").attr('value'))* qty);
+         var dollar= parseInt($("#checkoutprice").text());
+          switch(dollar)
+         {
+            case 10:
+            $('[data-id="1"]').click();
+            break;
+            case 50:
+            $('[data-id="2"]').click();
+            break;
+            case 100:
+            $('[data-id="3"]').click();
+            break;
+            case 250:
+            $('[data-id="4"]').click();
+            break;
+            case 500:
+            $('[data-id="5"]').click();
+            break;
+         }
      })
 
      $(document).on('click', '#purchase', function() {

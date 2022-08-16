@@ -42,9 +42,18 @@ Registraion
         width: 85%;
         left: 7%;
     }
+
+    .toast-top-right
+       {
+          position: fixed;
+          top: 24% !important;
+          left:60% !important;
+          transform: translate(-50%,-50%);
+       }
     .inputDiv  .g-recaptcha{
         transform: scale(0.60);
     }
+
 </style>
 @endsection
 
