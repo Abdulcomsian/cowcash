@@ -46,9 +46,12 @@ Registraion
     .toast-top-right
        {
           position: fixed;
-          top: 30% !important;
-          left:55% !important;
-          transform: translate(-50%,-50%);
+          top: 24% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%);
+        display: flex;
+    align-items: center;
+    justify-content: center;
        }
     .inputDiv  .g-recaptcha{
         transform: scale(0.60);

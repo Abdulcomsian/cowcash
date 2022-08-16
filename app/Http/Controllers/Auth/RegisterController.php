@@ -66,7 +66,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'country_id' => ['required'],
             'currency' => ['required'],
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ]
         ,
          [
