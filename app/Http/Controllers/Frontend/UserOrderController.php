@@ -83,12 +83,14 @@ class UserOrderController extends Controller
            if ($request->ajax()) {
              foreach($userreferal as $referal)
                  {
-                    
+                    if($referal->user)
+                    {
                     $list .= '<tr>';
                     $list .= '<td>'.$referal->user->name ?? "".'</td>';
                     $list .= '<td>'.$referal->user->created_at .'</td>';
                     $list .= '<td>'.$referal->referal_coins.'</td>';
                     $list .='</tr>';
+                    }
                  }
                     
                return $list; 
