@@ -75,25 +75,23 @@ class UserOrderController extends Controller
     //referal
     public function Referal(Request $request)
     {
+        $userreferal=UserReferal::with('user')->where(['referred_by'=> Auth::user()->affiliate_id])->orderBy('referal_coins','desc')->paginate(20);
+        $userreferaltotal = User::where('referred_by', Auth::user()->affiliate_id)->count();
 
-      $userreferal = User::where('referred_by', Auth::user()->affiliate_id)->paginate(20);
-      $userreferaltotal = User::where('referred_by', Auth::user()->affiliate_id)->count();
-
-      $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->whereDate('created_at', Carbon::today())->count();
-       $list='';
-       if ($request->ajax()) {
-         foreach($userreferal as $referal)
-             {
-                $res=UserReferal::where('referred_by',$referal->referred_by)->first();
-                $list .= '<tr>';
-                $list .= '<td>'.$referal->name ?? "".'</td>';
-                $list .= '<td>'.$referal->created_at .'</td>';
-                $list .= '<td>'.$res->referal_coins.'</td>';
-                $list .='</tr>';
-             }
-                
-           return $list; 
-       }
+        $referalcount=User::where(['referred_by'=>Auth::user()->affiliate_id])->whereDate('created_at', Carbon::today())->count();
+        $list='';
+           if ($request->ajax()) {
+             foreach($userreferal as $referal)
+                 {
+                    $list .= '<tr>';
+                    $list .= '<td>'.$referal->user->name ?? "".'</td>';
+                    $list .= '<td>'.$referal->user->created_at .'</td>';
+                    $list .= '<td>'.$referal->referal_coins.'</td>';
+                    $list .='</tr>';
+                 }
+                    
+               return $list; 
+           }
       return view('Frontend.myreferals', compact('userreferal','referalcount','userreferaltotal'));
     }
 

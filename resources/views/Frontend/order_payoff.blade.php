@@ -24,6 +24,7 @@ About Us
     background-color: #fff1d5 !important;
     border-color: #f7e6c2 !important;
 }
+
 </style>
 @endsection
 @php

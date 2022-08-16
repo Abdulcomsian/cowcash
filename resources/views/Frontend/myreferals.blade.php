@@ -52,6 +52,8 @@
             padding: 5px;
             color: #fff;
        }
+
+       
    </style>
    @endsection
 
@@ -118,12 +120,10 @@
                                             <tbody id="referals">
                                                 @foreach($userreferal as $referal)
                                                 <tr>
-                                                    <td>{{$referal->name ?? ''}}</td>
-                                                    <td>{{$referal->created_at ?? ''}}</td>
+                                                    <td>{{$referal->user->name ?? ''}}</td>
+                                                    <td>{{$referal->user->created_at ?? ''}}</td>
                                                     <td>
-                                                        @php $res=\App\Models\UserReferal::where('referred_by',$referal->referred_by)->first();
-                                                        @endphp
-                                                        {{$res->referal_coins ?? ''}}
+                                                        {{$referal->referal_coins ?? ''}}
                                                    </td>
                                                 </tr>
                                                 @endforeach
