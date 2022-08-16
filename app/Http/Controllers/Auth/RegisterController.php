@@ -125,7 +125,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $referred_by = '';
+        $referred_by = NULL;
         if(isset($_GET['ref']))
         {
              $referred_by = $_GET['ref'];
@@ -136,7 +136,7 @@ class RegisterController extends Controller
         $ipaddress = $_SERVER['REMOTE_ADDR'];
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'https://cow4cash.com') . '/account/registration/?ref=' . $affiliateid;
-        $referalcount = User::where(['referred_by' => $referred_by])->whereDate('created_at', Carbon::today())->count();
+        
         
         $user = User::create([
             'name' => $data['name'],
@@ -155,8 +155,8 @@ class RegisterController extends Controller
         if ($user) {
             //check parent
             if ($user->referred_by != NULL) {
-                   
-                    if ($referred_by !='' && $referalcount < 20) {
+                    $referalcount = User::where(['referred_by' => $referred_by])->whereDate('created_at', Carbon::today())->count();
+                    if ($referred_by != NULL && $referalcount < 20) {
                          User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
                         UserReferal::create([
                         'referred_by' => $referred_by,
