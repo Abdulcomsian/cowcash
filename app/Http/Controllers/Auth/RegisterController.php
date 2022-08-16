@@ -77,7 +77,7 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        Cookie::queue('referral', $_GET['ref']);
+        // Cookie::queue('referral', $_GET['ref']);
         $countries = Country::get();
         return view('auth.register', compact('countries'));
     }
@@ -125,18 +125,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $referred_by = NULL;
-        if (!empty(Cookie::get('referral'))) {
-            $referred_by = Cookie::get('referral');
+        $referred_by = '';
+        if(isset($_GET['ref']))
+        {
+             $referred_by = $_GET['ref'];
         }
+        // if (!empty(Cookie::get('referral'))) {
+        //     $referred_by = Cookie::get('referral');
+        // }
         $ipaddress = $_SERVER['REMOTE_ADDR'];
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'https://cow4cash.com') . '/account/registration/?ref=' . $affiliateid;
         $referalcount = User::where(['referred_by' => $referred_by])->whereDate('created_at', Carbon::today())->count();
-        if ($referalcount >= 20) {
-            toastError('Your Day wise referals completed');
-            return back();
-        }
+        
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -154,12 +155,17 @@ class RegisterController extends Controller
         if ($user) {
             //check parent
             if ($user->referred_by != NULL) {
-                User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
-                UserReferal::create([
-                'referred_by' => $referred_by,
-                'referal_coins' => DB::raw('referal_coins +250'),
-                'affiliate_id' => $affiliateid,
-                 ]);
+                   
+                    if ($referred_by !='' && $referalcount < 20) {
+                         User::where('affiliate_id', $user->referred_by)->update(['silver_coins' => DB::raw('silver_coins +250'), 'referal_coins' => DB::raw('referal_coins +250')]);
+                        UserReferal::create([
+                        'referred_by' => $referred_by,
+                        'referal_coins' => DB::raw('referal_coins +250'),
+                        'affiliate_id' => $affiliateid,
+                         ]);
+                    }
+                
+               
             }
             if ($user) {
                  $usercoworder = UserOrder::create([
@@ -183,6 +189,7 @@ class RegisterController extends Controller
                         'status' => 1,
                     ]);
                 }
+                Cookie::forget('referral');
             }
             return $user;
         }
