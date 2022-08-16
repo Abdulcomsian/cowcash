@@ -159,7 +159,7 @@
               </div>
               <!--onclick="pay_ps()"-->
               <div class="paymentDiv cursor-pointer" >
-                  <div style="color:#000;text-align: center;font-family: Nexa-Bold !important;font-size: 12px;">Coming Soon</div>
+                  <div style="color:#000;text-align: center;font-family: Nexa-Bold !important;font-size: 12px;">Active</div>
                 <img src="{{asset('images/Payeer1.png')}}" alt="" onclick="pay_ps()">
               </div>
             </div>

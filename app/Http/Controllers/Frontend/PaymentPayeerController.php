@@ -108,8 +108,8 @@ class PaymentPayeerController extends PayeerClassController
             toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
             return Redirect::back();
         }
-        if($amount < 1){
-                toastError('Minuminum 1 dollar can be withdrawl');
+        if($amount < 0.03){
+               toastError('Minuminum 0.04 dollar can be withdrawl');
                 return Redirect::back();
             }
          //payeer payout code here
