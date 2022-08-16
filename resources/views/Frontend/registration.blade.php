@@ -46,7 +46,7 @@ Registraion
     .toast-top-right
        {
           position: fixed;
-          top: 35% !important;
+          top: 40% !important;
           left: 50% !important;
           transform: translate(-50%,-50%);
             display: flex;
