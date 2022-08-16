@@ -119,6 +119,7 @@
                                             </thead>
                                             <tbody id="referals">
                                                 @foreach($userreferal as $referal)
+                                                @if($referal->user)
                                                 <tr>
                                                     <td>{{$referal->user->name ?? ''}}</td>
                                                     <td>{{$referal->user->created_at ?? ''}}</td>
@@ -126,6 +127,7 @@
                                                         {{$referal->referal_coins ?? ''}}
                                                    </td>
                                                 </tr>
+                                                @endif
                                                 @endforeach
                                             
                                             </tbody>
