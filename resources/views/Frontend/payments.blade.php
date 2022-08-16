@@ -48,7 +48,7 @@ Payments
                 </tbody>
             </table>
         </div>
-        <p style="text-align: right; color: #000; font-size: 12px;">Displayed last 20 payments</p>
+        <p style="text-align: right; color: #000; font-size: 12px;" class="displayPayment">Displayed last 20 payments</p>
 
         @include('Frontend.includes.menues')
 

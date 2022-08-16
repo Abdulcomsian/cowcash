@@ -82,7 +82,7 @@
         </div>
         <div class="customAmount">
           <div class="inputDiv">
-            <label for="">Enter custom amount ({{'USD'}}):</label>
+            <label for="">Enter custom amount ({{'USD'}}) minimum $1:</label>
             <input type="number" value="1" class="form-control customcal" min="1">
             <label for="">=</label>
             <label for="">
