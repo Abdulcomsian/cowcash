@@ -58,7 +58,7 @@ About Us
                         </a>
                         <a href="{{url('account/payment',1)}}"> 
                         <!--//{{url('account/payment',1)}}-->
-                            <div style="color:#000;font-family: Nexa-Bold !important;font-size: 14px;">Coming Soon</div>
+                            <div style="color:#000;font-family: Nexa-Bold !important;font-size: 14px;">Active</div>
                             <div class="cardDiv">
                                 <img src="{{asset('images/Payeer1.png')}}" alt="">
                             </div>

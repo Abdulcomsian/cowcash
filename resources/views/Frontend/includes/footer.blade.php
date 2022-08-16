@@ -128,10 +128,10 @@ function copyText(text) {
           $(".checkoutOrder").css('pointer-events', 'auto');
      })
 
-     $(document).on('change keyup', '#checkoutqty', function() {
+     $(document).on('change', '#checkoutqty', function() {
          qty = $(this).val();
          if (qty < 0) {
-              qty=1;
+              qty=2;
              $(this).val(qty);
              $("#checkoutcoins").text(parseInt($("#checkoutcoins").attr('value')) * qty);
              $("#checkoutprice").text(parseInt($("#checkoutprice").attr('value')) * qty);
