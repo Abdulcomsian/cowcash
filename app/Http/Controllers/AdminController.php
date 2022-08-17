@@ -103,14 +103,14 @@ class AdminController extends Controller
     //paymetns
     public function admin_payments()
     {
-        $payments=Payment::latest()->latest()->paginate(100);
+        $payments=Payment::where('payment_status',1)->latest()->paginate(100);
          return view('backend.Admin.payments',compact('payments'));
     }
 
     //withdraw payments
     public function admin_withdraw_payments(Request $request)
     {
-         $payments=PayOff::latest()->latest()->paginate(50);
+         $payments=PayOff::latest()->paginate(50);
          return view('backend.Admin.withdrawpaymetns',compact('payments'));
     }
 }
