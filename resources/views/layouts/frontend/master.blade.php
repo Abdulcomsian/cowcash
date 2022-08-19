@@ -147,7 +147,10 @@
             <label for="">3. Select the payment method:</label>
             <div class="paymentMulti">
                 <!-- click payment for payyer -->
-              
+                <div class="paymentDiv cursor-pointer" >
+                  <div style="color:green;text-align: center;font-family: Nexa-Bold !important;font-size: 12px;">Active</div>
+                <img src="{{asset('images/Payeer1.png')}}" alt="" onclick="pay_ps()">
+              </div>
                <!-- click payment for faucet-->
               <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
                   <div style="color:green;font-family: Nexa-Bold !important;text-align: center;font-size: 12px;">Active</div>
@@ -158,10 +161,7 @@
                 <img src="{{asset('images/Group 39.png')}}" alt="">
               </div>
               <!--onclick="pay_ps()"-->
-              <div class="paymentDiv cursor-pointer" >
-                  <div style="color:#000;text-align: center;font-family: Nexa-Bold !important;font-size: 12px;">Active</div>
-                <img src="{{asset('images/Payeer1.png')}}" alt="" onclick="pay_ps()">
-              </div>
+             
             </div>
           </div>
         </div>
