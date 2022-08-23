@@ -41,28 +41,28 @@ About Us
                         <p>Choose the payment system suitable for you from the list of available Payoffs are made in automatic mode</p>
                     </div>
                     <div class="multiCards">
-                        
+                        <a href="{{url('account/payment',1)}}"> 
+                        <!--//{{url('account/payment',1)}}-->
+                            <!-- <div style="color:#000;font-family: Nexa-Bold !important;font-size: 14px;">Active</div> -->
+                            <div class="cardDiv">
+                                <img src="{{asset('images/Payeer1.png')}}" alt="">
+                            </div>
+                        </a>
                         <a href="{{url('account/payment',2)}}">
                         <div class="cardDiv">
-                            <div style="color:green;font-family: Nexa-Bold !important;font-size: 14px;">Active</div>
+                            <!-- <div style="color:green;font-family: Nexa-Bold !important;font-size: 14px;">Active</div> -->
                             <img src="{{asset('images/faucet.png')}}" alt="">
                         </div>
                         </a>
                         <a href="{{url('account/payment',3)}}">
                         <div class="cardDiv">
                            
-                             <div style="color:green;font-family: Nexa-Bold !important;font-size: 14px;">Active</div>
+                             <!-- <div style="color:green;font-family: Nexa-Bold !important;font-size: 14px;">Active</div> -->
                              <img src="{{asset('images/Group 39.png')}}" alt="">
                            
                         </div>
                         </a>
-                        <a href="{{url('account/payment',1)}}"> 
-                        <!--//{{url('account/payment',1)}}-->
-                            <div style="color:#000;font-family: Nexa-Bold !important;font-size: 14px;">Active</div>
-                            <div class="cardDiv">
-                                <img src="{{asset('images/Payeer1.png')}}" alt="">
-                            </div>
-                        </a>
+                       
                         <!-- <div class="cardDiv">
                             <img src="{{asset('images/Group40.png')}}" alt="">
                         </div>
