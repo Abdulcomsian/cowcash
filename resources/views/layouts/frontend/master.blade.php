@@ -148,12 +148,12 @@
             <div class="paymentMulti">
                 <!-- click payment for payyer -->
                 <div class="paymentDiv cursor-pointer" >
-                  <div style="color:green;text-align: center;font-family: Nexa-Bold !important;font-size: 12px;">Active</div>
+                  <!-- <div style="color:green;text-align: center;font-family: Nexa-Bold !important;font-size: 12px;">Active</div> -->
                 <img src="{{asset('images/Payeer1.png')}}" alt="" onclick="pay_ps()">
               </div>
                <!-- click payment for faucet-->
               <div class="paymentDiv cursor-pointer" onclick="pay_fs()">
-                  <div style="color:green;font-family: Nexa-Bold !important;text-align: center;font-size: 12px;">Active</div>
+                  <!-- <div style="color:green;font-family: Nexa-Bold !important;text-align: center;font-size: 12px;">Active</div> -->
                 <img src="{{asset('images/faucet.png')}}" alt="">
               </div>
               <div class="paymentDiv">
