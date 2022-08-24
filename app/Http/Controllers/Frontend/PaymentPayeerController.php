@@ -104,7 +104,11 @@ class PaymentPayeerController extends PayeerClassController
         $amount=$amount*$fee;
         $amount=bcdiv($amount, 1, 2);
       
-        if ($silverblocks > $ursilverblocks && $crystal > $amount) {
+        if ($silverblocks > $ursilverblocks) {
+            toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
+            return Redirect::back();
+        }
+         if ($amount > $crystal) {
             toastError('The amount of Silver block exceeds your account balance You have ' .  $silverblocks . ' Silver Blocks (for withdrawal)');
             return Redirect::back();
         }

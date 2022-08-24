@@ -165,7 +165,7 @@
                                         
                                     </div>
                                     <div class="amountDiv">
-                                        <p>Amount of your referrals: {{count($userreferal ?? 0)}} users</p>
+                                       <p>Amount of your referrals: {{$userreferaltotal}} users</p>
                                         <table>
                                             <thead style="background-color: #e6ceaf;padding: 5px;">
                                                 <tr>
@@ -175,17 +175,24 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach($userreferal as $referal)
+                                                 @foreach($userreferal as $referal)
+                                                @if($referal->user != null)
                                                 <tr>
-                                                    <td>{{$referal->name ?? ''}}</td>
-                                                    <td>{{$referal->created_at ?? ''}}</td>
-                                                    <td>250 coins</td>
+                                                    <td>{{$referal->user->name ?? ''}}</td>
+                                                    <td>{{$referal->user->created_at ?? ''}}</td>
+                                                    <td>
+                                                        {{$referal->referal_coins ?? ''}}
+                                                   </td>
                                                 </tr>
+                                                @endif
                                                 @endforeach
                                                
                                             </tbody>
                                         </table>
                                     </div>
+                                     @if(count($userreferal)>0)
+                                     <button class="cursor-pointer see-more" data-page="2" data-link="{{url('account/referal')}}?page=" data-div="#referals">show more</button>
+                                     @endif
                                 </div>
                             </div>
                     </div>
