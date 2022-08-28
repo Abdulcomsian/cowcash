@@ -44,8 +44,18 @@ class PaymentPayeerController extends PayeerClassController
             $m_key
         );
         $sign = strtoupper(hash('sha256', implode(':', $arHash)));
-
-        if ($m_amount != 0) {
+        if($pkgid)
+        {
+            $packagedata=Packages::find($pkgid);
+            $packamount=$packagedata->amount;
+            $totalpkgamount=$packamount*$pkgqty;
+            if($totalpkgamount!=$m_amount)
+            {
+                 toastError('Something heppening wrong your package amount with respect to quantity not matching with originol package price');
+                return Redirect::back();
+            }
+        }
+        if ($m_amount < 1) {
             try {
                 DB::beginTransaction();
                 $payment = new Payment();
@@ -76,10 +86,17 @@ class PaymentPayeerController extends PayeerClassController
                 print $e->getMessage();
                 DB::connection()->getPdo()->rollBack();
             }
+
+            return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
+        }
+        else{
+            toastError('Amount is less then $1');
+            return Redirect::back();
         }
 
 
-        return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
+
+        
     }
 
     //user payoff
