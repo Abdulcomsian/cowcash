@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Frontend\PayeerClassController;
 use App\Models\User;
 use App\Models\PayOff;
+use App\Models\Packages;
 use DB;
 use Auth;
 
