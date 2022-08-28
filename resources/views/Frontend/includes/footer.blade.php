@@ -212,6 +212,11 @@ function copyText(text) {
 
      function pay_fs()
      {
+        if($("#amount1").val(qty)<1)
+        {
+            alert("your amount is lesst then $1");
+            return false;
+        }
         $("#faucetform").submit();
             // $('#checkout-submit').attr('action', "{{route('send')}}");
         // $("#checkout-submit").submit();

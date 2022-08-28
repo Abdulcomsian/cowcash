@@ -138,7 +138,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 
-Route::get('/faucet-callback',[FaucetPayController::class,'callback'])->name('faucet.callback');
+Route::post('/faucet-callback',[FaucetPayController::class,'callback'])->name('faucet.callback');
 Route::get('/faucet-success',[FaucetPayController::class,'sucess'])->name('faucet.sucess');
 Route::get('/faucet-cancel',[FaucetPayController::class,'cancel'])->name('faucet.cancel');
 
