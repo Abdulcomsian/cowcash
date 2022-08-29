@@ -77,7 +77,7 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        // Cookie::queue('referral', $_GET['ref']);
+        Cookie::queue('referral', $_GET['ref']);
         $countries = Country::get();
         return view('auth.register', compact('countries'));
     }
@@ -115,13 +115,13 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $referred_by = NULL;
-        if(isset($_GET['ref']))
-        {
-             $referred_by = $_GET['ref'];
-        }
-        // if (!empty(Cookie::get('referral'))) {
-        //     $referred_by = Cookie::get('referral');
+        // if(isset($_GET['ref']))
+        // {
+        //      $referred_by = $_GET['ref'];
         // }
+        if (!empty(Cookie::get('referral'))) {
+            $referred_by = Cookie::get('referral');
+        }
         $ipaddress = $_SERVER['REMOTE_ADDR'];
         $affiliateid = Str::random(10);
         $referal_link = env('APP_URL', 'https://cow4cash.com') . '/account/registration/?ref=' . $affiliateid;
