@@ -40,5 +40,9 @@
                 </a>
             </div>
         </div>
+
+    </div>
+    <div style="position: absolute;">
+         <ins class="612e2109a776d6ab7da4f191" style="display:inline-block;width:350px;height:250px;"></ins>
     </div>
 </div>
