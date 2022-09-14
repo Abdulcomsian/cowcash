@@ -23,9 +23,6 @@ Home Page
 @section('content')
 
 <section id="startRightNow">
-    <div style="position: absolute;left:10px;">
-    <ins class="612d2209a776d6e570a4f16a" style="display:inline-block;width:160px;height:600px;"></ins>
-    </div>
     <div class="midDiv">
         <p class="rightNow">EARN MONEY BY PLAYING</p>
         <p>Cow farm with money withdrawal <br> Stable earnings with our affiliate program</p>
@@ -118,7 +115,5 @@ Home Page
             </div>
         </div>
     </div>
-   <script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","612e2109a776d6ab7da4f191",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>
-   <script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","612d2209a776d6e570a4f16a",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>
 </section>
 @endsection
