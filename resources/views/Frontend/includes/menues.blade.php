@@ -43,9 +43,11 @@
 
     </div>
     <!-- desktop dev -->
+    @if(!request()->is('/'))
     <div class="onlyDesktop" style="position: absolute;left:20px">
       <div style="text-align: center;">
         <ins class="612d1d1ea776d6d4d5a4f169" style="display:inline-block;width:300px;height:250px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","612d1d1ea776d6d4d5a4f169",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>
       </div>
     </div>
+    @endif
 </div>
