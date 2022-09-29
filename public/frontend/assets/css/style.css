@@ -3249,11 +3249,6 @@ input:checked + .slider:before {
         height: 200px;
     }
 
-    /* #header .statistics p {
-        position: relative;
-        top: 53px;
-    } */
-
     .menuBtn,
     .headerMenu {
         display: block;
@@ -3294,6 +3289,8 @@ input:checked + .slider:before {
         max-width: 90%;
         margin: auto;
     }
+
+    /* header */
     #header .statistics .mobileStatistics button {
         top: initial;
         bottom: initial;
@@ -3302,6 +3299,7 @@ input:checked + .slider:before {
         position: relative;
         top: 100px;
     }
+
     .main-promoDiv {
         padding: 0px !important;
         direction: initial;
@@ -3334,6 +3332,7 @@ input:checked + .slider:before {
     .onlyMobile {
         display: block;
     }
+
     .paymentTable table tr td {
         min-width: 65px;
     }
