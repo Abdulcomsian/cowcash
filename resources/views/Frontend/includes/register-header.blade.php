@@ -451,3 +451,29 @@
  </section>
  
  @endauth
+
+
+
+<!-- desktop dev -->
+<div class="onlyDesktop">
+    <div style="margin-top: 20px;text-align: center;">
+  <!--   <ins class="60c6013aa064cf644420be64" style="display:inline-block;width:728px;height:90px;"></ins>
+     <script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","60c6013aa064cf644420be64",["cdn.bmcdn4.com"], 0, new Date().getTime())}(); -->
+		
+		<iframe data-aa='2084258' loading='lazy' src='//ad.a-ads.com/2084258?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+     </script>
+   </div>
+</div>
+
+<!-- desktop dev -->
+<div class="onlyMobile">
+     <div style="margin-top: 100px;text-align: center;">
+     <!--  <ins class="612d1d1ea776d6d4d5a4f169" style="display:inline-block;width:300px;height:250px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","612d1d1ea776d6d4d5a4f169",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>  -->
+		 
+		 <iframe data-aa='2084270' loading='lazy' src='//ad.a-ads.com/2084270?size=300x250' style='width:300px; height:250px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+
+     </div>
+	<div style="margin-top: 40px;;text-align: center;">
+	<ins class="632adf59377094c6f1d323df" style="display:inline-block;width:320px;height:100px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","632adf59377094c6f1d323df",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>
+	</div>
+</div>

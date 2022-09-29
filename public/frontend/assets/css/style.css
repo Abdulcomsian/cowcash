@@ -1,4 +1,4 @@
-.tourBtn{
+.tourBtn {
     cursor: pointer;
 }
 @font-face {
@@ -132,14 +132,12 @@ input:focus {
 } */
 
 #header .statistics button {
-  
     background: transparent;
     border: none;
     color: #fff;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     font-size: 11px;
-   
 }
 
 #header .payment {
@@ -150,7 +148,7 @@ input:focus {
 .board {
     background-image: url("../img/btnBoard.png");
 }
-#header .loginForm .inputDiv{
+#header .loginForm .inputDiv {
     cursor: pointer;
 }
 #header .loginForm .inputDiv input {
@@ -234,7 +232,7 @@ button#register_button {
     font-weight: 1000;
     font-family: "Poppins", sans-serif;
 }
-#header .statistics #commonBtn{
+#header .statistics #commonBtn {
     max-width: 50% !important;
     position: relative;
     top: 42px;
@@ -309,7 +307,7 @@ button#register_button {
     align-items: center;
     letter-spacing: 2px;
 }
-#startRightNow .midDiv .rightNow{
+#startRightNow .midDiv .rightNow {
     font-size: 18px;
     letter-spacing: 5px;
 }
@@ -391,7 +389,7 @@ button#register_button {
 }
 
 #startRightNow .stairDiv {
-    z-index:-9999;
+    z-index: -9999;
     background-image: url("../img/newstair.png") !important;
     height: 100%;
     background-repeat: no-repeat;
@@ -446,7 +444,6 @@ button#register_button {
     transform: rotate(0deg);
 }
 
-
 #startRightNow .stairDiv .forthChild .fifthChild-h2 {
     position: relative;
     top: 133px;
@@ -454,7 +451,7 @@ button#register_button {
     line-height: 2;
 }
 
-#startRightNow .stairDiv .fifthChild .fifthChild-p{
+#startRightNow .stairDiv .fifthChild .fifthChild-p {
     position: relative;
     top: 205px;
 }
@@ -520,7 +517,7 @@ p#fifthChild-p {
     height: auto;
 }
 
-#startRightNow .midDiv .multiBox .imgBoxInput{
+#startRightNow .midDiv .multiBox .imgBoxInput {
     width: 25%;
     margin-bottom: 20px;
 }
@@ -662,7 +659,6 @@ button.signUpBtn {
     font-weight: 400 !important;
     font-family: Nexa-Regular !important;
     font-size: 14px;
-   
 }
 
 .affiliateProgram p {
@@ -691,7 +687,7 @@ button.signUpBtn {
     width: 50%;
     padding: 5px;
     cursor: pointer;
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .affiliateProgram .tabeDiv p.active {
@@ -702,16 +698,16 @@ button.signUpBtn {
     padding: 10px 55px 10px 10px;
     direction: ltr;
 }
-.main-affiliateProgram{
+.main-affiliateProgram {
     direction: rtl;
     padding: 30px 20px !important;
     height: 90% !important;
-    overflow: auto  !important;
+    overflow: auto !important;
 }
-.affiliateProgram{
+.affiliateProgram {
     direction: ltr;
 }
-.main-htmlDiv{
+.main-htmlDiv {
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
@@ -721,17 +717,16 @@ button.signUpBtn {
     direction: ltr;
     padding: 17px;
 }
-.main-promoDiv{
+.main-promoDiv {
     padding: 0px 20px !important;
     margin-top: 3px;
     direction: rtl;
     overflow-x: hidden !important;
- 
 }
 .promoDiv {
     direction: ltr;
 }
-.scroll-rtl-milkWhareSec{
+.scroll-rtl-milkWhareSec {
     overflow: auto;
     height: 75%;
     direction: rtl;
@@ -787,6 +782,11 @@ table {
     padding: 5px;
     font-family: "Source Serif Pro", serif;
     font-size: 14px;
+}
+
+.paymentTable {
+    min-width: 100%;
+    overflow: auto;
 }
 
 .paymentTable table tr td {
@@ -967,7 +967,7 @@ table {
     position: relative;
 }
 
-.invalid-feedback{
+.invalid-feedback {
     position: absolute;
     font-size: 10px;
     bottom: -16px;
@@ -991,7 +991,7 @@ table {
     margin: auto;
     padding: 20px;
 }
-.registration .formDiv .inputDiv{
+.registration .formDiv .inputDiv {
     margin-bottom: 20px;
 }
 .main-descriptionDiv {
@@ -999,11 +999,11 @@ table {
     overflow: scroll;
     overflow-x: hidden;
     direction: rtl;
- }
- .descriptionDiv{
-     direction:ltr;
- }
-.setting .main-formDiv{
+}
+.descriptionDiv {
+    direction: ltr;
+}
+.setting .main-formDiv {
     width: 100%;
     max-width: 91%;
     margin: auto;
@@ -1049,7 +1049,7 @@ table {
     color: #ffd9a9;
     font-family: Nexa-Bold !important;
 }
-.rulesProgram .rulesDiv .main-rulesPara{
+.rulesProgram .rulesDiv .main-rulesPara {
     direction: ltr;
     width: 100%;
     max-width: 96%;
@@ -1309,13 +1309,13 @@ input:checked + .slider:before {
 .loginUser .signInText {
     left: 90px !important;
 }
-.header_col2 a{
-    position:relative;
-    top:33px;
+.header_col2 a {
+    position: relative;
+    top: 33px;
 }
-.header_col1 .inputView{
-    position:relative;
-    top:4px;
+.header_col1 .inputView {
+    position: relative;
+    top: 4px;
 }
 #header .loginUser {
     min-width: 135px;
@@ -1512,7 +1512,7 @@ input:checked + .slider:before {
     border-bottom: 1px solid #b57a4b;
 }
 
-.crystalDiv .multiCrystalDiv .commonDiv{
+.crystalDiv .multiCrystalDiv .commonDiv {
     margin: 0px 10px;
 }
 
@@ -1644,10 +1644,10 @@ input:checked + .slider:before {
     text-align: center;
     left: 70px;
 }
-.logoutBtn a.dropdown-item{
+.logoutBtn a.dropdown-item {
     position: relative;
 }
-.logoutBtn span{
+.logoutBtn span {
     position: absolute;
     top: 0px;
     z-index: 999;
@@ -1657,10 +1657,10 @@ input:checked + .slider:before {
     border-radius: 3px;
     font-size: 12px;
     display: none;
-    transition: all .5s;
+    transition: all 0.5s;
     right: -50px;
 }
-.logoutBtn a.dropdown-item:hover span{
+.logoutBtn a.dropdown-item:hover span {
     display: block;
 }
 .tour .actionContainer button {
@@ -1676,13 +1676,13 @@ input:checked + .slider:before {
     -webkit-animation: none;
     animation: none;
 }
-.tour .titleContainer{
+.tour .titleContainer {
     background-color: #763202 !important;
 }
 .tour {
     background-color: #fff5e0 !important;
 }
-.tour .mainContainer p{
+.tour .mainContainer p {
     text-align: left !important;
     font-family: "Poppins", sans-serif !important;
     font-weight: 500 !important;
@@ -1691,11 +1691,11 @@ input:checked + .slider:before {
     position: initial;
     top: 0px !important;
 }
-.tour .tour-arrow{
+.tour .tour-arrow {
     background-color: #763202 !important;
     border-color: #fff !important;
 }
-.tour .titleContainer h3{
+.tour .titleContainer h3 {
     color: #fff !important;
     font-family: Nexa-Bold !important;
 }
@@ -1726,13 +1726,12 @@ input:checked + .slider:before {
 }
 .modalBody p {
     font-family: Nexa-Regular !important;
-   font-size: 14px;
+    font-size: 14px;
 }
-.modalBody p:nth-child(1){
+.modalBody p:nth-child(1) {
     font-size: 19px;
     font-family: Nexa-Regular !important;
 }
-
 
 .multiPackage .packageDiv img {
     margin: 20px 0px;
@@ -1787,7 +1786,7 @@ input:checked + .slider:before {
     border-radius: 3px;
     padding: 5px;
 }
-.customAmount input{
+.customAmount input {
     padding: 5px;
 }
 
@@ -1867,100 +1866,101 @@ input:checked + .slider:before {
     margin-right: 10px;
 }
 
-
-.silverBlock{
+.silverBlock {
     display: none;
 }
-.detailBox p{color:#5e3700 !important;}
+.detailBox p {
+    color: #5e3700 !important;
+}
 
-#header .rightHeader{
+#header .rightHeader {
     position: absolute;
     top: 0px;
     right: 10px;
 }
-#header .rightHeader ul{
+#header .rightHeader ul {
     list-style: none;
     padding: none;
     margin: none;
 }
-#header .rightHeader ul li{
+#header .rightHeader ul li {
     text-align: center;
     margin-bottom: 20px;
     position: relative;
     z-index: 99999999;
 }
-#header .rightHeader select:focus{
+#header .rightHeader select:focus {
     outline: none;
 }
-#header .rightHeader select{
+#header .rightHeader select {
     background: #d69434;
     border: none;
     padding: 5px;
     border-radius: 5px;
     color: #fff;
 }
-.leftSideContent{
+.leftSideContent {
     position: absolute;
     left: 170px;
     top: 50px;
 }
-.leftSideContent ul{
+.leftSideContent ul {
     list-style: none;
     padding: 0px;
     margin: 0px;
 }
-.commonBoard{
+.commonBoard {
     position: relative;
     width: 200px;
     height: 180px;
 }
-.commonBoard img{
+.commonBoard img {
     width: 100%;
     height: 100%;
 }
-.commonBoard p{
-    top:70px;
+.commonBoard p {
+    top: 70px;
     font-size: 24px !important;
     font-family: "Bangers", cursive !important;
     color: #005f90 !important;
     text-align: center;
     display: block !important;
 }
-.registerHeader .commonWooden{
+.registerHeader .commonWooden {
     background-image: url("../img/logoBadge.png") !important;
 }
-#registrationModal .modal-content{
+#registrationModal .modal-content {
     width: 30%;
 }
 #welcomeModal .modal-content,
-#congratulationModal .modal-content{
+#congratulationModal .modal-content {
     width: 40%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.modal{
+.modal {
     z-index: 99999999999999999;
 }
 #welcomeModal .modal-content h5,
-#congratulationModal .modal-content h5{
+#congratulationModal .modal-content h5 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 18px;
     font-family: "poppins";
 }
 #welcomeModal .modal-content p,
-#congratulationModal .modal-content p{
+#congratulationModal .modal-content p {
     font-size: 16px;
 }
 #welcomeModal .modalFooter,
-#congratulationModal .modalFooter{
+#congratulationModal .modalFooter {
     text-align: center;
     margin-top: 30px;
 }
 #welcomeModal .modalFooter button,
-#congratulationModal .modalFooter button{
+#congratulationModal .modalFooter button {
     background: #763202;
     padding: 10px 60px;
     font-size: 16px;
@@ -1969,10 +1969,10 @@ input:checked + .slider:before {
     border-radius: 4px;
     font-family: "Bangers", cursive;
 }
-#registrationModal .modalHeader{
+#registrationModal .modalHeader {
     margin-bottom: 50px;
 }
-#buyCow .modal-content{
+#buyCow .modal-content {
     width: 25%;
     background-image: url(../img/Group\ 36.png);
     background-color: transparent;
@@ -1982,37 +1982,37 @@ input:checked + .slider:before {
     border: none;
     position: relative;
 }
-#buyCow .modalHeader{
+#buyCow .modalHeader {
     margin-bottom: 30px;
     position: absolute;
     top: 10%;
     left: 29%;
 }
-#buyCow .modalHeader h1{
+#buyCow .modalHeader h1 {
     color: #fff;
     font-size: 18px;
     font-family: "Bangers", cursive;
     letter-spacing: 2px;
 }
-#registrationModal .modalBody{
+#registrationModal .modalBody {
     height: 550px;
     overflow: scroll;
     overflow-x: hidden;
 }
-#registrationModal .modalFooter{
+#registrationModal .modalFooter {
     text-align: center;
     margin: 20px 0px;
 }
-.backDrop{
+.backDrop {
     width: 100%;
     height: 100%;
     background: #000;
-    opacity: .2;
+    opacity: 0.2;
     position: absolute;
     z-index: 999;
     display: none;
 }
-#registrationModal .modalFooter button{
+#registrationModal .modalFooter button {
     background-color: #763202;
     border: none;
     padding: 10px;
@@ -2020,13 +2020,13 @@ input:checked + .slider:before {
     color: #fff5e0;
     cursor: pointer;
 }
-#registrationModal .modalBody h3{
+#registrationModal .modalBody h3 {
     margin-bottom: 20px;
 }
-#registrationModal .modalBody p{
+#registrationModal .modalBody p {
     margin-bottom: 5px;
 }
-#buyCow .modalBody{
+#buyCow .modalBody {
     position: absolute;
     top: 40%;
     text-align: center;
@@ -2034,7 +2034,7 @@ input:checked + .slider:before {
     width: 100%;
     max-width: 80%;
 }
-#buyCow .close{
+#buyCow .close {
     color: #00669b;
     float: right;
     font-size: 28px;
@@ -2042,7 +2042,7 @@ input:checked + .slider:before {
     position: relative;
     right: 13px;
 }
-#buyCow .modalBody p{
+#buyCow .modalBody p {
     font-size: 18px;
     font-family: Nexa-Bold !important;
     color: #7d3701 !important;
@@ -2050,47 +2050,46 @@ input:checked + .slider:before {
 /*********** Media Query ************/
 
 @media (max-width: 1400px) {
-   
-    .copyText{
+    .copyText {
         right: 0px !important;
     }
-    #startRightNow .midDiv p{
+    #startRightNow .midDiv p {
         font-size: 12px;
-       
     }
     #startRightNow .midDiv {
         max-width: 26%;
         background-size: 100% 100%;
     }
-    #startRightNow .midDiv .advantagesList ul{
+    #startRightNow .midDiv .advantagesList ul {
         padding: 0px 30px;
     }
-    #startRightNow .midDiv .advantagesList img{
+    #startRightNow .midDiv .advantagesList img {
         width: 50px;
         height: 50px;
     }
-    #startRightNow .midDiv .advantagesList ul li p{
+    #startRightNow .midDiv .advantagesList ul li p {
         font-size: 10px;
     }
-    p#fifthChild-p{
+    p#fifthChild-p {
         padding-right: 0px;
     }
-    #startRightNow .midDiv .multiDiv .leftDiv p, #startRightNow .midDiv .multiDiv .rightDiv p{
+    #startRightNow .midDiv .multiDiv .leftDiv p,
+    #startRightNow .midDiv .multiDiv .rightDiv p {
         margin-left: 5px;
     }
-    #startRightNow .midDiv .multiDiv .leftDiv img, #startRightNow .midDiv .multiDiv .rightDiv img{
+    #startRightNow .midDiv .multiDiv .leftDiv img,
+    #startRightNow .midDiv .multiDiv .rightDiv img {
         width: 60px;
     }
 }
 
 @media (max-width: 1200px) {
-    
     #header .rightHeader {
         position: absolute;
         top: 50px;
         right: -30px;
     }
-    #startRightNow .midDiv .menuBox{
+    #startRightNow .midDiv .menuBox {
         right: -420px;
     }
     #startRightNow .stairDiv {
@@ -2099,15 +2098,15 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 992px) {
-    #header .loginForm .inputDiv{
+    #header .loginForm .inputDiv {
         max-width: 90% !important;
     }
-    #startRightNow .midDiv .advantagesList{
+    #startRightNow .midDiv .advantagesList {
         width: 100%;
-max-width: 80%;
-margin: auto;
+        max-width: 80%;
+        margin: auto;
     }
-    #startRightNow .midDiv .advantagesList ul{
+    #startRightNow .midDiv .advantagesList ul {
         padding: 0px;
     }
     #header .rightHeader {
@@ -2122,87 +2121,88 @@ margin: auto;
     #header table {
         min-width: 900px;
     }
-    .main-promoDiv{
+    .main-promoDiv {
         padding: 0px !important;
     }
-    .htmlDiv img{
+    .htmlDiv img {
         width: 100% !important;
     }
 }
 
 @media (max-width: 768px) {
-        #registrationModal .modal-content,
-        #welcomeModal .modal-content, #congratulationModal .modal-content {
+    #registrationModal .modal-content,
+    #welcomeModal .modal-content,
+    #congratulationModal .modal-content {
         width: 85%;
         height: auto;
     }
-    #registrationModal .modal-content h1{
+    #registrationModal .modal-content h1 {
         font-size: 18px;
         font-family: poppins;
-        font-weight: 600
+        font-weight: 600;
     }
-    #registrationModal .modalHeader{
+    #registrationModal .modalHeader {
         margin-bottom: 20px;
     }
-    .acceptText{
+    .acceptText {
         font-size: 12px !important;
     }
-    #registrationModal .modal-content h3{
+    #registrationModal .modal-content h3 {
         font-size: 16px;
         font-family: poppins;
-        font-weight: 400
+        font-weight: 400;
     }
-    #buyCow .modal-content{
+    #buyCow .modal-content {
         width: 50%;
         overflow: hidden;
     }
-   
-    .copyText{
+
+    .copyText {
         right: 10px !important;
     }
-    #startRightNow .midDiv .rightNow{
+    #startRightNow .midDiv .rightNow {
         font-size: 15px;
     }
-    #header .commonWooden .multiBtn{
+    #header .commonWooden .multiBtn {
         position: absolute;
         top: 50px;
         left: 40px;
     }
-    .registerHeader .commonWooden .multiBtn:last-child{
+    .registerHeader .commonWooden .multiBtn:last-child {
         top: 50px;
         left: 40px;
     }
-    #header .commonWooden .multiBtn:last-child{
+    #header .commonWooden .multiBtn:last-child {
         top: 10px;
         left: 0px;
     }
-    .registerHeader .commonWooden .multiBtn:last-child{
+    .registerHeader .commonWooden .multiBtn:last-child {
         top: 100px !important;
         left: 50px !important;
     }
-    .mobileMenu #login .multiBtn button{
+    .mobileMenu #login .multiBtn button {
         margin: 0px !important;
     }
-    #login .formDiv .inputDiv input{
+    #login .formDiv .inputDiv input {
         width: 80% !important;
     }
-    .registration .nav-pills{
+    .registration .nav-pills {
         width: 92% !important;
         left: 4% !important;
     }
-    #startRightNow .midDiv.registration .rightNow a{
+    #startRightNow .midDiv.registration .rightNow a {
         font-size: 12px;
     }
-    .commonBoard p{
+    .commonBoard p {
         position: absolute;
         left: 0%;
         top: 80px;
         width: 100%;
     }
-    .commonBoard{
+    .commonBoard {
         width: 100%;
     }
-    .registerHeader .loginForm h2{
+    .registerHeader .loginForm h2 {
         font-family: "Bangers", cursive;
         text-align: center;
         color: #005f90;
@@ -2210,27 +2210,27 @@ margin: auto;
         position: relative;
         top: 82px;
     }
-    .leftSideContent{
+    .leftSideContent {
         position: relative;
     }
     /* .htmlDiv img{
         width: 100% !important;
     } */
-    #header .statistics #commonBtn{
+    #header .statistics #commonBtn {
         top: initial;
     }
-    .mobileMenu #login .inputView{
+    .mobileMenu #login .inputView {
         position: relative;
         top: 24px;
     }
-    .mobileMenu #login .multiBtn{
+    .mobileMenu #login .multiBtn {
         position: relative;
         top: 12px;
         right: 0px;
     }
-    #header .commonWooden .mobileStatistics #commonBtn{
+    #header .commonWooden .mobileStatistics #commonBtn {
         padding: 5px 4px 12px;
-    max-width: 53% !important;
+        max-width: 53% !important;
     }
     .mobileMenu .multiImg img {
         width: 50px;
@@ -2246,7 +2246,7 @@ margin: auto;
     } */
     .mobileMenu #login .multiBtn button,
     .mobileMenu #login .multiBtn a,
-    #header .commonWooden .mobileStatistics #commonBtn a{
+    #header .commonWooden .mobileStatistics #commonBtn a {
         width: initial !important;
         text-align: center;
         margin: 0px 5px;
@@ -2258,59 +2258,59 @@ margin: auto;
         border-radius: 3px;
         font-size: 12px;
     }
-    .mobileMenu #login .multiBtn #commonBtn{
+    .mobileMenu #login .multiBtn #commonBtn {
         width: 20% !important;
     }
-    #startRightNow .midDiv .advantagesList{
+    #startRightNow .midDiv .advantagesList {
         max-width: 100%;
     }
-    #startRightNow .midDiv .advantagesList li{
+    #startRightNow .midDiv .advantagesList li {
         width: 22%;
     }
-    #startRightNow .midDiv .multiDiv{
+    #startRightNow .midDiv .multiDiv {
         margin-bottom: 30px;
     }
-    .twoThreeStep{
+    .twoThreeStep {
         display: block;
         margin-top: 30px;
     }
     .twoThreeStep .checkoutOrder,
-    .twoThreeStep .paymentMethod{
+    .twoThreeStep .paymentMethod {
         width: 100%;
         margin: 10px;
         padding: 0px;
     }
-    .modal{
+    .modal {
         top: 8%;
     }
-    .modal-content{
+    .modal-content {
         max-width: 90%;
         height: 80%;
         overflow: scroll;
     }
-    .modalBody .multiPackage{
+    .modalBody .multiPackage {
         display: flex !important;
         flex-wrap: wrap;
     }
-    .modalBody .multiPackage .packageDiv{
+    .modalBody .multiPackage .packageDiv {
         width: 10%;
     }
-    .modalBody p{
+    .modalBody p {
         font-size: 10px;
     }
-    #startRightNow .midDiv .multiBox{
+    #startRightNow .midDiv .multiBox {
         width: 100%;
     }
     #startRightNow .midDiv .multiBox .imgBoxInput img,
-    .multiPackage .packageDiv img{
+    .multiPackage .packageDiv img {
         width: 30px;
     }
-    .logoutBtn{
+    .logoutBtn {
         top: 46px;
-    text-align: center;
-    left: 83px;
+        text-align: center;
+        left: 83px;
     }
-    .loginForm .formDiv{
+    .loginForm .formDiv {
         margin: 0px;
     }
     .bgColor {
@@ -2338,10 +2338,10 @@ margin: auto;
     .statistics.loginUser p {
         top: 77px !important;
     }
-    .mobileMenu .payment.loginUser p{
+    .mobileMenu .payment.loginUser p {
         top: 76px;
     }
-    .mobileMenu .loginUser .addFunds{
+    .mobileMenu .loginUser .addFunds {
         top: -10px;
     }
     .mobileMenu .loginUser .withDrawFunds {
@@ -2353,10 +2353,7 @@ margin: auto;
     .mobileMenu .loginUser .accountSetting {
         top: 22px;
     }
-    
-    
-    
-    
+
     .payment.loginUser p {
         top: 100px;
     }
@@ -2365,7 +2362,9 @@ margin: auto;
         font-size: 12px;
         padding: 0px;
     }
-    #startRightNow .stairDiv .forthChild p{font-size:14px;}
+    #startRightNow .stairDiv .forthChild p {
+        font-size: 14px;
+    }
     #startRightNow .stairDiv .listContent p:last-child {
         font-size: 10px;
     }
@@ -2459,37 +2458,37 @@ margin: auto;
         justify-content: space-between;
         align-items: center;
     }
-    #startRightNow .midDiv{
+    #startRightNow .midDiv {
         max-width: 70% !important;
     }
-    #header .loginForm .formDiv{
+    #header .loginForm .formDiv {
         padding: 0px;
         position: relative;
         top: 50px;
     }
-    #header .commonWooden .mobileStatistics{
+    #header .commonWooden .mobileStatistics {
         position: relative;
         top: 73px;
         width: 100%;
         max-width: 90%;
         margin: auto;
     }
-    #header .statistics .mobileStatistics button{
+    #header .statistics .mobileStatistics button {
         top: initial;
         bottom: initial;
     }
-    #header .mobilePayment{
+    #header .mobilePayment {
         position: relative;
         top: 100px;
     }
-    .main-promoDiv{
+    .main-promoDiv {
         padding: 0px !important;
         direction: initial;
     }
     /* .mobileMenu .board{
         top: -27px !important;
     } */
-    .mobileMenu{
+    .mobileMenu {
         height: 93vh;
         overflow: scroll;
         overflow-x: hidden;
@@ -2500,20 +2499,20 @@ margin: auto;
 }
 
 @media (max-width: 568px) {
-    .inputDiv  .g-recaptcha{
-        transform: scale(0.70);
+    .inputDiv .g-recaptcha {
+        transform: scale(0.7);
     }
 
-    .dailyBonusTable table thead td{
+    .dailyBonusTable table thead td {
         font-size: 10px;
     }
-    .dailyBonustwo .imgText{
+    .dailyBonustwo .imgText {
         display: block;
     }
-    .linkCopy p{
+    .linkCopy p {
         font-size: 9px !important;
     }
-   
+
     .twoThreeStep .imgTable table td {
         font-size: 11px;
         text-align: left;
@@ -2521,61 +2520,63 @@ margin: auto;
     .twoThreeStep .imgTable table {
         margin-left: 0px;
     }
-    .horizontalLine p{
+    .horizontalLine p {
         left: 40%;
     }
-    .twoThreeStep .paymentMethod label{
+    .twoThreeStep .paymentMethod label {
         font-size: 12px;
     }
     .paymentMulti img {
         width: 79px;
         height: 50px;
     }
-    .checkoutOrder .inputDiv label:nth-child(1){
+    .checkoutOrder .inputDiv label:nth-child(1) {
         font-size: 12px;
         margin-right: 2px;
     }
-    .twoThreeStep .checkoutOrder, .twoThreeStep .paymentMethod{
+    .twoThreeStep .checkoutOrder,
+    .twoThreeStep .paymentMethod {
         margin: 0px;
     }
-    .multiCards{
+    .multiCards {
         flex-wrap: wrap;
     }
-    .modalBody .multiPackage .packageDiv{
+    .modalBody .multiPackage .packageDiv {
         width: 30%;
         margin-bottom: 10px;
     }
-    .promoMaterial .multiSelect .selectOption{
+    .promoMaterial .multiSelect .selectOption {
         width: 14%;
     }
-    .copyText{
+    .copyText {
         right: -10px !important;
     }
-    .cowShop .multipleDiv .commonDiv{
+    .cowShop .multipleDiv .commonDiv {
         max-width: 100%;
         width: 80% !important;
     }
-    .setting .main-formDiv{
+    .setting .main-formDiv {
         padding: 20px 0px;
     }
-    .profileDetails .profileTable{
+    .profileDetails .profileTable {
         margin: 50px 0px;
     }
-    .registration .formDiv, .setting .formDiv{
+    .registration .formDiv,
+    .setting .formDiv {
         max-width: 90%;
     }
     .registration .formDiv .inputDiv select,
     .setting .formDiv .inputDiv input,
-    .setting .formDiv .inputDiv select{
+    .setting .formDiv .inputDiv select {
         font-size: 12px;
     }
-    #startRightNow .midDiv .multiBox .imgBoxInput{
+    #startRightNow .midDiv .multiBox .imgBoxInput {
         width: 34%;
     }
-    #startRightNow .midDiv .multiBox{
+    #startRightNow .midDiv .multiBox {
         justify-content: space-around !important;
     }
-    #startRightNow .midDiv .multiBox .imgBoxInput label{
+    #startRightNow .midDiv .multiBox .imgBoxInput label {
         font-size: 9px !important;
     }
     .menuBtn {
@@ -2597,15 +2598,15 @@ margin: auto;
     #startRightNow .midDiv p {
         font-size: 12px;
     }
-    .setting .formDiv .inputDiv label{
+    .setting .formDiv .inputDiv label {
         font-size: 10px;
     }
-    .commonBtn{
+    .commonBtn {
         width: 150px;
         background-size: contain;
         font-size: 12px;
     }
-    .profileDetails .profileTable table tr td{
+    .profileDetails .profileTable table tr td {
         font-size: 10px;
         line-break: anywhere;
     }
@@ -2665,7 +2666,6 @@ margin: auto;
     #startRightNow .stairDiv .secondChild {
         top: 81px !important;
         transform: rotate(0deg);
-    
     }
 
     #startRightNow .stairDiv .thirdChild {
@@ -2686,11 +2686,12 @@ margin: auto;
         left: 2px;
     }
     #startRightNow .midDiv .multiDiv,
-    #startRightNow .midDiv .multiDiv .leftDiv, 
-    #startRightNow .midDiv .multiDiv .rightDiv{
+    #startRightNow .midDiv .multiDiv .leftDiv,
+    #startRightNow .midDiv .multiDiv .rightDiv {
         align-items: initial;
     }
-    #startRightNow .midDiv .multiDiv .leftDiv p, #startRightNow .midDiv .multiDiv .rightDiv p{
+    #startRightNow .midDiv .multiDiv .leftDiv p,
+    #startRightNow .midDiv .multiDiv .rightDiv p {
         margin-top: 0px;
     }
     p#fifthChild-h2 {
@@ -2701,61 +2702,64 @@ margin: auto;
         transform: rotate(0deg);
         padding-right: 38%;
     }
-    .displayPayment{
+    .displayPayment {
         text-align: center !important;
         margin-top: 12px;
     }
 }
-.htmlDiv .imgDiv{
-    
+.htmlDiv .imgDiv {
 }
 
-@media (max-width: 390px){
-#startRightNow .midDiv .multiDiv {
-    margin-bottom: 60px;
+@media (max-width: 390px) {
+    #startRightNow .midDiv .multiDiv {
+        margin-bottom: 60px;
+    }
+
+    #buyCow .modalBody p {
+        font-size: 16px;
+    }
+    #buyCow .modalHeader h1 {
+        font-size: 8px !important;
+    }
 }
 
-#buyCow .modalBody p{
-    font-size:16px;
-}
-#buyCow .modalHeader h1{font-size:8px !important;}
-}
-
-@media (max-width: 320px){
+@media (max-width: 320px) {
     #startRightNow .midDiv .multiDiv {
         margin-bottom: 80px;
     }
 }
 
 /* for landscape screen */
-@media screen and (orientation:landscape) and (max-width: 900px){
-    #startRightNow .midDiv{
+@media screen and (orientation: landscape) and (max-width: 900px) {
+    #startRightNow .midDiv {
         padding-top: 60px;
     }
     #startRightNow .midDiv .multiDiv {
         margin-bottom: 60px;
     }
-    #buyCow .modalBody p{
-        font-size:16px;
+    #buyCow .modalBody p {
+        font-size: 16px;
     }
-    #buyCow .modalHeader h1{font-size:8px !important;}
+    #buyCow .modalHeader h1 {
+        font-size: 8px !important;
+    }
     #startRightNow .midDiv .multiDiv {
         margin-bottom: 80px;
     }
-    .inputDiv  .g-recaptcha{
-        transform: scale(0.70);
+    .inputDiv .g-recaptcha {
+        transform: scale(0.7);
     }
 
-    .dailyBonusTable table thead td{
+    .dailyBonusTable table thead td {
         font-size: 10px;
     }
-    .dailyBonustwo .imgText{
+    .dailyBonustwo .imgText {
         display: block;
     }
-    .linkCopy p{
+    .linkCopy p {
         font-size: 9px !important;
     }
-   
+
     .twoThreeStep .imgTable table td {
         font-size: 11px;
         text-align: left;
@@ -2763,61 +2767,63 @@ margin: auto;
     .twoThreeStep .imgTable table {
         margin-left: 0px;
     }
-    .horizontalLine p{
+    .horizontalLine p {
         left: 40%;
     }
-    .twoThreeStep .paymentMethod label{
+    .twoThreeStep .paymentMethod label {
         font-size: 12px;
     }
     .paymentMulti img {
         width: 79px;
         height: 50px;
     }
-    .checkoutOrder .inputDiv label:nth-child(1){
+    .checkoutOrder .inputDiv label:nth-child(1) {
         font-size: 12px;
         margin-right: 2px;
     }
-    .twoThreeStep .checkoutOrder, .twoThreeStep .paymentMethod{
+    .twoThreeStep .checkoutOrder,
+    .twoThreeStep .paymentMethod {
         margin: 0px;
     }
-    .multiCards{
+    .multiCards {
         flex-wrap: wrap;
     }
-    .modalBody .multiPackage .packageDiv{
+    .modalBody .multiPackage .packageDiv {
         width: 30%;
         margin-bottom: 10px;
     }
-    .promoMaterial .multiSelect .selectOption{
+    .promoMaterial .multiSelect .selectOption {
         width: 14%;
     }
-    .copyText{
+    .copyText {
         right: -10px !important;
     }
-    .cowShop .multipleDiv .commonDiv{
+    .cowShop .multipleDiv .commonDiv {
         max-width: 100%;
         width: 80% !important;
     }
-    .setting .main-formDiv{
+    .setting .main-formDiv {
         padding: 20px 0px;
     }
-    .profileDetails .profileTable{
+    .profileDetails .profileTable {
         margin: 50px 0px;
     }
-    .registration .formDiv, .setting .formDiv{
+    .registration .formDiv,
+    .setting .formDiv {
         max-width: 90%;
     }
     .registration .formDiv .inputDiv select,
     .setting .formDiv .inputDiv input,
-    .setting .formDiv .inputDiv select{
+    .setting .formDiv .inputDiv select {
         font-size: 12px;
     }
-    #startRightNow .midDiv .multiBox .imgBoxInput{
+    #startRightNow .midDiv .multiBox .imgBoxInput {
         width: 34%;
     }
-    #startRightNow .midDiv .multiBox{
+    #startRightNow .midDiv .multiBox {
         justify-content: space-around !important;
     }
-    #startRightNow .midDiv .multiBox .imgBoxInput label{
+    #startRightNow .midDiv .multiBox .imgBoxInput label {
         font-size: 9px !important;
     }
     .menuBtn {
@@ -2841,15 +2847,15 @@ margin: auto;
         text-align: center !important;
         margin-top: 12px;
     }
-    .setting .formDiv .inputDiv label{
+    .setting .formDiv .inputDiv label {
         font-size: 10px;
     }
-    .commonBtn{
+    .commonBtn {
         width: 150px;
         background-size: contain;
         font-size: 12px;
     }
-    .profileDetails .profileTable table tr td{
+    .profileDetails .profileTable table tr td {
         font-size: 10px;
         line-break: anywhere;
     }
@@ -2909,7 +2915,6 @@ margin: auto;
     #startRightNow .stairDiv .secondChild {
         top: 81px !important;
         transform: rotate(0deg);
-    
     }
 
     #startRightNow .stairDiv .thirdChild {
@@ -2930,11 +2935,12 @@ margin: auto;
         left: 2px;
     }
     #startRightNow .midDiv .multiDiv,
-    #startRightNow .midDiv .multiDiv .leftDiv, 
-    #startRightNow .midDiv .multiDiv .rightDiv{
+    #startRightNow .midDiv .multiDiv .leftDiv,
+    #startRightNow .midDiv .multiDiv .rightDiv {
         align-items: initial;
     }
-    #startRightNow .midDiv .multiDiv .leftDiv p, #startRightNow .midDiv .multiDiv .rightDiv p{
+    #startRightNow .midDiv .multiDiv .leftDiv p,
+    #startRightNow .midDiv .multiDiv .rightDiv p {
         margin-top: 0px;
     }
     p#fifthChild-h2 {
@@ -2945,78 +2951,79 @@ margin: auto;
         transform: rotate(0deg);
         padding-right: 38%;
     }
-        #registrationModal .modal-content,
-        #welcomeModal .modal-content, #congratulationModal .modal-content {
+    #registrationModal .modal-content,
+    #welcomeModal .modal-content,
+    #congratulationModal .modal-content {
         width: 85%;
         height: auto;
     }
-    #registrationModal .modal-content h1{
+    #registrationModal .modal-content h1 {
         font-size: 18px;
         font-family: poppins;
-        font-weight: 600
+        font-weight: 600;
     }
-    #registrationModal .modalHeader{
+    #registrationModal .modalHeader {
         margin-bottom: 20px;
     }
-    .acceptText{
+    .acceptText {
         font-size: 12px !important;
     }
-    #registrationModal .modal-content h3{
+    #registrationModal .modal-content h3 {
         font-size: 16px;
         font-family: poppins;
-        font-weight: 400
+        font-weight: 400;
     }
-    #buyCow .modal-content{
+    #buyCow .modal-content {
         width: 50%;
         overflow: hidden;
     }
-   
-    .copyText{
+
+    .copyText {
         right: 10px !important;
     }
-    #startRightNow .midDiv .rightNow{
+    #startRightNow .midDiv .rightNow {
         font-size: 15px;
     }
-    #header .commonWooden .multiBtn{
+    #header .commonWooden .multiBtn {
         position: absolute;
         top: 50px;
         left: 40px;
     }
-    .registerHeader .commonWooden .multiBtn:last-child{
+    .registerHeader .commonWooden .multiBtn:last-child {
         top: 50px;
         left: 40px;
     }
-    #header .commonWooden .multiBtn:last-child{
+    #header .commonWooden .multiBtn:last-child {
         top: 10px;
         left: 0px;
     }
-    .registerHeader .commonWooden .multiBtn:last-child{
+    .registerHeader .commonWooden .multiBtn:last-child {
         top: 100px !important;
         left: 50px !important;
     }
-    .mobileMenu #login .multiBtn button{
+    .mobileMenu #login .multiBtn button {
         margin: 0px !important;
     }
-    #login .formDiv .inputDiv input{
+    #login .formDiv .inputDiv input {
         width: 80% !important;
     }
-    .registration .nav-pills{
+    .registration .nav-pills {
         width: 92% !important;
         left: 4% !important;
     }
-    #startRightNow .midDiv.registration .rightNow a{
+    #startRightNow .midDiv.registration .rightNow a {
         font-size: 12px;
     }
-    .commonBoard p{
+    .commonBoard p {
         position: absolute;
         left: 0%;
         top: 80px;
         width: 100%;
     }
-    .commonBoard{
+    .commonBoard {
         width: 100%;
     }
-    .registerHeader .loginForm h2{
+    .registerHeader .loginForm h2 {
         font-family: "Bangers", cursive;
         text-align: center;
         color: #005f90;
@@ -3024,27 +3031,27 @@ margin: auto;
         position: relative;
         top: 82px;
     }
-    .leftSideContent{
+    .leftSideContent {
         position: relative;
     }
     /* .htmlDiv img{
         width: 100% !important;
     } */
-    #header .statistics #commonBtn{
+    #header .statistics #commonBtn {
         top: initial;
     }
-    .mobileMenu #login .inputView{
+    .mobileMenu #login .inputView {
         position: relative;
         top: 24px;
     }
-    .mobileMenu #login .multiBtn{
+    .mobileMenu #login .multiBtn {
         position: relative;
         top: 12px;
         right: 0px;
     }
-    #header .commonWooden .mobileStatistics #commonBtn{
+    #header .commonWooden .mobileStatistics #commonBtn {
         padding: 5px 4px 12px;
-    max-width: 53% !important;
+        max-width: 53% !important;
     }
     .mobileMenu .multiImg img {
         width: 50px;
@@ -3060,7 +3067,7 @@ margin: auto;
     } */
     .mobileMenu #login .multiBtn button,
     .mobileMenu #login .multiBtn a,
-    #header .commonWooden .mobileStatistics #commonBtn a{
+    #header .commonWooden .mobileStatistics #commonBtn a {
         width: initial !important;
         text-align: center;
         margin: 0px 5px;
@@ -3072,59 +3079,59 @@ margin: auto;
         border-radius: 3px;
         font-size: 12px;
     }
-    .mobileMenu #login .multiBtn #commonBtn{
+    .mobileMenu #login .multiBtn #commonBtn {
         width: 20% !important;
     }
-    #startRightNow .midDiv .advantagesList{
+    #startRightNow .midDiv .advantagesList {
         max-width: 100%;
     }
-    #startRightNow .midDiv .advantagesList li{
+    #startRightNow .midDiv .advantagesList li {
         width: 22%;
     }
-    #startRightNow .midDiv .multiDiv{
+    #startRightNow .midDiv .multiDiv {
         margin-bottom: 30px;
     }
-    .twoThreeStep{
+    .twoThreeStep {
         display: block;
         margin-top: 30px;
     }
     .twoThreeStep .checkoutOrder,
-    .twoThreeStep .paymentMethod{
+    .twoThreeStep .paymentMethod {
         width: 100%;
         margin: 10px;
         padding: 0px;
     }
-    .modal{
+    .modal {
         top: 8%;
     }
-    .modal-content{
+    .modal-content {
         max-width: 90%;
         height: 80%;
         overflow: scroll;
     }
-    .modalBody .multiPackage{
+    .modalBody .multiPackage {
         display: flex !important;
         flex-wrap: wrap;
     }
-    .modalBody .multiPackage .packageDiv{
+    .modalBody .multiPackage .packageDiv {
         width: 10%;
     }
-    .modalBody p{
+    .modalBody p {
         font-size: 10px;
     }
-    #startRightNow .midDiv .multiBox{
+    #startRightNow .midDiv .multiBox {
         width: 100%;
     }
     #startRightNow .midDiv .multiBox .imgBoxInput img,
-    .multiPackage .packageDiv img{
+    .multiPackage .packageDiv img {
         width: 30px;
     }
-    .logoutBtn{
+    .logoutBtn {
         top: 46px;
-    text-align: center;
-    left: 83px;
+        text-align: center;
+        left: 83px;
     }
-    .loginForm .formDiv{
+    .loginForm .formDiv {
         margin: 0px;
     }
     .bgColor {
@@ -3152,10 +3159,10 @@ margin: auto;
     .statistics.loginUser p {
         top: 77px !important;
     }
-    .mobileMenu .payment.loginUser p{
+    .mobileMenu .payment.loginUser p {
         top: 76px;
     }
-    .mobileMenu .loginUser .addFunds{
+    .mobileMenu .loginUser .addFunds {
         top: -10px;
     }
     .mobileMenu .loginUser .withDrawFunds {
@@ -3167,10 +3174,7 @@ margin: auto;
     .mobileMenu .loginUser .accountSetting {
         top: 22px;
     }
-    
-    
-    
-    
+
     .payment.loginUser p {
         top: 100px;
     }
@@ -3179,7 +3183,9 @@ margin: auto;
         font-size: 12px;
         padding: 0px;
     }
-    #startRightNow .stairDiv .forthChild p{font-size:14px;}
+    #startRightNow .stairDiv .forthChild p {
+        font-size: 14px;
+    }
     #startRightNow .stairDiv .listContent p:last-child {
         font-size: 10px;
     }
@@ -3243,11 +3249,6 @@ margin: auto;
         height: 200px;
     }
 
-    /* #header .statistics p {
-        position: relative;
-        top: 53px;
-    } */
-
     .menuBtn,
     .headerMenu {
         display: block;
@@ -3273,37 +3274,40 @@ margin: auto;
         justify-content: space-between;
         align-items: center;
     }
-    #startRightNow .midDiv{
+    #startRightNow .midDiv {
         max-width: 70% !important;
     }
-    #header .loginForm .formDiv{
+    #header .loginForm .formDiv {
         padding: 0px;
         position: relative;
         top: 50px;
     }
-    #header .commonWooden .mobileStatistics{
+    #header .commonWooden .mobileStatistics {
         position: relative;
         top: 73px;
         width: 100%;
         max-width: 90%;
         margin: auto;
     }
-    #header .statistics .mobileStatistics button{
+
+    /* header */
+    #header .statistics .mobileStatistics button {
         top: initial;
         bottom: initial;
     }
-    #header .mobilePayment{
+    #header .mobilePayment {
         position: relative;
         top: 100px;
     }
-    .main-promoDiv{
+
+    .main-promoDiv {
         padding: 0px !important;
         direction: initial;
     }
     /* .mobileMenu .board{
         top: -27px !important;
     } */
-    .mobileMenu{
+    .mobileMenu {
         height: 93vh;
         overflow: scroll;
         overflow-x: hidden;
@@ -3313,19 +3317,23 @@ margin: auto;
     } */
 }
 
-@media (min-width: 991px){
-    .onlyDesktop{
+@media (min-width: 991px) {
+    .onlyDesktop {
         display: block;
     }
-    .onlyMobile{
+    .onlyMobile {
         display: none;
     }
 }
-@media (max-width: 990px){
-    .onlyDesktop{
+@media (max-width: 990px) {
+    .onlyDesktop {
         display: none;
     }
-    .onlyMobile{
+    .onlyMobile {
         display: block;
+    }
+
+    .paymentTable table tr td {
+        min-width: 65px;
     }
 }
