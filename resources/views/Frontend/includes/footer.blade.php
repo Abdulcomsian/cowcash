@@ -225,6 +225,7 @@ function copyText(text) {
  </script>
 
 
+
  @toastr_js
  @toastr_render
  @yield('script')
