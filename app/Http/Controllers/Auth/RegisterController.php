@@ -135,7 +135,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'silver_coins' => DB::raw('silver_coins +300'),
-            'crystal' => DB::raw('crystal + 0.1'),
+            // 'crystal' => DB::raw('crystal + 0.1'),
             'role' => 'farmer',
             'affiliate_id' => $affiliateid,
             'referal_link' => $referal_link,
