@@ -212,7 +212,7 @@ function copyText(text) {
 
      function pay_fs()
      {
-        if($("#amount1").val(qty)<1)
+        if($("#amount1").val()<1)
         {
             alert("your amount is lesst then $1");
             return false;
