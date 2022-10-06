@@ -35,6 +35,8 @@ class PaymentPayeerController extends PayeerClassController
         $m_curr = 'USD';
         $m_desc = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
         $m_key = 'j5I09GDP@5264';
+        $m_amount=(float)$m_amount;
+
 
         $arHash = array(
             $m_shop,
@@ -44,6 +46,7 @@ class PaymentPayeerController extends PayeerClassController
             $m_desc,
             $m_key
         );
+
         $sign = strtoupper(hash('sha256', implode(':', $arHash)));
         if($pkgid)
         {
@@ -56,7 +59,7 @@ class PaymentPayeerController extends PayeerClassController
                 return Redirect::back();
             }
         }
-        if ($m_amount < 1) {
+        if ($m_amount >= 1) {
             try {
                 DB::beginTransaction();
                 $payment = new Payment();
