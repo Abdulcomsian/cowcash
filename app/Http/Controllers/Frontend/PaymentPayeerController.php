@@ -33,8 +33,8 @@ class PaymentPayeerController extends PayeerClassController
         $m_orderid = mt_rand();
         $m_amount = number_format($request->purchase_sum, 2, '.', '');
         $m_curr = 'USD';
-        $m_desc = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
-        $m_key = 'j5I09GDP@5264';
+        $m_desc = 'hello';
+        $m_key = 'obaid123';
         $m_amount=(float)$m_amount;
 
 
@@ -44,7 +44,8 @@ class PaymentPayeerController extends PayeerClassController
             $m_amount,
             $m_curr,
             $m_desc,
-            $m_key
+            $m_key='obaid123',
+           
         );
 
         $sign = strtoupper(hash('sha256', implode(':', $arHash)));
@@ -90,6 +91,7 @@ class PaymentPayeerController extends PayeerClassController
                 print $e->getMessage();
                 DB::connection()->getPdo()->rollBack();
             }
+            echo "https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en";exit;
 
             return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
         }
