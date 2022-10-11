@@ -26,7 +26,7 @@ class IpnPayeerController extends Controller
     public function Payment_Success(Request $request)
     {
         //if ($_SERVER['REMOTE_ADDR'] != '37.59.221.230') return;
-        $m_key = 'j5I09GDP@5264';
+        $m_key = '123';
         $m_shop = $request->get('m_shop');
         $m_orderid = $request->get('m_orderid');
         $m_amount = $request->get('m_amount');
@@ -222,7 +222,7 @@ class IpnPayeerController extends Controller
 
     public function Payment_Fail(Request $request)
     {
-        $m_key = 'j5I09GDP@5264';
+        $m_key = '123';
         $m_shop = $request->get('m_shop');
         $m_orderid = $request->get('m_orderid');
         $m_amount = $request->get('m_amount');
