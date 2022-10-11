@@ -23,31 +23,31 @@ class PaymentPayeerController extends PayeerClassController
     public function __construct() {
         
     }
-    public function createPayment(Request $request)
+
+     public function createPayment(Request $request)
     {
         $pkgid = $request->package_id;
         $pkgqty=$request->pkgqty;
         $user = Auth::user();
         $user = $user->id;
-        $m_shop =  '1672659702';
+        $m_shop = '1672659702';
         $m_orderid = mt_rand();
         $m_amount = number_format($request->purchase_sum, 2, '.', '');
         $m_curr = 'USD';
-        $m_desc = 'VGVzdCBwYXltZW50IOKEljEyMzQ1';
-        $m_key = 'j5I09GDP@5264';
-        $m_amount=(float)$m_amount;
-
+        $m_desc = base64_encode('comments');
+        $m_key = '123';
 
         $arHash = array(
-            $m_shop,
-            $m_orderid,
-            $m_amount,
-            $m_curr,
-            $m_desc,
-            $m_key
+        $m_shop,
+        $m_orderid,
+        $m_amount,
+        $m_curr,
+        $m_desc
         );
 
-        $sign = strtoupper(hash('sha256', implode(':', $arHash)));
+        $arHash[] = $m_key;
+
+        $sign = strtoupper(hash('sha256', implode(':',$arHash)));
         if($pkgid)
         {
             $packagedata=Packages::find($pkgid);
@@ -90,18 +90,94 @@ class PaymentPayeerController extends PayeerClassController
                 print $e->getMessage();
                 DB::connection()->getPdo()->rollBack();
             }
-
-            return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
-        }
+             return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
+       }
         else{
             toastError('Amount is less then $1');
             return Redirect::back();
         }
+    }
+    // public function createPayment(Request $request)
+    // {
+    //     $pkgid = $request->package_id;
+    //     $pkgqty=$request->pkgqty;
+    //     $user = Auth::user();
+    //     $user = $user->id;
+    //     $m_shop =  '1672659702';
+    //     $m_orderid = mt_rand();
+    //     $m_amount = number_format($request->purchase_sum, 2, '.', '');
+    //     $m_curr = 'USD';
+    //     $m_desc = 'hello';
+    //     $m_key = 'obaid123';
+    //     $m_amount=(float)$m_amount;
+
+
+    //     $arHash = array(
+    //         $m_shop,
+    //         $m_orderid,
+    //         $m_amount,
+    //         $m_curr,
+    //         $m_desc,
+    //         $m_key='obaid123',
+           
+    //     );
+
+    //     $sign = strtoupper(hash('sha256', implode(':', $arHash)));
+    //     if($pkgid)
+    //     {
+    //         $packagedata=Packages::find($pkgid);
+    //         $packamount=$packagedata->amount;
+    //         $totalpkgamount=$packamount*$pkgqty;
+    //         if($totalpkgamount!=$m_amount)
+    //         {
+    //              toastError('Something heppening wrong your package amount with respect to quantity not matching with originol package price');
+    //             return Redirect::back();
+    //         }
+    //     }
+    //     if ($m_amount >= 1) {
+    //         try {
+    //             DB::beginTransaction();
+    //             $payment = new Payment();
+    //             $payment->uid = $m_orderid;
+    //             $payment->user_id = $user;
+    //             $payment->balance = $m_amount;
+    //             $payment->description = base64_decode($m_desc);
+    //             $payment->operation = '+';
+    //             $payment->payment_method='P';
+    //             $payment->currency= $m_curr;
+    //             $payment->save();
+    //             //
+    //             if($pkgid)
+    //             {
+    //                 $PackageTxn = new PackageTxn();
+    //                 $PackageTxn->user_id = $user;
+    //                 $PackageTxn->uid = $m_orderid;
+    //                 $PackageTxn->package_id = $pkgid;
+    //                 $PackageTxn->qty=$pkgqty;
+    //                 $PackageTxn->payment_method = 'Payeer';
+    //                 $PackageTxn->payment_status = 0;
+    //                 $PackageTxn->save();
+    //             }
+
+    //             DB::commit();
+    //         } catch (\PDOException $e) {
+
+    //             print $e->getMessage();
+    //             DB::connection()->getPdo()->rollBack();
+    //         }
+    //         echo "https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en";exit;
+
+    //         return redirect()->to("https://payeer.com/merchant/?m_shop=$m_shop&m_orderid=$m_orderid&m_amount=$m_amount&m_curr=$m_curr&m_desc=$m_desc&m_sign=$sign&lang=en");
+    //     }
+    //     else{
+    //         toastError('Amount is less then $1');
+    //         return Redirect::back();
+    //     }
 
 
 
         
-    }
+    // }
 
     //user payoff
     public function payoff(Request $request)
