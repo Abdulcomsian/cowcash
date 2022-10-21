@@ -78,8 +78,12 @@
   @endsection
 
   @section('content')
+  
   <section id="startRightNow">
+ 
       <div class="midDiv cowShop">
+      
+        @include('Frontend.includes.buyCowads')
           <div class="bgColor">
               <p class="rightNow">COW SHOP</p>
               <div class="scroll-rtl">
@@ -123,7 +127,8 @@
             </p>
           </div>
           @include('Frontend.includes.buyCowMenu')
-
+      
+          
       </div>
   </section>
   @endsection

@@ -96,7 +96,11 @@ Registraion
       $errormsg=$message;
      @endphp
     @enderror
+   
     <div class="midDiv registration">
+         <div class="onlyDesktop" style="position:absolute; top:100px;left:-344px;">
+            <ins class="635148731dca4635dfdc0233" style="display:inline-block;width:250px;height:250px;"></ins>
+        </div>
         <div class="bgColor">
         <ul class="nav nav-pills" role="tablist">
             <li class="nav-item rightNow">
@@ -107,6 +111,8 @@ Registraion
                 <a class="nav-link {{$errormsg =='These credentials do not match our records.' ?'ative show':''}}" data-toggle="pill" href="#loginForm">LOGIN</a>
             </li>
         </ul>
+       
+
         <div class="tab-content">
             <div id="register" class="container tab-pane {{$errormsg =='These credentials do not match our records.' ? '':'active'}}" style="{{$errormsg =='These credentials do not match our records.' ? 'display: none':''}}">
                 <div class="detailBox">
@@ -240,8 +246,10 @@ Registraion
         </div>
         </div>
 
-        <!-- @include('Frontend.includes.menues') -->
-
+        <!-- @include('Frontend.includes.menues') 123 -->
+        <div class="onlyDesktop" style="position:absolute; top:100px;right:115px;">
+        <ins class="6329aaa3f08e029721e46ae6" style="display:inline-block;width:300px;height:250px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","6329aaa3f08e029721e46ae6",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>
+        </div>
     </div>
     <!-- <div class="leftSideContent desktopHide">
         <ul>
