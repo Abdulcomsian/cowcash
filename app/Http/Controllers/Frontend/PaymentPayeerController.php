@@ -186,7 +186,7 @@ class PaymentPayeerController extends PayeerClassController
             'wallet' => ['required'],
             'amount' => ['required'],
             'silverblocks'=>['required'],
-            'g-recaptcha-response' => 'required|captcha',
+            //'g-recaptcha-response' => 'required|captcha',
         ],[
             'wallet' => 'Please Enter Wallet',
         ]);
@@ -214,7 +214,7 @@ class PaymentPayeerController extends PayeerClassController
                 return Redirect::back();
             }
          //payeer payout code here
-        $payeer= new PayeerClassController('P1066080920','1721205312','123');
+        $payeer= new PayeerClassController('P1066080920','1721205312','j5I09GDP@5264');
         if(!$payeer->isAuth()){
              toastError(json_encode($payeer->getErrors()));
              return Redirect::back();
