@@ -95,6 +95,9 @@
           </div>
 
           @include('Frontend.includes.menues')
+          <div class="onlyDesktop" style="position:absolute; top:100px;left:-298px;">
+            <ins class="635148731dca4635dfdc0233" style="display:inline-block;width:250px;height:250px;"></ins>
+        </div>
 
       </div>
   </section>
