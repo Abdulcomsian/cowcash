@@ -18,7 +18,7 @@ Account Setting
 <section id="startRightNow">
     <div class="midDiv setting">
          <div class="onlyDesktop" style="position:absolute; top:100px;left:-298px;">
-            <ins class="635148731dca4635dfdc0233" style="display:inline-block;width:250px;height:250px;"></ins>
+           <ins class="6357f5a99fae580a7534d3f1" style="display:inline-block;width:250px;height:250px;"></ins>
         </div>
         
         <div class="bgColor">
