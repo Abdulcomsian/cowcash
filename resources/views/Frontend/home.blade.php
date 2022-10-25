@@ -71,19 +71,19 @@ Home Page
         <div class="advantagesList">
             <ul>
                 <li>
-                    <img src="{{asset('images//locker.png')}}" alt="">
+                    <img src="{{asset('frontend/assets/img/locker.png')}}" alt="">
                     <p>Reverse Fund</p>
                 </li>
                 <li>
-                    <img src="{{asset('images//Vector Smart Object-2.png')}}" alt="">
+                    <img src="{{asset('frontend/assets/img/Vector Smart Object-2.png')}}" alt="">
                     <p>Payments</p>
                 </li>
                 <li>
-                    <img src="{{asset('images//plant.png')}}" alt="">
+                    <img src="{{asset('frontend/assets/img/plant.png')}}" alt="">
                     <p>Stability</p>
                 </li>
                 <li>
-                    <img src="{{asset('images//Vector Smart Object-3.png')}}" alt="">
+                    <img src="{{asset('frontend/assets/img/Vector Smart Object-3.png')}}" alt="">
                     <p>Support 24/7</p>
                 </li>
             </ul>
