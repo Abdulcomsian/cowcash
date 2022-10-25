@@ -246,8 +246,8 @@ Registraion
         </div>
         </div>
 
-        <!-- @include('Frontend.includes.menues') 123 -->
-        <div class="onlyDesktop" style="position:absolute; top:100px;right:115px;">
+      
+        <div class="onlyDesktop" style="position:absolute; top:100px;right:-340px;">
         <ins class="6329aaa3f08e029721e46ae6" style="display:inline-block;width:300px;height:250px;"></ins><script>!function(e,n,c,t,o,r,d){!function e(n,c,t,o,r,m,d,s,a){s=c.getElementsByTagName(t)[0],(a=c.createElement(t)).async=!0,a.src="https://"+r[m]+"/js/"+o+".js?v="+d,a.onerror=function(){a.remove(),(m+=1)>=r.length||e(n,c,t,o,r,m)},s.parentNode.insertBefore(a,s)}(window,document,"script","6329aaa3f08e029721e46ae6",["cdn.bmcdn4.com"], 0, new Date().getTime())}();</script>
         </div>
     </div>
