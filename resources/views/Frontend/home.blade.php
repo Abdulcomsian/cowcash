@@ -7,36 +7,38 @@ Home Page
     .cursor-pointer {
         cursor: pointer;
     }
-    .tourBtn{
-    cursor: pointer;
-}
+
+    .tourBtn {
+        cursor: pointer;
+    }
+
     @media (max-width: 992px) {
-        #startRightNow .midDiv p:nth-child(2){
+        #startRightNow .midDiv p:nth-child(2) {
             width: 100%;
             max-width: 70%;
             margin: auto;
         }
-       
+
     }
 </style>
 @endsection
 @section('content')
 
 <section id="startRightNow">
-     
+
     <div class="midDiv">
         <p class="rightNow">EARN MONEY BY PLAYING</p>
         <p>Cow farm with money withdrawal <br> Stable earnings with our affiliate program</p>
         <div class="multiDiv">
             <div class="leftDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('frontend/assets/img/cow.png')}}" alt="">
+                    <img src="{{asset('images//cow.png')}}" alt="">
                 </div>
                 <p>Buy cow they give milks for you 24/7 automatic</p>
             </div>
             <div class="rightDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('frontend/assets/img/milksBotel.png')}}" alt="">
+                    <img src="{{asset('images//milksBotel.png')}}" alt="">
                 </div>
                 <p>Milk will be stored in the warehouse, collect it.</p>
             </div>
@@ -44,13 +46,13 @@ Home Page
         <div class="multiDiv" style="padding: 0px;">
             <div class="leftDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('frontend/assets/img/eggMilk.png')}}" alt="">
+                    <img src="{{asset('images//eggMilk.png')}}" alt="">
                 </div>
                 <p>Sell milk and you will get silver(real money)</p>
             </div>
             <div class="rightDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('frontend/assets/img/cow-2.png')}}" alt="">
+                    <img src="{{asset('images//cow-2.png')}}" alt="">
                 </div>
                 <p>Invite frineds, excahnge resource for real money and buy more cow to get more income!</p>
             </div>
@@ -60,7 +62,7 @@ Home Page
             <div class="leftDiv" style="width: 100%;">
                 <p>Sign Up right now and get <<Green>> cow +300 silver coins as a gift</p>
                 <div class="imgDiv">
-                    <img src="{{asset('frontend/assets/img/Group 291.png')}}" alt="">
+                    <img src="{{asset('images//Group 291.png')}}" alt="">
                 </div>
 
             </div>
@@ -69,29 +71,29 @@ Home Page
         <div class="advantagesList">
             <ul>
                 <li>
-                    <img src="{{asset('frontend/assets/img/locker.png')}}" alt="">
+                    <img src="{{asset('images//locker.png')}}" alt="">
                     <p>Reverse Fund</p>
                 </li>
                 <li>
-                    <img src="{{asset('frontend/assets/img/Vector Smart Object-2.png')}}" alt="">
+                    <img src="{{asset('images//Vector Smart Object-2.png')}}" alt="">
                     <p>Payments</p>
                 </li>
                 <li>
-                    <img src="{{asset('frontend/assets/img/plant.png')}}" alt="">
+                    <img src="{{asset('images//plant.png')}}" alt="">
                     <p>Stability</p>
                 </li>
                 <li>
-                    <img src="{{asset('frontend/assets/img/Vector Smart Object-3.png')}}" alt="">
+                    <img src="{{asset('images//Vector Smart Object-3.png')}}" alt="">
                     <p>Support 24/7</p>
                 </li>
             </ul>
 
         </div>
-
-        @include('Frontend.includes.menues')
         <div class="onlyDesktop" style="position:absolute; top:100px;left:-298px;">
             <ins class="635148731dca4635dfdc0233" style="display:inline-block;width:250px;height:250px;"></ins>
         </div>
+        @include('Frontend.includes.menues')
+
 
 
     </div>
@@ -114,7 +116,7 @@ Home Page
                 <p style="visibility:hidden;">At the replenishment above 250 EUR</p>
             </div>
             <div class="fifthChild">
-                <p id="fifthChild-h2" >https://cow4cash.com/</p>
+                <p id="fifthChild-h2">https://cow4cash.com/</p>
                 <!-- <p id="fifthChild-p">At the replenishment above 500 EUR</p> -->
             </div>
         </div>
