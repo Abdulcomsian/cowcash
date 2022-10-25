@@ -337,7 +337,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
                 @auth
                 <div class="logoutBtn">
                     <a class="dropdown-item text-danger" href="{{ url('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <img src="{{asset ('images//logout.png')}}" class="img-fluid" alt="logo">
+                        <img src="{{asset ('frontend/assets/img/logout.png')}}" class="img-fluid" alt="logo">
                         <span>LogOut</span>
                     </a>
                 </div>
@@ -345,7 +345,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
                     {{ csrf_field() }}
                 </form>
                 <!-- <div class="logoutBtn">
-                        <a href=""><img src="{{asset ('images//logout.png')}}" class="img-fluid" alt="logo"></a>
+                        <a href=""><img src="{{asset ('frontend/assets/img/logout.png')}}" class="img-fluid" alt="logo"></a>
                     </div>                 -->
                 @endauth
                 <!-- <h2><span>CASH</span> <br>COW</h2> -->

@@ -398,7 +398,7 @@ button#register_button {
     position: relative;
     top: -90px;
     width: 100%;
-    max-width: 30%;
+    /* max-width: 30%; */
     margin: auto;
 }
 
