@@ -32,13 +32,13 @@ Home Page
         <div class="multiDiv">
             <div class="leftDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('images//cow.png')}}" alt="">
+                    <img src="{{asset('images/cow.png')}}" alt="">
                 </div>
                 <p>Buy cow they give milks for you 24/7 automatic</p>
             </div>
             <div class="rightDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('images//milksBotel.png')}}" alt="">
+                    <img src="{{asset('images/milksBotel.png')}}" alt="">
                 </div>
                 <p>Milk will be stored in the warehouse, collect it.</p>
             </div>
@@ -46,13 +46,13 @@ Home Page
         <div class="multiDiv" style="padding: 0px;">
             <div class="leftDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('images//eggMilk.png')}}" alt="">
+                    <img src="{{asset('images/eggMilk.png')}}" alt="">
                 </div>
                 <p>Sell milk and you will get silver(real money)</p>
             </div>
             <div class="rightDiv">
                 <div class="imgDiv">
-                    <img src="{{asset('images//cow-2.png')}}" alt="">
+                    <img src="{{asset('images/cow-2.png')}}" alt="">
                 </div>
                 <p>Invite frineds, excahnge resource for real money and buy more cow to get more income!</p>
             </div>
@@ -62,7 +62,7 @@ Home Page
             <div class="leftDiv" style="width: 100%;">
                 <p>Sign Up right now and get <<Green>> cow +300 silver coins as a gift</p>
                 <div class="imgDiv">
-                    <img src="{{asset('images//Group 291.png')}}" alt="">
+                    <img src="{{asset('images/Group 291.png')}}" alt="">
                 </div>
 
             </div>

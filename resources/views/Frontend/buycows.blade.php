@@ -113,7 +113,7 @@
               </div>
               <div class="alreadyPurchased">
                   <p>You have already purchased: <b>{{$perchasecows ?? 0}} cow</b></p>
-                  <img src="{{asset('images//coinsCow.png')}}" alt="">
+                  <img src="{{asset('images/coinsCow.png')}}" alt="">
               </div>
               <div class="detail-scroll-rtl">
                   <div class="multipleDiv">
