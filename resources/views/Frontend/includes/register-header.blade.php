@@ -39,14 +39,14 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
                 </div>
                 <div class="payment commonWooden">
                     <div class="multiBtn">
-                        <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="multiBtn">
-                        <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                     </div>
 
                 </div>
@@ -58,7 +58,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/home')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//main.png')}}" alt="">
+                        <img src="{{asset('images/main.png')}}" alt="">
                         <p>Main</p>
                     </div>
                 </a>
@@ -74,7 +74,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/rules')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//rules.png')}}" alt="">
+                        <img src="{{asset('images/rules.png')}}" alt="">
                         <p>Rules</p>
                     </div>
                 </a>
@@ -82,7 +82,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/about')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//about.png')}}" alt="">
+                        <img src="{{asset('images/about.png')}}" alt="">
                         <p>About</p>
                     </div>
                 </a>
@@ -91,7 +91,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('account/calculate')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//calculate.png')}}" alt="">
+                        <img src="{{asset('images/calculate.png')}}" alt="">
                         <p>Calculate</p>
                     </div>
                 </a>
@@ -99,7 +99,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/support')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//support.png')}}" alt="">
+                        <img src="{{asset('images/support.png')}}" alt="">
                         <p>Support</p>
                     </div>
                 </a>
@@ -138,16 +138,16 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
                 </a>
 
             </td>
-            <td class="board commonWooden" style="background-image: url({{asset('images//btnBoard.png')}}) !important;">
+            <td class="board commonWooden" style="background-image: url({{asset('images/btnBoard.png')}}) !important;">
                 <div class="multiBtn">
-                    <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                 </div>
                 <div class="multiBtn">
-                    <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                 </div>
 
             </td>
@@ -173,12 +173,12 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
              </li> -->
             <li>
                 <a href="/faq">
-                    <img src="{{asset('images//faq-new.png')}}" alt="">
+                    <img src="{{asset('images/faq-new.png')}}" alt="">
                 </a>
             </li>
             <li>
                 <a href="https://www.youtube.com/">
-                    <img src="{{asset('images//topdesktube.png')}}" alt="">
+                    <img src="{{asset('images/topdesktube.png')}}" alt="">
                 </a>
             </li>
 
@@ -264,14 +264,14 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
                 </div>
                 <div class="board commonWooden">
                     <div class="multiBtn">
-                        <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                     </div>
                     <div class="multiBtn">
-                        <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                        <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                        <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                     </div>
 
                 </div>
@@ -283,7 +283,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/home')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//main.png')}}" alt="">
+                        <img src="{{asset('images/main.png')}}" alt="">
                         <p>Main</p>
                     </div>
                 </a>
@@ -299,7 +299,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/rules')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//rules.png')}}" alt="">
+                        <img src="{{asset('images/rules.png')}}" alt="">
                         <p>Rules</p>
                     </div>
                 </a>
@@ -307,7 +307,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/about')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//about.png')}}" alt="">
+                        <img src="{{asset('images/about.png')}}" alt="">
                         <p>About</p>
                     </div>
                 </a>
@@ -316,7 +316,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('account/calculate')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//calculate.png')}}" alt="">
+                        <img src="{{asset('images/calculate.png')}}" alt="">
                         <p>Calculate</p>
                     </div>
                 </a>
@@ -324,7 +324,7 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             <li>
                 <a href="{{url('/support')}}">
                     <div class="listdiv">
-                        <img src="{{asset('images//support.png')}}" alt="">
+                        <img src="{{asset('images/support.png')}}" alt="">
                         <p>Support</p>
                     </div>
                 </a>
@@ -420,14 +420,14 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
             </td>
             <td class="board commonWooden loginUser">
                 <div class="multiBtn">
-                    <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                 </div>
                 <div class="multiBtn">
-                    <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                    <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                    <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                 </div>
 
             </td>
@@ -437,12 +437,12 @@ $todayActive = App\Models\User::where('role', 'farmer')->whereDate('created_at',
         <ul>
             <li>
                 <a href="/faq">
-                    <img src="{{asset('images//faq-new.png')}}" alt="">
+                    <img src="{{asset('images/faq-new.png')}}" alt="">
                 </a>
             </li>
             <li>
                 <a href="https://www.youtube.com/">
-                    <img src="{{asset('images//topdesktube.png')}}" alt="">
+                    <img src="{{asset('images/topdesktube.png')}}" alt="">
                 </a>
             </li>
 

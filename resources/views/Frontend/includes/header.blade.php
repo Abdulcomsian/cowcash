@@ -68,22 +68,22 @@
                      <span class="paymentText">Payment System</span>
                      <div class="mobilePayment">
                          <div class="multiImg">
-                             <img src="{{asset('images//Untitled-1-03 (1).png')}}" alt="" class="img-fluid">
-                             <img src="{{asset('images//Untitled-1-02.png')}}" alt="" class="img-fluid">
-                             <img src="{{asset('images//Untitled-1-01.png')}}" alt="" class="img-fluid">
+                             <img src="{{asset('images/Untitled-1-03 (1).png')}}" alt="" class="img-fluid">
+                             <img src="{{asset('images/Untitled-1-02.png')}}" alt="" class="img-fluid">
+                             <img src="{{asset('images/Untitled-1-01.png')}}" alt="" class="img-fluid">
                          </div>
                      </div>
                  </div>
                  <div class="board commonWooden">
                      <div class="multiBtn">
-                         <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                      </div>
                      <div class="multiBtn">
-                         <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                      </div>
 
                  </div>
@@ -95,7 +95,7 @@
              <li>
                  <a href="{{url('/home')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//main.png')}}" alt="">
+                         <img src="{{asset('images/main.png')}}" alt="">
                          <p>Main</p>
                      </div>
                  </a>
@@ -111,7 +111,7 @@
              <li>
                  <a href="{{url('/rules')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//rules.png')}}" alt="">
+                         <img src="{{asset('images/rules.png')}}" alt="">
                          <p>Rules</p>
                      </div>
                  </a>
@@ -119,7 +119,7 @@
              <li>
                  <a href="{{url('/about')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//about.png')}}" alt="">
+                         <img src="{{asset('images/about.png')}}" alt="">
                          <p>About</p>
                      </div>
                  </a>
@@ -128,7 +128,7 @@
              <li>
                  <a href="{{url('account/calculate')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//calculate.png')}}" alt="">
+                         <img src="{{asset('images/calculate.png')}}" alt="">
                          <p>Calculate</p>
                      </div>
                  </a>
@@ -136,7 +136,7 @@
              <li>
                  <a href="{{url('/support')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//support.png')}}" alt="">
+                         <img src="{{asset('images/support.png')}}" alt="">
                          <p>Support</p>
                      </div>
                  </a>
@@ -202,24 +202,24 @@
                  <span class="paymentText">Payment System</span>
                  <div class="logoDiv" style="position: absolute;top: 40%;width: 100%;">
                      <div class="multiImg">
-                         <img src="{{asset('images//Layer 6.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//bitcoin2.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/Layer 6.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/bitcoin2.png')}}" alt="" class="img-fluid">
                      </div>
                      <div class="text-center" style="text-align: center;">
-                         <img style="width: 50px; padding-top:9px;" src="{{asset('images//payeer.png')}}" alt="" class="img-fluid">
+                         <img style="width: 50px; padding-top:9px;" src="{{asset('images/payeer.png')}}" alt="" class="img-fluid">
                      </div>
                  </div>
              </td>
              <td class="board commonWooden">
                  <div class="multiBtn">
-                     <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                  </div>
                  <div class="multiBtn">
-                     <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                  </div>
 
              </td>
@@ -245,12 +245,12 @@
              </li> -->
              <li style="z-index: 0">
                  <a href="/faq">
-                     <img src="{{asset('images//faq-new.png')}}" alt="">
+                     <img src="{{asset('images/faq-new.png')}}" alt="">
                  </a>
              </li>
              <li>
                  <a href="https://www.youtube.com/">
-                     <img src="{{asset('images//topdesktube.png')}}" alt="">
+                     <img src="{{asset('images/topdesktube.png')}}" alt="">
                  </a>
              </li>
              <li>
@@ -359,14 +359,14 @@
                  </div>
                  <div class="board commonWooden">
                      <div class="multiBtn">
-                         <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                      </div>
                      <div class="multiBtn">
-                         <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                         <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                         <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                      </div>
 
                  </div>
@@ -378,7 +378,7 @@
              <li>
                  <a href="{{url('/home')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//main.png')}}" alt="">
+                         <img src="{{asset('images/main.png')}}" alt="">
                          <p>Main</p>
                      </div>
                  </a>
@@ -394,7 +394,7 @@
              <li>
                  <a href="{{url('/rules')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//rules.png')}}" alt="">
+                         <img src="{{asset('images/rules.png')}}" alt="">
                          <p>Rules</p>
                      </div>
                  </a>
@@ -402,7 +402,7 @@
              <li>
                  <a href="{{url('/about')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//about.png')}}" alt="">
+                         <img src="{{asset('images/about.png')}}" alt="">
                          <p>About</p>
                      </div>
                  </a>
@@ -411,7 +411,7 @@
              <li>
                  <a href="{{url('account/calculate')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//calculate.png')}}" alt="">
+                         <img src="{{asset('images/calculate.png')}}" alt="">
                          <p>Calculate</p>
                      </div>
                  </a>
@@ -419,7 +419,7 @@
              <li>
                  <a href="{{url('/support')}}">
                      <div class="listdiv">
-                         <img src="{{asset('images//support.png')}}" alt="">
+                         <img src="{{asset('images/support.png')}}" alt="">
                          <p>Support</p>
                      </div>
                  </a>
@@ -533,14 +533,14 @@
              </td>
              <td class="board commonWooden loginUser" style="min-width:113px !important;">
                  <div class="multiBtn">
-                     <img src="{{asset('images//Euro Coin.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//Layer 5.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//USD Coin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/Euro Coin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/Layer 5.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/USD Coin.png')}}" alt="" class="img-fluid">
                  </div>
                  <div class="multiBtn">
-                     <img src="{{asset('images//dogecoin.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//bitcoin.png')}}" alt="" class="img-fluid">
-                     <img src="{{asset('images//eth.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/dogecoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/bitcoin.png')}}" alt="" class="img-fluid">
+                     <img src="{{asset('images/eth.png')}}" alt="" class="img-fluid">
                  </div>
 
              </td>
@@ -566,12 +566,12 @@
              </li> -->
              <li style="z-index: 0">
                  <a href="/faq">
-                     <img src="{{asset('images//faq-new.png')}}" alt="">
+                     <img src="{{asset('images/faq-new.png')}}" alt="">
                  </a>
              </li>
              <li>
                  <a href="https://www.youtube.com/">
-                     <img src="{{asset('images//topdesktube.png')}}" alt="">
+                     <img src="{{asset('images/topdesktube.png')}}" alt="">
                  </a>
              </li>
              <li>
