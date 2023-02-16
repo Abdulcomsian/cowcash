@@ -53,6 +53,14 @@
                             <span>User</span>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{route('admin.export')}}">
+                            <i><img src="{{asset('images/specialist-user.png')}}"></i>
+                            <span>Export User</span>
+                        </a>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link active" href="{{route('packages.index')}}">
                             <i class="fa fa-gift" aria-hidden="true"></i>

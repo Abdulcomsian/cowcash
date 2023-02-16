@@ -8,6 +8,8 @@ use App\Models\UserCows;
 use App\Models\Payment;
 use App\Models\PayOff;
 use Illuminate\Http\Request;
+use App\Exports\UserExport;
+use Excel;
 
 class AdminController extends Controller
 {
@@ -113,4 +115,71 @@ class AdminController extends Controller
          $payments=PayOff::latest()->paginate(50);
          return view('backend.Admin.withdrawpaymetns',compact('payments'));
     }
+
+    public function ExportUser()
+    {
+        try {
+            $users = User::with('totalaffiliate')->where('role', 'farmer')->paginate(100);
+            return view('backend.Admin.exportuser', compact('users'));
+        } catch (\Exception $exception) {
+            toastError('Something went wrong,try again');
+            return back();
+        }
+    }
+
+    public function FilterUser(Request $request)
+    {
+        $fromDate = $request->fromDate;
+        
+        $toDate = $request->toDate;
+
+        $userList = User::query();
+
+        $userList->when(isset($fromDate) && !empty($fromDate) , function($q) use ($fromDate){
+            $q->where(\DB::raw('Date(created_at)') , '>=' , $fromDate );
+        });
+
+        $userList->when(isset($toDate) && !empty($toDate) , function($q) use ($toDate){
+            $q->where(\DB::raw('Date(created_at)') , '<=' , $toDate );
+        });
+        
+        $users  = $userList->where('role' , 'farmer')->get();
+        
+        return view('backend.Admin.components.export-table')->with(['users' => $users]);
+    
+
+    }
+
+    public function ExportSheet(Request $request)
+    {  
+        $fromDate = $request->fromDate;
+        
+        $toDate = $request->toDate;
+
+        $userList = User::query();
+
+        $userList->when(isset($fromDate) && !empty($fromDate) , function($q) use ($fromDate){
+            $q->where(\DB::raw('Date(created_at)') , '>=' , $fromDate );
+        });
+
+        $userList->when(isset($toDate) && !empty($toDate) , function($q) use ($toDate){
+            $q->where(\DB::raw('Date(created_at)') , '<=' , $toDate );
+        });
+        
+        $userList  = $userList->where('role' , 'farmer')->get();
+
+        $users = [];
+
+        foreach($userList as $user )
+        {
+            $users[] = ['name' => $user->name , 'email'=> $user->email];
+        }
+
+        // $users = collect($users);
+    //   dd($users);
+        return Excel::download(new UserExport($users) , 'user.xls');
+
+
+    }
+
 }
