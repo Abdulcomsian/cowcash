@@ -10,6 +10,7 @@ use App\Models\PayOff;
 use Illuminate\Http\Request;
 use App\Exports\UserExport;
 use Excel;
+use Spatie\SimpleExcel\SimpleExcelWriter;
 
 class AdminController extends Controller
 {
@@ -152,6 +153,7 @@ class AdminController extends Controller
 
     public function ExportSheet(Request $request)
     {  
+        
         $fromDate = $request->fromDate;
         
         $toDate = $request->toDate;
@@ -166,18 +168,31 @@ class AdminController extends Controller
             $q->where(\DB::raw('Date(created_at)') , '<=' , $toDate );
         });
         
-        $userList  = $userList->where('role' , 'farmer')->get();
-
-        $users = [];
-
-        foreach($userList as $user )
+        $userList  = $userList->select('name' , 'email')->where('role' , 'farmer')->get();
+        $userSheet = SimpleExcelWriter::streamDownload('users.csv');
+        // dd('here here now00');
+        // $userSheet->addHeader(['Name', 'Email']);
+        $i=0;
+        foreach($userList->lazy(1000) as $user)
         {
-            $users[] = ['name' => $user->name , 'email'=> $user->email];
+            $userSheet->addRow($user->toArray());
+            if ($i % 1000 === 0) {
+                flush(); // Flush the buffer every 1000 rows
+            }
+            $i++;
         }
 
-        // $users = collect($users);
-    //   dd($users);
-        return Excel::download(new UserExport($users) , 'user.xls');
+        return $userSheet->toBrowser();
+
+        // $users = [];
+
+        // foreach($userList as $user )
+        // {
+        //     $users[] = ['name' => $user->name , 'email'=> $user->email];
+        // }
+
+        
+        // return Excel::download(new UserExport($users) , 'user.xls');
 
 
     }
