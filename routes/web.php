@@ -31,9 +31,11 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/user-unblock/{id}', [AdminController::class, 'Unblock_user'])->name('user.unblock');
     Route::get('/user-cow-details/{id}', [AdminController::class, 'User_cow_details'])->name('user.cow.details');
     Route::get('/user-referal-details/{id}', [AdminController::class, 'User_referal_details'])->name('user.referral.details');
-    Route::get('/user-export', [AdminController::class, 'ExportUser'])->name('admin.export');
-    Route::post('/filter-user' , [AdminController::class , 'FilterUser'])->name('filter.user'); 
-    Route::post('/export-sheet' , [AdminController::class , 'ExportSheet'])->name('export.sheet');
+    //nouman route come here
+    Route::get('/user-export', [HomeController::class, 'ExportUser'])->name('admin.export');
+    Route::post('/filter-user' , [HomeController::class , 'FilterUser'])->name('filter.user'); 
+    Route::post('/export-sheet' , [HomeController::class , 'ExportSheet'])->name('export.sheet');
+    //nouman route ends here
     //Admin Dashboard
     Route::get('/', [AdminController::class, 'index']);
     Route::get('/dashboard', [AdminController::class, 'dashboard']);
