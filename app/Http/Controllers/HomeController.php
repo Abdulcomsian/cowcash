@@ -117,7 +117,7 @@ class HomeController extends Controller
     public function ExportSheet(Request $request)
     {  
         try{
-        // dd($) 
+        dd($request->all()); 
         $fromDate = $request->fromDate;
         
         $toDate = $request->toDate;
