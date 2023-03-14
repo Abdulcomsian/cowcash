@@ -158,7 +158,7 @@ class HomeController extends Controller
         //     $users[] = ['name' => $user->name , 'email'=> $user->email];
         // }
 
-        dd($request->all() ,'herenow'); 
+        // dd($request->all() ,'herenow'); 
          return Excel::download(new UserExport($userList) , 'user.xlsx' , null ,[
             'chunkSize' => 500,
          ]);
