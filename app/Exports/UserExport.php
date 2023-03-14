@@ -4,6 +4,9 @@ namespace App\Exports;
 
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\Exportable;
+use Maatwebsite\Excel\Concerns\FromQuery;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
 
 class UserExport implements FromCollection, WithHeadings
 {
@@ -27,5 +30,15 @@ class UserExport implements FromCollection, WithHeadings
     public function collection()
     {
         return collect($this->userList);
+    }
+
+    public function batchSize(): int
+    {
+        return 1000;
+    }
+
+    public function chunkSize(): int
+    {
+        return 500;
     }
 }

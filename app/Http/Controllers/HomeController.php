@@ -9,8 +9,10 @@ use App\Models\Cows;
 use DB;
 use Carbon\Carbon;
 use Auth;
-use Spatie\SimpleExcel\SimpleExcelWriter;
-
+// use Spatie\SimpleExcel\SimpleExcelWriter;
+use DataTables;
+use Excel;
+use App\Exports\UserExport;
 class HomeController extends Controller
 {
     //front end page page hoeme page
@@ -66,6 +68,29 @@ class HomeController extends Controller
         }
     }
 
+    public function UserData(Request $request)
+    {
+        
+        $fromDate = $request->fromDate;
+        
+        $toDate = $request->toDate;
+
+        $userList = DB::table('users');
+        $userList->when(isset($fromDate) && !empty($fromDate) , function($q) use ($fromDate){
+            $q->where(\DB::raw('Date(created_at)') , '>=' , $fromDate );
+        });
+
+        $userList->when(isset($toDate) && !empty($toDate) , function($q) use ($toDate){
+            $q->where(\DB::raw('Date(created_at)') , '<=' , $toDate );
+        });
+        
+        $users = $userList->where('role' , 'farmer')->orderBy('id' , 'asc');
+        
+        return DataTables::queryBuilder($users)->toJson();
+        
+
+    }
+
     public function FilterUser(Request $request)
     {
         $fromDate = $request->fromDate;
@@ -107,20 +132,23 @@ class HomeController extends Controller
         });
         
         $userList  = $userList->select('name' , 'email')->where('role' , 'farmer')->get();
-        $userSheet = SimpleExcelWriter::streamDownload('users.csv');
-        // dd('here here now00');
-        // $userSheet->addHeader(['Name', 'Email']);
-        $i=0;
-        foreach($userList->lazy(1000) as $user)
-        {
-            $userSheet->addRow($user->toArray());
-            if ($i % 1000 === 0) {
-                flush(); // Flush the buffer every 1000 rows
-            }
-            $i++;
-        }
+        // $userSheet = SimpleExcelWriter::streamDownload('users.csv');
+        // // dd('here here now00');
+        // // $userSheet->addHeader(['Name', 'Email']);
+        // $i=0;
+        // foreach($userList->lazy(1000) as $user)
+        // {
+        //     $userSheet->addRow($user->toArray());
+        //     if ($i % 1000 === 0) {
+        //         flush(); // Flush the buffer every 1000 rows
+        //     }
+        //     $i++;
+        // }
 
-        return $userSheet->toBrowser();
+        // return $userSheet->toBrowser();
+
+
+
 
         // $users = [];
 
@@ -130,7 +158,9 @@ class HomeController extends Controller
         // }
 
         
-        // return Excel::download(new UserExport($users) , 'user.xls');
+         return Excel::download(new UserExport($userList) , 'user.xlsx' , null ,[
+            'chunkSize' => 500,
+         ]);
 
 
     }

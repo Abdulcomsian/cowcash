@@ -1,4 +1,4 @@
-        <div class="container-fluid" style="position: fixed;bottom:0px;">
+        <div class="container-fluid footer" style="position: fixed;bottom:0px;">
             <div class="row">
                 <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
                     <footer class="main-footer d-flex p-2 px-3 bg-white border-top">

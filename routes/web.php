@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'Admin'], function 
     Route::get('/user-export', [HomeController::class, 'ExportUser'])->name('admin.export');
     Route::post('/filter-user' , [HomeController::class , 'FilterUser'])->name('filter.user'); 
     Route::post('/export-sheet' , [HomeController::class , 'ExportSheet'])->name('export.sheet');
+    Route::post('/user-data' , [HomeController::class , 'UserData'])->name('user.data');
     //nouman route ends here
     //Admin Dashboard
     Route::get('/', [AdminController::class, 'index']);

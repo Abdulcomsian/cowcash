@@ -6,7 +6,21 @@ ALL Users
 @include('layouts.sweetalert.sweetalert_css')
 @endsection
 @section('content')
+<style>
+div#user-table_paginate {
+    display: flex;
+    justify-content: end;
+}
 
+div#user-table_paginate .paginate_button{
+    margin: 10px 5px;
+}
+
+.container-fluid.footer{
+    display: none;
+}
+
+</style>
 <!-- Table section -->
 <div style="width: calc(100% - 240px); margin-left: auto;">
     <div>
@@ -59,9 +73,20 @@ ALL Users
                                     </div>
                                 </div>
                             </div>
-                            <div id="export-table-section">
+                            <div id="export-table-section p-2 my-2">
+                                <table id="user-table" class="table">
+                                    <thead class="thead-dark">
+                                        <th>Sno</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+
+                                </table>
                                 {{-- export table starts here --}}
-                                @include('backend.Admin.components.export-table')
+                                {{-- @include('backend.Admin.components.export-table') --}}
                                 {{-- export table ends here --}}
                             </div>
                         </div>
@@ -76,23 +101,97 @@ ALL Users
 @section('script')
 @include('layouts.sweetalert.sweetalert_js')
 <script>
+    var table;
+    window.onload = function(){
+        (function(){
+        //     $('#user-table').DataTable({
+		// 			processing: true,
+		// 			serverSide: true,
+		// 			searching: false,
+		// 			"aaSorting": [],
+		// 			bDestroy: true,
+		// 				ajax: {
+		// 				url: "{{route('user.data')}}",
+		// 				type: 'POST',
+		// 				data: {
+        //                     _token : "{{csrf_token()}}"
+        //                 },
+		// 			},
+		// 			columns:[
+        //                 {data: 'id', name: 'id'},
+        //                 {data: 'name', name: 'name'},
+        //                 {data: 'email', name: 'email'},
+        // ]
+		// 		})
+              table =   $('#user-table').DataTable({
+                    serverSide: true,
+                    ajax: {
+						url: "{{route('user.data')}}",
+						type: 'POST',
+						data: {
+                            _token : "{{csrf_token()}}"
+                        }
+                    },
+                    button : true,
+                    search : true,
+                    scrollY : true,
+                    columns:[
+                        {data: 'id', name: 'id'},
+                        {data: 'name', name: 'name'},
+                        {data: 'email', name: 'email'},
+                    ]
+                
+
+                })
+
+        })()
+        
+    }
+
+
+
     document.getElementById("filter").addEventListener('click' , function(e){
         let fromDate = document.getElementById("fromDate").value;
         let toDate = document.getElementById("toDate").value;
-        $.ajax({
-            method : 'POST',
-            url : '{{route("filter.user")}}',
-            datatype : 'HTML',
-            data : {
-                fromDate : fromDate,
-                toDate : toDate,
-                _token : '{{csrf_token()}}'
-            },
-            success : function(res){
-                document.getElementById("export-table-section").innerHTML = res;
-                swal("Good job!", "Table Has Been Updated!", "success");
-            }
-        })
+        $("#user-table").DataTable().clear().destroy();
+        $('#user-table').DataTable({
+                    serverSide: true,
+                    ajax: {
+						url: "{{route('user.data')}}",
+						type: 'POST',
+						data: {
+                            _token : "{{csrf_token()}}",
+                            fromDate : fromDate,
+                            toDate : toDate
+                        }
+                    },
+                    button : true,
+                    search : true,
+                    scrollY : true,
+                    columns:[
+                        {data: 'id', name: 'id'},
+                        {data: 'name', name: 'name'},
+                        {data: 'email', name: 'email'},
+                    ]
+                
+
+                })
+
+
+        // $.ajax({
+        //     method : 'POST',
+        //     url : '{{route("filter.user")}}',
+        //     datatype : 'HTML',
+        //     data : {
+        //         fromDate : fromDate,
+        //         toDate : toDate,
+        //         _token : '{{csrf_token()}}'
+        //     },
+        //     success : function(res){
+        //         document.getElementById("export-table-section").innerHTML = res;
+        //         swal("Good job!", "Table Has Been Updated!", "success");
+        //     }
+        // })
     })
 
     document.getElementById('export').addEventListener('click' , function(e){

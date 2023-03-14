@@ -12,7 +12,7 @@
     <link rel="stylesheet" id="bootstrap-stylesheet" data-version="1.1.0" href="{{asset('styles/bootstrap.min.css')}}">
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="{{asset('styles/dashboard.css')}}">
     <link rel="stylesheet" href="{{asset('styles/extras.1.1.0.min.css')}}">
-    <link href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
+    <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" />
     @toastr_css
     @yield('css')
 </head>
