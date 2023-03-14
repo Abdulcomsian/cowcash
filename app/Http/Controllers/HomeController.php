@@ -116,7 +116,8 @@ class HomeController extends Controller
 
     public function ExportSheet(Request $request)
     {  
-        
+        try{
+        // dd($) 
         $fromDate = $request->fromDate;
         
         $toDate = $request->toDate;
@@ -161,6 +162,9 @@ class HomeController extends Controller
          return Excel::download(new UserExport($userList) , 'user.xlsx' , null ,[
             'chunkSize' => 500,
          ]);
+        }catch(Exception $e){
+            dd($e->getMessage());
+        }
 
 
     }
