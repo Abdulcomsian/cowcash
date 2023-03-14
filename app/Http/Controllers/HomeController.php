@@ -116,6 +116,7 @@ class HomeController extends Controller
 
     public function ExportSheet(Request $request)
     {  
+        ini_set('memory_limit', '-1');
         try{
         
         $fromDate = $request->fromDate;
